@@ -26,8 +26,14 @@ mod tests {
     let lib_path = path_resolve("/source/FFmpeg".into());
     if !Path::new(&lib_path).exists() {
       let git_url = "git@github.com:FFmpeg/FFmpeg.git";
+      let workspace = "source";
+      let cwd = path_resolve(workspace.into());
       let mut task_clone_ffmpeg_lib = Command::new("git");
       task_clone_ffmpeg_lib.arg("clone").arg(git_url);
+      task_clone_ffmpeg_lib.current_dir(cwd.clone());
+      task_clone_ffmpeg_lib
+        .status()
+        .expect(&format!("git clone {} --> failed", git_url));
     }
   }
 }
