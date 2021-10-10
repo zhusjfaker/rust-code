@@ -72,4 +72,6 @@ make -j 12
 
 make install
 
+make clean
+
 cd -
