@@ -16,7 +16,11 @@
         ]
       },
       "args": ["build"],
-      "cwd": "${workspaceFolder}/rust-ffmpeg"
+      "cwd": "${workspaceFolder}",
+      "console": "externalTerminal",
+      "env": {},
+      "terminal": "external",
+      "stopOnEntry": false
     }
   ]
 }
