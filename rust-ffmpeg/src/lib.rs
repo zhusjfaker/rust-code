@@ -24,8 +24,8 @@ mod tests {
   #[test]
   fn build() {
     // 下载FFmpeg 内容
-    let lib_path = path_resolve("/source/FFmpeg".into());
-    if !Path::new(&lib_path).exists() {
+    let lib_path = path_resolve("source/FFmpeg".into());
+    if Path::new(&lib_path).exists() == false {
       let git_url = "git@github.com:FFmpeg/FFmpeg.git";
       let workspace = "source";
       let cwd = path_resolve(workspace.into());
@@ -45,7 +45,7 @@ mod tests {
         .expect("source/FFmpeg 下执行 git pull 失败");
     }
     // 尝试编译 FFmpeg 根据当前 OS 和 arch
-    let complier_lib_path = path_resolve("/ff-output".into());
+    let complier_lib_path = path_resolve("ff-output".into());
     if !Path::new(&complier_lib_path).exists() {
       let mut task_complie_ffmpeg_lib = Command::new("sh");
       if cfg!(target_arch = "arm64") {
