@@ -1,0 +1,18 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+    {
+      "type": "shell",
+      "problemMatcher": [
+        "$rustc"
+      ],
+      "command": "cargo",
+      "args": ["test","build"],
+      "options": {
+        "cwd": "${workspaceFolder}/rust-ffmpeg",
+        "env": {}
+      },
+      "label": "test build"
+    }
+  ]
+}
