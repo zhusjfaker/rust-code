@@ -22,6 +22,13 @@ mod tests {
   }
 
   #[test]
+  fn env() {
+    for (key, val) in std::env::vars() {
+      println!("{} is {} ....", key, val);
+    }
+  }
+
+  #[test]
   fn build() {
     // 下载FFmpeg 内容
     let lib_path = path_resolve("source/FFmpeg".into());
