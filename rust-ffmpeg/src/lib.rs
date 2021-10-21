@@ -9,7 +9,8 @@ mod tests {
    * 计算项目的全局目录
    */
   fn path_resolve(path: String) -> String {
-    let work_cwd = std::env::var("CARGO_MANIFEST_DIR").unwrap();
+    let work_cwd = env!("CARGO_MANIFEST_DIR");
+    // let work_cwd = std::env::var("CARGO_MANIFEST_DIR").unwrap();
     let os_work_cwd = OsString::from(work_cwd);
     return Path::new(&os_work_cwd)
       .join(path)
@@ -32,6 +33,7 @@ mod tests {
 
   #[test]
   fn build() {
+    env();
     // 下载FFmpeg 内容
     let lib_path = path_resolve("source/FFmpeg".into());
     if Path::new(&lib_path).exists() == false {
@@ -58,9 +60,9 @@ mod tests {
     if !Path::new(&complier_lib_path).exists() {
       let mut task_complie_ffmpeg_lib = Command::new("sh");
       if cfg!(target_arch = "arm64") {
-        task_complie_ffmpeg_lib.arg("clone").arg("./build.arm.sh");
+        task_complie_ffmpeg_lib.arg("./build.arm.sh");
       } else {
-        task_complie_ffmpeg_lib.arg("clone").arg("./build.sh");
+        task_complie_ffmpeg_lib.arg("./build.sh");
       }
       let complie_cwd_path = "script";
       let complie_cwd = path_resolve(complie_cwd_path.into());
