@@ -1,6 +1,7 @@
 #[cfg(test)]
 mod tests {
 
+  use std::ffi::OsString;
   use std::path::Path;
   use std::process::Command;
 
@@ -8,8 +9,9 @@ mod tests {
    * 计算项目的全局目录
    */
   fn path_resolve(path: String) -> String {
-    return std::env::current_dir()
-      .unwrap()
+    let work_cwd = std::env::var("CARGO_MANIFEST_DIR").unwrap();
+    let os_work_cwd = OsString::from(work_cwd);
+    return Path::new(&os_work_cwd)
       .join(path)
       .into_os_string()
       .into_string()
