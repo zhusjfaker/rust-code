@@ -33,7 +33,6 @@ mod tests {
 
   #[test]
   fn build() {
-    env();
     // 下载FFmpeg 内容
     let lib_path = path_resolve("source/FFmpeg".into());
     if Path::new(&lib_path).exists() == false {

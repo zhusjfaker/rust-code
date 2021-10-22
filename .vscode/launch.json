@@ -1,5 +1,5 @@
 {
-  // 使用 IntelliSense 了解相关属性。
+  // 使用 IntelliSense 了解相关属性。 
   // 悬停以查看现有属性的描述。
   // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
@@ -7,25 +7,20 @@
     {
       "type": "lldb",
       "request": "launch",
-      "name": "test-build",
+      "name": "Cargo test",
       "cargo": {
         "args": [
           "test",
           "-p",
           "rust_ffmpeg",
-          "--no-run",
-          "--lib",
-          "build",
-          "--",
-          "--nocapture"
         ]
       },
-      "args": [],
+      "terminal": "integrated",
       "cwd": "${workspaceFolder}",
-      "console": "integratedTerminal",
-      "env": {},
-      "terminal": "console",
-      "stopOnEntry": false
+      "args": [
+        "env",
+        "--nocapture"
+      ]
     }
   ]
 }
