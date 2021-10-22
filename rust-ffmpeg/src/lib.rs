@@ -58,7 +58,7 @@ mod tests {
     let complier_lib_path = path_resolve("ff-output".into());
     if !Path::new(&complier_lib_path).exists() {
       let mut task_complie_ffmpeg_lib = Command::new("sh");
-      if cfg!(target_arch = "arm64") {
+      if cfg!(target_arch = "aarch64") {
         task_complie_ffmpeg_lib.arg("./build.arm.sh");
       } else {
         task_complie_ffmpeg_lib.arg("./build.sh");
