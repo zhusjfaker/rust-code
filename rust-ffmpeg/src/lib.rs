@@ -10,7 +10,6 @@ mod tests {
    */
   fn path_resolve(path: String) -> String {
     let work_cwd = env!("CARGO_MANIFEST_DIR");
-    // let work_cwd = std::env::var("CARGO_MANIFEST_DIR").unwrap();
     let os_work_cwd = OsString::from(work_cwd);
     return Path::new(&os_work_cwd)
       .join(path)
@@ -55,7 +54,7 @@ mod tests {
         .expect("source/FFmpeg 下执行 git pull 失败");
     }
     // 尝试编译 FFmpeg 根据当前 OS 和 arch
-    let complier_lib_path = path_resolve("ff-output".into());
+    let complier_lib_path = path_resolve(String::from("ff-output"));
     if !Path::new(&complier_lib_path).exists() {
       let mut task_complie_ffmpeg_lib = Command::new("sh");
       if cfg!(target_arch = "aarch64") {
