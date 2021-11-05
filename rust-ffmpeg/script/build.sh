@@ -30,7 +30,7 @@ cd ../source/FFmpeg
 --disable-outdevs \
 --disable-swresample \
 --disable-x86asm \
-–disable-shared \
+-–disable-shared \
 --disable-ffplay \
 --disable-hwaccels \
 --enable-protocol=file \
