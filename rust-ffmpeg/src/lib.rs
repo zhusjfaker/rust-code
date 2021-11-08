@@ -35,6 +35,55 @@ mod tests {
             .unwrap();
     }
 
+    /**
+     * 计算项目内部关于 ffmpeg 的静态库 文件
+     */
+    fn static_ffmpeg_lib() -> Vec<String> {
+        let mut list: Vec<String> = Vec::new();
+        let path = path_resolve("ff-output/lib".into());
+        let mut files = std::fs::read_dir(path).unwrap();
+        while let Some(file) = files.next() {
+            let name = file.unwrap().file_name().into_string().unwrap();
+            let extname = std::path::Path::new(&name)
+                .extension()
+                .and_then(std::ffi::OsStr::to_str);
+            if extname.unwrap_or("") == "a" {
+                list.push(name.replace(".a", "").replace("lib", ""));
+            }
+        }
+        return list;
+    }
+
+    /**
+     * 批量增加 rust 构建中 查询静态库的 路径 include
+     */
+    fn build_include_path(static_files: Vec<String>) {
+        for static_path in static_files.iter() {
+            println!("cargo:rustc-link-search=native={}", static_path);
+        }
+    }
+
+    /**
+     * 批量返回所有 项目 文件里 的绝对路径
+     */
+    fn calc_project_path(static_files: Vec<String>) -> Vec<String> {
+        let mut final_paths: Vec<String> = std::vec::Vec::new();
+        for static_path in static_files.iter() {
+            let static_file = path_resolve(String::from(static_path));
+            final_paths.push(static_file);
+        }
+        return final_paths;
+    }
+
+    /**
+     * 批量制定找寻的静态库 库名 libxx 则 -> xx 忽略前缀 lib
+     */
+    fn build_include_dll(static_libs: Vec<String>) {
+        for static_lib in static_libs.iter() {
+            println!("cargo:rustc-link-lib=static={}", static_lib);
+        }
+    }
+
     #[test]
     fn it_works() {
         assert_eq!(2 + 2, 4);
@@ -220,16 +269,26 @@ mod tests {
                 .status()
                 .expect("执行 ffmpeg 构建编译失败!");
         }
+        // 尝试生成 rust 定义
         let rs_lib_dir = "src/gen";
-        let rs_lib_file = format!("{}/ffmpeg.rs", rs_lib_dir);
-        let abs_rs_lib_dir = path_resolve(rs_lib_dir.to_string()).as_ref();
-        if !Path::new(abs_rs_lib_dir).exists() {
-
+        let rs_lib_file = format!("{}/ffmpeg.rs", rs_lib_dir.clone());
+        let abs_rs_lib_dir = path_resolve(rs_lib_dir.to_string());
+        if !Path::new(abs_rs_lib_dir.clone().as_str()).exists() {
+            std::fs::create_dir_all(abs_rs_lib_dir.clone().as_str()).unwrap();
         }
-
         let ffoutput_path = format!("{}/include/", complier_lib_path);
         if !Path::new(&rs_lib_file.to_string()).exists() {
             recursivefolder(ffoutput_path.as_ref(), rs_lib_file.as_ref());
         }
+        // 尝试 编译绑定生成的静态文件
+        let include_static_paths = vec!["ff-output/lib"];
+        build_include_path(calc_project_path(
+            include_static_paths
+                .into_iter()
+                .map(|s| s.to_owned())
+                .collect(),
+        ));
+        let lib_name_list = static_ffmpeg_lib();
+        build_include_dll(lib_name_list);
     }
 }
