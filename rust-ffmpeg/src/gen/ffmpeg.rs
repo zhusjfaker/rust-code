@@ -84,7 +84,20 @@ pub mod root {
     }
     #[allow(unused_imports)]
     use self::super::root;
-    pub const __WORDSIZE: u32 = 64;
+    pub const AV_HAVE_BIGENDIAN: u32 = 0;
+    pub const AV_HAVE_FAST_UNALIGNED: u32 = 0;
+    pub const LIBAVUTIL_VERSION_MAJOR: u32 = 57;
+    pub const LIBAVUTIL_VERSION_MINOR: u32 = 7;
+    pub const LIBAVUTIL_VERSION_MICRO: u32 = 100;
+    pub const LIBAVFILTER_VERSION_MAJOR: u32 = 8;
+    pub const LIBAVFILTER_VERSION_MINOR: u32 = 16;
+    pub const LIBAVFILTER_VERSION_MICRO: u32 = 101;
+    pub const FF_LAMBDA_SHIFT: u32 = 7;
+    pub const FF_LAMBDA_SCALE: u32 = 128;
+    pub const FF_QP2LAMBDA: u32 = 118;
+    pub const FF_LAMBDA_MAX: u32 = 32767;
+    pub const FF_QUALITY_SCALE: u32 = 128;
+    pub const AV_TIME_BASE: u32 = 1000000;
     pub const __DARWIN_ONLY_64_BIT_INO_T: u32 = 1;
     pub const __DARWIN_ONLY_UNIX_CONFORMANCE: u32 = 1;
     pub const __DARWIN_ONLY_VERS_1050: u32 = 1;
@@ -103,67 +116,6 @@ pub mod root {
     pub const _DARWIN_FEATURE_ONLY_VERS_1050: u32 = 1;
     pub const _DARWIN_FEATURE_ONLY_UNIX_CONFORMANCE: u32 = 1;
     pub const _DARWIN_FEATURE_UNIX_CONFORMANCE: u32 = 3;
-    pub const __PTHREAD_SIZE__: u32 = 8176;
-    pub const __PTHREAD_ATTR_SIZE__: u32 = 56;
-    pub const __PTHREAD_MUTEXATTR_SIZE__: u32 = 8;
-    pub const __PTHREAD_MUTEX_SIZE__: u32 = 56;
-    pub const __PTHREAD_CONDATTR_SIZE__: u32 = 8;
-    pub const __PTHREAD_COND_SIZE__: u32 = 40;
-    pub const __PTHREAD_ONCE_SIZE__: u32 = 8;
-    pub const __PTHREAD_RWLOCK_SIZE__: u32 = 192;
-    pub const __PTHREAD_RWLOCKATTR_SIZE__: u32 = 16;
-    pub const INT8_MAX: u32 = 127;
-    pub const INT16_MAX: u32 = 32767;
-    pub const INT32_MAX: u32 = 2147483647;
-    pub const INT64_MAX: u64 = 9223372036854775807;
-    pub const INT8_MIN: i32 = -128;
-    pub const INT16_MIN: i32 = -32768;
-    pub const INT32_MIN: i32 = -2147483648;
-    pub const INT64_MIN: i64 = -9223372036854775808;
-    pub const UINT8_MAX: u32 = 255;
-    pub const UINT16_MAX: u32 = 65535;
-    pub const UINT32_MAX: u32 = 4294967295;
-    pub const UINT64_MAX: i32 = -1;
-    pub const INT_LEAST8_MIN: i32 = -128;
-    pub const INT_LEAST16_MIN: i32 = -32768;
-    pub const INT_LEAST32_MIN: i32 = -2147483648;
-    pub const INT_LEAST64_MIN: i64 = -9223372036854775808;
-    pub const INT_LEAST8_MAX: u32 = 127;
-    pub const INT_LEAST16_MAX: u32 = 32767;
-    pub const INT_LEAST32_MAX: u32 = 2147483647;
-    pub const INT_LEAST64_MAX: u64 = 9223372036854775807;
-    pub const UINT_LEAST8_MAX: u32 = 255;
-    pub const UINT_LEAST16_MAX: u32 = 65535;
-    pub const UINT_LEAST32_MAX: u32 = 4294967295;
-    pub const UINT_LEAST64_MAX: i32 = -1;
-    pub const INT_FAST8_MIN: i32 = -128;
-    pub const INT_FAST16_MIN: i32 = -32768;
-    pub const INT_FAST32_MIN: i32 = -2147483648;
-    pub const INT_FAST64_MIN: i64 = -9223372036854775808;
-    pub const INT_FAST8_MAX: u32 = 127;
-    pub const INT_FAST16_MAX: u32 = 32767;
-    pub const INT_FAST32_MAX: u32 = 2147483647;
-    pub const INT_FAST64_MAX: u64 = 9223372036854775807;
-    pub const UINT_FAST8_MAX: u32 = 255;
-    pub const UINT_FAST16_MAX: u32 = 65535;
-    pub const UINT_FAST32_MAX: u32 = 4294967295;
-    pub const UINT_FAST64_MAX: i32 = -1;
-    pub const INTPTR_MAX: u64 = 9223372036854775807;
-    pub const INTPTR_MIN: i64 = -9223372036854775808;
-    pub const UINTPTR_MAX: i32 = -1;
-    pub const SIZE_MAX: i32 = -1;
-    pub const RSIZE_MAX: i32 = -1;
-    pub const WINT_MIN: i32 = -2147483648;
-    pub const WINT_MAX: u32 = 2147483647;
-    pub const SIG_ATOMIC_MIN: i32 = -2147483648;
-    pub const SIG_ATOMIC_MAX: u32 = 2147483647;
-    pub const AV_BUFFER_FLAG_READONLY: u32 = 1;
-    pub const FF_LAMBDA_SHIFT: u32 = 7;
-    pub const FF_LAMBDA_SCALE: u32 = 128;
-    pub const FF_QP2LAMBDA: u32 = 118;
-    pub const FF_LAMBDA_MAX: u32 = 32767;
-    pub const FF_QUALITY_SCALE: u32 = 128;
-    pub const AV_TIME_BASE: u32 = 1000000;
     pub const EPERM: u32 = 1;
     pub const ENOENT: u32 = 2;
     pub const ESRCH: u32 = 3;
@@ -622,8 +574,63 @@ pub mod root {
     pub const __DRIVERKIT_21_0: u32 = 210000;
     pub const __MAC_OS_X_VERSION_MAX_ALLOWED: u32 = 120000;
     pub const __ENABLE_LEGACY_MAC_AVAILABILITY: u32 = 1;
+    pub const __PTHREAD_SIZE__: u32 = 8176;
+    pub const __PTHREAD_ATTR_SIZE__: u32 = 56;
+    pub const __PTHREAD_MUTEXATTR_SIZE__: u32 = 8;
+    pub const __PTHREAD_MUTEX_SIZE__: u32 = 56;
+    pub const __PTHREAD_CONDATTR_SIZE__: u32 = 8;
+    pub const __PTHREAD_COND_SIZE__: u32 = 40;
+    pub const __PTHREAD_ONCE_SIZE__: u32 = 8;
+    pub const __PTHREAD_RWLOCK_SIZE__: u32 = 192;
+    pub const __PTHREAD_RWLOCKATTR_SIZE__: u32 = 16;
     pub const __DARWIN_WCHAR_MIN: i32 = -2147483648;
     pub const _FORTIFY_SOURCE: u32 = 2;
+    pub const __WORDSIZE: u32 = 64;
+    pub const INT8_MAX: u32 = 127;
+    pub const INT16_MAX: u32 = 32767;
+    pub const INT32_MAX: u32 = 2147483647;
+    pub const INT64_MAX: u64 = 9223372036854775807;
+    pub const INT8_MIN: i32 = -128;
+    pub const INT16_MIN: i32 = -32768;
+    pub const INT32_MIN: i32 = -2147483648;
+    pub const INT64_MIN: i64 = -9223372036854775808;
+    pub const UINT8_MAX: u32 = 255;
+    pub const UINT16_MAX: u32 = 65535;
+    pub const UINT32_MAX: u32 = 4294967295;
+    pub const UINT64_MAX: i32 = -1;
+    pub const INT_LEAST8_MIN: i32 = -128;
+    pub const INT_LEAST16_MIN: i32 = -32768;
+    pub const INT_LEAST32_MIN: i32 = -2147483648;
+    pub const INT_LEAST64_MIN: i64 = -9223372036854775808;
+    pub const INT_LEAST8_MAX: u32 = 127;
+    pub const INT_LEAST16_MAX: u32 = 32767;
+    pub const INT_LEAST32_MAX: u32 = 2147483647;
+    pub const INT_LEAST64_MAX: u64 = 9223372036854775807;
+    pub const UINT_LEAST8_MAX: u32 = 255;
+    pub const UINT_LEAST16_MAX: u32 = 65535;
+    pub const UINT_LEAST32_MAX: u32 = 4294967295;
+    pub const UINT_LEAST64_MAX: i32 = -1;
+    pub const INT_FAST8_MIN: i32 = -128;
+    pub const INT_FAST16_MIN: i32 = -32768;
+    pub const INT_FAST32_MIN: i32 = -2147483648;
+    pub const INT_FAST64_MIN: i64 = -9223372036854775808;
+    pub const INT_FAST8_MAX: u32 = 127;
+    pub const INT_FAST16_MAX: u32 = 32767;
+    pub const INT_FAST32_MAX: u32 = 2147483647;
+    pub const INT_FAST64_MAX: u64 = 9223372036854775807;
+    pub const UINT_FAST8_MAX: u32 = 255;
+    pub const UINT_FAST16_MAX: u32 = 65535;
+    pub const UINT_FAST32_MAX: u32 = 4294967295;
+    pub const UINT_FAST64_MAX: i32 = -1;
+    pub const INTPTR_MAX: u64 = 9223372036854775807;
+    pub const INTPTR_MIN: i64 = -9223372036854775808;
+    pub const UINTPTR_MAX: i32 = -1;
+    pub const SIZE_MAX: i32 = -1;
+    pub const RSIZE_MAX: i32 = -1;
+    pub const WINT_MIN: i32 = -2147483648;
+    pub const WINT_MAX: u32 = 2147483647;
+    pub const SIG_ATOMIC_MIN: i32 = -2147483648;
+    pub const SIG_ATOMIC_MAX: u32 = 2147483647;
     pub const __DARWIN_CLK_TCK: u32 = 100;
     pub const CHAR_BIT: u32 = 8;
     pub const MB_LEN_MAX: u32 = 6;
@@ -1010,11 +1017,6 @@ pub mod root {
     pub const EXIT_SUCCESS: u32 = 0;
     pub const RAND_MAX: u32 = 2147483647;
     pub const __HAS_FIXED_CHK_PROTOTYPES: u32 = 1;
-    pub const AV_HAVE_BIGENDIAN: u32 = 0;
-    pub const AV_HAVE_FAST_UNALIGNED: u32 = 0;
-    pub const LIBAVUTIL_VERSION_MAJOR: u32 = 57;
-    pub const LIBAVUTIL_VERSION_MINOR: u32 = 7;
-    pub const LIBAVUTIL_VERSION_MICRO: u32 = 100;
     pub const AVERROR_EXPERIMENTAL: i32 = -733130664;
     pub const AVERROR_INPUT_CHANGED: i32 = -1668179713;
     pub const AVERROR_OUTPUT_CHANGED: i32 = -1668179714;
@@ -1037,6 +1039,7 @@ pub mod root {
     pub const AVPALETTE_SIZE: u32 = 1024;
     pub const AVPALETTE_COUNT: u32 = 256;
     pub const AV_FOURCC_MAX_STRING_SIZE: u32 = 32;
+    pub const AV_BUFFER_FLAG_READONLY: u32 = 1;
     pub const AV_DICT_MATCH_CASE: u32 = 1;
     pub const AV_DICT_IGNORE_SUFFIX: u32 = 2;
     pub const AV_DICT_DONT_STRDUP_KEY: u32 = 4;
@@ -1051,6 +1054,17 @@ pub mod root {
     pub const FF_DECODE_ERROR_MISSING_REFERENCE: u32 = 2;
     pub const FF_DECODE_ERROR_CONCEALMENT_ACTIVE: u32 = 4;
     pub const FF_DECODE_ERROR_DECODE_SLICES: u32 = 8;
+    pub const AVFILTER_FLAG_DYNAMIC_INPUTS: u32 = 1;
+    pub const AVFILTER_FLAG_DYNAMIC_OUTPUTS: u32 = 2;
+    pub const AVFILTER_FLAG_SLICE_THREADS: u32 = 4;
+    pub const AVFILTER_FLAG_SUPPORT_TIMELINE_GENERIC: u32 = 65536;
+    pub const AVFILTER_FLAG_SUPPORT_TIMELINE_INTERNAL: u32 = 131072;
+    pub const AVFILTER_FLAG_SUPPORT_TIMELINE: u32 = 196608;
+    pub const AVFILTER_THREAD_SLICE: u32 = 1;
+    pub const AVFILTER_CMD_FLAG_ONE: u32 = 1;
+    pub const AVFILTER_CMD_FLAG_FAST: u32 = 2;
+    pub const AV_BUFFERSINK_FLAG_PEEK: u32 = 1;
+    pub const AV_BUFFERSINK_FLAG_NO_REQUEST: u32 = 2;
     pub const AV_DETECTION_BBOX_LABEL_NAME_MAX_SIZE: u32 = 64;
     pub const AV_NUM_DETECTION_BBOX_CLASSIFY: u32 = 4;
     pub const AV_BF_ROUNDS: u32 = 16;
@@ -1131,6 +1145,12 @@ pub mod root {
     pub const AV_CPU_FLAG_SETEND: u32 = 65536;
     pub const AV_CPU_FLAG_MMI: u32 = 1;
     pub const AV_CPU_FLAG_MSA: u32 = 2;
+    pub const AV_LZO_INPUT_DEPLETED: u32 = 1;
+    pub const AV_LZO_OUTPUT_FULL: u32 = 2;
+    pub const AV_LZO_INVALID_BACKPTR: u32 = 4;
+    pub const AV_LZO_ERROR: u32 = 8;
+    pub const AV_LZO_INPUT_PADDING: u32 = 8;
+    pub const AV_LZO_OUTPUT_PADDING: u32 = 12;
     pub const AV_CH_FRONT_LEFT: u32 = 1;
     pub const AV_CH_FRONT_RIGHT: u32 = 2;
     pub const AV_CH_FRONT_CENTER: u32 = 4;
@@ -1208,25 +1228,505 @@ pub mod root {
     pub const AES_CTR_IV_SIZE: u32 = 8;
     pub const AV_TS_MAX_STRING_SIZE: u32 = 32;
     pub const AV_HASH_MAX_SIZE: u32 = 64;
+    pub const LIBAVDEVICE_VERSION_MAJOR: u32 = 59;
+    pub const LIBAVDEVICE_VERSION_MINOR: u32 = 0;
+    pub const LIBAVDEVICE_VERSION_MICRO: u32 = 101;
+    pub const LIBAVCODEC_VERSION_MAJOR: u32 = 59;
+    pub const LIBAVCODEC_VERSION_MINOR: u32 = 12;
+    pub const LIBAVCODEC_VERSION_MICRO: u32 = 100;
+    pub const AV_CODEC_CAP_DRAW_HORIZ_BAND: u32 = 1;
+    pub const AV_CODEC_CAP_DR1: u32 = 2;
+    pub const AV_CODEC_CAP_TRUNCATED: u32 = 8;
+    pub const AV_CODEC_CAP_DELAY: u32 = 32;
+    pub const AV_CODEC_CAP_SMALL_LAST_FRAME: u32 = 64;
+    pub const AV_CODEC_CAP_SUBFRAMES: u32 = 256;
+    pub const AV_CODEC_CAP_EXPERIMENTAL: u32 = 512;
+    pub const AV_CODEC_CAP_CHANNEL_CONF: u32 = 1024;
+    pub const AV_CODEC_CAP_FRAME_THREADS: u32 = 4096;
+    pub const AV_CODEC_CAP_SLICE_THREADS: u32 = 8192;
+    pub const AV_CODEC_CAP_PARAM_CHANGE: u32 = 16384;
+    pub const AV_CODEC_CAP_OTHER_THREADS: u32 = 32768;
+    pub const AV_CODEC_CAP_AUTO_THREADS: u32 = 32768;
+    pub const AV_CODEC_CAP_VARIABLE_FRAME_SIZE: u32 = 65536;
+    pub const AV_CODEC_CAP_AVOID_PROBING: u32 = 131072;
+    pub const AV_CODEC_CAP_INTRA_ONLY: u32 = 1073741824;
+    pub const AV_CODEC_CAP_LOSSLESS: u32 = 2147483648;
+    pub const AV_CODEC_CAP_HARDWARE: u32 = 262144;
+    pub const AV_CODEC_CAP_HYBRID: u32 = 524288;
+    pub const AV_CODEC_CAP_ENCODER_REORDERED_OPAQUE: u32 = 1048576;
+    pub const AV_CODEC_CAP_ENCODER_FLUSH: u32 = 2097152;
+    pub const AV_INPUT_BUFFER_PADDING_SIZE: u32 = 64;
+    pub const AV_PKT_FLAG_KEY: u32 = 1;
+    pub const AV_PKT_FLAG_CORRUPT: u32 = 2;
+    pub const AV_PKT_FLAG_DISCARD: u32 = 4;
+    pub const AV_PKT_FLAG_TRUSTED: u32 = 8;
+    pub const AV_PKT_FLAG_DISPOSABLE: u32 = 16;
+    pub const LIBAVFORMAT_VERSION_MAJOR: u32 = 59;
+    pub const LIBAVFORMAT_VERSION_MINOR: u32 = 8;
+    pub const LIBAVFORMAT_VERSION_MICRO: u32 = 100;
+    pub const FF_API_R_FRAME_RATE: u32 = 1;
+    pub const AVIO_SEEKABLE_NORMAL: u32 = 1;
+    pub const AVIO_SEEKABLE_TIME: u32 = 2;
+    pub const AVSEEK_SIZE: u32 = 65536;
+    pub const AVSEEK_FORCE: u32 = 131072;
+    pub const AVIO_FLAG_READ: u32 = 1;
+    pub const AVIO_FLAG_WRITE: u32 = 2;
+    pub const AVIO_FLAG_READ_WRITE: u32 = 3;
+    pub const AVIO_FLAG_NONBLOCK: u32 = 8;
+    pub const AVIO_FLAG_DIRECT: u32 = 32768;
+    pub const AVPROBE_SCORE_EXTENSION: u32 = 50;
+    pub const AVPROBE_SCORE_MIME: u32 = 75;
+    pub const AVPROBE_SCORE_MAX: u32 = 100;
+    pub const AVPROBE_PADDING_SIZE: u32 = 32;
+    pub const AVFMT_NOFILE: u32 = 1;
+    pub const AVFMT_NEEDNUMBER: u32 = 2;
+    pub const AVFMT_SHOW_IDS: u32 = 8;
+    pub const AVFMT_GLOBALHEADER: u32 = 64;
+    pub const AVFMT_NOTIMESTAMPS: u32 = 128;
+    pub const AVFMT_GENERIC_INDEX: u32 = 256;
+    pub const AVFMT_TS_DISCONT: u32 = 512;
+    pub const AVFMT_VARIABLE_FPS: u32 = 1024;
+    pub const AVFMT_NODIMENSIONS: u32 = 2048;
+    pub const AVFMT_NOSTREAMS: u32 = 4096;
+    pub const AVFMT_NOBINSEARCH: u32 = 8192;
+    pub const AVFMT_NOGENSEARCH: u32 = 16384;
+    pub const AVFMT_NO_BYTE_SEEK: u32 = 32768;
+    pub const AVFMT_ALLOW_FLUSH: u32 = 65536;
+    pub const AVFMT_TS_NONSTRICT: u32 = 131072;
+    pub const AVFMT_TS_NEGATIVE: u32 = 262144;
+    pub const AVFMT_SEEK_TO_PTS: u32 = 67108864;
+    pub const AVINDEX_KEYFRAME: u32 = 1;
+    pub const AVINDEX_DISCARD_FRAME: u32 = 2;
+    pub const AV_DISPOSITION_DEFAULT: u32 = 1;
+    pub const AV_DISPOSITION_DUB: u32 = 2;
+    pub const AV_DISPOSITION_ORIGINAL: u32 = 4;
+    pub const AV_DISPOSITION_COMMENT: u32 = 8;
+    pub const AV_DISPOSITION_LYRICS: u32 = 16;
+    pub const AV_DISPOSITION_KARAOKE: u32 = 32;
+    pub const AV_DISPOSITION_FORCED: u32 = 64;
+    pub const AV_DISPOSITION_HEARING_IMPAIRED: u32 = 128;
+    pub const AV_DISPOSITION_VISUAL_IMPAIRED: u32 = 256;
+    pub const AV_DISPOSITION_CLEAN_EFFECTS: u32 = 512;
+    pub const AV_DISPOSITION_ATTACHED_PIC: u32 = 1024;
+    pub const AV_DISPOSITION_TIMED_THUMBNAILS: u32 = 2048;
+    pub const AV_DISPOSITION_CAPTIONS: u32 = 65536;
+    pub const AV_DISPOSITION_DESCRIPTIONS: u32 = 131072;
+    pub const AV_DISPOSITION_METADATA: u32 = 262144;
+    pub const AV_DISPOSITION_DEPENDENT: u32 = 524288;
+    pub const AV_DISPOSITION_STILL_IMAGE: u32 = 1048576;
+    pub const AV_PTS_WRAP_IGNORE: u32 = 0;
+    pub const AV_PTS_WRAP_ADD_OFFSET: u32 = 1;
+    pub const AV_PTS_WRAP_SUB_OFFSET: i32 = -1;
+    pub const AVSTREAM_EVENT_FLAG_METADATA_UPDATED: u32 = 1;
+    pub const AVSTREAM_EVENT_FLAG_NEW_PACKETS: u32 = 2;
+    pub const AV_PROGRAM_RUNNING: u32 = 1;
+    pub const AVFMTCTX_NOHEADER: u32 = 1;
+    pub const AVFMTCTX_UNSEEKABLE: u32 = 2;
+    pub const AVFMT_FLAG_GENPTS: u32 = 1;
+    pub const AVFMT_FLAG_IGNIDX: u32 = 2;
+    pub const AVFMT_FLAG_NONBLOCK: u32 = 4;
+    pub const AVFMT_FLAG_IGNDTS: u32 = 8;
+    pub const AVFMT_FLAG_NOFILLIN: u32 = 16;
+    pub const AVFMT_FLAG_NOPARSE: u32 = 32;
+    pub const AVFMT_FLAG_NOBUFFER: u32 = 64;
+    pub const AVFMT_FLAG_CUSTOM_IO: u32 = 128;
+    pub const AVFMT_FLAG_DISCARD_CORRUPT: u32 = 256;
+    pub const AVFMT_FLAG_FLUSH_PACKETS: u32 = 512;
+    pub const AVFMT_FLAG_BITEXACT: u32 = 1024;
+    pub const AVFMT_FLAG_SORT_DTS: u32 = 65536;
+    pub const AVFMT_FLAG_PRIV_OPT: u32 = 131072;
+    pub const AVFMT_FLAG_FAST_SEEK: u32 = 524288;
+    pub const AVFMT_FLAG_SHORTEST: u32 = 1048576;
+    pub const AVFMT_FLAG_AUTO_BSF: u32 = 2097152;
+    pub const FF_FDEBUG_TS: u32 = 1;
+    pub const AVFMT_EVENT_FLAG_METADATA_UPDATED: u32 = 1;
+    pub const AVFMT_AVOID_NEG_TS_AUTO: i32 = -1;
+    pub const AVFMT_AVOID_NEG_TS_MAKE_NON_NEGATIVE: u32 = 1;
+    pub const AVFMT_AVOID_NEG_TS_MAKE_ZERO: u32 = 2;
+    pub const AVSEEK_FLAG_BACKWARD: u32 = 1;
+    pub const AVSEEK_FLAG_BYTE: u32 = 2;
+    pub const AVSEEK_FLAG_ANY: u32 = 4;
+    pub const AVSEEK_FLAG_FRAME: u32 = 8;
+    pub const AVSTREAM_INIT_IN_WRITE_HEADER: u32 = 0;
+    pub const AVSTREAM_INIT_IN_INIT_OUTPUT: u32 = 1;
+    pub const AV_FRAME_FILENAME_FLAGS_MULTIPLE: u32 = 1;
+    pub const LIBSWSCALE_VERSION_MAJOR: u32 = 6;
+    pub const LIBSWSCALE_VERSION_MINOR: u32 = 1;
+    pub const LIBSWSCALE_VERSION_MICRO: u32 = 100;
+    pub const SWS_FAST_BILINEAR: u32 = 1;
+    pub const SWS_BILINEAR: u32 = 2;
+    pub const SWS_BICUBIC: u32 = 4;
+    pub const SWS_X: u32 = 8;
+    pub const SWS_POINT: u32 = 16;
+    pub const SWS_AREA: u32 = 32;
+    pub const SWS_BICUBLIN: u32 = 64;
+    pub const SWS_GAUSS: u32 = 128;
+    pub const SWS_SINC: u32 = 256;
+    pub const SWS_LANCZOS: u32 = 512;
+    pub const SWS_SPLINE: u32 = 1024;
+    pub const SWS_SRC_V_CHR_DROP_MASK: u32 = 196608;
+    pub const SWS_SRC_V_CHR_DROP_SHIFT: u32 = 16;
+    pub const SWS_PARAM_DEFAULT: u32 = 123456;
+    pub const SWS_PRINT_INFO: u32 = 4096;
+    pub const SWS_FULL_CHR_H_INT: u32 = 8192;
+    pub const SWS_FULL_CHR_H_INP: u32 = 16384;
+    pub const SWS_DIRECT_BGR: u32 = 32768;
+    pub const SWS_ACCURATE_RND: u32 = 262144;
+    pub const SWS_BITEXACT: u32 = 524288;
+    pub const SWS_ERROR_DIFFUSION: u32 = 8388608;
+    pub const SWS_MAX_REDUCE_CUTOFF: f64 = 0.002;
+    pub const SWS_CS_ITU709: u32 = 1;
+    pub const SWS_CS_FCC: u32 = 4;
+    pub const SWS_CS_ITU601: u32 = 5;
+    pub const SWS_CS_ITU624: u32 = 5;
+    pub const SWS_CS_SMPTE170M: u32 = 5;
+    pub const SWS_CS_SMPTE240M: u32 = 7;
+    pub const SWS_CS_DEFAULT: u32 = 5;
+    pub const SWS_CS_BT2020: u32 = 9;
+    pub const AV_AAC_ADTS_HEADER_SIZE: u32 = 7;
+    pub const AV_CODEC_PROP_INTRA_ONLY: u32 = 1;
+    pub const AV_CODEC_PROP_LOSSY: u32 = 2;
+    pub const AV_CODEC_PROP_LOSSLESS: u32 = 4;
+    pub const AV_CODEC_PROP_REORDER: u32 = 8;
+    pub const AV_CODEC_PROP_BITMAP_SUB: u32 = 65536;
+    pub const AV_CODEC_PROP_TEXT_SUB: u32 = 131072;
+    pub const AV_INPUT_BUFFER_MIN_SIZE: u32 = 16384;
+    pub const AV_CODEC_FLAG_UNALIGNED: u32 = 1;
+    pub const AV_CODEC_FLAG_QSCALE: u32 = 2;
+    pub const AV_CODEC_FLAG_4MV: u32 = 4;
+    pub const AV_CODEC_FLAG_OUTPUT_CORRUPT: u32 = 8;
+    pub const AV_CODEC_FLAG_QPEL: u32 = 16;
+    pub const AV_CODEC_FLAG_DROPCHANGED: u32 = 32;
+    pub const AV_CODEC_FLAG_PASS1: u32 = 512;
+    pub const AV_CODEC_FLAG_PASS2: u32 = 1024;
+    pub const AV_CODEC_FLAG_LOOP_FILTER: u32 = 2048;
+    pub const AV_CODEC_FLAG_GRAY: u32 = 8192;
+    pub const AV_CODEC_FLAG_PSNR: u32 = 32768;
+    pub const AV_CODEC_FLAG_TRUNCATED: u32 = 65536;
+    pub const AV_CODEC_FLAG_INTERLACED_DCT: u32 = 262144;
+    pub const AV_CODEC_FLAG_LOW_DELAY: u32 = 524288;
+    pub const AV_CODEC_FLAG_GLOBAL_HEADER: u32 = 4194304;
+    pub const AV_CODEC_FLAG_BITEXACT: u32 = 8388608;
+    pub const AV_CODEC_FLAG_AC_PRED: u32 = 16777216;
+    pub const AV_CODEC_FLAG_INTERLACED_ME: u32 = 536870912;
+    pub const AV_CODEC_FLAG_CLOSED_GOP: u32 = 2147483648;
+    pub const AV_CODEC_FLAG2_FAST: u32 = 1;
+    pub const AV_CODEC_FLAG2_NO_OUTPUT: u32 = 4;
+    pub const AV_CODEC_FLAG2_LOCAL_HEADER: u32 = 8;
+    pub const AV_CODEC_FLAG2_DROP_FRAME_TIMECODE: u32 = 8192;
+    pub const AV_CODEC_FLAG2_CHUNKS: u32 = 32768;
+    pub const AV_CODEC_FLAG2_IGNORE_CROP: u32 = 65536;
+    pub const AV_CODEC_FLAG2_SHOW_ALL: u32 = 4194304;
+    pub const AV_CODEC_FLAG2_EXPORT_MVS: u32 = 268435456;
+    pub const AV_CODEC_FLAG2_SKIP_MANUAL: u32 = 536870912;
+    pub const AV_CODEC_FLAG2_RO_FLUSH_NOOP: u32 = 1073741824;
+    pub const AV_CODEC_EXPORT_DATA_MVS: u32 = 1;
+    pub const AV_CODEC_EXPORT_DATA_PRFT: u32 = 2;
+    pub const AV_CODEC_EXPORT_DATA_VIDEO_ENC_PARAMS: u32 = 4;
+    pub const AV_CODEC_EXPORT_DATA_FILM_GRAIN: u32 = 8;
+    pub const AV_GET_BUFFER_FLAG_REF: u32 = 1;
+    pub const AV_GET_ENCODE_BUFFER_FLAG_REF: u32 = 1;
+    pub const FF_COMPRESSION_DEFAULT: i32 = -1;
+    pub const FF_CMP_SAD: u32 = 0;
+    pub const FF_CMP_SSE: u32 = 1;
+    pub const FF_CMP_SATD: u32 = 2;
+    pub const FF_CMP_DCT: u32 = 3;
+    pub const FF_CMP_PSNR: u32 = 4;
+    pub const FF_CMP_BIT: u32 = 5;
+    pub const FF_CMP_RD: u32 = 6;
+    pub const FF_CMP_ZERO: u32 = 7;
+    pub const FF_CMP_VSAD: u32 = 8;
+    pub const FF_CMP_VSSE: u32 = 9;
+    pub const FF_CMP_NSSE: u32 = 10;
+    pub const FF_CMP_W53: u32 = 11;
+    pub const FF_CMP_W97: u32 = 12;
+    pub const FF_CMP_DCTMAX: u32 = 13;
+    pub const FF_CMP_DCT264: u32 = 14;
+    pub const FF_CMP_MEDIAN_SAD: u32 = 15;
+    pub const FF_CMP_CHROMA: u32 = 256;
+    pub const SLICE_FLAG_CODED_ORDER: u32 = 1;
+    pub const SLICE_FLAG_ALLOW_FIELD: u32 = 2;
+    pub const SLICE_FLAG_ALLOW_PLANE: u32 = 4;
+    pub const FF_MB_DECISION_SIMPLE: u32 = 0;
+    pub const FF_MB_DECISION_BITS: u32 = 1;
+    pub const FF_MB_DECISION_RD: u32 = 2;
+    pub const FF_BUG_AUTODETECT: u32 = 1;
+    pub const FF_BUG_XVID_ILACE: u32 = 4;
+    pub const FF_BUG_UMP4: u32 = 8;
+    pub const FF_BUG_NO_PADDING: u32 = 16;
+    pub const FF_BUG_AMV: u32 = 32;
+    pub const FF_BUG_QPEL_CHROMA: u32 = 64;
+    pub const FF_BUG_STD_QPEL: u32 = 128;
+    pub const FF_BUG_QPEL_CHROMA2: u32 = 256;
+    pub const FF_BUG_DIRECT_BLOCKSIZE: u32 = 512;
+    pub const FF_BUG_EDGE: u32 = 1024;
+    pub const FF_BUG_HPEL_CHROMA: u32 = 2048;
+    pub const FF_BUG_DC_CLIP: u32 = 4096;
+    pub const FF_BUG_MS: u32 = 8192;
+    pub const FF_BUG_TRUNCATED: u32 = 16384;
+    pub const FF_BUG_IEDGE: u32 = 32768;
+    pub const FF_COMPLIANCE_VERY_STRICT: u32 = 2;
+    pub const FF_COMPLIANCE_STRICT: u32 = 1;
+    pub const FF_COMPLIANCE_NORMAL: u32 = 0;
+    pub const FF_COMPLIANCE_UNOFFICIAL: i32 = -1;
+    pub const FF_COMPLIANCE_EXPERIMENTAL: i32 = -2;
+    pub const FF_EC_GUESS_MVS: u32 = 1;
+    pub const FF_EC_DEBLOCK: u32 = 2;
+    pub const FF_EC_FAVOR_INTER: u32 = 256;
+    pub const FF_DEBUG_PICT_INFO: u32 = 1;
+    pub const FF_DEBUG_RC: u32 = 2;
+    pub const FF_DEBUG_BITSTREAM: u32 = 4;
+    pub const FF_DEBUG_MB_TYPE: u32 = 8;
+    pub const FF_DEBUG_QP: u32 = 16;
+    pub const FF_DEBUG_DCT_COEFF: u32 = 64;
+    pub const FF_DEBUG_SKIP: u32 = 128;
+    pub const FF_DEBUG_STARTCODE: u32 = 256;
+    pub const FF_DEBUG_ER: u32 = 1024;
+    pub const FF_DEBUG_MMCO: u32 = 2048;
+    pub const FF_DEBUG_BUGS: u32 = 4096;
+    pub const FF_DEBUG_BUFFERS: u32 = 32768;
+    pub const FF_DEBUG_THREADS: u32 = 65536;
+    pub const FF_DEBUG_GREEN_MD: u32 = 8388608;
+    pub const FF_DEBUG_NOMC: u32 = 16777216;
+    pub const AV_EF_CRCCHECK: u32 = 1;
+    pub const AV_EF_BITSTREAM: u32 = 2;
+    pub const AV_EF_BUFFER: u32 = 4;
+    pub const AV_EF_EXPLODE: u32 = 8;
+    pub const AV_EF_IGNORE_ERR: u32 = 32768;
+    pub const AV_EF_CAREFUL: u32 = 65536;
+    pub const AV_EF_COMPLIANT: u32 = 131072;
+    pub const AV_EF_AGGRESSIVE: u32 = 262144;
+    pub const FF_DCT_AUTO: u32 = 0;
+    pub const FF_DCT_FASTINT: u32 = 1;
+    pub const FF_DCT_INT: u32 = 2;
+    pub const FF_DCT_MMX: u32 = 3;
+    pub const FF_DCT_ALTIVEC: u32 = 5;
+    pub const FF_DCT_FAAN: u32 = 6;
+    pub const FF_IDCT_AUTO: u32 = 0;
+    pub const FF_IDCT_INT: u32 = 1;
+    pub const FF_IDCT_SIMPLE: u32 = 2;
+    pub const FF_IDCT_SIMPLEMMX: u32 = 3;
+    pub const FF_IDCT_ARM: u32 = 7;
+    pub const FF_IDCT_ALTIVEC: u32 = 8;
+    pub const FF_IDCT_SIMPLEARM: u32 = 10;
+    pub const FF_IDCT_XVID: u32 = 14;
+    pub const FF_IDCT_SIMPLEARMV5TE: u32 = 16;
+    pub const FF_IDCT_SIMPLEARMV6: u32 = 17;
+    pub const FF_IDCT_FAAN: u32 = 20;
+    pub const FF_IDCT_SIMPLENEON: u32 = 22;
+    pub const FF_IDCT_NONE: u32 = 24;
+    pub const FF_IDCT_SIMPLEAUTO: u32 = 128;
+    pub const FF_THREAD_FRAME: u32 = 1;
+    pub const FF_THREAD_SLICE: u32 = 2;
+    pub const FF_PROFILE_UNKNOWN: i32 = -99;
+    pub const FF_PROFILE_RESERVED: i32 = -100;
+    pub const FF_PROFILE_AAC_MAIN: u32 = 0;
+    pub const FF_PROFILE_AAC_LOW: u32 = 1;
+    pub const FF_PROFILE_AAC_SSR: u32 = 2;
+    pub const FF_PROFILE_AAC_LTP: u32 = 3;
+    pub const FF_PROFILE_AAC_HE: u32 = 4;
+    pub const FF_PROFILE_AAC_HE_V2: u32 = 28;
+    pub const FF_PROFILE_AAC_LD: u32 = 22;
+    pub const FF_PROFILE_AAC_ELD: u32 = 38;
+    pub const FF_PROFILE_MPEG2_AAC_LOW: u32 = 128;
+    pub const FF_PROFILE_MPEG2_AAC_HE: u32 = 131;
+    pub const FF_PROFILE_DNXHD: u32 = 0;
+    pub const FF_PROFILE_DNXHR_LB: u32 = 1;
+    pub const FF_PROFILE_DNXHR_SQ: u32 = 2;
+    pub const FF_PROFILE_DNXHR_HQ: u32 = 3;
+    pub const FF_PROFILE_DNXHR_HQX: u32 = 4;
+    pub const FF_PROFILE_DNXHR_444: u32 = 5;
+    pub const FF_PROFILE_DTS: u32 = 20;
+    pub const FF_PROFILE_DTS_ES: u32 = 30;
+    pub const FF_PROFILE_DTS_96_24: u32 = 40;
+    pub const FF_PROFILE_DTS_HD_HRA: u32 = 50;
+    pub const FF_PROFILE_DTS_HD_MA: u32 = 60;
+    pub const FF_PROFILE_DTS_EXPRESS: u32 = 70;
+    pub const FF_PROFILE_MPEG2_422: u32 = 0;
+    pub const FF_PROFILE_MPEG2_HIGH: u32 = 1;
+    pub const FF_PROFILE_MPEG2_SS: u32 = 2;
+    pub const FF_PROFILE_MPEG2_SNR_SCALABLE: u32 = 3;
+    pub const FF_PROFILE_MPEG2_MAIN: u32 = 4;
+    pub const FF_PROFILE_MPEG2_SIMPLE: u32 = 5;
+    pub const FF_PROFILE_H264_CONSTRAINED: u32 = 512;
+    pub const FF_PROFILE_H264_INTRA: u32 = 2048;
+    pub const FF_PROFILE_H264_BASELINE: u32 = 66;
+    pub const FF_PROFILE_H264_CONSTRAINED_BASELINE: u32 = 578;
+    pub const FF_PROFILE_H264_MAIN: u32 = 77;
+    pub const FF_PROFILE_H264_EXTENDED: u32 = 88;
+    pub const FF_PROFILE_H264_HIGH: u32 = 100;
+    pub const FF_PROFILE_H264_HIGH_10: u32 = 110;
+    pub const FF_PROFILE_H264_HIGH_10_INTRA: u32 = 2158;
+    pub const FF_PROFILE_H264_MULTIVIEW_HIGH: u32 = 118;
+    pub const FF_PROFILE_H264_HIGH_422: u32 = 122;
+    pub const FF_PROFILE_H264_HIGH_422_INTRA: u32 = 2170;
+    pub const FF_PROFILE_H264_STEREO_HIGH: u32 = 128;
+    pub const FF_PROFILE_H264_HIGH_444: u32 = 144;
+    pub const FF_PROFILE_H264_HIGH_444_PREDICTIVE: u32 = 244;
+    pub const FF_PROFILE_H264_HIGH_444_INTRA: u32 = 2292;
+    pub const FF_PROFILE_H264_CAVLC_444: u32 = 44;
+    pub const FF_PROFILE_VC1_SIMPLE: u32 = 0;
+    pub const FF_PROFILE_VC1_MAIN: u32 = 1;
+    pub const FF_PROFILE_VC1_COMPLEX: u32 = 2;
+    pub const FF_PROFILE_VC1_ADVANCED: u32 = 3;
+    pub const FF_PROFILE_MPEG4_SIMPLE: u32 = 0;
+    pub const FF_PROFILE_MPEG4_SIMPLE_SCALABLE: u32 = 1;
+    pub const FF_PROFILE_MPEG4_CORE: u32 = 2;
+    pub const FF_PROFILE_MPEG4_MAIN: u32 = 3;
+    pub const FF_PROFILE_MPEG4_N_BIT: u32 = 4;
+    pub const FF_PROFILE_MPEG4_SCALABLE_TEXTURE: u32 = 5;
+    pub const FF_PROFILE_MPEG4_SIMPLE_FACE_ANIMATION: u32 = 6;
+    pub const FF_PROFILE_MPEG4_BASIC_ANIMATED_TEXTURE: u32 = 7;
+    pub const FF_PROFILE_MPEG4_HYBRID: u32 = 8;
+    pub const FF_PROFILE_MPEG4_ADVANCED_REAL_TIME: u32 = 9;
+    pub const FF_PROFILE_MPEG4_CORE_SCALABLE: u32 = 10;
+    pub const FF_PROFILE_MPEG4_ADVANCED_CODING: u32 = 11;
+    pub const FF_PROFILE_MPEG4_ADVANCED_CORE: u32 = 12;
+    pub const FF_PROFILE_MPEG4_ADVANCED_SCALABLE_TEXTURE: u32 = 13;
+    pub const FF_PROFILE_MPEG4_SIMPLE_STUDIO: u32 = 14;
+    pub const FF_PROFILE_MPEG4_ADVANCED_SIMPLE: u32 = 15;
+    pub const FF_PROFILE_JPEG2000_CSTREAM_RESTRICTION_0: u32 = 1;
+    pub const FF_PROFILE_JPEG2000_CSTREAM_RESTRICTION_1: u32 = 2;
+    pub const FF_PROFILE_JPEG2000_CSTREAM_NO_RESTRICTION: u32 = 32768;
+    pub const FF_PROFILE_JPEG2000_DCINEMA_2K: u32 = 3;
+    pub const FF_PROFILE_JPEG2000_DCINEMA_4K: u32 = 4;
+    pub const FF_PROFILE_VP9_0: u32 = 0;
+    pub const FF_PROFILE_VP9_1: u32 = 1;
+    pub const FF_PROFILE_VP9_2: u32 = 2;
+    pub const FF_PROFILE_VP9_3: u32 = 3;
+    pub const FF_PROFILE_HEVC_MAIN: u32 = 1;
+    pub const FF_PROFILE_HEVC_MAIN_10: u32 = 2;
+    pub const FF_PROFILE_HEVC_MAIN_STILL_PICTURE: u32 = 3;
+    pub const FF_PROFILE_HEVC_REXT: u32 = 4;
+    pub const FF_PROFILE_VVC_MAIN_10: u32 = 1;
+    pub const FF_PROFILE_VVC_MAIN_10_444: u32 = 33;
+    pub const FF_PROFILE_AV1_MAIN: u32 = 0;
+    pub const FF_PROFILE_AV1_HIGH: u32 = 1;
+    pub const FF_PROFILE_AV1_PROFESSIONAL: u32 = 2;
+    pub const FF_PROFILE_MJPEG_HUFFMAN_BASELINE_DCT: u32 = 192;
+    pub const FF_PROFILE_MJPEG_HUFFMAN_EXTENDED_SEQUENTIAL_DCT: u32 = 193;
+    pub const FF_PROFILE_MJPEG_HUFFMAN_PROGRESSIVE_DCT: u32 = 194;
+    pub const FF_PROFILE_MJPEG_HUFFMAN_LOSSLESS: u32 = 195;
+    pub const FF_PROFILE_MJPEG_JPEG_LS: u32 = 247;
+    pub const FF_PROFILE_SBC_MSBC: u32 = 1;
+    pub const FF_PROFILE_PRORES_PROXY: u32 = 0;
+    pub const FF_PROFILE_PRORES_LT: u32 = 1;
+    pub const FF_PROFILE_PRORES_STANDARD: u32 = 2;
+    pub const FF_PROFILE_PRORES_HQ: u32 = 3;
+    pub const FF_PROFILE_PRORES_4444: u32 = 4;
+    pub const FF_PROFILE_PRORES_XQ: u32 = 5;
+    pub const FF_PROFILE_ARIB_PROFILE_A: u32 = 0;
+    pub const FF_PROFILE_ARIB_PROFILE_C: u32 = 1;
+    pub const FF_PROFILE_KLVA_SYNC: u32 = 0;
+    pub const FF_PROFILE_KLVA_ASYNC: u32 = 1;
+    pub const FF_LEVEL_UNKNOWN: i32 = -99;
+    pub const FF_SUB_CHARENC_MODE_DO_NOTHING: i32 = -1;
+    pub const FF_SUB_CHARENC_MODE_AUTOMATIC: u32 = 0;
+    pub const FF_SUB_CHARENC_MODE_PRE_DECODER: u32 = 1;
+    pub const FF_SUB_CHARENC_MODE_IGNORE: u32 = 2;
+    pub const FF_DEBUG_VIS_MV_P_FOR: u32 = 1;
+    pub const FF_DEBUG_VIS_MV_B_FOR: u32 = 2;
+    pub const FF_DEBUG_VIS_MV_B_BACK: u32 = 4;
+    pub const FF_CODEC_PROPERTY_LOSSLESS: u32 = 1;
+    pub const FF_CODEC_PROPERTY_CLOSED_CAPTIONS: u32 = 2;
+    pub const FF_CODEC_PROPERTY_FILM_GRAIN: u32 = 4;
+    pub const FF_SUB_TEXT_FMT_ASS: u32 = 0;
+    pub const AV_HWACCEL_CODEC_CAP_EXPERIMENTAL: u32 = 512;
+    pub const AV_HWACCEL_FLAG_IGNORE_LEVEL: u32 = 1;
+    pub const AV_HWACCEL_FLAG_ALLOW_HIGH_DEPTH: u32 = 2;
+    pub const AV_HWACCEL_FLAG_ALLOW_PROFILE_MISMATCH: u32 = 4;
+    pub const AV_SUBTITLE_FLAG_FORCED: u32 = 1;
+    pub const AV_PARSER_PTS_NB: u32 = 4;
+    pub const PARSER_FLAG_COMPLETE_FRAMES: u32 = 1;
+    pub const PARSER_FLAG_ONCE: u32 = 2;
+    pub const PARSER_FLAG_FETCHED_OFFSET: u32 = 4;
+    pub const PARSER_FLAG_USE_CODEC_TS: u32 = 4096;
+    pub const MAX_DWT_LEVELS: u32 = 5;
+    pub const VORBIS_FLAG_HEADER: u32 = 1;
+    pub const VORBIS_FLAG_COMMENT: u32 = 2;
+    pub const VORBIS_FLAG_SETUP: u32 = 4;
+    pub const DV_PROFILE_BYTES: u32 = 480;
+    pub const LIBSWRESAMPLE_VERSION_MAJOR: u32 = 4;
+    pub const LIBSWRESAMPLE_VERSION_MINOR: u32 = 0;
+    pub const LIBSWRESAMPLE_VERSION_MICRO: u32 = 100;
+    pub const SWR_FLAG_RESAMPLE: u32 = 1;
     pub type size_t = ::std::os::raw::c_ulong;
     pub type wchar_t = ::std::os::raw::c_int;
     pub type max_align_t = f64;
-    pub type int_least8_t = i8;
-    pub type int_least16_t = i16;
-    pub type int_least32_t = i32;
-    pub type int_least64_t = i64;
-    pub type uint_least8_t = u8;
-    pub type uint_least16_t = u16;
-    pub type uint_least32_t = u32;
-    pub type uint_least64_t = u64;
-    pub type int_fast8_t = i8;
-    pub type int_fast16_t = i16;
-    pub type int_fast32_t = i32;
-    pub type int_fast64_t = i64;
-    pub type uint_fast8_t = u8;
-    pub type uint_fast16_t = u16;
-    pub type uint_fast32_t = u32;
-    pub type uint_fast64_t = u64;
+    extern "C" {
+        #[doc = " Return the LIBAVUTIL_VERSION_INT constant."]
+        pub fn avutil_version() -> ::std::os::raw::c_uint;
+    }
+    extern "C" {
+        #[doc = " Return an informative version string. This usually is the actual release"]
+        #[doc = " version number or a git commit description. This string has no fixed format"]
+        #[doc = " and can change any time. It should never be parsed by code."]
+        pub fn av_version_info() -> *const ::std::os::raw::c_char;
+    }
+    extern "C" {
+        #[doc = " Return the libavutil build-time configuration."]
+        pub fn avutil_configuration() -> *const ::std::os::raw::c_char;
+    }
+    extern "C" {
+        #[doc = " Return the libavutil license."]
+        pub fn avutil_license() -> *const ::std::os::raw::c_char;
+    }
+    #[doc = "< Usually treated as AVMEDIA_TYPE_DATA"]
+    pub const AVMediaType_AVMEDIA_TYPE_UNKNOWN: root::AVMediaType = -1;
+    pub const AVMediaType_AVMEDIA_TYPE_VIDEO: root::AVMediaType = 0;
+    pub const AVMediaType_AVMEDIA_TYPE_AUDIO: root::AVMediaType = 1;
+    #[doc = "< Opaque data information usually continuous"]
+    pub const AVMediaType_AVMEDIA_TYPE_DATA: root::AVMediaType = 2;
+    pub const AVMediaType_AVMEDIA_TYPE_SUBTITLE: root::AVMediaType = 3;
+    #[doc = "< Opaque data information usually sparse"]
+    pub const AVMediaType_AVMEDIA_TYPE_ATTACHMENT: root::AVMediaType = 4;
+    pub const AVMediaType_AVMEDIA_TYPE_NB: root::AVMediaType = 5;
+    #[doc = " @addtogroup lavu_media Media Type"]
+    #[doc = " @brief Media Type"]
+    pub type AVMediaType = ::std::os::raw::c_int;
+    extern "C" {
+        #[doc = " Return a string describing the media_type enum, NULL if media_type"]
+        #[doc = " is unknown."]
+        pub fn av_get_media_type_string(
+            media_type: root::AVMediaType,
+        ) -> *const ::std::os::raw::c_char;
+    }
+    #[doc = "< Undefined"]
+    pub const AVPictureType_AV_PICTURE_TYPE_NONE: root::AVPictureType = 0;
+    #[doc = "< Intra"]
+    pub const AVPictureType_AV_PICTURE_TYPE_I: root::AVPictureType = 1;
+    #[doc = "< Predicted"]
+    pub const AVPictureType_AV_PICTURE_TYPE_P: root::AVPictureType = 2;
+    #[doc = "< Bi-dir predicted"]
+    pub const AVPictureType_AV_PICTURE_TYPE_B: root::AVPictureType = 3;
+    #[doc = "< S(GMC)-VOP MPEG-4"]
+    pub const AVPictureType_AV_PICTURE_TYPE_S: root::AVPictureType = 4;
+    #[doc = "< Switching Intra"]
+    pub const AVPictureType_AV_PICTURE_TYPE_SI: root::AVPictureType = 5;
+    #[doc = "< Switching Predicted"]
+    pub const AVPictureType_AV_PICTURE_TYPE_SP: root::AVPictureType = 6;
+    #[doc = "< BI type"]
+    pub const AVPictureType_AV_PICTURE_TYPE_BI: root::AVPictureType = 7;
+    #[doc = " @}"]
+    #[doc = " @}"]
+    #[doc = " @defgroup lavu_picture Image related"]
+    #[doc = ""]
+    #[doc = " AVPicture types, pixel formats and basic image planes manipulation."]
+    #[doc = ""]
+    #[doc = " @{"]
+    pub type AVPictureType = ::std::os::raw::c_uint;
+    extern "C" {
+        #[doc = " Return a single letter to describe the given picture type"]
+        #[doc = " pict_type."]
+        #[doc = ""]
+        #[doc = " @param[in] pict_type the picture type @return a single character"]
+        #[doc = " representing the picture type, '?' if pict_type is unknown"]
+        pub fn av_get_picture_type_char(pict_type: root::AVPictureType) -> ::std::os::raw::c_char;
+    }
+    pub type errno_t = ::std::os::raw::c_int;
+    extern "C" {
+        pub fn __error() -> *mut ::std::os::raw::c_int;
+    }
     pub type __int8_t = ::std::os::raw::c_schar;
     pub type __uint8_t = ::std::os::raw::c_uchar;
     pub type __int16_t = ::std::os::raw::c_short;
@@ -1411,6 +1911,25 @@ pub mod root {
     pub type __darwin_pthread_rwlock_t = root::_opaque_pthread_rwlock_t;
     pub type __darwin_pthread_rwlockattr_t = root::_opaque_pthread_rwlockattr_t;
     pub type __darwin_pthread_t = *mut root::_opaque_pthread_t;
+    pub type __darwin_nl_item = ::std::os::raw::c_int;
+    pub type __darwin_wctrans_t = ::std::os::raw::c_int;
+    pub type __darwin_wctype_t = root::__uint32_t;
+    pub type int_least8_t = i8;
+    pub type int_least16_t = i16;
+    pub type int_least32_t = i32;
+    pub type int_least64_t = i64;
+    pub type uint_least8_t = u8;
+    pub type uint_least16_t = u16;
+    pub type uint_least32_t = u32;
+    pub type uint_least64_t = u64;
+    pub type int_fast8_t = i8;
+    pub type int_fast16_t = i16;
+    pub type int_fast32_t = i32;
+    pub type int_fast64_t = i64;
+    pub type uint_fast8_t = u8;
+    pub type uint_fast16_t = u16;
+    pub type uint_fast32_t = u32;
+    pub type uint_fast64_t = u64;
     pub type u_int8_t = ::std::os::raw::c_uchar;
     pub type u_int16_t = ::std::os::raw::c_ushort;
     pub type u_int32_t = ::std::os::raw::c_uint;
@@ -1426,306 +1945,6 @@ pub mod root {
     pub type syscall_arg_t = root::u_int64_t;
     pub type intmax_t = ::std::os::raw::c_long;
     pub type uintmax_t = ::std::os::raw::c_ulong;
-    #[repr(C)]
-    #[derive(Debug, Copy, Clone)]
-    pub struct AVBuffer {
-        _unused: [u8; 0],
-    }
-    #[doc = " A reference to a data buffer."]
-    #[doc = ""]
-    #[doc = " The size of this struct is not a part of the public ABI and it is not meant"]
-    #[doc = " to be allocated directly."]
-    #[repr(C)]
-    #[derive(Debug, Copy, Clone)]
-    pub struct AVBufferRef {
-        pub buffer: *mut root::AVBuffer,
-        #[doc = " The data buffer. It is considered writable if and only if"]
-        #[doc = " this is the only reference to the buffer, in which case"]
-        #[doc = " av_buffer_is_writable() returns 1."]
-        pub data: *mut u8,
-        #[doc = " Size of data in bytes."]
-        pub size: root::size_t,
-    }
-    impl Default for AVBufferRef {
-        fn default() -> Self {
-            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
-            unsafe {
-                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
-                s.assume_init()
-            }
-        }
-    }
-    extern "C" {
-        #[doc = " Allocate an AVBuffer of the given size using av_malloc()."]
-        #[doc = ""]
-        #[doc = " @return an AVBufferRef of given size or NULL when out of memory"]
-        pub fn av_buffer_alloc(size: root::size_t) -> *mut root::AVBufferRef;
-    }
-    extern "C" {
-        #[doc = " Same as av_buffer_alloc(), except the returned buffer will be initialized"]
-        #[doc = " to zero."]
-        pub fn av_buffer_allocz(size: root::size_t) -> *mut root::AVBufferRef;
-    }
-    extern "C" {
-        #[doc = " Create an AVBuffer from an existing array."]
-        #[doc = ""]
-        #[doc = " If this function is successful, data is owned by the AVBuffer. The caller may"]
-        #[doc = " only access data through the returned AVBufferRef and references derived from"]
-        #[doc = " it."]
-        #[doc = " If this function fails, data is left untouched."]
-        #[doc = " @param data   data array"]
-        #[doc = " @param size   size of data in bytes"]
-        #[doc = " @param free   a callback for freeing this buffer's data"]
-        #[doc = " @param opaque parameter to be got for processing or passed to free"]
-        #[doc = " @param flags  a combination of AV_BUFFER_FLAG_*"]
-        #[doc = ""]
-        #[doc = " @return an AVBufferRef referring to data on success, NULL on failure."]
-        pub fn av_buffer_create(
-            data: *mut u8,
-            size: root::size_t,
-            free: ::std::option::Option<
-                unsafe extern "C" fn(opaque: *mut ::std::os::raw::c_void, data: *mut u8),
-            >,
-            opaque: *mut ::std::os::raw::c_void,
-            flags: ::std::os::raw::c_int,
-        ) -> *mut root::AVBufferRef;
-    }
-    extern "C" {
-        #[doc = " Default free callback, which calls av_free() on the buffer data."]
-        #[doc = " This function is meant to be passed to av_buffer_create(), not called"]
-        #[doc = " directly."]
-        pub fn av_buffer_default_free(opaque: *mut ::std::os::raw::c_void, data: *mut u8);
-    }
-    extern "C" {
-        #[doc = " Create a new reference to an AVBuffer."]
-        #[doc = ""]
-        #[doc = " @return a new AVBufferRef referring to the same AVBuffer as buf or NULL on"]
-        #[doc = " failure."]
-        pub fn av_buffer_ref(buf: *const root::AVBufferRef) -> *mut root::AVBufferRef;
-    }
-    extern "C" {
-        #[doc = " Free a given reference and automatically free the buffer if there are no more"]
-        #[doc = " references to it."]
-        #[doc = ""]
-        #[doc = " @param buf the reference to be freed. The pointer is set to NULL on return."]
-        pub fn av_buffer_unref(buf: *mut *mut root::AVBufferRef);
-    }
-    extern "C" {
-        #[doc = " @return 1 if the caller may write to the data referred to by buf (which is"]
-        #[doc = " true if and only if buf is the only reference to the underlying AVBuffer)."]
-        #[doc = " Return 0 otherwise."]
-        #[doc = " A positive answer is valid until av_buffer_ref() is called on buf."]
-        pub fn av_buffer_is_writable(buf: *const root::AVBufferRef) -> ::std::os::raw::c_int;
-    }
-    extern "C" {
-        #[doc = " @return the opaque parameter set by av_buffer_create."]
-        pub fn av_buffer_get_opaque(buf: *const root::AVBufferRef) -> *mut ::std::os::raw::c_void;
-    }
-    extern "C" {
-        pub fn av_buffer_get_ref_count(buf: *const root::AVBufferRef) -> ::std::os::raw::c_int;
-    }
-    extern "C" {
-        #[doc = " Create a writable reference from a given buffer reference, avoiding data copy"]
-        #[doc = " if possible."]
-        #[doc = ""]
-        #[doc = " @param buf buffer reference to make writable. On success, buf is either left"]
-        #[doc = "            untouched, or it is unreferenced and a new writable AVBufferRef is"]
-        #[doc = "            written in its place. On failure, buf is left untouched."]
-        #[doc = " @return 0 on success, a negative AVERROR on failure."]
-        pub fn av_buffer_make_writable(buf: *mut *mut root::AVBufferRef) -> ::std::os::raw::c_int;
-    }
-    extern "C" {
-        #[doc = " Reallocate a given buffer."]
-        #[doc = ""]
-        #[doc = " @param buf  a buffer reference to reallocate. On success, buf will be"]
-        #[doc = "             unreferenced and a new reference with the required size will be"]
-        #[doc = "             written in its place. On failure buf will be left untouched. *buf"]
-        #[doc = "             may be NULL, then a new buffer is allocated."]
-        #[doc = " @param size required new buffer size."]
-        #[doc = " @return 0 on success, a negative AVERROR on failure."]
-        #[doc = ""]
-        #[doc = " @note the buffer is actually reallocated with av_realloc() only if it was"]
-        #[doc = " initially allocated through av_buffer_realloc(NULL) and there is only one"]
-        #[doc = " reference to it (i.e. the one passed to this function). In all other cases"]
-        #[doc = " a new buffer is allocated and the data is copied."]
-        pub fn av_buffer_realloc(
-            buf: *mut *mut root::AVBufferRef,
-            size: root::size_t,
-        ) -> ::std::os::raw::c_int;
-    }
-    extern "C" {
-        #[doc = " Ensure dst refers to the same data as src."]
-        #[doc = ""]
-        #[doc = " When *dst is already equivalent to src, do nothing. Otherwise unreference dst"]
-        #[doc = " and replace it with a new reference to src."]
-        #[doc = ""]
-        #[doc = " @param dst Pointer to either a valid buffer reference or NULL. On success,"]
-        #[doc = "            this will point to a buffer reference equivalent to src. On"]
-        #[doc = "            failure, dst will be left untouched."]
-        #[doc = " @param src A buffer reference to replace dst with. May be NULL, then this"]
-        #[doc = "            function is equivalent to av_buffer_unref(dst)."]
-        #[doc = " @return 0 on success"]
-        #[doc = "         AVERROR(ENOMEM) on memory allocation failure."]
-        pub fn av_buffer_replace(
-            dst: *mut *mut root::AVBufferRef,
-            src: *const root::AVBufferRef,
-        ) -> ::std::os::raw::c_int;
-    }
-    #[repr(C)]
-    #[derive(Debug, Copy, Clone)]
-    pub struct AVBufferPool {
-        _unused: [u8; 0],
-    }
-    extern "C" {
-        #[doc = " Allocate and initialize a buffer pool."]
-        #[doc = ""]
-        #[doc = " @param size size of each buffer in this pool"]
-        #[doc = " @param alloc a function that will be used to allocate new buffers when the"]
-        #[doc = " pool is empty. May be NULL, then the default allocator will be used"]
-        #[doc = " (av_buffer_alloc())."]
-        #[doc = " @return newly created buffer pool on success, NULL on error."]
-        pub fn av_buffer_pool_init(
-            size: root::size_t,
-            alloc: ::std::option::Option<
-                unsafe extern "C" fn(size: root::size_t) -> *mut root::AVBufferRef,
-            >,
-        ) -> *mut root::AVBufferPool;
-    }
-    extern "C" {
-        #[doc = " Allocate and initialize a buffer pool with a more complex allocator."]
-        #[doc = ""]
-        #[doc = " @param size size of each buffer in this pool"]
-        #[doc = " @param opaque arbitrary user data used by the allocator"]
-        #[doc = " @param alloc a function that will be used to allocate new buffers when the"]
-        #[doc = "              pool is empty. May be NULL, then the default allocator will be"]
-        #[doc = "              used (av_buffer_alloc())."]
-        #[doc = " @param pool_free a function that will be called immediately before the pool"]
-        #[doc = "                  is freed. I.e. after av_buffer_pool_uninit() is called"]
-        #[doc = "                  by the caller and all the frames are returned to the pool"]
-        #[doc = "                  and freed. It is intended to uninitialize the user opaque"]
-        #[doc = "                  data. May be NULL."]
-        #[doc = " @return newly created buffer pool on success, NULL on error."]
-        pub fn av_buffer_pool_init2(
-            size: root::size_t,
-            opaque: *mut ::std::os::raw::c_void,
-            alloc: ::std::option::Option<
-                unsafe extern "C" fn(
-                    opaque: *mut ::std::os::raw::c_void,
-                    size: root::size_t,
-                ) -> *mut root::AVBufferRef,
-            >,
-            pool_free: ::std::option::Option<
-                unsafe extern "C" fn(opaque: *mut ::std::os::raw::c_void),
-            >,
-        ) -> *mut root::AVBufferPool;
-    }
-    extern "C" {
-        #[doc = " Mark the pool as being available for freeing. It will actually be freed only"]
-        #[doc = " once all the allocated buffers associated with the pool are released. Thus it"]
-        #[doc = " is safe to call this function while some of the allocated buffers are still"]
-        #[doc = " in use."]
-        #[doc = ""]
-        #[doc = " @param pool pointer to the pool to be freed. It will be set to NULL."]
-        pub fn av_buffer_pool_uninit(pool: *mut *mut root::AVBufferPool);
-    }
-    extern "C" {
-        #[doc = " Allocate a new AVBuffer, reusing an old buffer from the pool when available."]
-        #[doc = " This function may be called simultaneously from multiple threads."]
-        #[doc = ""]
-        #[doc = " @return a reference to the new buffer on success, NULL on error."]
-        pub fn av_buffer_pool_get(pool: *mut root::AVBufferPool) -> *mut root::AVBufferRef;
-    }
-    extern "C" {
-        #[doc = " Query the original opaque parameter of an allocated buffer in the pool."]
-        #[doc = ""]
-        #[doc = " @param ref a buffer reference to a buffer returned by av_buffer_pool_get."]
-        #[doc = " @return the opaque parameter set by the buffer allocator function of the"]
-        #[doc = "         buffer pool."]
-        #[doc = ""]
-        #[doc = " @note the opaque parameter of ref is used by the buffer pool implementation,"]
-        #[doc = " therefore you have to use this function to access the original opaque"]
-        #[doc = " parameter of an allocated buffer."]
-        pub fn av_buffer_pool_buffer_get_opaque(
-            ref_: *const root::AVBufferRef,
-        ) -> *mut ::std::os::raw::c_void;
-    }
-    extern "C" {
-        #[doc = " Return the LIBAVUTIL_VERSION_INT constant."]
-        pub fn avutil_version() -> ::std::os::raw::c_uint;
-    }
-    extern "C" {
-        #[doc = " Return an informative version string. This usually is the actual release"]
-        #[doc = " version number or a git commit description. This string has no fixed format"]
-        #[doc = " and can change any time. It should never be parsed by code."]
-        pub fn av_version_info() -> *const ::std::os::raw::c_char;
-    }
-    extern "C" {
-        #[doc = " Return the libavutil build-time configuration."]
-        pub fn avutil_configuration() -> *const ::std::os::raw::c_char;
-    }
-    extern "C" {
-        #[doc = " Return the libavutil license."]
-        pub fn avutil_license() -> *const ::std::os::raw::c_char;
-    }
-    #[doc = "< Usually treated as AVMEDIA_TYPE_DATA"]
-    pub const AVMediaType_AVMEDIA_TYPE_UNKNOWN: root::AVMediaType = -1;
-    pub const AVMediaType_AVMEDIA_TYPE_VIDEO: root::AVMediaType = 0;
-    pub const AVMediaType_AVMEDIA_TYPE_AUDIO: root::AVMediaType = 1;
-    #[doc = "< Opaque data information usually continuous"]
-    pub const AVMediaType_AVMEDIA_TYPE_DATA: root::AVMediaType = 2;
-    pub const AVMediaType_AVMEDIA_TYPE_SUBTITLE: root::AVMediaType = 3;
-    #[doc = "< Opaque data information usually sparse"]
-    pub const AVMediaType_AVMEDIA_TYPE_ATTACHMENT: root::AVMediaType = 4;
-    pub const AVMediaType_AVMEDIA_TYPE_NB: root::AVMediaType = 5;
-    #[doc = " @addtogroup lavu_media Media Type"]
-    #[doc = " @brief Media Type"]
-    pub type AVMediaType = ::std::os::raw::c_int;
-    extern "C" {
-        #[doc = " Return a string describing the media_type enum, NULL if media_type"]
-        #[doc = " is unknown."]
-        pub fn av_get_media_type_string(
-            media_type: root::AVMediaType,
-        ) -> *const ::std::os::raw::c_char;
-    }
-    #[doc = "< Undefined"]
-    pub const AVPictureType_AV_PICTURE_TYPE_NONE: root::AVPictureType = 0;
-    #[doc = "< Intra"]
-    pub const AVPictureType_AV_PICTURE_TYPE_I: root::AVPictureType = 1;
-    #[doc = "< Predicted"]
-    pub const AVPictureType_AV_PICTURE_TYPE_P: root::AVPictureType = 2;
-    #[doc = "< Bi-dir predicted"]
-    pub const AVPictureType_AV_PICTURE_TYPE_B: root::AVPictureType = 3;
-    #[doc = "< S(GMC)-VOP MPEG-4"]
-    pub const AVPictureType_AV_PICTURE_TYPE_S: root::AVPictureType = 4;
-    #[doc = "< Switching Intra"]
-    pub const AVPictureType_AV_PICTURE_TYPE_SI: root::AVPictureType = 5;
-    #[doc = "< Switching Predicted"]
-    pub const AVPictureType_AV_PICTURE_TYPE_SP: root::AVPictureType = 6;
-    #[doc = "< BI type"]
-    pub const AVPictureType_AV_PICTURE_TYPE_BI: root::AVPictureType = 7;
-    #[doc = " @}"]
-    #[doc = " @}"]
-    #[doc = " @defgroup lavu_picture Image related"]
-    #[doc = ""]
-    #[doc = " AVPicture types, pixel formats and basic image planes manipulation."]
-    #[doc = ""]
-    #[doc = " @{"]
-    pub type AVPictureType = ::std::os::raw::c_uint;
-    extern "C" {
-        #[doc = " Return a single letter to describe the given picture type"]
-        #[doc = " pict_type."]
-        #[doc = ""]
-        #[doc = " @param[in] pict_type the picture type @return a single character"]
-        #[doc = " representing the picture type, '?' if pict_type is unknown"]
-        pub fn av_get_picture_type_char(pict_type: root::AVPictureType) -> ::std::os::raw::c_char;
-    }
-    pub type errno_t = ::std::os::raw::c_int;
-    extern "C" {
-        pub fn __error() -> *mut ::std::os::raw::c_int;
-    }
-    pub type __darwin_nl_item = ::std::os::raw::c_int;
-    pub type __darwin_wctrans_t = ::std::os::raw::c_int;
-    pub type __darwin_wctype_t = root::__uint32_t;
     extern "C" {
         pub fn imaxabs(j: root::intmax_t) -> root::intmax_t;
     }
@@ -6534,6 +6753,229 @@ pub mod root {
     }
     #[repr(C)]
     #[derive(Debug, Copy, Clone)]
+    pub struct AVBuffer {
+        _unused: [u8; 0],
+    }
+    #[doc = " A reference to a data buffer."]
+    #[doc = ""]
+    #[doc = " The size of this struct is not a part of the public ABI and it is not meant"]
+    #[doc = " to be allocated directly."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVBufferRef {
+        pub buffer: *mut root::AVBuffer,
+        #[doc = " The data buffer. It is considered writable if and only if"]
+        #[doc = " this is the only reference to the buffer, in which case"]
+        #[doc = " av_buffer_is_writable() returns 1."]
+        pub data: *mut u8,
+        #[doc = " Size of data in bytes."]
+        pub size: root::size_t,
+    }
+    impl Default for AVBufferRef {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " Allocate an AVBuffer of the given size using av_malloc()."]
+        #[doc = ""]
+        #[doc = " @return an AVBufferRef of given size or NULL when out of memory"]
+        pub fn av_buffer_alloc(size: root::size_t) -> *mut root::AVBufferRef;
+    }
+    extern "C" {
+        #[doc = " Same as av_buffer_alloc(), except the returned buffer will be initialized"]
+        #[doc = " to zero."]
+        pub fn av_buffer_allocz(size: root::size_t) -> *mut root::AVBufferRef;
+    }
+    extern "C" {
+        #[doc = " Create an AVBuffer from an existing array."]
+        #[doc = ""]
+        #[doc = " If this function is successful, data is owned by the AVBuffer. The caller may"]
+        #[doc = " only access data through the returned AVBufferRef and references derived from"]
+        #[doc = " it."]
+        #[doc = " If this function fails, data is left untouched."]
+        #[doc = " @param data   data array"]
+        #[doc = " @param size   size of data in bytes"]
+        #[doc = " @param free   a callback for freeing this buffer's data"]
+        #[doc = " @param opaque parameter to be got for processing or passed to free"]
+        #[doc = " @param flags  a combination of AV_BUFFER_FLAG_*"]
+        #[doc = ""]
+        #[doc = " @return an AVBufferRef referring to data on success, NULL on failure."]
+        pub fn av_buffer_create(
+            data: *mut u8,
+            size: root::size_t,
+            free: ::std::option::Option<
+                unsafe extern "C" fn(opaque: *mut ::std::os::raw::c_void, data: *mut u8),
+            >,
+            opaque: *mut ::std::os::raw::c_void,
+            flags: ::std::os::raw::c_int,
+        ) -> *mut root::AVBufferRef;
+    }
+    extern "C" {
+        #[doc = " Default free callback, which calls av_free() on the buffer data."]
+        #[doc = " This function is meant to be passed to av_buffer_create(), not called"]
+        #[doc = " directly."]
+        pub fn av_buffer_default_free(opaque: *mut ::std::os::raw::c_void, data: *mut u8);
+    }
+    extern "C" {
+        #[doc = " Create a new reference to an AVBuffer."]
+        #[doc = ""]
+        #[doc = " @return a new AVBufferRef referring to the same AVBuffer as buf or NULL on"]
+        #[doc = " failure."]
+        pub fn av_buffer_ref(buf: *const root::AVBufferRef) -> *mut root::AVBufferRef;
+    }
+    extern "C" {
+        #[doc = " Free a given reference and automatically free the buffer if there are no more"]
+        #[doc = " references to it."]
+        #[doc = ""]
+        #[doc = " @param buf the reference to be freed. The pointer is set to NULL on return."]
+        pub fn av_buffer_unref(buf: *mut *mut root::AVBufferRef);
+    }
+    extern "C" {
+        #[doc = " @return 1 if the caller may write to the data referred to by buf (which is"]
+        #[doc = " true if and only if buf is the only reference to the underlying AVBuffer)."]
+        #[doc = " Return 0 otherwise."]
+        #[doc = " A positive answer is valid until av_buffer_ref() is called on buf."]
+        pub fn av_buffer_is_writable(buf: *const root::AVBufferRef) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " @return the opaque parameter set by av_buffer_create."]
+        pub fn av_buffer_get_opaque(buf: *const root::AVBufferRef) -> *mut ::std::os::raw::c_void;
+    }
+    extern "C" {
+        pub fn av_buffer_get_ref_count(buf: *const root::AVBufferRef) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Create a writable reference from a given buffer reference, avoiding data copy"]
+        #[doc = " if possible."]
+        #[doc = ""]
+        #[doc = " @param buf buffer reference to make writable. On success, buf is either left"]
+        #[doc = "            untouched, or it is unreferenced and a new writable AVBufferRef is"]
+        #[doc = "            written in its place. On failure, buf is left untouched."]
+        #[doc = " @return 0 on success, a negative AVERROR on failure."]
+        pub fn av_buffer_make_writable(buf: *mut *mut root::AVBufferRef) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Reallocate a given buffer."]
+        #[doc = ""]
+        #[doc = " @param buf  a buffer reference to reallocate. On success, buf will be"]
+        #[doc = "             unreferenced and a new reference with the required size will be"]
+        #[doc = "             written in its place. On failure buf will be left untouched. *buf"]
+        #[doc = "             may be NULL, then a new buffer is allocated."]
+        #[doc = " @param size required new buffer size."]
+        #[doc = " @return 0 on success, a negative AVERROR on failure."]
+        #[doc = ""]
+        #[doc = " @note the buffer is actually reallocated with av_realloc() only if it was"]
+        #[doc = " initially allocated through av_buffer_realloc(NULL) and there is only one"]
+        #[doc = " reference to it (i.e. the one passed to this function). In all other cases"]
+        #[doc = " a new buffer is allocated and the data is copied."]
+        pub fn av_buffer_realloc(
+            buf: *mut *mut root::AVBufferRef,
+            size: root::size_t,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Ensure dst refers to the same data as src."]
+        #[doc = ""]
+        #[doc = " When *dst is already equivalent to src, do nothing. Otherwise unreference dst"]
+        #[doc = " and replace it with a new reference to src."]
+        #[doc = ""]
+        #[doc = " @param dst Pointer to either a valid buffer reference or NULL. On success,"]
+        #[doc = "            this will point to a buffer reference equivalent to src. On"]
+        #[doc = "            failure, dst will be left untouched."]
+        #[doc = " @param src A buffer reference to replace dst with. May be NULL, then this"]
+        #[doc = "            function is equivalent to av_buffer_unref(dst)."]
+        #[doc = " @return 0 on success"]
+        #[doc = "         AVERROR(ENOMEM) on memory allocation failure."]
+        pub fn av_buffer_replace(
+            dst: *mut *mut root::AVBufferRef,
+            src: *const root::AVBufferRef,
+        ) -> ::std::os::raw::c_int;
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVBufferPool {
+        _unused: [u8; 0],
+    }
+    extern "C" {
+        #[doc = " Allocate and initialize a buffer pool."]
+        #[doc = ""]
+        #[doc = " @param size size of each buffer in this pool"]
+        #[doc = " @param alloc a function that will be used to allocate new buffers when the"]
+        #[doc = " pool is empty. May be NULL, then the default allocator will be used"]
+        #[doc = " (av_buffer_alloc())."]
+        #[doc = " @return newly created buffer pool on success, NULL on error."]
+        pub fn av_buffer_pool_init(
+            size: root::size_t,
+            alloc: ::std::option::Option<
+                unsafe extern "C" fn(size: root::size_t) -> *mut root::AVBufferRef,
+            >,
+        ) -> *mut root::AVBufferPool;
+    }
+    extern "C" {
+        #[doc = " Allocate and initialize a buffer pool with a more complex allocator."]
+        #[doc = ""]
+        #[doc = " @param size size of each buffer in this pool"]
+        #[doc = " @param opaque arbitrary user data used by the allocator"]
+        #[doc = " @param alloc a function that will be used to allocate new buffers when the"]
+        #[doc = "              pool is empty. May be NULL, then the default allocator will be"]
+        #[doc = "              used (av_buffer_alloc())."]
+        #[doc = " @param pool_free a function that will be called immediately before the pool"]
+        #[doc = "                  is freed. I.e. after av_buffer_pool_uninit() is called"]
+        #[doc = "                  by the caller and all the frames are returned to the pool"]
+        #[doc = "                  and freed. It is intended to uninitialize the user opaque"]
+        #[doc = "                  data. May be NULL."]
+        #[doc = " @return newly created buffer pool on success, NULL on error."]
+        pub fn av_buffer_pool_init2(
+            size: root::size_t,
+            opaque: *mut ::std::os::raw::c_void,
+            alloc: ::std::option::Option<
+                unsafe extern "C" fn(
+                    opaque: *mut ::std::os::raw::c_void,
+                    size: root::size_t,
+                ) -> *mut root::AVBufferRef,
+            >,
+            pool_free: ::std::option::Option<
+                unsafe extern "C" fn(opaque: *mut ::std::os::raw::c_void),
+            >,
+        ) -> *mut root::AVBufferPool;
+    }
+    extern "C" {
+        #[doc = " Mark the pool as being available for freeing. It will actually be freed only"]
+        #[doc = " once all the allocated buffers associated with the pool are released. Thus it"]
+        #[doc = " is safe to call this function while some of the allocated buffers are still"]
+        #[doc = " in use."]
+        #[doc = ""]
+        #[doc = " @param pool pointer to the pool to be freed. It will be set to NULL."]
+        pub fn av_buffer_pool_uninit(pool: *mut *mut root::AVBufferPool);
+    }
+    extern "C" {
+        #[doc = " Allocate a new AVBuffer, reusing an old buffer from the pool when available."]
+        #[doc = " This function may be called simultaneously from multiple threads."]
+        #[doc = ""]
+        #[doc = " @return a reference to the new buffer on success, NULL on error."]
+        pub fn av_buffer_pool_get(pool: *mut root::AVBufferPool) -> *mut root::AVBufferRef;
+    }
+    extern "C" {
+        #[doc = " Query the original opaque parameter of an allocated buffer in the pool."]
+        #[doc = ""]
+        #[doc = " @param ref a buffer reference to a buffer returned by av_buffer_pool_get."]
+        #[doc = " @return the opaque parameter set by the buffer allocator function of the"]
+        #[doc = "         buffer pool."]
+        #[doc = ""]
+        #[doc = " @note the opaque parameter of ref is used by the buffer pool implementation,"]
+        #[doc = " therefore you have to use this function to access the original opaque"]
+        #[doc = " parameter of an allocated buffer."]
+        pub fn av_buffer_pool_buffer_get_opaque(
+            ref_: *const root::AVBufferRef,
+        ) -> *mut ::std::os::raw::c_void;
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
     pub struct AVDictionaryEntry {
         pub key: *mut ::std::os::raw::c_char,
         pub value: *mut ::std::os::raw::c_char,
@@ -7585,6 +8027,1344 @@ pub mod root {
             type_: root::AVFrameSideDataType,
         ) -> *const ::std::os::raw::c_char;
     }
+    extern "C" {
+        #[doc = " Return the LIBAVFILTER_VERSION_INT constant."]
+        pub fn avfilter_version() -> ::std::os::raw::c_uint;
+    }
+    extern "C" {
+        #[doc = " Return the libavfilter build-time configuration."]
+        pub fn avfilter_configuration() -> *const ::std::os::raw::c_char;
+    }
+    extern "C" {
+        #[doc = " Return the libavfilter license."]
+        pub fn avfilter_license() -> *const ::std::os::raw::c_char;
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVFilterPad {
+        _unused: [u8; 0],
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVFilterFormats {
+        _unused: [u8; 0],
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVFilterChannelLayouts {
+        _unused: [u8; 0],
+    }
+    extern "C" {
+        #[doc = " Get the number of elements in an AVFilter's inputs or outputs array."]
+        #[doc = ""]
+        #[doc = " @deprecated Use avfilter_filter_pad_count() instead."]
+        pub fn avfilter_pad_count(pads: *const root::AVFilterPad) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Get the name of an AVFilterPad."]
+        #[doc = ""]
+        #[doc = " @param pads an array of AVFilterPads"]
+        #[doc = " @param pad_idx index of the pad in the array; it is the caller's"]
+        #[doc = "                responsibility to ensure the index is valid"]
+        #[doc = ""]
+        #[doc = " @return name of the pad_idx'th pad in pads"]
+        pub fn avfilter_pad_get_name(
+            pads: *const root::AVFilterPad,
+            pad_idx: ::std::os::raw::c_int,
+        ) -> *const ::std::os::raw::c_char;
+    }
+    extern "C" {
+        #[doc = " Get the type of an AVFilterPad."]
+        #[doc = ""]
+        #[doc = " @param pads an array of AVFilterPads"]
+        #[doc = " @param pad_idx index of the pad in the array; it is the caller's"]
+        #[doc = "                responsibility to ensure the index is valid"]
+        #[doc = ""]
+        #[doc = " @return type of the pad_idx'th pad in pads"]
+        pub fn avfilter_pad_get_type(
+            pads: *const root::AVFilterPad,
+            pad_idx: ::std::os::raw::c_int,
+        ) -> root::AVMediaType;
+    }
+    #[doc = " Filter definition. This defines the pads a filter contains, and all the"]
+    #[doc = " callback functions used to interact with the filter."]
+    #[repr(C)]
+    #[derive(Copy, Clone)]
+    pub struct AVFilter {
+        #[doc = " Filter name. Must be non-NULL and unique among filters."]
+        pub name: *const ::std::os::raw::c_char,
+        #[doc = " A description of the filter. May be NULL."]
+        #[doc = ""]
+        #[doc = " You should use the NULL_IF_CONFIG_SMALL() macro to define it."]
+        pub description: *const ::std::os::raw::c_char,
+        #[doc = " List of static inputs."]
+        #[doc = ""]
+        #[doc = " NULL if there are no (static) inputs. Instances of filters with"]
+        #[doc = " AVFILTER_FLAG_DYNAMIC_INPUTS set may have more inputs than present in"]
+        #[doc = " this list."]
+        pub inputs: *const root::AVFilterPad,
+        #[doc = " List of static outputs."]
+        #[doc = ""]
+        #[doc = " NULL if there are no (static) outputs. Instances of filters with"]
+        #[doc = " AVFILTER_FLAG_DYNAMIC_OUTPUTS set may have more outputs than present in"]
+        #[doc = " this list."]
+        pub outputs: *const root::AVFilterPad,
+        #[doc = " A class for the private data, used to declare filter private AVOptions."]
+        #[doc = " This field is NULL for filters that do not declare any options."]
+        #[doc = ""]
+        #[doc = " If this field is non-NULL, the first member of the filter private data"]
+        #[doc = " must be a pointer to AVClass, which will be set by libavfilter generic"]
+        #[doc = " code to this class."]
+        pub priv_class: *const root::AVClass,
+        #[doc = " A combination of AVFILTER_FLAG_*"]
+        pub flags: ::std::os::raw::c_int,
+        #[doc = " The number of entries in the list of inputs."]
+        pub nb_inputs: u8,
+        #[doc = " The number of entries in the list of outputs."]
+        pub nb_outputs: u8,
+        #[doc = " This field determines the state of the formats union."]
+        #[doc = " It is an enum FilterFormatsState value."]
+        pub formats_state: u8,
+        #[doc = " Filter pre-initialization function"]
+        #[doc = ""]
+        #[doc = " This callback will be called immediately after the filter context is"]
+        #[doc = " allocated, to allow allocating and initing sub-objects."]
+        #[doc = ""]
+        #[doc = " If this callback is not NULL, the uninit callback will be called on"]
+        #[doc = " allocation failure."]
+        #[doc = ""]
+        #[doc = " @return 0 on success,"]
+        #[doc = "         AVERROR code on failure (but the code will be"]
+        #[doc = "           dropped and treated as ENOMEM by the calling code)"]
+        pub preinit: ::std::option::Option<
+            unsafe extern "C" fn(ctx: *mut root::AVFilterContext) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Filter initialization function."]
+        #[doc = ""]
+        #[doc = " This callback will be called only once during the filter lifetime, after"]
+        #[doc = " all the options have been set, but before links between filters are"]
+        #[doc = " established and format negotiation is done."]
+        #[doc = ""]
+        #[doc = " Basic filter initialization should be done here. Filters with dynamic"]
+        #[doc = " inputs and/or outputs should create those inputs/outputs here based on"]
+        #[doc = " provided options. No more changes to this filter's inputs/outputs can be"]
+        #[doc = " done after this callback."]
+        #[doc = ""]
+        #[doc = " This callback must not assume that the filter links exist or frame"]
+        #[doc = " parameters are known."]
+        #[doc = ""]
+        #[doc = " @ref AVFilter.uninit \"uninit\" is guaranteed to be called even if"]
+        #[doc = " initialization fails, so this callback does not have to clean up on"]
+        #[doc = " failure."]
+        #[doc = ""]
+        #[doc = " @return 0 on success, a negative AVERROR on failure"]
+        pub init: ::std::option::Option<
+            unsafe extern "C" fn(ctx: *mut root::AVFilterContext) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Should be set instead of @ref AVFilter.init \"init\" by the filters that"]
+        #[doc = " want to pass a dictionary of AVOptions to nested contexts that are"]
+        #[doc = " allocated during init."]
+        #[doc = ""]
+        #[doc = " On return, the options dict should be freed and replaced with one that"]
+        #[doc = " contains all the options which could not be processed by this filter (or"]
+        #[doc = " with NULL if all the options were processed)."]
+        #[doc = ""]
+        #[doc = " Otherwise the semantics is the same as for @ref AVFilter.init \"init\"."]
+        pub init_dict: ::std::option::Option<
+            unsafe extern "C" fn(
+                ctx: *mut root::AVFilterContext,
+                options: *mut *mut root::AVDictionary,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Filter uninitialization function."]
+        #[doc = ""]
+        #[doc = " Called only once right before the filter is freed. Should deallocate any"]
+        #[doc = " memory held by the filter, release any buffer references, etc. It does"]
+        #[doc = " not need to deallocate the AVFilterContext.priv memory itself."]
+        #[doc = ""]
+        #[doc = " This callback may be called even if @ref AVFilter.init \"init\" was not"]
+        #[doc = " called or failed, so it must be prepared to handle such a situation."]
+        pub uninit: ::std::option::Option<unsafe extern "C" fn(ctx: *mut root::AVFilterContext)>,
+        pub formats: root::AVFilter__bindgen_ty_1,
+        #[doc = "< size of private data to allocate for the filter"]
+        pub priv_size: ::std::os::raw::c_int,
+        #[doc = "< Additional flags for avfilter internal use only."]
+        pub flags_internal: ::std::os::raw::c_int,
+        #[doc = " Make the filter instance process a command."]
+        #[doc = ""]
+        #[doc = " @param cmd    the command to process, for handling simplicity all commands must be alphanumeric only"]
+        #[doc = " @param arg    the argument for the command"]
+        #[doc = " @param res    a buffer with size res_size where the filter(s) can return a response. This must not change when the command is not supported."]
+        #[doc = " @param flags  if AVFILTER_CMD_FLAG_FAST is set and the command would be"]
+        #[doc = "               time consuming then a filter should treat it like an unsupported command"]
+        #[doc = ""]
+        #[doc = " @returns >=0 on success otherwise an error code."]
+        #[doc = "          AVERROR(ENOSYS) on unsupported commands"]
+        pub process_command: ::std::option::Option<
+            unsafe extern "C" fn(
+                arg1: *mut root::AVFilterContext,
+                cmd: *const ::std::os::raw::c_char,
+                arg: *const ::std::os::raw::c_char,
+                res: *mut ::std::os::raw::c_char,
+                res_len: ::std::os::raw::c_int,
+                flags: ::std::os::raw::c_int,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Filter activation function."]
+        #[doc = ""]
+        #[doc = " Called when any processing is needed from the filter, instead of any"]
+        #[doc = " filter_frame and request_frame on pads."]
+        #[doc = ""]
+        #[doc = " The function must examine inlinks and outlinks and perform a single"]
+        #[doc = " step of processing. If there is nothing to do, the function must do"]
+        #[doc = " nothing and not return an error. If more steps are or may be"]
+        #[doc = " possible, it must use ff_filter_set_ready() to schedule another"]
+        #[doc = " activation."]
+        pub activate: ::std::option::Option<
+            unsafe extern "C" fn(ctx: *mut root::AVFilterContext) -> ::std::os::raw::c_int,
+        >,
+    }
+    #[doc = " The state of the following union is determined by formats_state."]
+    #[doc = " See the documentation of enum FilterFormatsState in internal.h."]
+    #[repr(C)]
+    #[derive(Copy, Clone)]
+    pub union AVFilter__bindgen_ty_1 {
+        #[doc = " Query formats supported by the filter on its inputs and outputs."]
+        #[doc = ""]
+        #[doc = " This callback is called after the filter is initialized (so the inputs"]
+        #[doc = " and outputs are fixed), shortly before the format negotiation. This"]
+        #[doc = " callback may be called more than once."]
+        #[doc = ""]
+        #[doc = " This callback must set AVFilterLink.outcfg.formats on every input link"]
+        #[doc = " and AVFilterLink.incfg.formats on every output link to a list of"]
+        #[doc = " pixel/sample formats that the filter supports on that link. For audio"]
+        #[doc = " links, this filter must also set @ref AVFilterLink.incfg.samplerates"]
+        #[doc = " \"in_samplerates\" / @ref AVFilterLink.outcfg.samplerates \"out_samplerates\""]
+        #[doc = " and @ref AVFilterLink.incfg.channel_layouts \"in_channel_layouts\" /"]
+        #[doc = " @ref AVFilterLink.outcfg.channel_layouts \"out_channel_layouts\" analogously."]
+        #[doc = ""]
+        #[doc = " This callback must never be NULL if the union is in this state."]
+        #[doc = ""]
+        #[doc = " @return zero on success, a negative value corresponding to an"]
+        #[doc = " AVERROR code otherwise"]
+        pub query_func: ::std::option::Option<
+            unsafe extern "C" fn(arg1: *mut root::AVFilterContext) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " A pointer to an array of admissible pixel formats delimited"]
+        #[doc = " by AV_PIX_FMT_NONE. The generic code will use this list"]
+        #[doc = " to indicate that this filter supports each of these pixel formats,"]
+        #[doc = " provided that all inputs and outputs use the same pixel format."]
+        #[doc = ""]
+        #[doc = " This list must never be NULL if the union is in this state."]
+        #[doc = " The type of all inputs and outputs of filters using this must"]
+        #[doc = " be AVMEDIA_TYPE_VIDEO."]
+        pub pixels_list: *const root::AVPixelFormat,
+        #[doc = " Analogous to pixels, but delimited by AV_SAMPLE_FMT_NONE"]
+        #[doc = " and restricted to filters that only have AVMEDIA_TYPE_AUDIO"]
+        #[doc = " inputs and outputs."]
+        #[doc = ""]
+        #[doc = " In addition to that the generic code will mark all inputs"]
+        #[doc = " and all outputs as supporting all sample rates and every"]
+        #[doc = " channel count and channel layout, as long as all inputs"]
+        #[doc = " and outputs use the same sample rate and channel count/layout."]
+        pub samples_list: *const root::AVSampleFormat,
+        #[doc = " Equivalent to { pix_fmt, AV_PIX_FMT_NONE } as pixels_list."]
+        pub pix_fmt: root::AVPixelFormat,
+        #[doc = " Equivalent to { sample_fmt, AV_SAMPLE_FMT_NONE } as samples_list."]
+        pub sample_fmt: root::AVSampleFormat,
+    }
+    impl Default for AVFilter__bindgen_ty_1 {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    impl Default for AVFilter {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " Get the number of elements in an AVFilter's inputs or outputs array."]
+        pub fn avfilter_filter_pad_count(
+            filter: *const root::AVFilter,
+            is_output: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_uint;
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVFilterInternal {
+        _unused: [u8; 0],
+    }
+    #[doc = " An instance of a filter"]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVFilterContext {
+        #[doc = "< needed for av_log() and filters common options"]
+        pub av_class: *const root::AVClass,
+        #[doc = "< the AVFilter of which this is an instance"]
+        pub filter: *const root::AVFilter,
+        #[doc = "< name of this filter instance"]
+        pub name: *mut ::std::os::raw::c_char,
+        #[doc = "< array of input pads"]
+        pub input_pads: *mut root::AVFilterPad,
+        #[doc = "< array of pointers to input links"]
+        pub inputs: *mut *mut root::AVFilterLink,
+        #[doc = "< number of input pads"]
+        pub nb_inputs: ::std::os::raw::c_uint,
+        #[doc = "< array of output pads"]
+        pub output_pads: *mut root::AVFilterPad,
+        #[doc = "< array of pointers to output links"]
+        pub outputs: *mut *mut root::AVFilterLink,
+        #[doc = "< number of output pads"]
+        pub nb_outputs: ::std::os::raw::c_uint,
+        #[doc = "< private data for use by the filter"]
+        pub priv_: *mut ::std::os::raw::c_void,
+        #[doc = "< filtergraph this filter belongs to"]
+        pub graph: *mut root::AVFilterGraph,
+        #[doc = " Type of multithreading being allowed/used. A combination of"]
+        #[doc = " AVFILTER_THREAD_* flags."]
+        #[doc = ""]
+        #[doc = " May be set by the caller before initializing the filter to forbid some"]
+        #[doc = " or all kinds of multithreading for this filter. The default is allowing"]
+        #[doc = " everything."]
+        #[doc = ""]
+        #[doc = " When the filter is initialized, this field is combined using bit AND with"]
+        #[doc = " AVFilterGraph.thread_type to get the final mask used for determining"]
+        #[doc = " allowed threading types. I.e. a threading type needs to be set in both"]
+        #[doc = " to be allowed."]
+        #[doc = ""]
+        #[doc = " After the filter is initialized, libavfilter sets this field to the"]
+        #[doc = " threading type that is actually used (0 for no multithreading)."]
+        pub thread_type: ::std::os::raw::c_int,
+        #[doc = " An opaque struct for libavfilter internal use."]
+        pub internal: *mut root::AVFilterInternal,
+        pub command_queue: *mut root::AVFilterCommand,
+        #[doc = "< enable expression string"]
+        pub enable_str: *mut ::std::os::raw::c_char,
+        #[doc = "< parsed expression (AVExpr*)"]
+        pub enable: *mut ::std::os::raw::c_void,
+        #[doc = "< variable values for the enable expression"]
+        pub var_values: *mut f64,
+        #[doc = "< the enabled state from the last expression evaluation"]
+        pub is_disabled: ::std::os::raw::c_int,
+        #[doc = " For filters which will create hardware frames, sets the device the"]
+        #[doc = " filter should create them in.  All other filters will ignore this field:"]
+        #[doc = " in particular, a filter which consumes or processes hardware frames will"]
+        #[doc = " instead use the hw_frames_ctx field in AVFilterLink to carry the"]
+        #[doc = " hardware context information."]
+        pub hw_device_ctx: *mut root::AVBufferRef,
+        #[doc = " Max number of threads allowed in this filter instance."]
+        #[doc = " If <= 0, its value is ignored."]
+        #[doc = " Overrides global number of threads set per filter graph."]
+        pub nb_threads: ::std::os::raw::c_int,
+        #[doc = " Ready status of the filter."]
+        #[doc = " A non-0 value means that the filter needs activating;"]
+        #[doc = " a higher value suggests a more urgent activation."]
+        pub ready: ::std::os::raw::c_uint,
+        #[doc = " Sets the number of extra hardware frames which the filter will"]
+        #[doc = " allocate on its output links for use in following filters or by"]
+        #[doc = " the caller."]
+        #[doc = ""]
+        #[doc = " Some hardware filters require all frames that they will use for"]
+        #[doc = " output to be defined in advance before filtering starts.  For such"]
+        #[doc = " filters, any hardware frame pools used for output must therefore be"]
+        #[doc = " of fixed size.  The extra frames set here are on top of any number"]
+        #[doc = " that the filter needs internally in order to operate normally."]
+        #[doc = ""]
+        #[doc = " This field must be set before the graph containing this filter is"]
+        #[doc = " configured."]
+        pub extra_hw_frames: ::std::os::raw::c_int,
+    }
+    impl Default for AVFilterContext {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    #[doc = " Lists of formats / etc. supported by an end of a link."]
+    #[doc = ""]
+    #[doc = " This structure is directly part of AVFilterLink, in two copies:"]
+    #[doc = " one for the source filter, one for the destination filter."]
+    #[doc = ""]
+    #[doc = " These lists are used for negotiating the format to actually be used,"]
+    #[doc = " which will be loaded into the format and channel_layout members of"]
+    #[doc = " AVFilterLink, when chosen."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVFilterFormatsConfig {
+        #[doc = " List of supported formats (pixel or sample)."]
+        pub formats: *mut root::AVFilterFormats,
+        #[doc = " Lists of supported sample rates, only for audio."]
+        pub samplerates: *mut root::AVFilterFormats,
+        #[doc = " Lists of supported channel layouts, only for audio."]
+        pub channel_layouts: *mut root::AVFilterChannelLayouts,
+    }
+    impl Default for AVFilterFormatsConfig {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    #[doc = " A link between two filters. This contains pointers to the source and"]
+    #[doc = " destination filters between which this link exists, and the indexes of"]
+    #[doc = " the pads involved. In addition, this link also contains the parameters"]
+    #[doc = " which have been negotiated and agreed upon between the filter, such as"]
+    #[doc = " image dimensions, format, etc."]
+    #[doc = ""]
+    #[doc = " Applications must not normally access the link structure directly."]
+    #[doc = " Use the buffersrc and buffersink API instead."]
+    #[doc = " In the future, access to the header may be reserved for filters"]
+    #[doc = " implementation."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVFilterLink {
+        #[doc = "< source filter"]
+        pub src: *mut root::AVFilterContext,
+        #[doc = "< output pad on the source filter"]
+        pub srcpad: *mut root::AVFilterPad,
+        #[doc = "< dest filter"]
+        pub dst: *mut root::AVFilterContext,
+        #[doc = "< input pad on the dest filter"]
+        pub dstpad: *mut root::AVFilterPad,
+        #[doc = "< filter media type"]
+        pub type_: root::AVMediaType,
+        #[doc = "< agreed upon image width"]
+        pub w: ::std::os::raw::c_int,
+        #[doc = "< agreed upon image height"]
+        pub h: ::std::os::raw::c_int,
+        #[doc = "< agreed upon sample aspect ratio"]
+        pub sample_aspect_ratio: root::AVRational,
+        #[doc = "< channel layout of current buffer (see libavutil/channel_layout.h)"]
+        pub channel_layout: u64,
+        #[doc = "< samples per second"]
+        pub sample_rate: ::std::os::raw::c_int,
+        #[doc = "< agreed upon media format"]
+        pub format: ::std::os::raw::c_int,
+        #[doc = " Define the time base used by the PTS of the frames/samples"]
+        #[doc = " which will pass through this link."]
+        #[doc = " During the configuration stage, each filter is supposed to"]
+        #[doc = " change only the output timebase, while the timebase of the"]
+        #[doc = " input link is assumed to be an unchangeable property."]
+        pub time_base: root::AVRational,
+        #[doc = " Lists of supported formats / etc. supported by the input filter."]
+        pub incfg: root::AVFilterFormatsConfig,
+        #[doc = " Lists of supported formats / etc. supported by the output filter."]
+        pub outcfg: root::AVFilterFormatsConfig,
+        pub init_state: root::AVFilterLink__bindgen_ty_1,
+        #[doc = " Graph the filter belongs to."]
+        pub graph: *mut root::AVFilterGraph,
+        #[doc = " Current timestamp of the link, as defined by the most recent"]
+        #[doc = " frame(s), in link time_base units."]
+        pub current_pts: i64,
+        #[doc = " Current timestamp of the link, as defined by the most recent"]
+        #[doc = " frame(s), in AV_TIME_BASE units."]
+        pub current_pts_us: i64,
+        #[doc = " Index in the age array."]
+        pub age_index: ::std::os::raw::c_int,
+        #[doc = " Frame rate of the stream on the link, or 1/0 if unknown or variable;"]
+        #[doc = " if left to 0/0, will be automatically copied from the first input"]
+        #[doc = " of the source filter if it exists."]
+        #[doc = ""]
+        #[doc = " Sources should set it to the best estimation of the real frame rate."]
+        #[doc = " If the source frame rate is unknown or variable, set this to 1/0."]
+        #[doc = " Filters should update it if necessary depending on their function."]
+        #[doc = " Sinks can use it to set a default output frame rate."]
+        #[doc = " It is similar to the r_frame_rate field in AVStream."]
+        pub frame_rate: root::AVRational,
+        #[doc = " Minimum number of samples to filter at once. If filter_frame() is"]
+        #[doc = " called with fewer samples, it will accumulate them in fifo."]
+        #[doc = " This field and the related ones must not be changed after filtering"]
+        #[doc = " has started."]
+        #[doc = " If 0, all related fields are ignored."]
+        pub min_samples: ::std::os::raw::c_int,
+        #[doc = " Maximum number of samples to filter at once. If filter_frame() is"]
+        #[doc = " called with more samples, it will split them."]
+        pub max_samples: ::std::os::raw::c_int,
+        #[doc = " Number of channels."]
+        pub channels: ::std::os::raw::c_int,
+        #[doc = " Number of past frames sent through the link."]
+        pub frame_count_in: i64,
+        #[doc = " Number of past frames sent through the link."]
+        pub frame_count_out: i64,
+        #[doc = " Number of past samples sent through the link."]
+        pub sample_count_in: i64,
+        #[doc = " Number of past samples sent through the link."]
+        pub sample_count_out: i64,
+        #[doc = " A pointer to a FFFramePool struct."]
+        pub frame_pool: *mut ::std::os::raw::c_void,
+        #[doc = " True if a frame is currently wanted on the output of this filter."]
+        #[doc = " Set when ff_request_frame() is called by the output,"]
+        #[doc = " cleared when a frame is filtered."]
+        pub frame_wanted_out: ::std::os::raw::c_int,
+        #[doc = " For hwaccel pixel formats, this should be a reference to the"]
+        #[doc = " AVHWFramesContext describing the frames."]
+        pub hw_frames_ctx: *mut root::AVBufferRef,
+        #[doc = " Internal structure members."]
+        #[doc = " The fields below this limit are internal for libavfilter's use"]
+        #[doc = " and must in no way be accessed by applications."]
+        pub reserved: [::std::os::raw::c_char; 61440usize],
+    }
+    #[doc = "< not started"]
+    pub const AVFilterLink_AVLINK_UNINIT: ::std::os::raw::c_uint = 0;
+    #[doc = "< started, but incomplete"]
+    pub const AVFilterLink_AVLINK_STARTINIT: ::std::os::raw::c_uint = 1;
+    #[doc = "< complete"]
+    pub const AVFilterLink_AVLINK_INIT: ::std::os::raw::c_uint = 2;
+    #[doc = " stage of the initialization of the link properties (dimensions, etc)"]
+    pub type AVFilterLink__bindgen_ty_1 = ::std::os::raw::c_uint;
+    impl Default for AVFilterLink {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " Link two filters together."]
+        #[doc = ""]
+        #[doc = " @param src    the source filter"]
+        #[doc = " @param srcpad index of the output pad on the source filter"]
+        #[doc = " @param dst    the destination filter"]
+        #[doc = " @param dstpad index of the input pad on the destination filter"]
+        #[doc = " @return       zero on success"]
+        pub fn avfilter_link(
+            src: *mut root::AVFilterContext,
+            srcpad: ::std::os::raw::c_uint,
+            dst: *mut root::AVFilterContext,
+            dstpad: ::std::os::raw::c_uint,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Free the link in *link, and set its pointer to NULL."]
+        pub fn avfilter_link_free(link: *mut *mut root::AVFilterLink);
+    }
+    extern "C" {
+        #[doc = " Negotiate the media format, dimensions, etc of all inputs to a filter."]
+        #[doc = ""]
+        #[doc = " @param filter the filter to negotiate the properties for its inputs"]
+        #[doc = " @return       zero on successful negotiation"]
+        pub fn avfilter_config_links(filter: *mut root::AVFilterContext) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Make the filter instance process a command."]
+        #[doc = " It is recommended to use avfilter_graph_send_command()."]
+        pub fn avfilter_process_command(
+            filter: *mut root::AVFilterContext,
+            cmd: *const ::std::os::raw::c_char,
+            arg: *const ::std::os::raw::c_char,
+            res: *mut ::std::os::raw::c_char,
+            res_len: ::std::os::raw::c_int,
+            flags: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Iterate over all registered filters."]
+        #[doc = ""]
+        #[doc = " @param opaque a pointer where libavfilter will store the iteration state. Must"]
+        #[doc = "               point to NULL to start the iteration."]
+        #[doc = ""]
+        #[doc = " @return the next registered filter or NULL when the iteration is"]
+        #[doc = "         finished"]
+        pub fn av_filter_iterate(opaque: *mut *mut ::std::os::raw::c_void)
+            -> *const root::AVFilter;
+    }
+    extern "C" {
+        #[doc = " Get a filter definition matching the given name."]
+        #[doc = ""]
+        #[doc = " @param name the filter name to find"]
+        #[doc = " @return     the filter definition, if any matching one is registered."]
+        #[doc = "             NULL if none found."]
+        pub fn avfilter_get_by_name(name: *const ::std::os::raw::c_char) -> *const root::AVFilter;
+    }
+    extern "C" {
+        #[doc = " Initialize a filter with the supplied parameters."]
+        #[doc = ""]
+        #[doc = " @param ctx  uninitialized filter context to initialize"]
+        #[doc = " @param args Options to initialize the filter with. This must be a"]
+        #[doc = "             ':'-separated list of options in the 'key=value' form."]
+        #[doc = "             May be NULL if the options have been set directly using the"]
+        #[doc = "             AVOptions API or there are no options that need to be set."]
+        #[doc = " @return 0 on success, a negative AVERROR on failure"]
+        pub fn avfilter_init_str(
+            ctx: *mut root::AVFilterContext,
+            args: *const ::std::os::raw::c_char,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Initialize a filter with the supplied dictionary of options."]
+        #[doc = ""]
+        #[doc = " @param ctx     uninitialized filter context to initialize"]
+        #[doc = " @param options An AVDictionary filled with options for this filter. On"]
+        #[doc = "                return this parameter will be destroyed and replaced with"]
+        #[doc = "                a dict containing options that were not found. This dictionary"]
+        #[doc = "                must be freed by the caller."]
+        #[doc = "                May be NULL, then this function is equivalent to"]
+        #[doc = "                avfilter_init_str() with the second parameter set to NULL."]
+        #[doc = " @return 0 on success, a negative AVERROR on failure"]
+        #[doc = ""]
+        #[doc = " @note This function and avfilter_init_str() do essentially the same thing,"]
+        #[doc = " the difference is in manner in which the options are passed. It is up to the"]
+        #[doc = " calling code to choose whichever is more preferable. The two functions also"]
+        #[doc = " behave differently when some of the provided options are not declared as"]
+        #[doc = " supported by the filter. In such a case, avfilter_init_str() will fail, but"]
+        #[doc = " this function will leave those extra options in the options AVDictionary and"]
+        #[doc = " continue as usual."]
+        pub fn avfilter_init_dict(
+            ctx: *mut root::AVFilterContext,
+            options: *mut *mut root::AVDictionary,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Free a filter context. This will also remove the filter from its"]
+        #[doc = " filtergraph's list of filters."]
+        #[doc = ""]
+        #[doc = " @param filter the filter to free"]
+        pub fn avfilter_free(filter: *mut root::AVFilterContext);
+    }
+    extern "C" {
+        #[doc = " Insert a filter in the middle of an existing link."]
+        #[doc = ""]
+        #[doc = " @param link the link into which the filter should be inserted"]
+        #[doc = " @param filt the filter to be inserted"]
+        #[doc = " @param filt_srcpad_idx the input pad on the filter to connect"]
+        #[doc = " @param filt_dstpad_idx the output pad on the filter to connect"]
+        #[doc = " @return     zero on success"]
+        pub fn avfilter_insert_filter(
+            link: *mut root::AVFilterLink,
+            filt: *mut root::AVFilterContext,
+            filt_srcpad_idx: ::std::os::raw::c_uint,
+            filt_dstpad_idx: ::std::os::raw::c_uint,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " @return AVClass for AVFilterContext."]
+        #[doc = ""]
+        #[doc = " @see av_opt_find()."]
+        pub fn avfilter_get_class() -> *const root::AVClass;
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVFilterGraphInternal {
+        _unused: [u8; 0],
+    }
+    #[doc = " A function pointer passed to the @ref AVFilterGraph.execute callback to be"]
+    #[doc = " executed multiple times, possibly in parallel."]
+    #[doc = ""]
+    #[doc = " @param ctx the filter context the job belongs to"]
+    #[doc = " @param arg an opaque parameter passed through from @ref"]
+    #[doc = "            AVFilterGraph.execute"]
+    #[doc = " @param jobnr the index of the job being executed"]
+    #[doc = " @param nb_jobs the total number of jobs"]
+    #[doc = ""]
+    #[doc = " @return 0 on success, a negative AVERROR on error"]
+    pub type avfilter_action_func = ::std::option::Option<
+        unsafe extern "C" fn(
+            ctx: *mut root::AVFilterContext,
+            arg: *mut ::std::os::raw::c_void,
+            jobnr: ::std::os::raw::c_int,
+            nb_jobs: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int,
+    >;
+    #[doc = " A function executing multiple jobs, possibly in parallel."]
+    #[doc = ""]
+    #[doc = " @param ctx the filter context to which the jobs belong"]
+    #[doc = " @param func the function to be called multiple times"]
+    #[doc = " @param arg the argument to be passed to func"]
+    #[doc = " @param ret a nb_jobs-sized array to be filled with return values from each"]
+    #[doc = "            invocation of func"]
+    #[doc = " @param nb_jobs the number of jobs to execute"]
+    #[doc = ""]
+    #[doc = " @return 0 on success, a negative AVERROR on error"]
+    pub type avfilter_execute_func = ::std::option::Option<
+        unsafe extern "C" fn(
+            ctx: *mut root::AVFilterContext,
+            func: root::avfilter_action_func,
+            arg: *mut ::std::os::raw::c_void,
+            ret: *mut ::std::os::raw::c_int,
+            nb_jobs: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int,
+    >;
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVFilterGraph {
+        pub av_class: *const root::AVClass,
+        pub filters: *mut *mut root::AVFilterContext,
+        pub nb_filters: ::std::os::raw::c_uint,
+        #[doc = "< sws options to use for the auto-inserted scale filters"]
+        pub scale_sws_opts: *mut ::std::os::raw::c_char,
+        #[doc = " Type of multithreading allowed for filters in this graph. A combination"]
+        #[doc = " of AVFILTER_THREAD_* flags."]
+        #[doc = ""]
+        #[doc = " May be set by the caller at any point, the setting will apply to all"]
+        #[doc = " filters initialized after that. The default is allowing everything."]
+        #[doc = ""]
+        #[doc = " When a filter in this graph is initialized, this field is combined using"]
+        #[doc = " bit AND with AVFilterContext.thread_type to get the final mask used for"]
+        #[doc = " determining allowed threading types. I.e. a threading type needs to be"]
+        #[doc = " set in both to be allowed."]
+        pub thread_type: ::std::os::raw::c_int,
+        #[doc = " Maximum number of threads used by filters in this graph. May be set by"]
+        #[doc = " the caller before adding any filters to the filtergraph. Zero (the"]
+        #[doc = " default) means that the number of threads is determined automatically."]
+        pub nb_threads: ::std::os::raw::c_int,
+        #[doc = " Opaque object for libavfilter internal use."]
+        pub internal: *mut root::AVFilterGraphInternal,
+        #[doc = " Opaque user data. May be set by the caller to an arbitrary value, e.g. to"]
+        #[doc = " be used from callbacks like @ref AVFilterGraph.execute."]
+        #[doc = " Libavfilter will not touch this field in any way."]
+        pub opaque: *mut ::std::os::raw::c_void,
+        #[doc = " This callback may be set by the caller immediately after allocating the"]
+        #[doc = " graph and before adding any filters to it, to provide a custom"]
+        #[doc = " multithreading implementation."]
+        #[doc = ""]
+        #[doc = " If set, filters with slice threading capability will call this callback"]
+        #[doc = " to execute multiple jobs in parallel."]
+        #[doc = ""]
+        #[doc = " If this field is left unset, libavfilter will use its internal"]
+        #[doc = " implementation, which may or may not be multithreaded depending on the"]
+        #[doc = " platform and build options."]
+        pub execute: root::avfilter_execute_func,
+        #[doc = "< swr options to use for the auto-inserted aresample filters, Access ONLY through AVOptions"]
+        pub aresample_swr_opts: *mut ::std::os::raw::c_char,
+        #[doc = " Private fields"]
+        #[doc = ""]
+        #[doc = " The following fields are for internal use only."]
+        #[doc = " Their type, offset, number and semantic can change without notice."]
+        pub sink_links: *mut *mut root::AVFilterLink,
+        pub sink_links_count: ::std::os::raw::c_int,
+        pub disable_auto_convert: ::std::os::raw::c_uint,
+    }
+    impl Default for AVFilterGraph {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " Allocate a filter graph."]
+        #[doc = ""]
+        #[doc = " @return the allocated filter graph on success or NULL."]
+        pub fn avfilter_graph_alloc() -> *mut root::AVFilterGraph;
+    }
+    extern "C" {
+        #[doc = " Create a new filter instance in a filter graph."]
+        #[doc = ""]
+        #[doc = " @param graph graph in which the new filter will be used"]
+        #[doc = " @param filter the filter to create an instance of"]
+        #[doc = " @param name Name to give to the new instance (will be copied to"]
+        #[doc = "             AVFilterContext.name). This may be used by the caller to identify"]
+        #[doc = "             different filters, libavfilter itself assigns no semantics to"]
+        #[doc = "             this parameter. May be NULL."]
+        #[doc = ""]
+        #[doc = " @return the context of the newly created filter instance (note that it is"]
+        #[doc = "         also retrievable directly through AVFilterGraph.filters or with"]
+        #[doc = "         avfilter_graph_get_filter()) on success or NULL on failure."]
+        pub fn avfilter_graph_alloc_filter(
+            graph: *mut root::AVFilterGraph,
+            filter: *const root::AVFilter,
+            name: *const ::std::os::raw::c_char,
+        ) -> *mut root::AVFilterContext;
+    }
+    extern "C" {
+        #[doc = " Get a filter instance identified by instance name from graph."]
+        #[doc = ""]
+        #[doc = " @param graph filter graph to search through."]
+        #[doc = " @param name filter instance name (should be unique in the graph)."]
+        #[doc = " @return the pointer to the found filter instance or NULL if it"]
+        #[doc = " cannot be found."]
+        pub fn avfilter_graph_get_filter(
+            graph: *mut root::AVFilterGraph,
+            name: *const ::std::os::raw::c_char,
+        ) -> *mut root::AVFilterContext;
+    }
+    extern "C" {
+        #[doc = " Create and add a filter instance into an existing graph."]
+        #[doc = " The filter instance is created from the filter filt and inited"]
+        #[doc = " with the parameter args. opaque is currently ignored."]
+        #[doc = ""]
+        #[doc = " In case of success put in *filt_ctx the pointer to the created"]
+        #[doc = " filter instance, otherwise set *filt_ctx to NULL."]
+        #[doc = ""]
+        #[doc = " @param name the instance name to give to the created filter instance"]
+        #[doc = " @param graph_ctx the filter graph"]
+        #[doc = " @return a negative AVERROR error code in case of failure, a non"]
+        #[doc = " negative value otherwise"]
+        pub fn avfilter_graph_create_filter(
+            filt_ctx: *mut *mut root::AVFilterContext,
+            filt: *const root::AVFilter,
+            name: *const ::std::os::raw::c_char,
+            args: *const ::std::os::raw::c_char,
+            opaque: *mut ::std::os::raw::c_void,
+            graph_ctx: *mut root::AVFilterGraph,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Enable or disable automatic format conversion inside the graph."]
+        #[doc = ""]
+        #[doc = " Note that format conversion can still happen inside explicitly inserted"]
+        #[doc = " scale and aresample filters."]
+        #[doc = ""]
+        #[doc = " @param flags  any of the AVFILTER_AUTO_CONVERT_* constants"]
+        pub fn avfilter_graph_set_auto_convert(
+            graph: *mut root::AVFilterGraph,
+            flags: ::std::os::raw::c_uint,
+        );
+    }
+    #[doc = "< all automatic conversions enabled"]
+    pub const AVFILTER_AUTO_CONVERT_ALL: ::std::os::raw::c_int = 0;
+    #[doc = "< all automatic conversions disabled"]
+    pub const AVFILTER_AUTO_CONVERT_NONE: ::std::os::raw::c_int = -1;
+    pub type _bindgen_ty_2 = ::std::os::raw::c_int;
+    extern "C" {
+        #[doc = " Check validity and configure all the links and formats in the graph."]
+        #[doc = ""]
+        #[doc = " @param graphctx the filter graph"]
+        #[doc = " @param log_ctx context used for logging"]
+        #[doc = " @return >= 0 in case of success, a negative AVERROR code otherwise"]
+        pub fn avfilter_graph_config(
+            graphctx: *mut root::AVFilterGraph,
+            log_ctx: *mut ::std::os::raw::c_void,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Free a graph, destroy its links, and set *graph to NULL."]
+        #[doc = " If *graph is NULL, do nothing."]
+        pub fn avfilter_graph_free(graph: *mut *mut root::AVFilterGraph);
+    }
+    #[doc = " A linked-list of the inputs/outputs of the filter chain."]
+    #[doc = ""]
+    #[doc = " This is mainly useful for avfilter_graph_parse() / avfilter_graph_parse2(),"]
+    #[doc = " where it is used to communicate open (unlinked) inputs and outputs from and"]
+    #[doc = " to the caller."]
+    #[doc = " This struct specifies, per each not connected pad contained in the graph, the"]
+    #[doc = " filter context and the pad index required for establishing a link."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVFilterInOut {
+        #[doc = " unique name for this input/output in the list"]
+        pub name: *mut ::std::os::raw::c_char,
+        #[doc = " filter context associated to this input/output"]
+        pub filter_ctx: *mut root::AVFilterContext,
+        #[doc = " index of the filt_ctx pad to use for linking"]
+        pub pad_idx: ::std::os::raw::c_int,
+        #[doc = " next input/input in the list, NULL if this is the last"]
+        pub next: *mut root::AVFilterInOut,
+    }
+    impl Default for AVFilterInOut {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " Allocate a single AVFilterInOut entry."]
+        #[doc = " Must be freed with avfilter_inout_free()."]
+        #[doc = " @return allocated AVFilterInOut on success, NULL on failure."]
+        pub fn avfilter_inout_alloc() -> *mut root::AVFilterInOut;
+    }
+    extern "C" {
+        #[doc = " Free the supplied list of AVFilterInOut and set *inout to NULL."]
+        #[doc = " If *inout is NULL, do nothing."]
+        pub fn avfilter_inout_free(inout: *mut *mut root::AVFilterInOut);
+    }
+    extern "C" {
+        #[doc = " Add a graph described by a string to a graph."]
+        #[doc = ""]
+        #[doc = " @note The caller must provide the lists of inputs and outputs,"]
+        #[doc = " which therefore must be known before calling the function."]
+        #[doc = ""]
+        #[doc = " @note The inputs parameter describes inputs of the already existing"]
+        #[doc = " part of the graph; i.e. from the point of view of the newly created"]
+        #[doc = " part, they are outputs. Similarly the outputs parameter describes"]
+        #[doc = " outputs of the already existing filters, which are provided as"]
+        #[doc = " inputs to the parsed filters."]
+        #[doc = ""]
+        #[doc = " @param graph   the filter graph where to link the parsed graph context"]
+        #[doc = " @param filters string to be parsed"]
+        #[doc = " @param inputs  linked list to the inputs of the graph"]
+        #[doc = " @param outputs linked list to the outputs of the graph"]
+        #[doc = " @return zero on success, a negative AVERROR code on error"]
+        pub fn avfilter_graph_parse(
+            graph: *mut root::AVFilterGraph,
+            filters: *const ::std::os::raw::c_char,
+            inputs: *mut root::AVFilterInOut,
+            outputs: *mut root::AVFilterInOut,
+            log_ctx: *mut ::std::os::raw::c_void,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Add a graph described by a string to a graph."]
+        #[doc = ""]
+        #[doc = " In the graph filters description, if the input label of the first"]
+        #[doc = " filter is not specified, \"in\" is assumed; if the output label of"]
+        #[doc = " the last filter is not specified, \"out\" is assumed."]
+        #[doc = ""]
+        #[doc = " @param graph   the filter graph where to link the parsed graph context"]
+        #[doc = " @param filters string to be parsed"]
+        #[doc = " @param inputs  pointer to a linked list to the inputs of the graph, may be NULL."]
+        #[doc = "                If non-NULL, *inputs is updated to contain the list of open inputs"]
+        #[doc = "                after the parsing, should be freed with avfilter_inout_free()."]
+        #[doc = " @param outputs pointer to a linked list to the outputs of the graph, may be NULL."]
+        #[doc = "                If non-NULL, *outputs is updated to contain the list of open outputs"]
+        #[doc = "                after the parsing, should be freed with avfilter_inout_free()."]
+        #[doc = " @return non negative on success, a negative AVERROR code on error"]
+        pub fn avfilter_graph_parse_ptr(
+            graph: *mut root::AVFilterGraph,
+            filters: *const ::std::os::raw::c_char,
+            inputs: *mut *mut root::AVFilterInOut,
+            outputs: *mut *mut root::AVFilterInOut,
+            log_ctx: *mut ::std::os::raw::c_void,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Add a graph described by a string to a graph."]
+        #[doc = ""]
+        #[doc = " @param[in]  graph   the filter graph where to link the parsed graph context"]
+        #[doc = " @param[in]  filters string to be parsed"]
+        #[doc = " @param[out] inputs  a linked list of all free (unlinked) inputs of the"]
+        #[doc = "                     parsed graph will be returned here. It is to be freed"]
+        #[doc = "                     by the caller using avfilter_inout_free()."]
+        #[doc = " @param[out] outputs a linked list of all free (unlinked) outputs of the"]
+        #[doc = "                     parsed graph will be returned here. It is to be freed by the"]
+        #[doc = "                     caller using avfilter_inout_free()."]
+        #[doc = " @return zero on success, a negative AVERROR code on error"]
+        #[doc = ""]
+        #[doc = " @note This function returns the inputs and outputs that are left"]
+        #[doc = " unlinked after parsing the graph and the caller then deals with"]
+        #[doc = " them."]
+        #[doc = " @note This function makes no reference whatsoever to already"]
+        #[doc = " existing parts of the graph and the inputs parameter will on return"]
+        #[doc = " contain inputs of the newly parsed part of the graph.  Analogously"]
+        #[doc = " the outputs parameter will contain outputs of the newly created"]
+        #[doc = " filters."]
+        pub fn avfilter_graph_parse2(
+            graph: *mut root::AVFilterGraph,
+            filters: *const ::std::os::raw::c_char,
+            inputs: *mut *mut root::AVFilterInOut,
+            outputs: *mut *mut root::AVFilterInOut,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Send a command to one or more filter instances."]
+        #[doc = ""]
+        #[doc = " @param graph  the filter graph"]
+        #[doc = " @param target the filter(s) to which the command should be sent"]
+        #[doc = "               \"all\" sends to all filters"]
+        #[doc = "               otherwise it can be a filter or filter instance name"]
+        #[doc = "               which will send the command to all matching filters."]
+        #[doc = " @param cmd    the command to send, for handling simplicity all commands must be alphanumeric only"]
+        #[doc = " @param arg    the argument for the command"]
+        #[doc = " @param res    a buffer with size res_size where the filter(s) can return a response."]
+        #[doc = ""]
+        #[doc = " @returns >=0 on success otherwise an error code."]
+        #[doc = "              AVERROR(ENOSYS) on unsupported commands"]
+        pub fn avfilter_graph_send_command(
+            graph: *mut root::AVFilterGraph,
+            target: *const ::std::os::raw::c_char,
+            cmd: *const ::std::os::raw::c_char,
+            arg: *const ::std::os::raw::c_char,
+            res: *mut ::std::os::raw::c_char,
+            res_len: ::std::os::raw::c_int,
+            flags: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Queue a command for one or more filter instances."]
+        #[doc = ""]
+        #[doc = " @param graph  the filter graph"]
+        #[doc = " @param target the filter(s) to which the command should be sent"]
+        #[doc = "               \"all\" sends to all filters"]
+        #[doc = "               otherwise it can be a filter or filter instance name"]
+        #[doc = "               which will send the command to all matching filters."]
+        #[doc = " @param cmd    the command to sent, for handling simplicity all commands must be alphanumeric only"]
+        #[doc = " @param arg    the argument for the command"]
+        #[doc = " @param ts     time at which the command should be sent to the filter"]
+        #[doc = ""]
+        #[doc = " @note As this executes commands after this function returns, no return code"]
+        #[doc = "       from the filter is provided, also AVFILTER_CMD_FLAG_ONE is not supported."]
+        pub fn avfilter_graph_queue_command(
+            graph: *mut root::AVFilterGraph,
+            target: *const ::std::os::raw::c_char,
+            cmd: *const ::std::os::raw::c_char,
+            arg: *const ::std::os::raw::c_char,
+            flags: ::std::os::raw::c_int,
+            ts: f64,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Dump a graph into a human-readable string representation."]
+        #[doc = ""]
+        #[doc = " @param graph    the graph to dump"]
+        #[doc = " @param options  formatting options; currently ignored"]
+        #[doc = " @return  a string, or NULL in case of memory allocation failure;"]
+        #[doc = "          the string must be freed using av_free"]
+        pub fn avfilter_graph_dump(
+            graph: *mut root::AVFilterGraph,
+            options: *const ::std::os::raw::c_char,
+        ) -> *mut ::std::os::raw::c_char;
+    }
+    extern "C" {
+        #[doc = " Request a frame on the oldest sink link."]
+        #[doc = ""]
+        #[doc = " If the request returns AVERROR_EOF, try the next."]
+        #[doc = ""]
+        #[doc = " Note that this function is not meant to be the sole scheduling mechanism"]
+        #[doc = " of a filtergraph, only a convenience function to help drain a filtergraph"]
+        #[doc = " in a balanced way under normal circumstances."]
+        #[doc = ""]
+        #[doc = " Also note that AVERROR_EOF does not mean that frames did not arrive on"]
+        #[doc = " some of the sinks during the process."]
+        #[doc = " When there are multiple sink links, in case the requested link"]
+        #[doc = " returns an EOF, this may cause a filter to flush pending frames"]
+        #[doc = " which are sent to another sink link, although unrequested."]
+        #[doc = ""]
+        #[doc = " @return  the return value of ff_request_frame(),"]
+        #[doc = "          or AVERROR_EOF if all links returned AVERROR_EOF"]
+        pub fn avfilter_graph_request_oldest(
+            graph: *mut root::AVFilterGraph,
+        ) -> ::std::os::raw::c_int;
+    }
+    #[doc = " Do not check for format changes."]
+    pub const AV_BUFFERSRC_FLAG_NO_CHECK_FORMAT: ::std::os::raw::c_uint = 1;
+    #[doc = " Immediately push the frame to the output."]
+    pub const AV_BUFFERSRC_FLAG_PUSH: ::std::os::raw::c_uint = 4;
+    #[doc = " Keep a reference to the frame."]
+    #[doc = " If the frame if reference-counted, create a new reference; otherwise"]
+    #[doc = " copy the frame data."]
+    pub const AV_BUFFERSRC_FLAG_KEEP_REF: ::std::os::raw::c_uint = 8;
+    #[doc = " @defgroup lavfi_buffersrc Buffer source API"]
+    #[doc = " @ingroup lavfi"]
+    #[doc = " @{"]
+    pub type _bindgen_ty_3 = ::std::os::raw::c_uint;
+    extern "C" {
+        #[doc = " Get the number of failed requests."]
+        #[doc = ""]
+        #[doc = " A failed request is when the request_frame method is called while no"]
+        #[doc = " frame is present in the buffer."]
+        #[doc = " The number is reset when a frame is added."]
+        pub fn av_buffersrc_get_nb_failed_requests(
+            buffer_src: *mut root::AVFilterContext,
+        ) -> ::std::os::raw::c_uint;
+    }
+    #[doc = " This structure contains the parameters describing the frames that will be"]
+    #[doc = " passed to this filter."]
+    #[doc = ""]
+    #[doc = " It should be allocated with av_buffersrc_parameters_alloc() and freed with"]
+    #[doc = " av_free(). All the allocated fields in it remain owned by the caller."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVBufferSrcParameters {
+        #[doc = " video: the pixel format, value corresponds to enum AVPixelFormat"]
+        #[doc = " audio: the sample format, value corresponds to enum AVSampleFormat"]
+        pub format: ::std::os::raw::c_int,
+        #[doc = " The timebase to be used for the timestamps on the input frames."]
+        pub time_base: root::AVRational,
+        #[doc = " Video only, the display dimensions of the input frames."]
+        pub width: ::std::os::raw::c_int,
+        #[doc = " Video only, the display dimensions of the input frames."]
+        pub height: ::std::os::raw::c_int,
+        #[doc = " Video only, the sample (pixel) aspect ratio."]
+        pub sample_aspect_ratio: root::AVRational,
+        #[doc = " Video only, the frame rate of the input video. This field must only be"]
+        #[doc = " set to a non-zero value if input stream has a known constant framerate"]
+        #[doc = " and should be left at its initial value if the framerate is variable or"]
+        #[doc = " unknown."]
+        pub frame_rate: root::AVRational,
+        #[doc = " Video with a hwaccel pixel format only. This should be a reference to an"]
+        #[doc = " AVHWFramesContext instance describing the input frames."]
+        pub hw_frames_ctx: *mut root::AVBufferRef,
+        #[doc = " Audio only, the audio sampling rate in samples per second."]
+        pub sample_rate: ::std::os::raw::c_int,
+        #[doc = " Audio only, the audio channel layout"]
+        pub channel_layout: u64,
+    }
+    impl Default for AVBufferSrcParameters {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " Allocate a new AVBufferSrcParameters instance. It should be freed by the"]
+        #[doc = " caller with av_free()."]
+        pub fn av_buffersrc_parameters_alloc() -> *mut root::AVBufferSrcParameters;
+    }
+    extern "C" {
+        #[doc = " Initialize the buffersrc or abuffersrc filter with the provided parameters."]
+        #[doc = " This function may be called multiple times, the later calls override the"]
+        #[doc = " previous ones. Some of the parameters may also be set through AVOptions, then"]
+        #[doc = " whatever method is used last takes precedence."]
+        #[doc = ""]
+        #[doc = " @param ctx an instance of the buffersrc or abuffersrc filter"]
+        #[doc = " @param param the stream parameters. The frames later passed to this filter"]
+        #[doc = "              must conform to those parameters. All the allocated fields in"]
+        #[doc = "              param remain owned by the caller, libavfilter will make internal"]
+        #[doc = "              copies or references when necessary."]
+        #[doc = " @return 0 on success, a negative AVERROR code on failure."]
+        pub fn av_buffersrc_parameters_set(
+            ctx: *mut root::AVFilterContext,
+            param: *mut root::AVBufferSrcParameters,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Add a frame to the buffer source."]
+        #[doc = ""]
+        #[doc = " @param ctx   an instance of the buffersrc filter"]
+        #[doc = " @param frame frame to be added. If the frame is reference counted, this"]
+        #[doc = " function will make a new reference to it. Otherwise the frame data will be"]
+        #[doc = " copied."]
+        #[doc = ""]
+        #[doc = " @return 0 on success, a negative AVERROR on error"]
+        #[doc = ""]
+        #[doc = " This function is equivalent to av_buffersrc_add_frame_flags() with the"]
+        #[doc = " AV_BUFFERSRC_FLAG_KEEP_REF flag."]
+        pub fn av_buffersrc_write_frame(
+            ctx: *mut root::AVFilterContext,
+            frame: *const root::AVFrame,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Add a frame to the buffer source."]
+        #[doc = ""]
+        #[doc = " @param ctx   an instance of the buffersrc filter"]
+        #[doc = " @param frame frame to be added. If the frame is reference counted, this"]
+        #[doc = " function will take ownership of the reference(s) and reset the frame."]
+        #[doc = " Otherwise the frame data will be copied. If this function returns an error,"]
+        #[doc = " the input frame is not touched."]
+        #[doc = ""]
+        #[doc = " @return 0 on success, a negative AVERROR on error."]
+        #[doc = ""]
+        #[doc = " @note the difference between this function and av_buffersrc_write_frame() is"]
+        #[doc = " that av_buffersrc_write_frame() creates a new reference to the input frame,"]
+        #[doc = " while this function takes ownership of the reference passed to it."]
+        #[doc = ""]
+        #[doc = " This function is equivalent to av_buffersrc_add_frame_flags() without the"]
+        #[doc = " AV_BUFFERSRC_FLAG_KEEP_REF flag."]
+        pub fn av_buffersrc_add_frame(
+            ctx: *mut root::AVFilterContext,
+            frame: *mut root::AVFrame,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Add a frame to the buffer source."]
+        #[doc = ""]
+        #[doc = " By default, if the frame is reference-counted, this function will take"]
+        #[doc = " ownership of the reference(s) and reset the frame. This can be controlled"]
+        #[doc = " using the flags."]
+        #[doc = ""]
+        #[doc = " If this function returns an error, the input frame is not touched."]
+        #[doc = ""]
+        #[doc = " @param buffer_src  pointer to a buffer source context"]
+        #[doc = " @param frame       a frame, or NULL to mark EOF"]
+        #[doc = " @param flags       a combination of AV_BUFFERSRC_FLAG_*"]
+        #[doc = " @return            >= 0 in case of success, a negative AVERROR code"]
+        #[doc = "                    in case of failure"]
+        pub fn av_buffersrc_add_frame_flags(
+            buffer_src: *mut root::AVFilterContext,
+            frame: *mut root::AVFrame,
+            flags: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Close the buffer source after EOF."]
+        #[doc = ""]
+        #[doc = " This is similar to passing NULL to av_buffersrc_add_frame_flags()"]
+        #[doc = " except it takes the timestamp of the EOF, i.e. the timestamp of the end"]
+        #[doc = " of the last frame."]
+        pub fn av_buffersrc_close(
+            ctx: *mut root::AVFilterContext,
+            pts: i64,
+            flags: ::std::os::raw::c_uint,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Get a frame with filtered data from sink and put it in frame."]
+        #[doc = ""]
+        #[doc = " @param ctx    pointer to a buffersink or abuffersink filter context."]
+        #[doc = " @param frame  pointer to an allocated frame that will be filled with data."]
+        #[doc = "               The data must be freed using av_frame_unref() / av_frame_free()"]
+        #[doc = " @param flags  a combination of AV_BUFFERSINK_FLAG_* flags"]
+        #[doc = ""]
+        #[doc = " @return  >= 0 in for success, a negative AVERROR code for failure."]
+        pub fn av_buffersink_get_frame_flags(
+            ctx: *mut root::AVFilterContext,
+            frame: *mut root::AVFrame,
+            flags: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    #[doc = " Deprecated and unused struct to use for initializing a buffersink context."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVBufferSinkParams {
+        #[doc = "< list of allowed pixel formats, terminated by AV_PIX_FMT_NONE"]
+        pub pixel_fmts: *const root::AVPixelFormat,
+    }
+    impl Default for AVBufferSinkParams {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " Create an AVBufferSinkParams structure."]
+        #[doc = ""]
+        #[doc = " Must be freed with av_free()."]
+        pub fn av_buffersink_params_alloc() -> *mut root::AVBufferSinkParams;
+    }
+    #[doc = " Deprecated and unused struct to use for initializing an abuffersink context."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVABufferSinkParams {
+        #[doc = "< list of allowed sample formats, terminated by AV_SAMPLE_FMT_NONE"]
+        pub sample_fmts: *const root::AVSampleFormat,
+        #[doc = "< list of allowed channel layouts, terminated by -1"]
+        pub channel_layouts: *const i64,
+        #[doc = "< list of allowed channel counts, terminated by -1"]
+        pub channel_counts: *const ::std::os::raw::c_int,
+        #[doc = "< if not 0, accept any channel count or layout"]
+        pub all_channel_counts: ::std::os::raw::c_int,
+        #[doc = "< list of allowed sample rates, terminated by -1"]
+        pub sample_rates: *mut ::std::os::raw::c_int,
+    }
+    impl Default for AVABufferSinkParams {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " Create an AVABufferSinkParams structure."]
+        #[doc = ""]
+        #[doc = " Must be freed with av_free()."]
+        pub fn av_abuffersink_params_alloc() -> *mut root::AVABufferSinkParams;
+    }
+    extern "C" {
+        #[doc = " Set the frame size for an audio buffer sink."]
+        #[doc = ""]
+        #[doc = " All calls to av_buffersink_get_buffer_ref will return a buffer with"]
+        #[doc = " exactly the specified number of samples, or AVERROR(EAGAIN) if there is"]
+        #[doc = " not enough. The last buffer at EOF will be padded with 0."]
+        pub fn av_buffersink_set_frame_size(
+            ctx: *mut root::AVFilterContext,
+            frame_size: ::std::os::raw::c_uint,
+        );
+    }
+    extern "C" {
+        #[doc = " @defgroup lavfi_buffersink_accessors Buffer sink accessors"]
+        #[doc = " Get the properties of the stream"]
+        #[doc = " @{"]
+        pub fn av_buffersink_get_type(ctx: *const root::AVFilterContext) -> root::AVMediaType;
+    }
+    extern "C" {
+        pub fn av_buffersink_get_time_base(ctx: *const root::AVFilterContext) -> root::AVRational;
+    }
+    extern "C" {
+        pub fn av_buffersink_get_format(ctx: *const root::AVFilterContext)
+            -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        pub fn av_buffersink_get_frame_rate(ctx: *const root::AVFilterContext) -> root::AVRational;
+    }
+    extern "C" {
+        pub fn av_buffersink_get_w(ctx: *const root::AVFilterContext) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        pub fn av_buffersink_get_h(ctx: *const root::AVFilterContext) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        pub fn av_buffersink_get_sample_aspect_ratio(
+            ctx: *const root::AVFilterContext,
+        ) -> root::AVRational;
+    }
+    extern "C" {
+        pub fn av_buffersink_get_channels(
+            ctx: *const root::AVFilterContext,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        pub fn av_buffersink_get_channel_layout(ctx: *const root::AVFilterContext) -> u64;
+    }
+    extern "C" {
+        pub fn av_buffersink_get_sample_rate(
+            ctx: *const root::AVFilterContext,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        pub fn av_buffersink_get_hw_frames_ctx(
+            ctx: *const root::AVFilterContext,
+        ) -> *mut root::AVBufferRef;
+    }
+    extern "C" {
+        #[doc = " Get a frame with filtered data from sink and put it in frame."]
+        #[doc = ""]
+        #[doc = " @param ctx pointer to a context of a buffersink or abuffersink AVFilter."]
+        #[doc = " @param frame pointer to an allocated frame that will be filled with data."]
+        #[doc = "              The data must be freed using av_frame_unref() / av_frame_free()"]
+        #[doc = ""]
+        #[doc = " @return"]
+        #[doc = "         - >= 0 if a frame was successfully returned."]
+        #[doc = "         - AVERROR(EAGAIN) if no frames are available at this point; more"]
+        #[doc = "           input frames must be added to the filtergraph to get more output."]
+        #[doc = "         - AVERROR_EOF if there will be no more output frames on this sink."]
+        #[doc = "         - A different negative AVERROR code in other failure cases."]
+        pub fn av_buffersink_get_frame(
+            ctx: *mut root::AVFilterContext,
+            frame: *mut root::AVFrame,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Same as av_buffersink_get_frame(), but with the ability to specify the number"]
+        #[doc = " of samples read. This function is less efficient than"]
+        #[doc = " av_buffersink_get_frame(), because it copies the data around."]
+        #[doc = ""]
+        #[doc = " @param ctx pointer to a context of the abuffersink AVFilter."]
+        #[doc = " @param frame pointer to an allocated frame that will be filled with data."]
+        #[doc = "              The data must be freed using av_frame_unref() / av_frame_free()"]
+        #[doc = "              frame will contain exactly nb_samples audio samples, except at"]
+        #[doc = "              the end of stream, when it can contain less than nb_samples."]
+        #[doc = ""]
+        #[doc = " @return The return codes have the same meaning as for"]
+        #[doc = "         av_buffersink_get_frame()."]
+        #[doc = ""]
+        #[doc = " @warning do not mix this function with av_buffersink_get_frame(). Use only one or"]
+        #[doc = " the other with a single sink, not both."]
+        pub fn av_buffersink_get_samples(
+            ctx: *mut root::AVFilterContext,
+            frame: *mut root::AVFrame,
+            nb_samples: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
     pub const AVHWDeviceType_AV_HWDEVICE_TYPE_NONE: root::AVHWDeviceType = 0;
     pub const AVHWDeviceType_AV_HWDEVICE_TYPE_VDPAU: root::AVHWDeviceType = 1;
     pub const AVHWDeviceType_AV_HWDEVICE_TYPE_CUDA: root::AVHWDeviceType = 2;
@@ -8065,7 +9845,7 @@ pub mod root {
     #[doc = " be much lower than normal memory."]
     pub const AV_HWFRAME_MAP_DIRECT: ::std::os::raw::c_uint = 8;
     #[doc = " Flags to apply to frame mappings."]
-    pub type _bindgen_ty_2 = ::std::os::raw::c_uint;
+    pub type _bindgen_ty_4 = ::std::os::raw::c_uint;
     extern "C" {
         #[doc = " Map a hardware frame."]
         #[doc = ""]
@@ -10508,7 +12288,7 @@ pub mod root {
     #[doc = " must be allocated by the user.  Thus AVHWFramesContext is always"]
     #[doc = " NULL, though this may change if support for frame allocation is"]
     #[doc = " added in future."]
-    pub type _bindgen_ty_3 = ::std::os::raw::c_uint;
+    pub type _bindgen_ty_5 = ::std::os::raw::c_uint;
     #[doc = " DRM object descriptor."]
     #[doc = ""]
     #[doc = " Describes a single DRM object, addressing it as a PRIME file"]
@@ -11341,7 +13121,7 @@ pub mod root {
     #[doc = " Accept to parse a value without a key; the key will then be returned"]
     #[doc = " as NULL."]
     pub const AV_OPT_FLAG_IMPLICIT_KEY: ::std::os::raw::c_uint = 1;
-    pub type _bindgen_ty_4 = ::std::os::raw::c_uint;
+    pub type _bindgen_ty_6 = ::std::os::raw::c_uint;
     extern "C" {
         #[doc = " @defgroup opt_eval_funcs Evaluating option strings"]
         #[doc = " @{"]
@@ -12101,6 +13881,23 @@ pub mod root {
         #[doc = "  av_set_cpu_flags_mask(), then this function will behave as if AVX is not"]
         #[doc = "  present."]
         pub fn av_cpu_max_align() -> root::size_t;
+    }
+    extern "C" {
+        #[doc = " @brief Decodes LZO 1x compressed data."]
+        #[doc = " @param out output buffer"]
+        #[doc = " @param outlen size of output buffer, number of bytes left are returned here"]
+        #[doc = " @param in input buffer"]
+        #[doc = " @param inlen size of input buffer, number of bytes left are returned here"]
+        #[doc = " @return 0 on success, otherwise a combination of the error flags above"]
+        #[doc = ""]
+        #[doc = " Make sure all buffers are appropriately padded, in must provide"]
+        #[doc = " AV_LZO_INPUT_PADDING, out must provide AV_LZO_OUTPUT_PADDING additional bytes."]
+        pub fn av_lzo1x_decode(
+            out: *mut ::std::os::raw::c_void,
+            outlen: *mut ::std::os::raw::c_int,
+            in_: *const ::std::os::raw::c_void,
+            inlen: *mut ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
     }
     #[doc = " @defgroup lavu_des DES"]
     #[doc = " @ingroup lavu_crypto"]
@@ -14632,6 +16429,9014 @@ pub mod root {
             frame: *mut root::AVFrame,
         ) -> *mut root::AVFilmGrainParams;
     }
+    pub const AVCodecID_AV_CODEC_ID_NONE: root::AVCodecID = 0;
+    pub const AVCodecID_AV_CODEC_ID_MPEG1VIDEO: root::AVCodecID = 1;
+    #[doc = "< preferred ID for MPEG-1/2 video decoding"]
+    pub const AVCodecID_AV_CODEC_ID_MPEG2VIDEO: root::AVCodecID = 2;
+    pub const AVCodecID_AV_CODEC_ID_H261: root::AVCodecID = 3;
+    pub const AVCodecID_AV_CODEC_ID_H263: root::AVCodecID = 4;
+    pub const AVCodecID_AV_CODEC_ID_RV10: root::AVCodecID = 5;
+    pub const AVCodecID_AV_CODEC_ID_RV20: root::AVCodecID = 6;
+    pub const AVCodecID_AV_CODEC_ID_MJPEG: root::AVCodecID = 7;
+    pub const AVCodecID_AV_CODEC_ID_MJPEGB: root::AVCodecID = 8;
+    pub const AVCodecID_AV_CODEC_ID_LJPEG: root::AVCodecID = 9;
+    pub const AVCodecID_AV_CODEC_ID_SP5X: root::AVCodecID = 10;
+    pub const AVCodecID_AV_CODEC_ID_JPEGLS: root::AVCodecID = 11;
+    pub const AVCodecID_AV_CODEC_ID_MPEG4: root::AVCodecID = 12;
+    pub const AVCodecID_AV_CODEC_ID_RAWVIDEO: root::AVCodecID = 13;
+    pub const AVCodecID_AV_CODEC_ID_MSMPEG4V1: root::AVCodecID = 14;
+    pub const AVCodecID_AV_CODEC_ID_MSMPEG4V2: root::AVCodecID = 15;
+    pub const AVCodecID_AV_CODEC_ID_MSMPEG4V3: root::AVCodecID = 16;
+    pub const AVCodecID_AV_CODEC_ID_WMV1: root::AVCodecID = 17;
+    pub const AVCodecID_AV_CODEC_ID_WMV2: root::AVCodecID = 18;
+    pub const AVCodecID_AV_CODEC_ID_H263P: root::AVCodecID = 19;
+    pub const AVCodecID_AV_CODEC_ID_H263I: root::AVCodecID = 20;
+    pub const AVCodecID_AV_CODEC_ID_FLV1: root::AVCodecID = 21;
+    pub const AVCodecID_AV_CODEC_ID_SVQ1: root::AVCodecID = 22;
+    pub const AVCodecID_AV_CODEC_ID_SVQ3: root::AVCodecID = 23;
+    pub const AVCodecID_AV_CODEC_ID_DVVIDEO: root::AVCodecID = 24;
+    pub const AVCodecID_AV_CODEC_ID_HUFFYUV: root::AVCodecID = 25;
+    pub const AVCodecID_AV_CODEC_ID_CYUV: root::AVCodecID = 26;
+    pub const AVCodecID_AV_CODEC_ID_H264: root::AVCodecID = 27;
+    pub const AVCodecID_AV_CODEC_ID_INDEO3: root::AVCodecID = 28;
+    pub const AVCodecID_AV_CODEC_ID_VP3: root::AVCodecID = 29;
+    pub const AVCodecID_AV_CODEC_ID_THEORA: root::AVCodecID = 30;
+    pub const AVCodecID_AV_CODEC_ID_ASV1: root::AVCodecID = 31;
+    pub const AVCodecID_AV_CODEC_ID_ASV2: root::AVCodecID = 32;
+    pub const AVCodecID_AV_CODEC_ID_FFV1: root::AVCodecID = 33;
+    pub const AVCodecID_AV_CODEC_ID_4XM: root::AVCodecID = 34;
+    pub const AVCodecID_AV_CODEC_ID_VCR1: root::AVCodecID = 35;
+    pub const AVCodecID_AV_CODEC_ID_CLJR: root::AVCodecID = 36;
+    pub const AVCodecID_AV_CODEC_ID_MDEC: root::AVCodecID = 37;
+    pub const AVCodecID_AV_CODEC_ID_ROQ: root::AVCodecID = 38;
+    pub const AVCodecID_AV_CODEC_ID_INTERPLAY_VIDEO: root::AVCodecID = 39;
+    pub const AVCodecID_AV_CODEC_ID_XAN_WC3: root::AVCodecID = 40;
+    pub const AVCodecID_AV_CODEC_ID_XAN_WC4: root::AVCodecID = 41;
+    pub const AVCodecID_AV_CODEC_ID_RPZA: root::AVCodecID = 42;
+    pub const AVCodecID_AV_CODEC_ID_CINEPAK: root::AVCodecID = 43;
+    pub const AVCodecID_AV_CODEC_ID_WS_VQA: root::AVCodecID = 44;
+    pub const AVCodecID_AV_CODEC_ID_MSRLE: root::AVCodecID = 45;
+    pub const AVCodecID_AV_CODEC_ID_MSVIDEO1: root::AVCodecID = 46;
+    pub const AVCodecID_AV_CODEC_ID_IDCIN: root::AVCodecID = 47;
+    pub const AVCodecID_AV_CODEC_ID_8BPS: root::AVCodecID = 48;
+    pub const AVCodecID_AV_CODEC_ID_SMC: root::AVCodecID = 49;
+    pub const AVCodecID_AV_CODEC_ID_FLIC: root::AVCodecID = 50;
+    pub const AVCodecID_AV_CODEC_ID_TRUEMOTION1: root::AVCodecID = 51;
+    pub const AVCodecID_AV_CODEC_ID_VMDVIDEO: root::AVCodecID = 52;
+    pub const AVCodecID_AV_CODEC_ID_MSZH: root::AVCodecID = 53;
+    pub const AVCodecID_AV_CODEC_ID_ZLIB: root::AVCodecID = 54;
+    pub const AVCodecID_AV_CODEC_ID_QTRLE: root::AVCodecID = 55;
+    pub const AVCodecID_AV_CODEC_ID_TSCC: root::AVCodecID = 56;
+    pub const AVCodecID_AV_CODEC_ID_ULTI: root::AVCodecID = 57;
+    pub const AVCodecID_AV_CODEC_ID_QDRAW: root::AVCodecID = 58;
+    pub const AVCodecID_AV_CODEC_ID_VIXL: root::AVCodecID = 59;
+    pub const AVCodecID_AV_CODEC_ID_QPEG: root::AVCodecID = 60;
+    pub const AVCodecID_AV_CODEC_ID_PNG: root::AVCodecID = 61;
+    pub const AVCodecID_AV_CODEC_ID_PPM: root::AVCodecID = 62;
+    pub const AVCodecID_AV_CODEC_ID_PBM: root::AVCodecID = 63;
+    pub const AVCodecID_AV_CODEC_ID_PGM: root::AVCodecID = 64;
+    pub const AVCodecID_AV_CODEC_ID_PGMYUV: root::AVCodecID = 65;
+    pub const AVCodecID_AV_CODEC_ID_PAM: root::AVCodecID = 66;
+    pub const AVCodecID_AV_CODEC_ID_FFVHUFF: root::AVCodecID = 67;
+    pub const AVCodecID_AV_CODEC_ID_RV30: root::AVCodecID = 68;
+    pub const AVCodecID_AV_CODEC_ID_RV40: root::AVCodecID = 69;
+    pub const AVCodecID_AV_CODEC_ID_VC1: root::AVCodecID = 70;
+    pub const AVCodecID_AV_CODEC_ID_WMV3: root::AVCodecID = 71;
+    pub const AVCodecID_AV_CODEC_ID_LOCO: root::AVCodecID = 72;
+    pub const AVCodecID_AV_CODEC_ID_WNV1: root::AVCodecID = 73;
+    pub const AVCodecID_AV_CODEC_ID_AASC: root::AVCodecID = 74;
+    pub const AVCodecID_AV_CODEC_ID_INDEO2: root::AVCodecID = 75;
+    pub const AVCodecID_AV_CODEC_ID_FRAPS: root::AVCodecID = 76;
+    pub const AVCodecID_AV_CODEC_ID_TRUEMOTION2: root::AVCodecID = 77;
+    pub const AVCodecID_AV_CODEC_ID_BMP: root::AVCodecID = 78;
+    pub const AVCodecID_AV_CODEC_ID_CSCD: root::AVCodecID = 79;
+    pub const AVCodecID_AV_CODEC_ID_MMVIDEO: root::AVCodecID = 80;
+    pub const AVCodecID_AV_CODEC_ID_ZMBV: root::AVCodecID = 81;
+    pub const AVCodecID_AV_CODEC_ID_AVS: root::AVCodecID = 82;
+    pub const AVCodecID_AV_CODEC_ID_SMACKVIDEO: root::AVCodecID = 83;
+    pub const AVCodecID_AV_CODEC_ID_NUV: root::AVCodecID = 84;
+    pub const AVCodecID_AV_CODEC_ID_KMVC: root::AVCodecID = 85;
+    pub const AVCodecID_AV_CODEC_ID_FLASHSV: root::AVCodecID = 86;
+    pub const AVCodecID_AV_CODEC_ID_CAVS: root::AVCodecID = 87;
+    pub const AVCodecID_AV_CODEC_ID_JPEG2000: root::AVCodecID = 88;
+    pub const AVCodecID_AV_CODEC_ID_VMNC: root::AVCodecID = 89;
+    pub const AVCodecID_AV_CODEC_ID_VP5: root::AVCodecID = 90;
+    pub const AVCodecID_AV_CODEC_ID_VP6: root::AVCodecID = 91;
+    pub const AVCodecID_AV_CODEC_ID_VP6F: root::AVCodecID = 92;
+    pub const AVCodecID_AV_CODEC_ID_TARGA: root::AVCodecID = 93;
+    pub const AVCodecID_AV_CODEC_ID_DSICINVIDEO: root::AVCodecID = 94;
+    pub const AVCodecID_AV_CODEC_ID_TIERTEXSEQVIDEO: root::AVCodecID = 95;
+    pub const AVCodecID_AV_CODEC_ID_TIFF: root::AVCodecID = 96;
+    pub const AVCodecID_AV_CODEC_ID_GIF: root::AVCodecID = 97;
+    pub const AVCodecID_AV_CODEC_ID_DXA: root::AVCodecID = 98;
+    pub const AVCodecID_AV_CODEC_ID_DNXHD: root::AVCodecID = 99;
+    pub const AVCodecID_AV_CODEC_ID_THP: root::AVCodecID = 100;
+    pub const AVCodecID_AV_CODEC_ID_SGI: root::AVCodecID = 101;
+    pub const AVCodecID_AV_CODEC_ID_C93: root::AVCodecID = 102;
+    pub const AVCodecID_AV_CODEC_ID_BETHSOFTVID: root::AVCodecID = 103;
+    pub const AVCodecID_AV_CODEC_ID_PTX: root::AVCodecID = 104;
+    pub const AVCodecID_AV_CODEC_ID_TXD: root::AVCodecID = 105;
+    pub const AVCodecID_AV_CODEC_ID_VP6A: root::AVCodecID = 106;
+    pub const AVCodecID_AV_CODEC_ID_AMV: root::AVCodecID = 107;
+    pub const AVCodecID_AV_CODEC_ID_VB: root::AVCodecID = 108;
+    pub const AVCodecID_AV_CODEC_ID_PCX: root::AVCodecID = 109;
+    pub const AVCodecID_AV_CODEC_ID_SUNRAST: root::AVCodecID = 110;
+    pub const AVCodecID_AV_CODEC_ID_INDEO4: root::AVCodecID = 111;
+    pub const AVCodecID_AV_CODEC_ID_INDEO5: root::AVCodecID = 112;
+    pub const AVCodecID_AV_CODEC_ID_MIMIC: root::AVCodecID = 113;
+    pub const AVCodecID_AV_CODEC_ID_RL2: root::AVCodecID = 114;
+    pub const AVCodecID_AV_CODEC_ID_ESCAPE124: root::AVCodecID = 115;
+    pub const AVCodecID_AV_CODEC_ID_DIRAC: root::AVCodecID = 116;
+    pub const AVCodecID_AV_CODEC_ID_BFI: root::AVCodecID = 117;
+    pub const AVCodecID_AV_CODEC_ID_CMV: root::AVCodecID = 118;
+    pub const AVCodecID_AV_CODEC_ID_MOTIONPIXELS: root::AVCodecID = 119;
+    pub const AVCodecID_AV_CODEC_ID_TGV: root::AVCodecID = 120;
+    pub const AVCodecID_AV_CODEC_ID_TGQ: root::AVCodecID = 121;
+    pub const AVCodecID_AV_CODEC_ID_TQI: root::AVCodecID = 122;
+    pub const AVCodecID_AV_CODEC_ID_AURA: root::AVCodecID = 123;
+    pub const AVCodecID_AV_CODEC_ID_AURA2: root::AVCodecID = 124;
+    pub const AVCodecID_AV_CODEC_ID_V210X: root::AVCodecID = 125;
+    pub const AVCodecID_AV_CODEC_ID_TMV: root::AVCodecID = 126;
+    pub const AVCodecID_AV_CODEC_ID_V210: root::AVCodecID = 127;
+    pub const AVCodecID_AV_CODEC_ID_DPX: root::AVCodecID = 128;
+    pub const AVCodecID_AV_CODEC_ID_MAD: root::AVCodecID = 129;
+    pub const AVCodecID_AV_CODEC_ID_FRWU: root::AVCodecID = 130;
+    pub const AVCodecID_AV_CODEC_ID_FLASHSV2: root::AVCodecID = 131;
+    pub const AVCodecID_AV_CODEC_ID_CDGRAPHICS: root::AVCodecID = 132;
+    pub const AVCodecID_AV_CODEC_ID_R210: root::AVCodecID = 133;
+    pub const AVCodecID_AV_CODEC_ID_ANM: root::AVCodecID = 134;
+    pub const AVCodecID_AV_CODEC_ID_BINKVIDEO: root::AVCodecID = 135;
+    pub const AVCodecID_AV_CODEC_ID_IFF_ILBM: root::AVCodecID = 136;
+    pub const AVCodecID_AV_CODEC_ID_KGV1: root::AVCodecID = 137;
+    pub const AVCodecID_AV_CODEC_ID_YOP: root::AVCodecID = 138;
+    pub const AVCodecID_AV_CODEC_ID_VP8: root::AVCodecID = 139;
+    pub const AVCodecID_AV_CODEC_ID_PICTOR: root::AVCodecID = 140;
+    pub const AVCodecID_AV_CODEC_ID_ANSI: root::AVCodecID = 141;
+    pub const AVCodecID_AV_CODEC_ID_A64_MULTI: root::AVCodecID = 142;
+    pub const AVCodecID_AV_CODEC_ID_A64_MULTI5: root::AVCodecID = 143;
+    pub const AVCodecID_AV_CODEC_ID_R10K: root::AVCodecID = 144;
+    pub const AVCodecID_AV_CODEC_ID_MXPEG: root::AVCodecID = 145;
+    pub const AVCodecID_AV_CODEC_ID_LAGARITH: root::AVCodecID = 146;
+    pub const AVCodecID_AV_CODEC_ID_PRORES: root::AVCodecID = 147;
+    pub const AVCodecID_AV_CODEC_ID_JV: root::AVCodecID = 148;
+    pub const AVCodecID_AV_CODEC_ID_DFA: root::AVCodecID = 149;
+    pub const AVCodecID_AV_CODEC_ID_WMV3IMAGE: root::AVCodecID = 150;
+    pub const AVCodecID_AV_CODEC_ID_VC1IMAGE: root::AVCodecID = 151;
+    pub const AVCodecID_AV_CODEC_ID_UTVIDEO: root::AVCodecID = 152;
+    pub const AVCodecID_AV_CODEC_ID_BMV_VIDEO: root::AVCodecID = 153;
+    pub const AVCodecID_AV_CODEC_ID_VBLE: root::AVCodecID = 154;
+    pub const AVCodecID_AV_CODEC_ID_DXTORY: root::AVCodecID = 155;
+    pub const AVCodecID_AV_CODEC_ID_V410: root::AVCodecID = 156;
+    pub const AVCodecID_AV_CODEC_ID_XWD: root::AVCodecID = 157;
+    pub const AVCodecID_AV_CODEC_ID_CDXL: root::AVCodecID = 158;
+    pub const AVCodecID_AV_CODEC_ID_XBM: root::AVCodecID = 159;
+    pub const AVCodecID_AV_CODEC_ID_ZEROCODEC: root::AVCodecID = 160;
+    pub const AVCodecID_AV_CODEC_ID_MSS1: root::AVCodecID = 161;
+    pub const AVCodecID_AV_CODEC_ID_MSA1: root::AVCodecID = 162;
+    pub const AVCodecID_AV_CODEC_ID_TSCC2: root::AVCodecID = 163;
+    pub const AVCodecID_AV_CODEC_ID_MTS2: root::AVCodecID = 164;
+    pub const AVCodecID_AV_CODEC_ID_CLLC: root::AVCodecID = 165;
+    pub const AVCodecID_AV_CODEC_ID_MSS2: root::AVCodecID = 166;
+    pub const AVCodecID_AV_CODEC_ID_VP9: root::AVCodecID = 167;
+    pub const AVCodecID_AV_CODEC_ID_AIC: root::AVCodecID = 168;
+    pub const AVCodecID_AV_CODEC_ID_ESCAPE130: root::AVCodecID = 169;
+    pub const AVCodecID_AV_CODEC_ID_G2M: root::AVCodecID = 170;
+    pub const AVCodecID_AV_CODEC_ID_WEBP: root::AVCodecID = 171;
+    pub const AVCodecID_AV_CODEC_ID_HNM4_VIDEO: root::AVCodecID = 172;
+    pub const AVCodecID_AV_CODEC_ID_HEVC: root::AVCodecID = 173;
+    pub const AVCodecID_AV_CODEC_ID_FIC: root::AVCodecID = 174;
+    pub const AVCodecID_AV_CODEC_ID_ALIAS_PIX: root::AVCodecID = 175;
+    pub const AVCodecID_AV_CODEC_ID_BRENDER_PIX: root::AVCodecID = 176;
+    pub const AVCodecID_AV_CODEC_ID_PAF_VIDEO: root::AVCodecID = 177;
+    pub const AVCodecID_AV_CODEC_ID_EXR: root::AVCodecID = 178;
+    pub const AVCodecID_AV_CODEC_ID_VP7: root::AVCodecID = 179;
+    pub const AVCodecID_AV_CODEC_ID_SANM: root::AVCodecID = 180;
+    pub const AVCodecID_AV_CODEC_ID_SGIRLE: root::AVCodecID = 181;
+    pub const AVCodecID_AV_CODEC_ID_MVC1: root::AVCodecID = 182;
+    pub const AVCodecID_AV_CODEC_ID_MVC2: root::AVCodecID = 183;
+    pub const AVCodecID_AV_CODEC_ID_HQX: root::AVCodecID = 184;
+    pub const AVCodecID_AV_CODEC_ID_TDSC: root::AVCodecID = 185;
+    pub const AVCodecID_AV_CODEC_ID_HQ_HQA: root::AVCodecID = 186;
+    pub const AVCodecID_AV_CODEC_ID_HAP: root::AVCodecID = 187;
+    pub const AVCodecID_AV_CODEC_ID_DDS: root::AVCodecID = 188;
+    pub const AVCodecID_AV_CODEC_ID_DXV: root::AVCodecID = 189;
+    pub const AVCodecID_AV_CODEC_ID_SCREENPRESSO: root::AVCodecID = 190;
+    pub const AVCodecID_AV_CODEC_ID_RSCC: root::AVCodecID = 191;
+    pub const AVCodecID_AV_CODEC_ID_AVS2: root::AVCodecID = 192;
+    pub const AVCodecID_AV_CODEC_ID_PGX: root::AVCodecID = 193;
+    pub const AVCodecID_AV_CODEC_ID_AVS3: root::AVCodecID = 194;
+    pub const AVCodecID_AV_CODEC_ID_MSP2: root::AVCodecID = 195;
+    pub const AVCodecID_AV_CODEC_ID_VVC: root::AVCodecID = 196;
+    pub const AVCodecID_AV_CODEC_ID_Y41P: root::AVCodecID = 197;
+    pub const AVCodecID_AV_CODEC_ID_AVRP: root::AVCodecID = 198;
+    pub const AVCodecID_AV_CODEC_ID_012V: root::AVCodecID = 199;
+    pub const AVCodecID_AV_CODEC_ID_AVUI: root::AVCodecID = 200;
+    pub const AVCodecID_AV_CODEC_ID_AYUV: root::AVCodecID = 201;
+    pub const AVCodecID_AV_CODEC_ID_TARGA_Y216: root::AVCodecID = 202;
+    pub const AVCodecID_AV_CODEC_ID_V308: root::AVCodecID = 203;
+    pub const AVCodecID_AV_CODEC_ID_V408: root::AVCodecID = 204;
+    pub const AVCodecID_AV_CODEC_ID_YUV4: root::AVCodecID = 205;
+    pub const AVCodecID_AV_CODEC_ID_AVRN: root::AVCodecID = 206;
+    pub const AVCodecID_AV_CODEC_ID_CPIA: root::AVCodecID = 207;
+    pub const AVCodecID_AV_CODEC_ID_XFACE: root::AVCodecID = 208;
+    pub const AVCodecID_AV_CODEC_ID_SNOW: root::AVCodecID = 209;
+    pub const AVCodecID_AV_CODEC_ID_SMVJPEG: root::AVCodecID = 210;
+    pub const AVCodecID_AV_CODEC_ID_APNG: root::AVCodecID = 211;
+    pub const AVCodecID_AV_CODEC_ID_DAALA: root::AVCodecID = 212;
+    pub const AVCodecID_AV_CODEC_ID_CFHD: root::AVCodecID = 213;
+    pub const AVCodecID_AV_CODEC_ID_TRUEMOTION2RT: root::AVCodecID = 214;
+    pub const AVCodecID_AV_CODEC_ID_M101: root::AVCodecID = 215;
+    pub const AVCodecID_AV_CODEC_ID_MAGICYUV: root::AVCodecID = 216;
+    pub const AVCodecID_AV_CODEC_ID_SHEERVIDEO: root::AVCodecID = 217;
+    pub const AVCodecID_AV_CODEC_ID_YLC: root::AVCodecID = 218;
+    pub const AVCodecID_AV_CODEC_ID_PSD: root::AVCodecID = 219;
+    pub const AVCodecID_AV_CODEC_ID_PIXLET: root::AVCodecID = 220;
+    pub const AVCodecID_AV_CODEC_ID_SPEEDHQ: root::AVCodecID = 221;
+    pub const AVCodecID_AV_CODEC_ID_FMVC: root::AVCodecID = 222;
+    pub const AVCodecID_AV_CODEC_ID_SCPR: root::AVCodecID = 223;
+    pub const AVCodecID_AV_CODEC_ID_CLEARVIDEO: root::AVCodecID = 224;
+    pub const AVCodecID_AV_CODEC_ID_XPM: root::AVCodecID = 225;
+    pub const AVCodecID_AV_CODEC_ID_AV1: root::AVCodecID = 226;
+    pub const AVCodecID_AV_CODEC_ID_BITPACKED: root::AVCodecID = 227;
+    pub const AVCodecID_AV_CODEC_ID_MSCC: root::AVCodecID = 228;
+    pub const AVCodecID_AV_CODEC_ID_SRGC: root::AVCodecID = 229;
+    pub const AVCodecID_AV_CODEC_ID_SVG: root::AVCodecID = 230;
+    pub const AVCodecID_AV_CODEC_ID_GDV: root::AVCodecID = 231;
+    pub const AVCodecID_AV_CODEC_ID_FITS: root::AVCodecID = 232;
+    pub const AVCodecID_AV_CODEC_ID_IMM4: root::AVCodecID = 233;
+    pub const AVCodecID_AV_CODEC_ID_PROSUMER: root::AVCodecID = 234;
+    pub const AVCodecID_AV_CODEC_ID_MWSC: root::AVCodecID = 235;
+    pub const AVCodecID_AV_CODEC_ID_WCMV: root::AVCodecID = 236;
+    pub const AVCodecID_AV_CODEC_ID_RASC: root::AVCodecID = 237;
+    pub const AVCodecID_AV_CODEC_ID_HYMT: root::AVCodecID = 238;
+    pub const AVCodecID_AV_CODEC_ID_ARBC: root::AVCodecID = 239;
+    pub const AVCodecID_AV_CODEC_ID_AGM: root::AVCodecID = 240;
+    pub const AVCodecID_AV_CODEC_ID_LSCR: root::AVCodecID = 241;
+    pub const AVCodecID_AV_CODEC_ID_VP4: root::AVCodecID = 242;
+    pub const AVCodecID_AV_CODEC_ID_IMM5: root::AVCodecID = 243;
+    pub const AVCodecID_AV_CODEC_ID_MVDV: root::AVCodecID = 244;
+    pub const AVCodecID_AV_CODEC_ID_MVHA: root::AVCodecID = 245;
+    pub const AVCodecID_AV_CODEC_ID_CDTOONS: root::AVCodecID = 246;
+    pub const AVCodecID_AV_CODEC_ID_MV30: root::AVCodecID = 247;
+    pub const AVCodecID_AV_CODEC_ID_NOTCHLC: root::AVCodecID = 248;
+    pub const AVCodecID_AV_CODEC_ID_PFM: root::AVCodecID = 249;
+    pub const AVCodecID_AV_CODEC_ID_MOBICLIP: root::AVCodecID = 250;
+    pub const AVCodecID_AV_CODEC_ID_PHOTOCD: root::AVCodecID = 251;
+    pub const AVCodecID_AV_CODEC_ID_IPU: root::AVCodecID = 252;
+    pub const AVCodecID_AV_CODEC_ID_ARGO: root::AVCodecID = 253;
+    pub const AVCodecID_AV_CODEC_ID_CRI: root::AVCodecID = 254;
+    pub const AVCodecID_AV_CODEC_ID_SIMBIOSIS_IMX: root::AVCodecID = 255;
+    pub const AVCodecID_AV_CODEC_ID_SGA_VIDEO: root::AVCodecID = 256;
+    pub const AVCodecID_AV_CODEC_ID_GEM: root::AVCodecID = 257;
+    #[doc = "< A dummy id pointing at the start of audio codecs"]
+    pub const AVCodecID_AV_CODEC_ID_FIRST_AUDIO: root::AVCodecID = 65536;
+    pub const AVCodecID_AV_CODEC_ID_PCM_S16LE: root::AVCodecID = 65536;
+    pub const AVCodecID_AV_CODEC_ID_PCM_S16BE: root::AVCodecID = 65537;
+    pub const AVCodecID_AV_CODEC_ID_PCM_U16LE: root::AVCodecID = 65538;
+    pub const AVCodecID_AV_CODEC_ID_PCM_U16BE: root::AVCodecID = 65539;
+    pub const AVCodecID_AV_CODEC_ID_PCM_S8: root::AVCodecID = 65540;
+    pub const AVCodecID_AV_CODEC_ID_PCM_U8: root::AVCodecID = 65541;
+    pub const AVCodecID_AV_CODEC_ID_PCM_MULAW: root::AVCodecID = 65542;
+    pub const AVCodecID_AV_CODEC_ID_PCM_ALAW: root::AVCodecID = 65543;
+    pub const AVCodecID_AV_CODEC_ID_PCM_S32LE: root::AVCodecID = 65544;
+    pub const AVCodecID_AV_CODEC_ID_PCM_S32BE: root::AVCodecID = 65545;
+    pub const AVCodecID_AV_CODEC_ID_PCM_U32LE: root::AVCodecID = 65546;
+    pub const AVCodecID_AV_CODEC_ID_PCM_U32BE: root::AVCodecID = 65547;
+    pub const AVCodecID_AV_CODEC_ID_PCM_S24LE: root::AVCodecID = 65548;
+    pub const AVCodecID_AV_CODEC_ID_PCM_S24BE: root::AVCodecID = 65549;
+    pub const AVCodecID_AV_CODEC_ID_PCM_U24LE: root::AVCodecID = 65550;
+    pub const AVCodecID_AV_CODEC_ID_PCM_U24BE: root::AVCodecID = 65551;
+    pub const AVCodecID_AV_CODEC_ID_PCM_S24DAUD: root::AVCodecID = 65552;
+    pub const AVCodecID_AV_CODEC_ID_PCM_ZORK: root::AVCodecID = 65553;
+    pub const AVCodecID_AV_CODEC_ID_PCM_S16LE_PLANAR: root::AVCodecID = 65554;
+    pub const AVCodecID_AV_CODEC_ID_PCM_DVD: root::AVCodecID = 65555;
+    pub const AVCodecID_AV_CODEC_ID_PCM_F32BE: root::AVCodecID = 65556;
+    pub const AVCodecID_AV_CODEC_ID_PCM_F32LE: root::AVCodecID = 65557;
+    pub const AVCodecID_AV_CODEC_ID_PCM_F64BE: root::AVCodecID = 65558;
+    pub const AVCodecID_AV_CODEC_ID_PCM_F64LE: root::AVCodecID = 65559;
+    pub const AVCodecID_AV_CODEC_ID_PCM_BLURAY: root::AVCodecID = 65560;
+    pub const AVCodecID_AV_CODEC_ID_PCM_LXF: root::AVCodecID = 65561;
+    pub const AVCodecID_AV_CODEC_ID_S302M: root::AVCodecID = 65562;
+    pub const AVCodecID_AV_CODEC_ID_PCM_S8_PLANAR: root::AVCodecID = 65563;
+    pub const AVCodecID_AV_CODEC_ID_PCM_S24LE_PLANAR: root::AVCodecID = 65564;
+    pub const AVCodecID_AV_CODEC_ID_PCM_S32LE_PLANAR: root::AVCodecID = 65565;
+    pub const AVCodecID_AV_CODEC_ID_PCM_S16BE_PLANAR: root::AVCodecID = 65566;
+    pub const AVCodecID_AV_CODEC_ID_PCM_S64LE: root::AVCodecID = 65567;
+    pub const AVCodecID_AV_CODEC_ID_PCM_S64BE: root::AVCodecID = 65568;
+    pub const AVCodecID_AV_CODEC_ID_PCM_F16LE: root::AVCodecID = 65569;
+    pub const AVCodecID_AV_CODEC_ID_PCM_F24LE: root::AVCodecID = 65570;
+    pub const AVCodecID_AV_CODEC_ID_PCM_VIDC: root::AVCodecID = 65571;
+    pub const AVCodecID_AV_CODEC_ID_PCM_SGA: root::AVCodecID = 65572;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_QT: root::AVCodecID = 69632;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_WAV: root::AVCodecID = 69633;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_DK3: root::AVCodecID = 69634;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_DK4: root::AVCodecID = 69635;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_WS: root::AVCodecID = 69636;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_SMJPEG: root::AVCodecID = 69637;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_MS: root::AVCodecID = 69638;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_4XM: root::AVCodecID = 69639;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_XA: root::AVCodecID = 69640;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_ADX: root::AVCodecID = 69641;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_EA: root::AVCodecID = 69642;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_G726: root::AVCodecID = 69643;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_CT: root::AVCodecID = 69644;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_SWF: root::AVCodecID = 69645;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_YAMAHA: root::AVCodecID = 69646;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_SBPRO_4: root::AVCodecID = 69647;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_SBPRO_3: root::AVCodecID = 69648;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_SBPRO_2: root::AVCodecID = 69649;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_THP: root::AVCodecID = 69650;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_AMV: root::AVCodecID = 69651;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_EA_R1: root::AVCodecID = 69652;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_EA_R3: root::AVCodecID = 69653;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_EA_R2: root::AVCodecID = 69654;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_EA_SEAD: root::AVCodecID = 69655;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_EA_EACS: root::AVCodecID = 69656;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_EA_XAS: root::AVCodecID = 69657;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_EA_MAXIS_XA: root::AVCodecID = 69658;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_ISS: root::AVCodecID = 69659;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_G722: root::AVCodecID = 69660;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_APC: root::AVCodecID = 69661;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_VIMA: root::AVCodecID = 69662;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_AFC: root::AVCodecID = 69663;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_OKI: root::AVCodecID = 69664;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_DTK: root::AVCodecID = 69665;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_RAD: root::AVCodecID = 69666;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_G726LE: root::AVCodecID = 69667;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_THP_LE: root::AVCodecID = 69668;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_PSX: root::AVCodecID = 69669;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_AICA: root::AVCodecID = 69670;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_DAT4: root::AVCodecID = 69671;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_MTAF: root::AVCodecID = 69672;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_AGM: root::AVCodecID = 69673;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_ARGO: root::AVCodecID = 69674;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_SSI: root::AVCodecID = 69675;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_ZORK: root::AVCodecID = 69676;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_APM: root::AVCodecID = 69677;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_ALP: root::AVCodecID = 69678;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_MTF: root::AVCodecID = 69679;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_CUNNING: root::AVCodecID = 69680;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_MOFLEX: root::AVCodecID = 69681;
+    pub const AVCodecID_AV_CODEC_ID_ADPCM_IMA_ACORN: root::AVCodecID = 69682;
+    pub const AVCodecID_AV_CODEC_ID_AMR_NB: root::AVCodecID = 73728;
+    pub const AVCodecID_AV_CODEC_ID_AMR_WB: root::AVCodecID = 73729;
+    pub const AVCodecID_AV_CODEC_ID_RA_144: root::AVCodecID = 77824;
+    pub const AVCodecID_AV_CODEC_ID_RA_288: root::AVCodecID = 77825;
+    pub const AVCodecID_AV_CODEC_ID_ROQ_DPCM: root::AVCodecID = 81920;
+    pub const AVCodecID_AV_CODEC_ID_INTERPLAY_DPCM: root::AVCodecID = 81921;
+    pub const AVCodecID_AV_CODEC_ID_XAN_DPCM: root::AVCodecID = 81922;
+    pub const AVCodecID_AV_CODEC_ID_SOL_DPCM: root::AVCodecID = 81923;
+    pub const AVCodecID_AV_CODEC_ID_SDX2_DPCM: root::AVCodecID = 81924;
+    pub const AVCodecID_AV_CODEC_ID_GREMLIN_DPCM: root::AVCodecID = 81925;
+    pub const AVCodecID_AV_CODEC_ID_DERF_DPCM: root::AVCodecID = 81926;
+    pub const AVCodecID_AV_CODEC_ID_MP2: root::AVCodecID = 86016;
+    #[doc = "< preferred ID for decoding MPEG audio layer 1, 2 or 3"]
+    pub const AVCodecID_AV_CODEC_ID_MP3: root::AVCodecID = 86017;
+    pub const AVCodecID_AV_CODEC_ID_AAC: root::AVCodecID = 86018;
+    pub const AVCodecID_AV_CODEC_ID_AC3: root::AVCodecID = 86019;
+    pub const AVCodecID_AV_CODEC_ID_DTS: root::AVCodecID = 86020;
+    pub const AVCodecID_AV_CODEC_ID_VORBIS: root::AVCodecID = 86021;
+    pub const AVCodecID_AV_CODEC_ID_DVAUDIO: root::AVCodecID = 86022;
+    pub const AVCodecID_AV_CODEC_ID_WMAV1: root::AVCodecID = 86023;
+    pub const AVCodecID_AV_CODEC_ID_WMAV2: root::AVCodecID = 86024;
+    pub const AVCodecID_AV_CODEC_ID_MACE3: root::AVCodecID = 86025;
+    pub const AVCodecID_AV_CODEC_ID_MACE6: root::AVCodecID = 86026;
+    pub const AVCodecID_AV_CODEC_ID_VMDAUDIO: root::AVCodecID = 86027;
+    pub const AVCodecID_AV_CODEC_ID_FLAC: root::AVCodecID = 86028;
+    pub const AVCodecID_AV_CODEC_ID_MP3ADU: root::AVCodecID = 86029;
+    pub const AVCodecID_AV_CODEC_ID_MP3ON4: root::AVCodecID = 86030;
+    pub const AVCodecID_AV_CODEC_ID_SHORTEN: root::AVCodecID = 86031;
+    pub const AVCodecID_AV_CODEC_ID_ALAC: root::AVCodecID = 86032;
+    pub const AVCodecID_AV_CODEC_ID_WESTWOOD_SND1: root::AVCodecID = 86033;
+    #[doc = "< as in Berlin toast format"]
+    pub const AVCodecID_AV_CODEC_ID_GSM: root::AVCodecID = 86034;
+    pub const AVCodecID_AV_CODEC_ID_QDM2: root::AVCodecID = 86035;
+    pub const AVCodecID_AV_CODEC_ID_COOK: root::AVCodecID = 86036;
+    pub const AVCodecID_AV_CODEC_ID_TRUESPEECH: root::AVCodecID = 86037;
+    pub const AVCodecID_AV_CODEC_ID_TTA: root::AVCodecID = 86038;
+    pub const AVCodecID_AV_CODEC_ID_SMACKAUDIO: root::AVCodecID = 86039;
+    pub const AVCodecID_AV_CODEC_ID_QCELP: root::AVCodecID = 86040;
+    pub const AVCodecID_AV_CODEC_ID_WAVPACK: root::AVCodecID = 86041;
+    pub const AVCodecID_AV_CODEC_ID_DSICINAUDIO: root::AVCodecID = 86042;
+    pub const AVCodecID_AV_CODEC_ID_IMC: root::AVCodecID = 86043;
+    pub const AVCodecID_AV_CODEC_ID_MUSEPACK7: root::AVCodecID = 86044;
+    pub const AVCodecID_AV_CODEC_ID_MLP: root::AVCodecID = 86045;
+    pub const AVCodecID_AV_CODEC_ID_GSM_MS: root::AVCodecID = 86046;
+    pub const AVCodecID_AV_CODEC_ID_ATRAC3: root::AVCodecID = 86047;
+    pub const AVCodecID_AV_CODEC_ID_APE: root::AVCodecID = 86048;
+    pub const AVCodecID_AV_CODEC_ID_NELLYMOSER: root::AVCodecID = 86049;
+    pub const AVCodecID_AV_CODEC_ID_MUSEPACK8: root::AVCodecID = 86050;
+    pub const AVCodecID_AV_CODEC_ID_SPEEX: root::AVCodecID = 86051;
+    pub const AVCodecID_AV_CODEC_ID_WMAVOICE: root::AVCodecID = 86052;
+    pub const AVCodecID_AV_CODEC_ID_WMAPRO: root::AVCodecID = 86053;
+    pub const AVCodecID_AV_CODEC_ID_WMALOSSLESS: root::AVCodecID = 86054;
+    pub const AVCodecID_AV_CODEC_ID_ATRAC3P: root::AVCodecID = 86055;
+    pub const AVCodecID_AV_CODEC_ID_EAC3: root::AVCodecID = 86056;
+    pub const AVCodecID_AV_CODEC_ID_SIPR: root::AVCodecID = 86057;
+    pub const AVCodecID_AV_CODEC_ID_MP1: root::AVCodecID = 86058;
+    pub const AVCodecID_AV_CODEC_ID_TWINVQ: root::AVCodecID = 86059;
+    pub const AVCodecID_AV_CODEC_ID_TRUEHD: root::AVCodecID = 86060;
+    pub const AVCodecID_AV_CODEC_ID_MP4ALS: root::AVCodecID = 86061;
+    pub const AVCodecID_AV_CODEC_ID_ATRAC1: root::AVCodecID = 86062;
+    pub const AVCodecID_AV_CODEC_ID_BINKAUDIO_RDFT: root::AVCodecID = 86063;
+    pub const AVCodecID_AV_CODEC_ID_BINKAUDIO_DCT: root::AVCodecID = 86064;
+    pub const AVCodecID_AV_CODEC_ID_AAC_LATM: root::AVCodecID = 86065;
+    pub const AVCodecID_AV_CODEC_ID_QDMC: root::AVCodecID = 86066;
+    pub const AVCodecID_AV_CODEC_ID_CELT: root::AVCodecID = 86067;
+    pub const AVCodecID_AV_CODEC_ID_G723_1: root::AVCodecID = 86068;
+    pub const AVCodecID_AV_CODEC_ID_G729: root::AVCodecID = 86069;
+    pub const AVCodecID_AV_CODEC_ID_8SVX_EXP: root::AVCodecID = 86070;
+    pub const AVCodecID_AV_CODEC_ID_8SVX_FIB: root::AVCodecID = 86071;
+    pub const AVCodecID_AV_CODEC_ID_BMV_AUDIO: root::AVCodecID = 86072;
+    pub const AVCodecID_AV_CODEC_ID_RALF: root::AVCodecID = 86073;
+    pub const AVCodecID_AV_CODEC_ID_IAC: root::AVCodecID = 86074;
+    pub const AVCodecID_AV_CODEC_ID_ILBC: root::AVCodecID = 86075;
+    pub const AVCodecID_AV_CODEC_ID_OPUS: root::AVCodecID = 86076;
+    pub const AVCodecID_AV_CODEC_ID_COMFORT_NOISE: root::AVCodecID = 86077;
+    pub const AVCodecID_AV_CODEC_ID_TAK: root::AVCodecID = 86078;
+    pub const AVCodecID_AV_CODEC_ID_METASOUND: root::AVCodecID = 86079;
+    pub const AVCodecID_AV_CODEC_ID_PAF_AUDIO: root::AVCodecID = 86080;
+    pub const AVCodecID_AV_CODEC_ID_ON2AVC: root::AVCodecID = 86081;
+    pub const AVCodecID_AV_CODEC_ID_DSS_SP: root::AVCodecID = 86082;
+    pub const AVCodecID_AV_CODEC_ID_CODEC2: root::AVCodecID = 86083;
+    pub const AVCodecID_AV_CODEC_ID_FFWAVESYNTH: root::AVCodecID = 86084;
+    pub const AVCodecID_AV_CODEC_ID_SONIC: root::AVCodecID = 86085;
+    pub const AVCodecID_AV_CODEC_ID_SONIC_LS: root::AVCodecID = 86086;
+    pub const AVCodecID_AV_CODEC_ID_EVRC: root::AVCodecID = 86087;
+    pub const AVCodecID_AV_CODEC_ID_SMV: root::AVCodecID = 86088;
+    pub const AVCodecID_AV_CODEC_ID_DSD_LSBF: root::AVCodecID = 86089;
+    pub const AVCodecID_AV_CODEC_ID_DSD_MSBF: root::AVCodecID = 86090;
+    pub const AVCodecID_AV_CODEC_ID_DSD_LSBF_PLANAR: root::AVCodecID = 86091;
+    pub const AVCodecID_AV_CODEC_ID_DSD_MSBF_PLANAR: root::AVCodecID = 86092;
+    pub const AVCodecID_AV_CODEC_ID_4GV: root::AVCodecID = 86093;
+    pub const AVCodecID_AV_CODEC_ID_INTERPLAY_ACM: root::AVCodecID = 86094;
+    pub const AVCodecID_AV_CODEC_ID_XMA1: root::AVCodecID = 86095;
+    pub const AVCodecID_AV_CODEC_ID_XMA2: root::AVCodecID = 86096;
+    pub const AVCodecID_AV_CODEC_ID_DST: root::AVCodecID = 86097;
+    pub const AVCodecID_AV_CODEC_ID_ATRAC3AL: root::AVCodecID = 86098;
+    pub const AVCodecID_AV_CODEC_ID_ATRAC3PAL: root::AVCodecID = 86099;
+    pub const AVCodecID_AV_CODEC_ID_DOLBY_E: root::AVCodecID = 86100;
+    pub const AVCodecID_AV_CODEC_ID_APTX: root::AVCodecID = 86101;
+    pub const AVCodecID_AV_CODEC_ID_APTX_HD: root::AVCodecID = 86102;
+    pub const AVCodecID_AV_CODEC_ID_SBC: root::AVCodecID = 86103;
+    pub const AVCodecID_AV_CODEC_ID_ATRAC9: root::AVCodecID = 86104;
+    pub const AVCodecID_AV_CODEC_ID_HCOM: root::AVCodecID = 86105;
+    pub const AVCodecID_AV_CODEC_ID_ACELP_KELVIN: root::AVCodecID = 86106;
+    pub const AVCodecID_AV_CODEC_ID_MPEGH_3D_AUDIO: root::AVCodecID = 86107;
+    pub const AVCodecID_AV_CODEC_ID_SIREN: root::AVCodecID = 86108;
+    pub const AVCodecID_AV_CODEC_ID_HCA: root::AVCodecID = 86109;
+    pub const AVCodecID_AV_CODEC_ID_FASTAUDIO: root::AVCodecID = 86110;
+    pub const AVCodecID_AV_CODEC_ID_MSNSIREN: root::AVCodecID = 86111;
+    #[doc = "< A dummy ID pointing at the start of subtitle codecs."]
+    pub const AVCodecID_AV_CODEC_ID_FIRST_SUBTITLE: root::AVCodecID = 94208;
+    pub const AVCodecID_AV_CODEC_ID_DVD_SUBTITLE: root::AVCodecID = 94208;
+    pub const AVCodecID_AV_CODEC_ID_DVB_SUBTITLE: root::AVCodecID = 94209;
+    #[doc = "< raw UTF-8 text"]
+    pub const AVCodecID_AV_CODEC_ID_TEXT: root::AVCodecID = 94210;
+    pub const AVCodecID_AV_CODEC_ID_XSUB: root::AVCodecID = 94211;
+    pub const AVCodecID_AV_CODEC_ID_SSA: root::AVCodecID = 94212;
+    pub const AVCodecID_AV_CODEC_ID_MOV_TEXT: root::AVCodecID = 94213;
+    pub const AVCodecID_AV_CODEC_ID_HDMV_PGS_SUBTITLE: root::AVCodecID = 94214;
+    pub const AVCodecID_AV_CODEC_ID_DVB_TELETEXT: root::AVCodecID = 94215;
+    pub const AVCodecID_AV_CODEC_ID_SRT: root::AVCodecID = 94216;
+    pub const AVCodecID_AV_CODEC_ID_MICRODVD: root::AVCodecID = 94217;
+    pub const AVCodecID_AV_CODEC_ID_EIA_608: root::AVCodecID = 94218;
+    pub const AVCodecID_AV_CODEC_ID_JACOSUB: root::AVCodecID = 94219;
+    pub const AVCodecID_AV_CODEC_ID_SAMI: root::AVCodecID = 94220;
+    pub const AVCodecID_AV_CODEC_ID_REALTEXT: root::AVCodecID = 94221;
+    pub const AVCodecID_AV_CODEC_ID_STL: root::AVCodecID = 94222;
+    pub const AVCodecID_AV_CODEC_ID_SUBVIEWER1: root::AVCodecID = 94223;
+    pub const AVCodecID_AV_CODEC_ID_SUBVIEWER: root::AVCodecID = 94224;
+    pub const AVCodecID_AV_CODEC_ID_SUBRIP: root::AVCodecID = 94225;
+    pub const AVCodecID_AV_CODEC_ID_WEBVTT: root::AVCodecID = 94226;
+    pub const AVCodecID_AV_CODEC_ID_MPL2: root::AVCodecID = 94227;
+    pub const AVCodecID_AV_CODEC_ID_VPLAYER: root::AVCodecID = 94228;
+    pub const AVCodecID_AV_CODEC_ID_PJS: root::AVCodecID = 94229;
+    pub const AVCodecID_AV_CODEC_ID_ASS: root::AVCodecID = 94230;
+    pub const AVCodecID_AV_CODEC_ID_HDMV_TEXT_SUBTITLE: root::AVCodecID = 94231;
+    pub const AVCodecID_AV_CODEC_ID_TTML: root::AVCodecID = 94232;
+    pub const AVCodecID_AV_CODEC_ID_ARIB_CAPTION: root::AVCodecID = 94233;
+    #[doc = "< A dummy ID pointing at the start of various fake codecs."]
+    pub const AVCodecID_AV_CODEC_ID_FIRST_UNKNOWN: root::AVCodecID = 98304;
+    pub const AVCodecID_AV_CODEC_ID_TTF: root::AVCodecID = 98304;
+    #[doc = "< Contain timestamp estimated through PCR of program stream."]
+    pub const AVCodecID_AV_CODEC_ID_SCTE_35: root::AVCodecID = 98305;
+    pub const AVCodecID_AV_CODEC_ID_EPG: root::AVCodecID = 98306;
+    pub const AVCodecID_AV_CODEC_ID_BINTEXT: root::AVCodecID = 98307;
+    pub const AVCodecID_AV_CODEC_ID_XBIN: root::AVCodecID = 98308;
+    pub const AVCodecID_AV_CODEC_ID_IDF: root::AVCodecID = 98309;
+    pub const AVCodecID_AV_CODEC_ID_OTF: root::AVCodecID = 98310;
+    pub const AVCodecID_AV_CODEC_ID_SMPTE_KLV: root::AVCodecID = 98311;
+    pub const AVCodecID_AV_CODEC_ID_DVD_NAV: root::AVCodecID = 98312;
+    pub const AVCodecID_AV_CODEC_ID_TIMED_ID3: root::AVCodecID = 98313;
+    pub const AVCodecID_AV_CODEC_ID_BIN_DATA: root::AVCodecID = 98314;
+    #[doc = "< codec_id is not known (like AV_CODEC_ID_NONE) but lavf should attempt to identify it"]
+    pub const AVCodecID_AV_CODEC_ID_PROBE: root::AVCodecID = 102400;
+    #[doc = "< _FAKE_ codec to indicate a raw MPEG-2 TS"]
+    #[doc = " stream (only used by libavformat)"]
+    pub const AVCodecID_AV_CODEC_ID_MPEG2TS: root::AVCodecID = 131072;
+    #[doc = "< _FAKE_ codec to indicate a MPEG-4 Systems"]
+    #[doc = " stream (only used by libavformat)"]
+    pub const AVCodecID_AV_CODEC_ID_MPEG4SYSTEMS: root::AVCodecID = 131073;
+    #[doc = "< Dummy codec for streams containing only metadata information."]
+    pub const AVCodecID_AV_CODEC_ID_FFMETADATA: root::AVCodecID = 135168;
+    #[doc = "< Passthrough codec, AVFrames wrapped in AVPacket"]
+    pub const AVCodecID_AV_CODEC_ID_WRAPPED_AVFRAME: root::AVCodecID = 135169;
+    #[doc = " Identify the syntax and semantics of the bitstream."]
+    #[doc = " The principle is roughly:"]
+    #[doc = " Two decoders with the same ID can decode the same streams."]
+    #[doc = " Two encoders with the same ID can encode compatible streams."]
+    #[doc = " There may be slight deviations from the principle due to implementation"]
+    #[doc = " details."]
+    #[doc = ""]
+    #[doc = " If you add a codec ID to this list, add it so that"]
+    #[doc = " 1. no value of an existing codec ID changes (that would break ABI),"]
+    #[doc = " 2. it is as close as possible to similar codecs"]
+    #[doc = ""]
+    #[doc = " After adding new codec IDs, do not forget to add an entry to the codec"]
+    #[doc = " descriptor list and bump libavcodec minor version."]
+    pub type AVCodecID = ::std::os::raw::c_uint;
+    extern "C" {
+        #[doc = " Get the type of the given codec."]
+        pub fn avcodec_get_type(codec_id: root::AVCodecID) -> root::AVMediaType;
+    }
+    extern "C" {
+        #[doc = " Get the name of a codec."]
+        #[doc = " @return  a static string identifying the codec; never NULL"]
+        pub fn avcodec_get_name(id: root::AVCodecID) -> *const ::std::os::raw::c_char;
+    }
+    extern "C" {
+        #[doc = " Return codec bits per sample."]
+        #[doc = ""]
+        #[doc = " @param[in] codec_id the codec"]
+        #[doc = " @return Number of bits per sample or zero if unknown for the given codec."]
+        pub fn av_get_bits_per_sample(codec_id: root::AVCodecID) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Return codec bits per sample."]
+        #[doc = " Only return non-zero if the bits per sample is exactly correct, not an"]
+        #[doc = " approximation."]
+        #[doc = ""]
+        #[doc = " @param[in] codec_id the codec"]
+        #[doc = " @return Number of bits per sample or zero if unknown for the given codec."]
+        pub fn av_get_exact_bits_per_sample(codec_id: root::AVCodecID) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Return a name for the specified profile, if available."]
+        #[doc = ""]
+        #[doc = " @param codec_id the ID of the codec to which the requested profile belongs"]
+        #[doc = " @param profile the profile value for which a name is requested"]
+        #[doc = " @return A name for the profile if found, NULL otherwise."]
+        #[doc = ""]
+        #[doc = " @note unlike av_get_profile_name(), which searches a list of profiles"]
+        #[doc = "       supported by a specific decoder or encoder implementation, this"]
+        #[doc = "       function searches the list of profiles from the AVCodecDescriptor"]
+        pub fn avcodec_profile_name(
+            codec_id: root::AVCodecID,
+            profile: ::std::os::raw::c_int,
+        ) -> *const ::std::os::raw::c_char;
+    }
+    extern "C" {
+        #[doc = " Return the PCM codec associated with a sample format."]
+        #[doc = " @param be  endianness, 0 for little, 1 for big,"]
+        #[doc = "            -1 (or anything else) for native"]
+        #[doc = " @return  AV_CODEC_ID_PCM_* or AV_CODEC_ID_NONE"]
+        pub fn av_get_pcm_codec(
+            fmt: root::AVSampleFormat,
+            be: ::std::os::raw::c_int,
+        ) -> root::AVCodecID;
+    }
+    #[doc = " AVProfile."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVProfile {
+        pub profile: ::std::os::raw::c_int,
+        #[doc = "< short name for the profile"]
+        pub name: *const ::std::os::raw::c_char,
+    }
+    impl Default for AVProfile {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVCodecDefault {
+        _unused: [u8; 0],
+    }
+    #[doc = " AVCodec."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVCodec {
+        #[doc = " Name of the codec implementation."]
+        #[doc = " The name is globally unique among encoders and among decoders (but an"]
+        #[doc = " encoder and a decoder can share the same name)."]
+        #[doc = " This is the primary way to find a codec from the user perspective."]
+        pub name: *const ::std::os::raw::c_char,
+        #[doc = " Descriptive name for the codec, meant to be more human readable than name."]
+        #[doc = " You should use the NULL_IF_CONFIG_SMALL() macro to define it."]
+        pub long_name: *const ::std::os::raw::c_char,
+        pub type_: root::AVMediaType,
+        pub id: root::AVCodecID,
+        #[doc = " Codec capabilities."]
+        #[doc = " see AV_CODEC_CAP_*"]
+        pub capabilities: ::std::os::raw::c_int,
+        #[doc = "< maximum value for lowres supported by the decoder"]
+        pub max_lowres: u8,
+        #[doc = "< array of supported framerates, or NULL if any, array is terminated by {0,0}"]
+        pub supported_framerates: *const root::AVRational,
+        #[doc = "< array of supported pixel formats, or NULL if unknown, array is terminated by -1"]
+        pub pix_fmts: *const root::AVPixelFormat,
+        #[doc = "< array of supported audio samplerates, or NULL if unknown, array is terminated by 0"]
+        pub supported_samplerates: *const ::std::os::raw::c_int,
+        #[doc = "< array of supported sample formats, or NULL if unknown, array is terminated by -1"]
+        pub sample_fmts: *const root::AVSampleFormat,
+        #[doc = "< array of support channel layouts, or NULL if unknown. array is terminated by 0"]
+        pub channel_layouts: *const u64,
+        #[doc = "< AVClass for the private context"]
+        pub priv_class: *const root::AVClass,
+        #[doc = "< array of recognized profiles, or NULL if unknown, array is terminated by {FF_PROFILE_UNKNOWN}"]
+        pub profiles: *const root::AVProfile,
+        #[doc = " Group name of the codec implementation."]
+        #[doc = " This is a short symbolic name of the wrapper backing this codec. A"]
+        #[doc = " wrapper uses some kind of external implementation for the codec, such"]
+        #[doc = " as an external library, or a codec implementation provided by the OS or"]
+        #[doc = " the hardware."]
+        #[doc = " If this field is NULL, this is a builtin, libavcodec native codec."]
+        #[doc = " If non-NULL, this will be the suffix in AVCodec.name in most cases"]
+        #[doc = " (usually AVCodec.name will be of the form \"<codec_name>_<wrapper_name>\")."]
+        pub wrapper_name: *const ::std::os::raw::c_char,
+        #[doc = " No fields below this line are part of the public API. They"]
+        #[doc = " may not be used outside of libavcodec and can be changed and"]
+        #[doc = " removed at will."]
+        #[doc = " New public fields should be added right above."]
+        #[doc = ""]
+        #[doc = " Internal codec capabilities."]
+        #[doc = " See FF_CODEC_CAP_* in internal.h"]
+        pub caps_internal: ::std::os::raw::c_int,
+        pub priv_data_size: ::std::os::raw::c_int,
+        #[doc = " @name Frame-level threading support functions"]
+        #[doc = " @{"]
+        #[doc = " Copy necessary context variables from a previous thread context to the current one."]
+        #[doc = " If not defined, the next thread will start automatically; otherwise, the codec"]
+        #[doc = " must call ff_thread_finish_setup()."]
+        #[doc = ""]
+        #[doc = " dst and src will (rarely) point to the same context, in which case memcpy should be skipped."]
+        pub update_thread_context: ::std::option::Option<
+            unsafe extern "C" fn(
+                dst: *mut root::AVCodecContext,
+                src: *const root::AVCodecContext,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Copy variables back to the user-facing context"]
+        pub update_thread_context_for_user: ::std::option::Option<
+            unsafe extern "C" fn(
+                dst: *mut root::AVCodecContext,
+                src: *const root::AVCodecContext,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Private codec-specific defaults."]
+        pub defaults: *const root::AVCodecDefault,
+        #[doc = " Initialize codec static data, called from av_codec_iterate()."]
+        #[doc = ""]
+        #[doc = " This is not intended for time consuming operations as it is"]
+        #[doc = " run for every codec regardless of that codec being used."]
+        pub init_static_data:
+            ::std::option::Option<unsafe extern "C" fn(codec: *mut root::AVCodec)>,
+        pub init: ::std::option::Option<
+            unsafe extern "C" fn(arg1: *mut root::AVCodecContext) -> ::std::os::raw::c_int,
+        >,
+        pub encode_sub: ::std::option::Option<
+            unsafe extern "C" fn(
+                arg1: *mut root::AVCodecContext,
+                buf: *mut u8,
+                buf_size: ::std::os::raw::c_int,
+                sub: *const root::AVSubtitle,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Encode data to an AVPacket."]
+        #[doc = ""]
+        #[doc = " @param      avctx          codec context"]
+        #[doc = " @param      avpkt          output AVPacket"]
+        #[doc = " @param[in]  frame          AVFrame containing the raw data to be encoded"]
+        #[doc = " @param[out] got_packet_ptr encoder sets to 0 or 1 to indicate that a"]
+        #[doc = "                            non-empty packet was returned in avpkt."]
+        #[doc = " @return 0 on success, negative error code on failure"]
+        pub encode2: ::std::option::Option<
+            unsafe extern "C" fn(
+                avctx: *mut root::AVCodecContext,
+                avpkt: *mut root::AVPacket,
+                frame: *const root::AVFrame,
+                got_packet_ptr: *mut ::std::os::raw::c_int,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Decode picture or subtitle data."]
+        #[doc = ""]
+        #[doc = " @param      avctx          codec context"]
+        #[doc = " @param      outdata        codec type dependent output struct"]
+        #[doc = " @param[out] got_frame_ptr  decoder sets to 0 or 1 to indicate that a"]
+        #[doc = "                            non-empty frame or subtitle was returned in"]
+        #[doc = "                            outdata."]
+        #[doc = " @param[in]  avpkt          AVPacket containing the data to be decoded"]
+        #[doc = " @return amount of bytes read from the packet on success, negative error"]
+        #[doc = "         code on failure"]
+        pub decode: ::std::option::Option<
+            unsafe extern "C" fn(
+                avctx: *mut root::AVCodecContext,
+                outdata: *mut ::std::os::raw::c_void,
+                got_frame_ptr: *mut ::std::os::raw::c_int,
+                avpkt: *mut root::AVPacket,
+            ) -> ::std::os::raw::c_int,
+        >,
+        pub close: ::std::option::Option<
+            unsafe extern "C" fn(arg1: *mut root::AVCodecContext) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Encode API with decoupled frame/packet dataflow. This function is called"]
+        #[doc = " to get one output packet. It should call ff_encode_get_frame() to obtain"]
+        #[doc = " input data."]
+        pub receive_packet: ::std::option::Option<
+            unsafe extern "C" fn(
+                avctx: *mut root::AVCodecContext,
+                avpkt: *mut root::AVPacket,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Decode API with decoupled packet/frame dataflow. This function is called"]
+        #[doc = " to get one output frame. It should call ff_decode_get_packet() to obtain"]
+        #[doc = " input data."]
+        pub receive_frame: ::std::option::Option<
+            unsafe extern "C" fn(
+                avctx: *mut root::AVCodecContext,
+                frame: *mut root::AVFrame,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Flush buffers."]
+        #[doc = " Will be called when seeking"]
+        pub flush: ::std::option::Option<unsafe extern "C" fn(arg1: *mut root::AVCodecContext)>,
+        #[doc = " Decoding only, a comma-separated list of bitstream filters to apply to"]
+        #[doc = " packets before decoding."]
+        pub bsfs: *const ::std::os::raw::c_char,
+        #[doc = " Array of pointers to hardware configurations supported by the codec,"]
+        #[doc = " or NULL if no hardware supported.  The array is terminated by a NULL"]
+        #[doc = " pointer."]
+        #[doc = ""]
+        #[doc = " The user can only access this field via avcodec_get_hw_config()."]
+        pub hw_configs: *const *mut root::AVCodecHWConfigInternal,
+        #[doc = " List of supported codec_tags, terminated by FF_CODEC_TAGS_END."]
+        pub codec_tags: *const u32,
+    }
+    impl Default for AVCodec {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " Iterate over all registered codecs."]
+        #[doc = ""]
+        #[doc = " @param opaque a pointer where libavcodec will store the iteration state. Must"]
+        #[doc = "               point to NULL to start the iteration."]
+        #[doc = ""]
+        #[doc = " @return the next registered codec or NULL when the iteration is"]
+        #[doc = "         finished"]
+        pub fn av_codec_iterate(opaque: *mut *mut ::std::os::raw::c_void) -> *const root::AVCodec;
+    }
+    extern "C" {
+        #[doc = " Find a registered decoder with a matching codec ID."]
+        #[doc = ""]
+        #[doc = " @param id AVCodecID of the requested decoder"]
+        #[doc = " @return A decoder if one was found, NULL otherwise."]
+        pub fn avcodec_find_decoder(id: root::AVCodecID) -> *const root::AVCodec;
+    }
+    extern "C" {
+        #[doc = " Find a registered decoder with the specified name."]
+        #[doc = ""]
+        #[doc = " @param name name of the requested decoder"]
+        #[doc = " @return A decoder if one was found, NULL otherwise."]
+        pub fn avcodec_find_decoder_by_name(
+            name: *const ::std::os::raw::c_char,
+        ) -> *const root::AVCodec;
+    }
+    extern "C" {
+        #[doc = " Find a registered encoder with a matching codec ID."]
+        #[doc = ""]
+        #[doc = " @param id AVCodecID of the requested encoder"]
+        #[doc = " @return An encoder if one was found, NULL otherwise."]
+        pub fn avcodec_find_encoder(id: root::AVCodecID) -> *const root::AVCodec;
+    }
+    extern "C" {
+        #[doc = " Find a registered encoder with the specified name."]
+        #[doc = ""]
+        #[doc = " @param name name of the requested encoder"]
+        #[doc = " @return An encoder if one was found, NULL otherwise."]
+        pub fn avcodec_find_encoder_by_name(
+            name: *const ::std::os::raw::c_char,
+        ) -> *const root::AVCodec;
+    }
+    extern "C" {
+        #[doc = " @return a non-zero number if codec is an encoder, zero otherwise"]
+        pub fn av_codec_is_encoder(codec: *const root::AVCodec) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " @return a non-zero number if codec is a decoder, zero otherwise"]
+        pub fn av_codec_is_decoder(codec: *const root::AVCodec) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Return a name for the specified profile, if available."]
+        #[doc = ""]
+        #[doc = " @param codec the codec that is searched for the given profile"]
+        #[doc = " @param profile the profile value for which a name is requested"]
+        #[doc = " @return A name for the profile if found, NULL otherwise."]
+        pub fn av_get_profile_name(
+            codec: *const root::AVCodec,
+            profile: ::std::os::raw::c_int,
+        ) -> *const ::std::os::raw::c_char;
+    }
+    #[doc = " The codec supports this format via the hw_device_ctx interface."]
+    #[doc = ""]
+    #[doc = " When selecting this format, AVCodecContext.hw_device_ctx should"]
+    #[doc = " have been set to a device of the specified type before calling"]
+    #[doc = " avcodec_open2()."]
+    pub const AV_CODEC_HW_CONFIG_METHOD_HW_DEVICE_CTX: ::std::os::raw::c_uint = 1;
+    #[doc = " The codec supports this format via the hw_frames_ctx interface."]
+    #[doc = ""]
+    #[doc = " When selecting this format for a decoder,"]
+    #[doc = " AVCodecContext.hw_frames_ctx should be set to a suitable frames"]
+    #[doc = " context inside the get_format() callback.  The frames context"]
+    #[doc = " must have been created on a device of the specified type."]
+    #[doc = ""]
+    #[doc = " When selecting this format for an encoder,"]
+    #[doc = " AVCodecContext.hw_frames_ctx should be set to the context which"]
+    #[doc = " will be used for the input frames before calling avcodec_open2()."]
+    pub const AV_CODEC_HW_CONFIG_METHOD_HW_FRAMES_CTX: ::std::os::raw::c_uint = 2;
+    #[doc = " The codec supports this format by some internal method."]
+    #[doc = ""]
+    #[doc = " This format can be selected without any additional configuration -"]
+    #[doc = " no device or frames context is required."]
+    pub const AV_CODEC_HW_CONFIG_METHOD_INTERNAL: ::std::os::raw::c_uint = 4;
+    #[doc = " The codec supports this format by some ad-hoc method."]
+    #[doc = ""]
+    #[doc = " Additional settings and/or function calls are required.  See the"]
+    #[doc = " codec-specific documentation for details.  (Methods requiring"]
+    #[doc = " this sort of configuration are deprecated and others should be"]
+    #[doc = " used in preference.)"]
+    pub const AV_CODEC_HW_CONFIG_METHOD_AD_HOC: ::std::os::raw::c_uint = 8;
+    pub type _bindgen_ty_7 = ::std::os::raw::c_uint;
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVCodecHWConfig {
+        #[doc = " For decoders, a hardware pixel format which that decoder may be"]
+        #[doc = " able to decode to if suitable hardware is available."]
+        #[doc = ""]
+        #[doc = " For encoders, a pixel format which the encoder may be able to"]
+        #[doc = " accept.  If set to AV_PIX_FMT_NONE, this applies to all pixel"]
+        #[doc = " formats supported by the codec."]
+        pub pix_fmt: root::AVPixelFormat,
+        #[doc = " Bit set of AV_CODEC_HW_CONFIG_METHOD_* flags, describing the possible"]
+        #[doc = " setup methods which can be used with this configuration."]
+        pub methods: ::std::os::raw::c_int,
+        #[doc = " The device type associated with the configuration."]
+        #[doc = ""]
+        #[doc = " Must be set for AV_CODEC_HW_CONFIG_METHOD_HW_DEVICE_CTX and"]
+        #[doc = " AV_CODEC_HW_CONFIG_METHOD_HW_FRAMES_CTX, otherwise unused."]
+        pub device_type: root::AVHWDeviceType,
+    }
+    impl Default for AVCodecHWConfig {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " Retrieve supported hardware configurations for a codec."]
+        #[doc = ""]
+        #[doc = " Values of index from zero to some maximum return the indexed configuration"]
+        #[doc = " descriptor; all other values return NULL.  If the codec does not support"]
+        #[doc = " any hardware configurations then it will always return NULL."]
+        pub fn avcodec_get_hw_config(
+            codec: *const root::AVCodec,
+            index: ::std::os::raw::c_int,
+        ) -> *const root::AVCodecHWConfig;
+    }
+    pub const AVFieldOrder_AV_FIELD_UNKNOWN: root::AVFieldOrder = 0;
+    pub const AVFieldOrder_AV_FIELD_PROGRESSIVE: root::AVFieldOrder = 1;
+    pub const AVFieldOrder_AV_FIELD_TT: root::AVFieldOrder = 2;
+    pub const AVFieldOrder_AV_FIELD_BB: root::AVFieldOrder = 3;
+    pub const AVFieldOrder_AV_FIELD_TB: root::AVFieldOrder = 4;
+    pub const AVFieldOrder_AV_FIELD_BT: root::AVFieldOrder = 5;
+    #[doc = " @addtogroup lavc_core"]
+    pub type AVFieldOrder = ::std::os::raw::c_uint;
+    #[doc = " This struct describes the properties of an encoded stream."]
+    #[doc = ""]
+    #[doc = " sizeof(AVCodecParameters) is not a part of the public ABI, this struct must"]
+    #[doc = " be allocated with avcodec_parameters_alloc() and freed with"]
+    #[doc = " avcodec_parameters_free()."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVCodecParameters {
+        #[doc = " General type of the encoded data."]
+        pub codec_type: root::AVMediaType,
+        #[doc = " Specific type of the encoded data (the codec used)."]
+        pub codec_id: root::AVCodecID,
+        #[doc = " Additional information about the codec (corresponds to the AVI FOURCC)."]
+        pub codec_tag: u32,
+        #[doc = " Extra binary data needed for initializing the decoder, codec-dependent."]
+        #[doc = ""]
+        #[doc = " Must be allocated with av_malloc() and will be freed by"]
+        #[doc = " avcodec_parameters_free(). The allocated size of extradata must be at"]
+        #[doc = " least extradata_size + AV_INPUT_BUFFER_PADDING_SIZE, with the padding"]
+        #[doc = " bytes zeroed."]
+        pub extradata: *mut u8,
+        #[doc = " Size of the extradata content in bytes."]
+        pub extradata_size: ::std::os::raw::c_int,
+        #[doc = " - video: the pixel format, the value corresponds to enum AVPixelFormat."]
+        #[doc = " - audio: the sample format, the value corresponds to enum AVSampleFormat."]
+        pub format: ::std::os::raw::c_int,
+        #[doc = " The average bitrate of the encoded data (in bits per second)."]
+        pub bit_rate: i64,
+        #[doc = " The number of bits per sample in the codedwords."]
+        #[doc = ""]
+        #[doc = " This is basically the bitrate per sample. It is mandatory for a bunch of"]
+        #[doc = " formats to actually decode them. It's the number of bits for one sample in"]
+        #[doc = " the actual coded bitstream."]
+        #[doc = ""]
+        #[doc = " This could be for example 4 for ADPCM"]
+        #[doc = " For PCM formats this matches bits_per_raw_sample"]
+        #[doc = " Can be 0"]
+        pub bits_per_coded_sample: ::std::os::raw::c_int,
+        #[doc = " This is the number of valid bits in each output sample. If the"]
+        #[doc = " sample format has more bits, the least significant bits are additional"]
+        #[doc = " padding bits, which are always 0. Use right shifts to reduce the sample"]
+        #[doc = " to its actual size. For example, audio formats with 24 bit samples will"]
+        #[doc = " have bits_per_raw_sample set to 24, and format set to AV_SAMPLE_FMT_S32."]
+        #[doc = " To get the original sample use \"(int32_t)sample >> 8\".\""]
+        #[doc = ""]
+        #[doc = " For ADPCM this might be 12 or 16 or similar"]
+        #[doc = " Can be 0"]
+        pub bits_per_raw_sample: ::std::os::raw::c_int,
+        #[doc = " Codec-specific bitstream restrictions that the stream conforms to."]
+        pub profile: ::std::os::raw::c_int,
+        pub level: ::std::os::raw::c_int,
+        #[doc = " Video only. The dimensions of the video frame in pixels."]
+        pub width: ::std::os::raw::c_int,
+        pub height: ::std::os::raw::c_int,
+        #[doc = " Video only. The aspect ratio (width / height) which a single pixel"]
+        #[doc = " should have when displayed."]
+        #[doc = ""]
+        #[doc = " When the aspect ratio is unknown / undefined, the numerator should be"]
+        #[doc = " set to 0 (the denominator may have any value)."]
+        pub sample_aspect_ratio: root::AVRational,
+        #[doc = " Video only. The order of the fields in interlaced video."]
+        pub field_order: root::AVFieldOrder,
+        #[doc = " Video only. Additional colorspace characteristics."]
+        pub color_range: root::AVColorRange,
+        pub color_primaries: root::AVColorPrimaries,
+        pub color_trc: root::AVColorTransferCharacteristic,
+        pub color_space: root::AVColorSpace,
+        pub chroma_location: root::AVChromaLocation,
+        #[doc = " Video only. Number of delayed frames."]
+        pub video_delay: ::std::os::raw::c_int,
+        #[doc = " Audio only. The channel layout bitmask. May be 0 if the channel layout is"]
+        #[doc = " unknown or unspecified, otherwise the number of bits set must be equal to"]
+        #[doc = " the channels field."]
+        pub channel_layout: u64,
+        #[doc = " Audio only. The number of audio channels."]
+        pub channels: ::std::os::raw::c_int,
+        #[doc = " Audio only. The number of audio samples per second."]
+        pub sample_rate: ::std::os::raw::c_int,
+        #[doc = " Audio only. The number of bytes per coded audio frame, required by some"]
+        #[doc = " formats."]
+        #[doc = ""]
+        #[doc = " Corresponds to nBlockAlign in WAVEFORMATEX."]
+        pub block_align: ::std::os::raw::c_int,
+        #[doc = " Audio only. Audio frame size, if known. Required by some formats to be static."]
+        pub frame_size: ::std::os::raw::c_int,
+        #[doc = " Audio only. The amount of padding (in samples) inserted by the encoder at"]
+        #[doc = " the beginning of the audio. I.e. this number of leading decoded samples"]
+        #[doc = " must be discarded by the caller to get the original audio without leading"]
+        #[doc = " padding."]
+        pub initial_padding: ::std::os::raw::c_int,
+        #[doc = " Audio only. The amount of padding (in samples) appended by the encoder to"]
+        #[doc = " the end of the audio. I.e. this number of decoded samples must be"]
+        #[doc = " discarded by the caller from the end of the stream to get the original"]
+        #[doc = " audio without any trailing padding."]
+        pub trailing_padding: ::std::os::raw::c_int,
+        #[doc = " Audio only. Number of samples to skip after a discontinuity."]
+        pub seek_preroll: ::std::os::raw::c_int,
+    }
+    impl Default for AVCodecParameters {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " Allocate a new AVCodecParameters and set its fields to default values"]
+        #[doc = " (unknown/invalid/0). The returned struct must be freed with"]
+        #[doc = " avcodec_parameters_free()."]
+        pub fn avcodec_parameters_alloc() -> *mut root::AVCodecParameters;
+    }
+    extern "C" {
+        #[doc = " Free an AVCodecParameters instance and everything associated with it and"]
+        #[doc = " write NULL to the supplied pointer."]
+        pub fn avcodec_parameters_free(par: *mut *mut root::AVCodecParameters);
+    }
+    extern "C" {
+        #[doc = " Copy the contents of src to dst. Any allocated fields in dst are freed and"]
+        #[doc = " replaced with newly allocated duplicates of the corresponding fields in src."]
+        #[doc = ""]
+        #[doc = " @return >= 0 on success, a negative AVERROR code on failure."]
+        pub fn avcodec_parameters_copy(
+            dst: *mut root::AVCodecParameters,
+            src: *const root::AVCodecParameters,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " This function is the same as av_get_audio_frame_duration(), except it works"]
+        #[doc = " with AVCodecParameters instead of an AVCodecContext."]
+        pub fn av_get_audio_frame_duration2(
+            par: *mut root::AVCodecParameters,
+            frame_bytes: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    #[doc = "< discard nothing"]
+    pub const AVDiscard_AVDISCARD_NONE: root::AVDiscard = -16;
+    #[doc = "< discard useless packets like 0 size packets in avi"]
+    pub const AVDiscard_AVDISCARD_DEFAULT: root::AVDiscard = 0;
+    #[doc = "< discard all non reference"]
+    pub const AVDiscard_AVDISCARD_NONREF: root::AVDiscard = 8;
+    #[doc = "< discard all bidirectional frames"]
+    pub const AVDiscard_AVDISCARD_BIDIR: root::AVDiscard = 16;
+    #[doc = "< discard all non intra frames"]
+    pub const AVDiscard_AVDISCARD_NONINTRA: root::AVDiscard = 24;
+    #[doc = "< discard all frames except keyframes"]
+    pub const AVDiscard_AVDISCARD_NONKEY: root::AVDiscard = 32;
+    #[doc = "< discard all"]
+    pub const AVDiscard_AVDISCARD_ALL: root::AVDiscard = 48;
+    #[doc = " @ingroup lavc_decoding"]
+    pub type AVDiscard = ::std::os::raw::c_int;
+    pub const AVAudioServiceType_AV_AUDIO_SERVICE_TYPE_MAIN: root::AVAudioServiceType = 0;
+    pub const AVAudioServiceType_AV_AUDIO_SERVICE_TYPE_EFFECTS: root::AVAudioServiceType = 1;
+    pub const AVAudioServiceType_AV_AUDIO_SERVICE_TYPE_VISUALLY_IMPAIRED: root::AVAudioServiceType =
+        2;
+    pub const AVAudioServiceType_AV_AUDIO_SERVICE_TYPE_HEARING_IMPAIRED: root::AVAudioServiceType =
+        3;
+    pub const AVAudioServiceType_AV_AUDIO_SERVICE_TYPE_DIALOGUE: root::AVAudioServiceType = 4;
+    pub const AVAudioServiceType_AV_AUDIO_SERVICE_TYPE_COMMENTARY: root::AVAudioServiceType = 5;
+    pub const AVAudioServiceType_AV_AUDIO_SERVICE_TYPE_EMERGENCY: root::AVAudioServiceType = 6;
+    pub const AVAudioServiceType_AV_AUDIO_SERVICE_TYPE_VOICE_OVER: root::AVAudioServiceType = 7;
+    pub const AVAudioServiceType_AV_AUDIO_SERVICE_TYPE_KARAOKE: root::AVAudioServiceType = 8;
+    #[doc = "< Not part of ABI"]
+    pub const AVAudioServiceType_AV_AUDIO_SERVICE_TYPE_NB: root::AVAudioServiceType = 9;
+    pub type AVAudioServiceType = ::std::os::raw::c_uint;
+    #[doc = " Pan Scan area."]
+    #[doc = " This specifies the area which should be displayed."]
+    #[doc = " Note there may be multiple such areas for one frame."]
+    #[repr(C)]
+    #[derive(Debug, Default, Copy, Clone)]
+    pub struct AVPanScan {
+        #[doc = " id"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by libavcodec."]
+        pub id: ::std::os::raw::c_int,
+        #[doc = " width and height in 1/16 pel"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by libavcodec."]
+        pub width: ::std::os::raw::c_int,
+        pub height: ::std::os::raw::c_int,
+        #[doc = " position of the top left corner in 1/16 pel for up to 3 fields/frames"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by libavcodec."]
+        pub position: [[i16; 2usize]; 3usize],
+    }
+    #[doc = " This structure describes the bitrate properties of an encoded bitstream. It"]
+    #[doc = " roughly corresponds to a subset the VBV parameters for MPEG-2 or HRD"]
+    #[doc = " parameters for H.264/HEVC."]
+    #[repr(C)]
+    #[derive(Debug, Default, Copy, Clone)]
+    pub struct AVCPBProperties {
+        #[doc = " Maximum bitrate of the stream, in bits per second."]
+        #[doc = " Zero if unknown or unspecified."]
+        pub max_bitrate: i64,
+        #[doc = " Minimum bitrate of the stream, in bits per second."]
+        #[doc = " Zero if unknown or unspecified."]
+        pub min_bitrate: i64,
+        #[doc = " Average bitrate of the stream, in bits per second."]
+        #[doc = " Zero if unknown or unspecified."]
+        pub avg_bitrate: i64,
+        #[doc = " The size of the buffer to which the ratecontrol is applied, in bits."]
+        #[doc = " Zero if unknown or unspecified."]
+        pub buffer_size: i64,
+        #[doc = " The delay between the time the packet this structure is associated with"]
+        #[doc = " is received and the time when it should be decoded, in periods of a 27MHz"]
+        #[doc = " clock."]
+        #[doc = ""]
+        #[doc = " UINT64_MAX when unknown or unspecified."]
+        pub vbv_delay: u64,
+    }
+    extern "C" {
+        #[doc = " Allocate a CPB properties structure and initialize its fields to default"]
+        #[doc = " values."]
+        #[doc = ""]
+        #[doc = " @param size if non-NULL, the size of the allocated struct will be written"]
+        #[doc = "             here. This is useful for embedding it in side data."]
+        #[doc = ""]
+        #[doc = " @return the newly allocated struct or NULL on failure"]
+        pub fn av_cpb_properties_alloc(size: *mut root::size_t) -> *mut root::AVCPBProperties;
+    }
+    #[doc = " This structure supplies correlation between a packet timestamp and a wall clock"]
+    #[doc = " production time. The definition follows the Producer Reference Time ('prft')"]
+    #[doc = " as defined in ISO/IEC 14496-12"]
+    #[repr(C)]
+    #[derive(Debug, Default, Copy, Clone)]
+    pub struct AVProducerReferenceTime {
+        #[doc = " A UTC timestamp, in microseconds, since Unix epoch (e.g, av_gettime())."]
+        pub wallclock: i64,
+        pub flags: ::std::os::raw::c_int,
+    }
+    extern "C" {
+        #[doc = " Encode extradata length to a buffer. Used by xiph codecs."]
+        #[doc = ""]
+        #[doc = " @param s buffer to write to; must be at least (v/255+1) bytes long"]
+        #[doc = " @param v size of extradata in bytes"]
+        #[doc = " @return number of bytes written to the buffer."]
+        pub fn av_xiphlacing(
+            s: *mut ::std::os::raw::c_uchar,
+            v: ::std::os::raw::c_uint,
+        ) -> ::std::os::raw::c_uint;
+    }
+    #[doc = " An AV_PKT_DATA_PALETTE side data packet contains exactly AVPALETTE_SIZE"]
+    #[doc = " bytes worth of palette. This side data signals that a new palette is"]
+    #[doc = " present."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_PALETTE: root::AVPacketSideDataType = 0;
+    #[doc = " The AV_PKT_DATA_NEW_EXTRADATA is used to notify the codec or the format"]
+    #[doc = " that the extradata buffer was changed and the receiving side should"]
+    #[doc = " act upon it appropriately. The new extradata is embedded in the side"]
+    #[doc = " data buffer and should be immediately used for processing the current"]
+    #[doc = " frame or packet."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_NEW_EXTRADATA: root::AVPacketSideDataType = 1;
+    #[doc = " An AV_PKT_DATA_PARAM_CHANGE side data packet is laid out as follows:"]
+    #[doc = " @code"]
+    #[doc = " u32le param_flags"]
+    #[doc = " if (param_flags & AV_SIDE_DATA_PARAM_CHANGE_CHANNEL_COUNT)"]
+    #[doc = "     s32le channel_count"]
+    #[doc = " if (param_flags & AV_SIDE_DATA_PARAM_CHANGE_CHANNEL_LAYOUT)"]
+    #[doc = "     u64le channel_layout"]
+    #[doc = " if (param_flags & AV_SIDE_DATA_PARAM_CHANGE_SAMPLE_RATE)"]
+    #[doc = "     s32le sample_rate"]
+    #[doc = " if (param_flags & AV_SIDE_DATA_PARAM_CHANGE_DIMENSIONS)"]
+    #[doc = "     s32le width"]
+    #[doc = "     s32le height"]
+    #[doc = " @endcode"]
+    pub const AVPacketSideDataType_AV_PKT_DATA_PARAM_CHANGE: root::AVPacketSideDataType = 2;
+    #[doc = " An AV_PKT_DATA_H263_MB_INFO side data packet contains a number of"]
+    #[doc = " structures with info about macroblocks relevant to splitting the"]
+    #[doc = " packet into smaller packets on macroblock edges (e.g. as for RFC 2190)."]
+    #[doc = " That is, it does not necessarily contain info about all macroblocks,"]
+    #[doc = " as long as the distance between macroblocks in the info is smaller"]
+    #[doc = " than the target payload size."]
+    #[doc = " Each MB info structure is 12 bytes, and is laid out as follows:"]
+    #[doc = " @code"]
+    #[doc = " u32le bit offset from the start of the packet"]
+    #[doc = " u8    current quantizer at the start of the macroblock"]
+    #[doc = " u8    GOB number"]
+    #[doc = " u16le macroblock address within the GOB"]
+    #[doc = " u8    horizontal MV predictor"]
+    #[doc = " u8    vertical MV predictor"]
+    #[doc = " u8    horizontal MV predictor for block number 3"]
+    #[doc = " u8    vertical MV predictor for block number 3"]
+    #[doc = " @endcode"]
+    pub const AVPacketSideDataType_AV_PKT_DATA_H263_MB_INFO: root::AVPacketSideDataType = 3;
+    #[doc = " This side data should be associated with an audio stream and contains"]
+    #[doc = " ReplayGain information in form of the AVReplayGain struct."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_REPLAYGAIN: root::AVPacketSideDataType = 4;
+    #[doc = " This side data contains a 3x3 transformation matrix describing an affine"]
+    #[doc = " transformation that needs to be applied to the decoded video frames for"]
+    #[doc = " correct presentation."]
+    #[doc = ""]
+    #[doc = " See libavutil/display.h for a detailed description of the data."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_DISPLAYMATRIX: root::AVPacketSideDataType = 5;
+    #[doc = " This side data should be associated with a video stream and contains"]
+    #[doc = " Stereoscopic 3D information in form of the AVStereo3D struct."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_STEREO3D: root::AVPacketSideDataType = 6;
+    #[doc = " This side data should be associated with an audio stream and corresponds"]
+    #[doc = " to enum AVAudioServiceType."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_AUDIO_SERVICE_TYPE: root::AVPacketSideDataType = 7;
+    #[doc = " This side data contains quality related information from the encoder."]
+    #[doc = " @code"]
+    #[doc = " u32le quality factor of the compressed frame. Allowed range is between 1 (good) and FF_LAMBDA_MAX (bad)."]
+    #[doc = " u8    picture type"]
+    #[doc = " u8    error count"]
+    #[doc = " u16   reserved"]
+    #[doc = " u64le[error count] sum of squared differences between encoder in and output"]
+    #[doc = " @endcode"]
+    pub const AVPacketSideDataType_AV_PKT_DATA_QUALITY_STATS: root::AVPacketSideDataType = 8;
+    #[doc = " This side data contains an integer value representing the stream index"]
+    #[doc = " of a \"fallback\" track.  A fallback track indicates an alternate"]
+    #[doc = " track to use when the current track can not be decoded for some reason."]
+    #[doc = " e.g. no decoder available for codec."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_FALLBACK_TRACK: root::AVPacketSideDataType = 9;
+    #[doc = " This side data corresponds to the AVCPBProperties struct."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_CPB_PROPERTIES: root::AVPacketSideDataType = 10;
+    #[doc = " Recommmends skipping the specified number of samples"]
+    #[doc = " @code"]
+    #[doc = " u32le number of samples to skip from start of this packet"]
+    #[doc = " u32le number of samples to skip from end of this packet"]
+    #[doc = " u8    reason for start skip"]
+    #[doc = " u8    reason for end   skip (0=padding silence, 1=convergence)"]
+    #[doc = " @endcode"]
+    pub const AVPacketSideDataType_AV_PKT_DATA_SKIP_SAMPLES: root::AVPacketSideDataType = 11;
+    #[doc = " An AV_PKT_DATA_JP_DUALMONO side data packet indicates that"]
+    #[doc = " the packet may contain \"dual mono\" audio specific to Japanese DTV"]
+    #[doc = " and if it is true, recommends only the selected channel to be used."]
+    #[doc = " @code"]
+    #[doc = " u8    selected channels (0=mail/left, 1=sub/right, 2=both)"]
+    #[doc = " @endcode"]
+    pub const AVPacketSideDataType_AV_PKT_DATA_JP_DUALMONO: root::AVPacketSideDataType = 12;
+    #[doc = " A list of zero terminated key/value strings. There is no end marker for"]
+    #[doc = " the list, so it is required to rely on the side data size to stop."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_STRINGS_METADATA: root::AVPacketSideDataType = 13;
+    #[doc = " Subtitle event position"]
+    #[doc = " @code"]
+    #[doc = " u32le x1"]
+    #[doc = " u32le y1"]
+    #[doc = " u32le x2"]
+    #[doc = " u32le y2"]
+    #[doc = " @endcode"]
+    pub const AVPacketSideDataType_AV_PKT_DATA_SUBTITLE_POSITION: root::AVPacketSideDataType = 14;
+    #[doc = " Data found in BlockAdditional element of matroska container. There is"]
+    #[doc = " no end marker for the data, so it is required to rely on the side data"]
+    #[doc = " size to recognize the end. 8 byte id (as found in BlockAddId) followed"]
+    #[doc = " by data."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_MATROSKA_BLOCKADDITIONAL:
+        root::AVPacketSideDataType = 15;
+    #[doc = " The optional first identifier line of a WebVTT cue."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_WEBVTT_IDENTIFIER: root::AVPacketSideDataType = 16;
+    #[doc = " The optional settings (rendering instructions) that immediately"]
+    #[doc = " follow the timestamp specifier of a WebVTT cue."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_WEBVTT_SETTINGS: root::AVPacketSideDataType = 17;
+    #[doc = " A list of zero terminated key/value strings. There is no end marker for"]
+    #[doc = " the list, so it is required to rely on the side data size to stop. This"]
+    #[doc = " side data includes updated metadata which appeared in the stream."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_METADATA_UPDATE: root::AVPacketSideDataType = 18;
+    #[doc = " MPEGTS stream ID as uint8_t, this is required to pass the stream ID"]
+    #[doc = " information from the demuxer to the corresponding muxer."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_MPEGTS_STREAM_ID: root::AVPacketSideDataType = 19;
+    #[doc = " Mastering display metadata (based on SMPTE-2086:2014). This metadata"]
+    #[doc = " should be associated with a video stream and contains data in the form"]
+    #[doc = " of the AVMasteringDisplayMetadata struct."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_MASTERING_DISPLAY_METADATA:
+        root::AVPacketSideDataType = 20;
+    #[doc = " This side data should be associated with a video stream and corresponds"]
+    #[doc = " to the AVSphericalMapping structure."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_SPHERICAL: root::AVPacketSideDataType = 21;
+    #[doc = " Content light level (based on CTA-861.3). This metadata should be"]
+    #[doc = " associated with a video stream and contains data in the form of the"]
+    #[doc = " AVContentLightMetadata struct."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_CONTENT_LIGHT_LEVEL: root::AVPacketSideDataType = 22;
+    #[doc = " ATSC A53 Part 4 Closed Captions. This metadata should be associated with"]
+    #[doc = " a video stream. A53 CC bitstream is stored as uint8_t in AVPacketSideData.data."]
+    #[doc = " The number of bytes of CC data is AVPacketSideData.size."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_A53_CC: root::AVPacketSideDataType = 23;
+    #[doc = " This side data is encryption initialization data."]
+    #[doc = " The format is not part of ABI, use av_encryption_init_info_* methods to"]
+    #[doc = " access."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_ENCRYPTION_INIT_INFO: root::AVPacketSideDataType =
+        24;
+    #[doc = " This side data contains encryption info for how to decrypt the packet."]
+    #[doc = " The format is not part of ABI, use av_encryption_info_* methods to access."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_ENCRYPTION_INFO: root::AVPacketSideDataType = 25;
+    #[doc = " Active Format Description data consisting of a single byte as specified"]
+    #[doc = " in ETSI TS 101 154 using AVActiveFormatDescription enum."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_AFD: root::AVPacketSideDataType = 26;
+    #[doc = " Producer Reference Time data corresponding to the AVProducerReferenceTime struct,"]
+    #[doc = " usually exported by some encoders (on demand through the prft flag set in the"]
+    #[doc = " AVCodecContext export_side_data field)."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_PRFT: root::AVPacketSideDataType = 27;
+    #[doc = " ICC profile data consisting of an opaque octet buffer following the"]
+    #[doc = " format described by ISO 15076-1."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_ICC_PROFILE: root::AVPacketSideDataType = 28;
+    #[doc = " DOVI configuration"]
+    #[doc = " ref:"]
+    #[doc = " dolby-vision-bitstreams-within-the-iso-base-media-file-format-v2.1.2, section 2.2"]
+    #[doc = " dolby-vision-bitstreams-in-mpeg-2-transport-stream-multiplex-v1.2, section 3.3"]
+    #[doc = " Tags are stored in struct AVDOVIDecoderConfigurationRecord."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_DOVI_CONF: root::AVPacketSideDataType = 29;
+    #[doc = " Timecode which conforms to SMPTE ST 12-1:2014. The data is an array of 4 uint32_t"]
+    #[doc = " where the first uint32_t describes how many (1-3) of the other timecodes are used."]
+    #[doc = " The timecode format is described in the documentation of av_timecode_get_smpte_from_framenum()"]
+    #[doc = " function in libavutil/timecode.h."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_S12M_TIMECODE: root::AVPacketSideDataType = 30;
+    #[doc = " HDR10+ dynamic metadata associated with a video frame. The metadata is in"]
+    #[doc = " the form of the AVDynamicHDRPlus struct and contains"]
+    #[doc = " information for color volume transform - application 4 of"]
+    #[doc = " SMPTE 2094-40:2016 standard."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_DYNAMIC_HDR10_PLUS: root::AVPacketSideDataType = 31;
+    #[doc = " The number of side data types."]
+    #[doc = " This is not part of the public API/ABI in the sense that it may"]
+    #[doc = " change when new side data types are added."]
+    #[doc = " This must stay the last enum value."]
+    #[doc = " If its value becomes huge, some code using it"]
+    #[doc = " needs to be updated as it assumes it to be smaller than other limits."]
+    pub const AVPacketSideDataType_AV_PKT_DATA_NB: root::AVPacketSideDataType = 32;
+    #[doc = " @defgroup lavc_packet AVPacket"]
+    #[doc = ""]
+    #[doc = " Types and functions for working with AVPacket."]
+    #[doc = " @{"]
+    pub type AVPacketSideDataType = ::std::os::raw::c_uint;
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVPacketSideData {
+        pub data: *mut u8,
+        pub size: root::size_t,
+        pub type_: root::AVPacketSideDataType,
+    }
+    impl Default for AVPacketSideData {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    #[doc = " This structure stores compressed data. It is typically exported by demuxers"]
+    #[doc = " and then passed as input to decoders, or received as output from encoders and"]
+    #[doc = " then passed to muxers."]
+    #[doc = ""]
+    #[doc = " For video, it should typically contain one compressed frame. For audio it may"]
+    #[doc = " contain several compressed frames. Encoders are allowed to output empty"]
+    #[doc = " packets, with no compressed data, containing only side data"]
+    #[doc = " (e.g. to update some stream parameters at the end of encoding)."]
+    #[doc = ""]
+    #[doc = " The semantics of data ownership depends on the buf field."]
+    #[doc = " If it is set, the packet data is dynamically allocated and is"]
+    #[doc = " valid indefinitely until a call to av_packet_unref() reduces the"]
+    #[doc = " reference count to 0."]
+    #[doc = ""]
+    #[doc = " If the buf field is not set av_packet_ref() would make a copy instead"]
+    #[doc = " of increasing the reference count."]
+    #[doc = ""]
+    #[doc = " The side data is always allocated with av_malloc(), copied by"]
+    #[doc = " av_packet_ref() and freed by av_packet_unref()."]
+    #[doc = ""]
+    #[doc = " sizeof(AVPacket) being a part of the public ABI is deprecated. once"]
+    #[doc = " av_init_packet() is removed, new packets will only be able to be allocated"]
+    #[doc = " with av_packet_alloc(), and new fields may be added to the end of the struct"]
+    #[doc = " with a minor bump."]
+    #[doc = ""]
+    #[doc = " @see av_packet_alloc"]
+    #[doc = " @see av_packet_ref"]
+    #[doc = " @see av_packet_unref"]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVPacket {
+        #[doc = " A reference to the reference-counted buffer where the packet data is"]
+        #[doc = " stored."]
+        #[doc = " May be NULL, then the packet data is not reference-counted."]
+        pub buf: *mut root::AVBufferRef,
+        #[doc = " Presentation timestamp in AVStream->time_base units; the time at which"]
+        #[doc = " the decompressed packet will be presented to the user."]
+        #[doc = " Can be AV_NOPTS_VALUE if it is not stored in the file."]
+        #[doc = " pts MUST be larger or equal to dts as presentation cannot happen before"]
+        #[doc = " decompression, unless one wants to view hex dumps. Some formats misuse"]
+        #[doc = " the terms dts and pts/cts to mean something different. Such timestamps"]
+        #[doc = " must be converted to true pts/dts before they are stored in AVPacket."]
+        pub pts: i64,
+        #[doc = " Decompression timestamp in AVStream->time_base units; the time at which"]
+        #[doc = " the packet is decompressed."]
+        #[doc = " Can be AV_NOPTS_VALUE if it is not stored in the file."]
+        pub dts: i64,
+        pub data: *mut u8,
+        pub size: ::std::os::raw::c_int,
+        pub stream_index: ::std::os::raw::c_int,
+        #[doc = " A combination of AV_PKT_FLAG values"]
+        pub flags: ::std::os::raw::c_int,
+        #[doc = " Additional packet data that can be provided by the container."]
+        #[doc = " Packet can contain several types of side information."]
+        pub side_data: *mut root::AVPacketSideData,
+        pub side_data_elems: ::std::os::raw::c_int,
+        #[doc = " Duration of this packet in AVStream->time_base units, 0 if unknown."]
+        #[doc = " Equals next_pts - this_pts in presentation order."]
+        pub duration: i64,
+        #[doc = "< byte position in stream, -1 if unknown"]
+        pub pos: i64,
+        #[doc = " for some private data of the user"]
+        pub opaque: *mut ::std::os::raw::c_void,
+        #[doc = " AVBufferRef for free use by the API user. FFmpeg will never check the"]
+        #[doc = " contents of the buffer ref. FFmpeg calls av_buffer_unref() on it when"]
+        #[doc = " the packet is unreferenced. av_packet_copy_props() calls create a new"]
+        #[doc = " reference with av_buffer_ref() for the target packet's opaque_ref field."]
+        #[doc = ""]
+        #[doc = " This is unrelated to the opaque field, although it serves a similar"]
+        #[doc = " purpose."]
+        pub opaque_ref: *mut root::AVBufferRef,
+        #[doc = " Time base of the packet's timestamps."]
+        pub time_base: root::AVRational,
+    }
+    impl Default for AVPacket {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVPacketList {
+        pub pkt: root::AVPacket,
+        pub next: *mut root::AVPacketList,
+    }
+    impl Default for AVPacketList {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    pub const AVSideDataParamChangeFlags_AV_SIDE_DATA_PARAM_CHANGE_CHANNEL_COUNT:
+        root::AVSideDataParamChangeFlags = 1;
+    pub const AVSideDataParamChangeFlags_AV_SIDE_DATA_PARAM_CHANGE_CHANNEL_LAYOUT:
+        root::AVSideDataParamChangeFlags = 2;
+    pub const AVSideDataParamChangeFlags_AV_SIDE_DATA_PARAM_CHANGE_SAMPLE_RATE:
+        root::AVSideDataParamChangeFlags = 4;
+    pub const AVSideDataParamChangeFlags_AV_SIDE_DATA_PARAM_CHANGE_DIMENSIONS:
+        root::AVSideDataParamChangeFlags = 8;
+    pub type AVSideDataParamChangeFlags = ::std::os::raw::c_uint;
+    extern "C" {
+        #[doc = " Allocate an AVPacket and set its fields to default values.  The resulting"]
+        #[doc = " struct must be freed using av_packet_free()."]
+        #[doc = ""]
+        #[doc = " @return An AVPacket filled with default values or NULL on failure."]
+        #[doc = ""]
+        #[doc = " @note this only allocates the AVPacket itself, not the data buffers. Those"]
+        #[doc = " must be allocated through other means such as av_new_packet."]
+        #[doc = ""]
+        #[doc = " @see av_new_packet"]
+        pub fn av_packet_alloc() -> *mut root::AVPacket;
+    }
+    extern "C" {
+        #[doc = " Create a new packet that references the same data as src."]
+        #[doc = ""]
+        #[doc = " This is a shortcut for av_packet_alloc()+av_packet_ref()."]
+        #[doc = ""]
+        #[doc = " @return newly created AVPacket on success, NULL on error."]
+        #[doc = ""]
+        #[doc = " @see av_packet_alloc"]
+        #[doc = " @see av_packet_ref"]
+        pub fn av_packet_clone(src: *const root::AVPacket) -> *mut root::AVPacket;
+    }
+    extern "C" {
+        #[doc = " Free the packet, if the packet is reference counted, it will be"]
+        #[doc = " unreferenced first."]
+        #[doc = ""]
+        #[doc = " @param pkt packet to be freed. The pointer will be set to NULL."]
+        #[doc = " @note passing NULL is a no-op."]
+        pub fn av_packet_free(pkt: *mut *mut root::AVPacket);
+    }
+    extern "C" {
+        #[doc = " Initialize optional fields of a packet with default values."]
+        #[doc = ""]
+        #[doc = " Note, this does not touch the data and size members, which have to be"]
+        #[doc = " initialized separately."]
+        #[doc = ""]
+        #[doc = " @param pkt packet"]
+        #[doc = ""]
+        #[doc = " @see av_packet_alloc"]
+        #[doc = " @see av_packet_unref"]
+        #[doc = ""]
+        #[doc = " @deprecated This function is deprecated. Once it's removed,"]
+        #[doc = "sizeof(AVPacket) will not be a part of the ABI anymore."]
+        pub fn av_init_packet(pkt: *mut root::AVPacket);
+    }
+    extern "C" {
+        #[doc = " Allocate the payload of a packet and initialize its fields with"]
+        #[doc = " default values."]
+        #[doc = ""]
+        #[doc = " @param pkt packet"]
+        #[doc = " @param size wanted payload size"]
+        #[doc = " @return 0 if OK, AVERROR_xxx otherwise"]
+        pub fn av_new_packet(
+            pkt: *mut root::AVPacket,
+            size: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Reduce packet size, correctly zeroing padding"]
+        #[doc = ""]
+        #[doc = " @param pkt packet"]
+        #[doc = " @param size new size"]
+        pub fn av_shrink_packet(pkt: *mut root::AVPacket, size: ::std::os::raw::c_int);
+    }
+    extern "C" {
+        #[doc = " Increase packet size, correctly zeroing padding"]
+        #[doc = ""]
+        #[doc = " @param pkt packet"]
+        #[doc = " @param grow_by number of bytes by which to increase the size of the packet"]
+        pub fn av_grow_packet(
+            pkt: *mut root::AVPacket,
+            grow_by: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Initialize a reference-counted packet from av_malloc()ed data."]
+        #[doc = ""]
+        #[doc = " @param pkt packet to be initialized. This function will set the data, size,"]
+        #[doc = "        and buf fields, all others are left untouched."]
+        #[doc = " @param data Data allocated by av_malloc() to be used as packet data. If this"]
+        #[doc = "        function returns successfully, the data is owned by the underlying AVBuffer."]
+        #[doc = "        The caller may not access the data through other means."]
+        #[doc = " @param size size of data in bytes, without the padding. I.e. the full buffer"]
+        #[doc = "        size is assumed to be size + AV_INPUT_BUFFER_PADDING_SIZE."]
+        #[doc = ""]
+        #[doc = " @return 0 on success, a negative AVERROR on error"]
+        pub fn av_packet_from_data(
+            pkt: *mut root::AVPacket,
+            data: *mut u8,
+            size: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Allocate new information of a packet."]
+        #[doc = ""]
+        #[doc = " @param pkt packet"]
+        #[doc = " @param type side information type"]
+        #[doc = " @param size side information size"]
+        #[doc = " @return pointer to fresh allocated data or NULL otherwise"]
+        pub fn av_packet_new_side_data(
+            pkt: *mut root::AVPacket,
+            type_: root::AVPacketSideDataType,
+            size: root::size_t,
+        ) -> *mut u8;
+    }
+    extern "C" {
+        #[doc = " Wrap an existing array as a packet side data."]
+        #[doc = ""]
+        #[doc = " @param pkt packet"]
+        #[doc = " @param type side information type"]
+        #[doc = " @param data the side data array. It must be allocated with the av_malloc()"]
+        #[doc = "             family of functions. The ownership of the data is transferred to"]
+        #[doc = "             pkt."]
+        #[doc = " @param size side information size"]
+        #[doc = " @return a non-negative number on success, a negative AVERROR code on"]
+        #[doc = "         failure. On failure, the packet is unchanged and the data remains"]
+        #[doc = "         owned by the caller."]
+        pub fn av_packet_add_side_data(
+            pkt: *mut root::AVPacket,
+            type_: root::AVPacketSideDataType,
+            data: *mut u8,
+            size: root::size_t,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Shrink the already allocated side data buffer"]
+        #[doc = ""]
+        #[doc = " @param pkt packet"]
+        #[doc = " @param type side information type"]
+        #[doc = " @param size new side information size"]
+        #[doc = " @return 0 on success, < 0 on failure"]
+        pub fn av_packet_shrink_side_data(
+            pkt: *mut root::AVPacket,
+            type_: root::AVPacketSideDataType,
+            size: root::size_t,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Get side information from packet."]
+        #[doc = ""]
+        #[doc = " @param pkt packet"]
+        #[doc = " @param type desired side information type"]
+        #[doc = " @param size If supplied, *size will be set to the size of the side data"]
+        #[doc = "             or to zero if the desired side data is not present."]
+        #[doc = " @return pointer to data if present or NULL otherwise"]
+        pub fn av_packet_get_side_data(
+            pkt: *const root::AVPacket,
+            type_: root::AVPacketSideDataType,
+            size: *mut root::size_t,
+        ) -> *mut u8;
+    }
+    extern "C" {
+        pub fn av_packet_side_data_name(
+            type_: root::AVPacketSideDataType,
+        ) -> *const ::std::os::raw::c_char;
+    }
+    extern "C" {
+        #[doc = " Pack a dictionary for use in side_data."]
+        #[doc = ""]
+        #[doc = " @param dict The dictionary to pack."]
+        #[doc = " @param size pointer to store the size of the returned data"]
+        #[doc = " @return pointer to data if successful, NULL otherwise"]
+        pub fn av_packet_pack_dictionary(
+            dict: *mut root::AVDictionary,
+            size: *mut root::size_t,
+        ) -> *mut u8;
+    }
+    extern "C" {
+        #[doc = " Unpack a dictionary from side_data."]
+        #[doc = ""]
+        #[doc = " @param data data from side_data"]
+        #[doc = " @param size size of the data"]
+        #[doc = " @param dict the metadata storage dictionary"]
+        #[doc = " @return 0 on success, < 0 on failure"]
+        pub fn av_packet_unpack_dictionary(
+            data: *const u8,
+            size: root::size_t,
+            dict: *mut *mut root::AVDictionary,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Convenience function to free all the side data stored."]
+        #[doc = " All the other fields stay untouched."]
+        #[doc = ""]
+        #[doc = " @param pkt packet"]
+        pub fn av_packet_free_side_data(pkt: *mut root::AVPacket);
+    }
+    extern "C" {
+        #[doc = " Setup a new reference to the data described by a given packet"]
+        #[doc = ""]
+        #[doc = " If src is reference-counted, setup dst as a new reference to the"]
+        #[doc = " buffer in src. Otherwise allocate a new buffer in dst and copy the"]
+        #[doc = " data from src into it."]
+        #[doc = ""]
+        #[doc = " All the other fields are copied from src."]
+        #[doc = ""]
+        #[doc = " @see av_packet_unref"]
+        #[doc = ""]
+        #[doc = " @param dst Destination packet. Will be completely overwritten."]
+        #[doc = " @param src Source packet"]
+        #[doc = ""]
+        #[doc = " @return 0 on success, a negative AVERROR on error. On error, dst"]
+        #[doc = "         will be blank (as if returned by av_packet_alloc())."]
+        pub fn av_packet_ref(
+            dst: *mut root::AVPacket,
+            src: *const root::AVPacket,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Wipe the packet."]
+        #[doc = ""]
+        #[doc = " Unreference the buffer referenced by the packet and reset the"]
+        #[doc = " remaining packet fields to their default values."]
+        #[doc = ""]
+        #[doc = " @param pkt The packet to be unreferenced."]
+        pub fn av_packet_unref(pkt: *mut root::AVPacket);
+    }
+    extern "C" {
+        #[doc = " Move every field in src to dst and reset src."]
+        #[doc = ""]
+        #[doc = " @see av_packet_unref"]
+        #[doc = ""]
+        #[doc = " @param src Source packet, will be reset"]
+        #[doc = " @param dst Destination packet"]
+        pub fn av_packet_move_ref(dst: *mut root::AVPacket, src: *mut root::AVPacket);
+    }
+    extern "C" {
+        #[doc = " Copy only \"properties\" fields from src to dst."]
+        #[doc = ""]
+        #[doc = " Properties for the purpose of this function are all the fields"]
+        #[doc = " beside those related to the packet data (buf, data, size)"]
+        #[doc = ""]
+        #[doc = " @param dst Destination packet"]
+        #[doc = " @param src Source packet"]
+        #[doc = ""]
+        #[doc = " @return 0 on success AVERROR on failure."]
+        pub fn av_packet_copy_props(
+            dst: *mut root::AVPacket,
+            src: *const root::AVPacket,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Ensure the data described by a given packet is reference counted."]
+        #[doc = ""]
+        #[doc = " @note This function does not ensure that the reference will be writable."]
+        #[doc = "       Use av_packet_make_writable instead for that purpose."]
+        #[doc = ""]
+        #[doc = " @see av_packet_ref"]
+        #[doc = " @see av_packet_make_writable"]
+        #[doc = ""]
+        #[doc = " @param pkt packet whose data should be made reference counted."]
+        #[doc = ""]
+        #[doc = " @return 0 on success, a negative AVERROR on error. On failure, the"]
+        #[doc = "         packet is unchanged."]
+        pub fn av_packet_make_refcounted(pkt: *mut root::AVPacket) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Create a writable reference for the data described by a given packet,"]
+        #[doc = " avoiding data copy if possible."]
+        #[doc = ""]
+        #[doc = " @param pkt Packet whose data should be made writable."]
+        #[doc = ""]
+        #[doc = " @return 0 on success, a negative AVERROR on failure. On failure, the"]
+        #[doc = "         packet is unchanged."]
+        pub fn av_packet_make_writable(pkt: *mut root::AVPacket) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Convert valid timing fields (timestamps / durations) in a packet from one"]
+        #[doc = " timebase to another. Timestamps with unknown values (AV_NOPTS_VALUE) will be"]
+        #[doc = " ignored."]
+        #[doc = ""]
+        #[doc = " @param pkt packet on which the conversion will be performed"]
+        #[doc = " @param tb_src source timebase, in which the timing fields in pkt are"]
+        #[doc = "               expressed"]
+        #[doc = " @param tb_dst destination timebase, to which the timing fields will be"]
+        #[doc = "               converted"]
+        pub fn av_packet_rescale_ts(
+            pkt: *mut root::AVPacket,
+            tb_src: root::AVRational,
+            tb_dst: root::AVRational,
+        );
+    }
+    #[doc = " Callback for checking whether to abort blocking functions."]
+    #[doc = " AVERROR_EXIT is returned in this case by the interrupted"]
+    #[doc = " function. During blocking operations, callback is called with"]
+    #[doc = " opaque as parameter. If the callback returns 1, the"]
+    #[doc = " blocking operation will be aborted."]
+    #[doc = ""]
+    #[doc = " No members can be added to this struct without a major bump, if"]
+    #[doc = " new elements have been added after this struct in AVFormatContext"]
+    #[doc = " or AVIOContext."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVIOInterruptCB {
+        pub callback: ::std::option::Option<
+            unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int,
+        >,
+        pub opaque: *mut ::std::os::raw::c_void,
+    }
+    impl Default for AVIOInterruptCB {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    pub const AVIODirEntryType_AVIO_ENTRY_UNKNOWN: root::AVIODirEntryType = 0;
+    pub const AVIODirEntryType_AVIO_ENTRY_BLOCK_DEVICE: root::AVIODirEntryType = 1;
+    pub const AVIODirEntryType_AVIO_ENTRY_CHARACTER_DEVICE: root::AVIODirEntryType = 2;
+    pub const AVIODirEntryType_AVIO_ENTRY_DIRECTORY: root::AVIODirEntryType = 3;
+    pub const AVIODirEntryType_AVIO_ENTRY_NAMED_PIPE: root::AVIODirEntryType = 4;
+    pub const AVIODirEntryType_AVIO_ENTRY_SYMBOLIC_LINK: root::AVIODirEntryType = 5;
+    pub const AVIODirEntryType_AVIO_ENTRY_SOCKET: root::AVIODirEntryType = 6;
+    pub const AVIODirEntryType_AVIO_ENTRY_FILE: root::AVIODirEntryType = 7;
+    pub const AVIODirEntryType_AVIO_ENTRY_SERVER: root::AVIODirEntryType = 8;
+    pub const AVIODirEntryType_AVIO_ENTRY_SHARE: root::AVIODirEntryType = 9;
+    pub const AVIODirEntryType_AVIO_ENTRY_WORKGROUP: root::AVIODirEntryType = 10;
+    #[doc = " Directory entry types."]
+    pub type AVIODirEntryType = ::std::os::raw::c_uint;
+    #[doc = " Describes single entry of the directory."]
+    #[doc = ""]
+    #[doc = " Only name and type fields are guaranteed be set."]
+    #[doc = " Rest of fields are protocol or/and platform dependent and might be unknown."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVIODirEntry {
+        #[doc = "< Filename"]
+        pub name: *mut ::std::os::raw::c_char,
+        #[doc = "< Type of the entry"]
+        pub type_: ::std::os::raw::c_int,
+        #[doc = "< Set to 1 when name is encoded with UTF-8, 0 otherwise."]
+        #[doc = "Name can be encoded with UTF-8 even though 0 is set."]
+        pub utf8: ::std::os::raw::c_int,
+        #[doc = "< File size in bytes, -1 if unknown."]
+        pub size: i64,
+        #[doc = "< Time of last modification in microseconds since unix"]
+        #[doc = "epoch, -1 if unknown."]
+        pub modification_timestamp: i64,
+        #[doc = "< Time of last access in microseconds since unix epoch,"]
+        #[doc = "-1 if unknown."]
+        pub access_timestamp: i64,
+        #[doc = "< Time of last status change in microseconds since unix"]
+        #[doc = "epoch, -1 if unknown."]
+        pub status_change_timestamp: i64,
+        #[doc = "< User ID of owner, -1 if unknown."]
+        pub user_id: i64,
+        #[doc = "< Group ID of owner, -1 if unknown."]
+        pub group_id: i64,
+        #[doc = "< Unix file mode, -1 if unknown."]
+        pub filemode: i64,
+    }
+    impl Default for AVIODirEntry {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVIODirContext {
+        pub url_context: *mut root::URLContext,
+    }
+    impl Default for AVIODirContext {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    #[doc = " Header data; this needs to be present for the stream to be decodeable."]
+    pub const AVIODataMarkerType_AVIO_DATA_MARKER_HEADER: root::AVIODataMarkerType = 0;
+    #[doc = " A point in the output bytestream where a decoder can start decoding"]
+    #[doc = " (i.e. a keyframe). A demuxer/decoder given the data flagged with"]
+    #[doc = " AVIO_DATA_MARKER_HEADER, followed by any AVIO_DATA_MARKER_SYNC_POINT,"]
+    #[doc = " should give decodeable results."]
+    pub const AVIODataMarkerType_AVIO_DATA_MARKER_SYNC_POINT: root::AVIODataMarkerType = 1;
+    #[doc = " A point in the output bytestream where a demuxer can start parsing"]
+    #[doc = " (for non self synchronizing bytestream formats). That is, any"]
+    #[doc = " non-keyframe packet start point."]
+    pub const AVIODataMarkerType_AVIO_DATA_MARKER_BOUNDARY_POINT: root::AVIODataMarkerType = 2;
+    #[doc = " This is any, unlabelled data. It can either be a muxer not marking"]
+    #[doc = " any positions at all, it can be an actual boundary/sync point"]
+    #[doc = " that the muxer chooses not to mark, or a later part of a packet/fragment"]
+    #[doc = " that is cut into multiple write callbacks due to limited IO buffer size."]
+    pub const AVIODataMarkerType_AVIO_DATA_MARKER_UNKNOWN: root::AVIODataMarkerType = 3;
+    #[doc = " Trailer data, which doesn't contain actual content, but only for"]
+    #[doc = " finalizing the output file."]
+    pub const AVIODataMarkerType_AVIO_DATA_MARKER_TRAILER: root::AVIODataMarkerType = 4;
+    #[doc = " A point in the output bytestream where the underlying AVIOContext might"]
+    #[doc = " flush the buffer depending on latency or buffering requirements. Typically"]
+    #[doc = " means the end of a packet."]
+    pub const AVIODataMarkerType_AVIO_DATA_MARKER_FLUSH_POINT: root::AVIODataMarkerType = 5;
+    #[doc = " Different data types that can be returned via the AVIO"]
+    #[doc = " write_data_type callback."]
+    pub type AVIODataMarkerType = ::std::os::raw::c_uint;
+    #[doc = " Bytestream IO Context."]
+    #[doc = " New public fields can be added with minor version bumps."]
+    #[doc = " Removal, reordering and changes to existing public fields require"]
+    #[doc = " a major version bump."]
+    #[doc = " sizeof(AVIOContext) must not be used outside libav*."]
+    #[doc = ""]
+    #[doc = " @note None of the function pointers in AVIOContext should be called"]
+    #[doc = "       directly, they should only be set by the client application"]
+    #[doc = "       when implementing custom I/O. Normally these are set to the"]
+    #[doc = "       function pointers specified in avio_alloc_context()"]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVIOContext {
+        #[doc = " A class for private options."]
+        #[doc = ""]
+        #[doc = " If this AVIOContext is created by avio_open2(), av_class is set and"]
+        #[doc = " passes the options down to protocols."]
+        #[doc = ""]
+        #[doc = " If this AVIOContext is manually allocated, then av_class may be set by"]
+        #[doc = " the caller."]
+        #[doc = ""]
+        #[doc = " warning -- this field can be NULL, be sure to not pass this AVIOContext"]
+        #[doc = " to any av_opt_* functions in that case."]
+        pub av_class: *const root::AVClass,
+        #[doc = "< Start of the buffer."]
+        pub buffer: *mut ::std::os::raw::c_uchar,
+        #[doc = "< Maximum buffer size"]
+        pub buffer_size: ::std::os::raw::c_int,
+        #[doc = "< Current position in the buffer"]
+        pub buf_ptr: *mut ::std::os::raw::c_uchar,
+        #[doc = "< End of the data, may be less than"]
+        #[doc = "buffer+buffer_size if the read function returned"]
+        #[doc = "less data than requested, e.g. for streams where"]
+        #[doc = "no more data has been received yet."]
+        pub buf_end: *mut ::std::os::raw::c_uchar,
+        #[doc = "< A private pointer, passed to the read/write/seek/..."]
+        #[doc = "functions."]
+        pub opaque: *mut ::std::os::raw::c_void,
+        pub read_packet: ::std::option::Option<
+            unsafe extern "C" fn(
+                opaque: *mut ::std::os::raw::c_void,
+                buf: *mut u8,
+                buf_size: ::std::os::raw::c_int,
+            ) -> ::std::os::raw::c_int,
+        >,
+        pub write_packet: ::std::option::Option<
+            unsafe extern "C" fn(
+                opaque: *mut ::std::os::raw::c_void,
+                buf: *mut u8,
+                buf_size: ::std::os::raw::c_int,
+            ) -> ::std::os::raw::c_int,
+        >,
+        pub seek: ::std::option::Option<
+            unsafe extern "C" fn(
+                opaque: *mut ::std::os::raw::c_void,
+                offset: i64,
+                whence: ::std::os::raw::c_int,
+            ) -> i64,
+        >,
+        #[doc = "< position in the file of the current buffer"]
+        pub pos: i64,
+        #[doc = "< true if was unable to read due to error or eof"]
+        pub eof_reached: ::std::os::raw::c_int,
+        #[doc = "< contains the error code or 0 if no error happened"]
+        pub error: ::std::os::raw::c_int,
+        #[doc = "< true if open for writing"]
+        pub write_flag: ::std::os::raw::c_int,
+        pub max_packet_size: ::std::os::raw::c_int,
+        #[doc = "< Try to buffer at least this amount of data"]
+        #[doc = "before flushing it."]
+        pub min_packet_size: ::std::os::raw::c_int,
+        pub checksum: ::std::os::raw::c_ulong,
+        pub checksum_ptr: *mut ::std::os::raw::c_uchar,
+        pub update_checksum: ::std::option::Option<
+            unsafe extern "C" fn(
+                checksum: ::std::os::raw::c_ulong,
+                buf: *const u8,
+                size: ::std::os::raw::c_uint,
+            ) -> ::std::os::raw::c_ulong,
+        >,
+        #[doc = " Pause or resume playback for network streaming protocols - e.g. MMS."]
+        pub read_pause: ::std::option::Option<
+            unsafe extern "C" fn(
+                opaque: *mut ::std::os::raw::c_void,
+                pause: ::std::os::raw::c_int,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Seek to a given timestamp in stream with the specified stream_index."]
+        #[doc = " Needed for some network streaming protocols which don't support seeking"]
+        #[doc = " to byte position."]
+        pub read_seek: ::std::option::Option<
+            unsafe extern "C" fn(
+                opaque: *mut ::std::os::raw::c_void,
+                stream_index: ::std::os::raw::c_int,
+                timestamp: i64,
+                flags: ::std::os::raw::c_int,
+            ) -> i64,
+        >,
+        #[doc = " A combination of AVIO_SEEKABLE_ flags or 0 when the stream is not seekable."]
+        pub seekable: ::std::os::raw::c_int,
+        #[doc = " avio_read and avio_write should if possible be satisfied directly"]
+        #[doc = " instead of going through a buffer, and avio_seek will always"]
+        #[doc = " call the underlying seek function directly."]
+        pub direct: ::std::os::raw::c_int,
+        #[doc = " ',' separated list of allowed protocols."]
+        pub protocol_whitelist: *const ::std::os::raw::c_char,
+        #[doc = " ',' separated list of disallowed protocols."]
+        pub protocol_blacklist: *const ::std::os::raw::c_char,
+        #[doc = " A callback that is used instead of write_packet."]
+        pub write_data_type: ::std::option::Option<
+            unsafe extern "C" fn(
+                opaque: *mut ::std::os::raw::c_void,
+                buf: *mut u8,
+                buf_size: ::std::os::raw::c_int,
+                type_: root::AVIODataMarkerType,
+                time: i64,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " If set, don't call write_data_type separately for AVIO_DATA_MARKER_BOUNDARY_POINT,"]
+        #[doc = " but ignore them and treat them as AVIO_DATA_MARKER_UNKNOWN (to avoid needlessly"]
+        #[doc = " small chunks of data returned from the callback)."]
+        pub ignore_boundary_point: ::std::os::raw::c_int,
+        #[doc = " @deprecated field utilized privately by libavformat. For a public"]
+        #[doc = "             statistic of how many bytes were written out, see"]
+        #[doc = "             AVIOContext::bytes_written."]
+        pub written: i64,
+        #[doc = " Maximum reached position before a backward seek in the write buffer,"]
+        #[doc = " used keeping track of already written data for a later flush."]
+        pub buf_ptr_max: *mut ::std::os::raw::c_uchar,
+        #[doc = " Read-only statistic of bytes read for this AVIOContext."]
+        pub bytes_read: i64,
+        #[doc = " Read-only statistic of bytes written for this AVIOContext."]
+        pub bytes_written: i64,
+    }
+    impl Default for AVIOContext {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " Return the name of the protocol that will handle the passed URL."]
+        #[doc = ""]
+        #[doc = " NULL is returned if no protocol could be found for the given URL."]
+        #[doc = ""]
+        #[doc = " @return Name of the protocol or NULL."]
+        pub fn avio_find_protocol_name(
+            url: *const ::std::os::raw::c_char,
+        ) -> *const ::std::os::raw::c_char;
+    }
+    extern "C" {
+        #[doc = " Return AVIO_FLAG_* access flags corresponding to the access permissions"]
+        #[doc = " of the resource in url, or a negative value corresponding to an"]
+        #[doc = " AVERROR code in case of failure. The returned access flags are"]
+        #[doc = " masked by the value in flags."]
+        #[doc = ""]
+        #[doc = " @note This function is intrinsically unsafe, in the sense that the"]
+        #[doc = " checked resource may change its existence or permission status from"]
+        #[doc = " one call to another. Thus you should not trust the returned value,"]
+        #[doc = " unless you are sure that no other processes are accessing the"]
+        #[doc = " checked resource."]
+        pub fn avio_check(
+            url: *const ::std::os::raw::c_char,
+            flags: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Open directory for reading."]
+        #[doc = ""]
+        #[doc = " @param s       directory read context. Pointer to a NULL pointer must be passed."]
+        #[doc = " @param url     directory to be listed."]
+        #[doc = " @param options A dictionary filled with protocol-private options. On return"]
+        #[doc = "                this parameter will be destroyed and replaced with a dictionary"]
+        #[doc = "                containing options that were not found. May be NULL."]
+        #[doc = " @return >=0 on success or negative on error."]
+        pub fn avio_open_dir(
+            s: *mut *mut root::AVIODirContext,
+            url: *const ::std::os::raw::c_char,
+            options: *mut *mut root::AVDictionary,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Get next directory entry."]
+        #[doc = ""]
+        #[doc = " Returned entry must be freed with avio_free_directory_entry(). In particular"]
+        #[doc = " it may outlive AVIODirContext."]
+        #[doc = ""]
+        #[doc = " @param s         directory read context."]
+        #[doc = " @param[out] next next entry or NULL when no more entries."]
+        #[doc = " @return >=0 on success or negative on error. End of list is not considered an"]
+        #[doc = "             error."]
+        pub fn avio_read_dir(
+            s: *mut root::AVIODirContext,
+            next: *mut *mut root::AVIODirEntry,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Close directory."]
+        #[doc = ""]
+        #[doc = " @note Entries created using avio_read_dir() are not deleted and must be"]
+        #[doc = " freeded with avio_free_directory_entry()."]
+        #[doc = ""]
+        #[doc = " @param s         directory read context."]
+        #[doc = " @return >=0 on success or negative on error."]
+        pub fn avio_close_dir(s: *mut *mut root::AVIODirContext) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Free entry allocated by avio_read_dir()."]
+        #[doc = ""]
+        #[doc = " @param entry entry to be freed."]
+        pub fn avio_free_directory_entry(entry: *mut *mut root::AVIODirEntry);
+    }
+    extern "C" {
+        #[doc = " Allocate and initialize an AVIOContext for buffered I/O. It must be later"]
+        #[doc = " freed with avio_context_free()."]
+        #[doc = ""]
+        #[doc = " @param buffer Memory block for input/output operations via AVIOContext."]
+        #[doc = "        The buffer must be allocated with av_malloc() and friends."]
+        #[doc = "        It may be freed and replaced with a new buffer by libavformat."]
+        #[doc = "        AVIOContext.buffer holds the buffer currently in use,"]
+        #[doc = "        which must be later freed with av_free()."]
+        #[doc = " @param buffer_size The buffer size is very important for performance."]
+        #[doc = "        For protocols with fixed blocksize it should be set to this blocksize."]
+        #[doc = "        For others a typical size is a cache page, e.g. 4kb."]
+        #[doc = " @param write_flag Set to 1 if the buffer should be writable, 0 otherwise."]
+        #[doc = " @param opaque An opaque pointer to user-specific data."]
+        #[doc = " @param read_packet  A function for refilling the buffer, may be NULL."]
+        #[doc = "                     For stream protocols, must never return 0 but rather"]
+        #[doc = "                     a proper AVERROR code."]
+        #[doc = " @param write_packet A function for writing the buffer contents, may be NULL."]
+        #[doc = "        The function may not change the input buffers content."]
+        #[doc = " @param seek A function for seeking to specified byte position, may be NULL."]
+        #[doc = ""]
+        #[doc = " @return Allocated AVIOContext or NULL on failure."]
+        pub fn avio_alloc_context(
+            buffer: *mut ::std::os::raw::c_uchar,
+            buffer_size: ::std::os::raw::c_int,
+            write_flag: ::std::os::raw::c_int,
+            opaque: *mut ::std::os::raw::c_void,
+            read_packet: ::std::option::Option<
+                unsafe extern "C" fn(
+                    opaque: *mut ::std::os::raw::c_void,
+                    buf: *mut u8,
+                    buf_size: ::std::os::raw::c_int,
+                ) -> ::std::os::raw::c_int,
+            >,
+            write_packet: ::std::option::Option<
+                unsafe extern "C" fn(
+                    opaque: *mut ::std::os::raw::c_void,
+                    buf: *mut u8,
+                    buf_size: ::std::os::raw::c_int,
+                ) -> ::std::os::raw::c_int,
+            >,
+            seek: ::std::option::Option<
+                unsafe extern "C" fn(
+                    opaque: *mut ::std::os::raw::c_void,
+                    offset: i64,
+                    whence: ::std::os::raw::c_int,
+                ) -> i64,
+            >,
+        ) -> *mut root::AVIOContext;
+    }
+    extern "C" {
+        #[doc = " Free the supplied IO context and everything associated with it."]
+        #[doc = ""]
+        #[doc = " @param s Double pointer to the IO context. This function will write NULL"]
+        #[doc = " into s."]
+        pub fn avio_context_free(s: *mut *mut root::AVIOContext);
+    }
+    extern "C" {
+        pub fn avio_w8(s: *mut root::AVIOContext, b: ::std::os::raw::c_int);
+    }
+    extern "C" {
+        pub fn avio_write(
+            s: *mut root::AVIOContext,
+            buf: *const ::std::os::raw::c_uchar,
+            size: ::std::os::raw::c_int,
+        );
+    }
+    extern "C" {
+        pub fn avio_wl64(s: *mut root::AVIOContext, val: u64);
+    }
+    extern "C" {
+        pub fn avio_wb64(s: *mut root::AVIOContext, val: u64);
+    }
+    extern "C" {
+        pub fn avio_wl32(s: *mut root::AVIOContext, val: ::std::os::raw::c_uint);
+    }
+    extern "C" {
+        pub fn avio_wb32(s: *mut root::AVIOContext, val: ::std::os::raw::c_uint);
+    }
+    extern "C" {
+        pub fn avio_wl24(s: *mut root::AVIOContext, val: ::std::os::raw::c_uint);
+    }
+    extern "C" {
+        pub fn avio_wb24(s: *mut root::AVIOContext, val: ::std::os::raw::c_uint);
+    }
+    extern "C" {
+        pub fn avio_wl16(s: *mut root::AVIOContext, val: ::std::os::raw::c_uint);
+    }
+    extern "C" {
+        pub fn avio_wb16(s: *mut root::AVIOContext, val: ::std::os::raw::c_uint);
+    }
+    extern "C" {
+        #[doc = " Write a NULL-terminated string."]
+        #[doc = " @return number of bytes written."]
+        pub fn avio_put_str(
+            s: *mut root::AVIOContext,
+            str_: *const ::std::os::raw::c_char,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Convert an UTF-8 string to UTF-16LE and write it."]
+        #[doc = " @param s the AVIOContext"]
+        #[doc = " @param str NULL-terminated UTF-8 string"]
+        #[doc = ""]
+        #[doc = " @return number of bytes written."]
+        pub fn avio_put_str16le(
+            s: *mut root::AVIOContext,
+            str_: *const ::std::os::raw::c_char,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Convert an UTF-8 string to UTF-16BE and write it."]
+        #[doc = " @param s the AVIOContext"]
+        #[doc = " @param str NULL-terminated UTF-8 string"]
+        #[doc = ""]
+        #[doc = " @return number of bytes written."]
+        pub fn avio_put_str16be(
+            s: *mut root::AVIOContext,
+            str_: *const ::std::os::raw::c_char,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Mark the written bytestream as a specific type."]
+        #[doc = ""]
+        #[doc = " Zero-length ranges are omitted from the output."]
+        #[doc = ""]
+        #[doc = " @param time the stream time the current bytestream pos corresponds to"]
+        #[doc = "             (in AV_TIME_BASE units), or AV_NOPTS_VALUE if unknown or not"]
+        #[doc = "             applicable"]
+        #[doc = " @param type the kind of data written starting at the current pos"]
+        pub fn avio_write_marker(
+            s: *mut root::AVIOContext,
+            time: i64,
+            type_: root::AVIODataMarkerType,
+        );
+    }
+    extern "C" {
+        #[doc = " fseek() equivalent for AVIOContext."]
+        #[doc = " @return new position or AVERROR."]
+        pub fn avio_seek(
+            s: *mut root::AVIOContext,
+            offset: i64,
+            whence: ::std::os::raw::c_int,
+        ) -> i64;
+    }
+    extern "C" {
+        #[doc = " Skip given number of bytes forward"]
+        #[doc = " @return new position or AVERROR."]
+        pub fn avio_skip(s: *mut root::AVIOContext, offset: i64) -> i64;
+    }
+    extern "C" {
+        #[doc = " Get the filesize."]
+        #[doc = " @return filesize or AVERROR"]
+        pub fn avio_size(s: *mut root::AVIOContext) -> i64;
+    }
+    extern "C" {
+        #[doc = " Similar to feof() but also returns nonzero on read errors."]
+        #[doc = " @return non zero if and only if at end of file or a read error happened when reading."]
+        pub fn avio_feof(s: *mut root::AVIOContext) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Writes a formatted string to the context."]
+        #[doc = " @return number of bytes written, < 0 on error."]
+        pub fn avio_printf(
+            s: *mut root::AVIOContext,
+            fmt: *const ::std::os::raw::c_char,
+            ...
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Write a NULL terminated array of strings to the context."]
+        #[doc = " Usually you don't need to use this function directly but its macro wrapper,"]
+        #[doc = " avio_print."]
+        pub fn avio_print_string_array(
+            s: *mut root::AVIOContext,
+            strings: *mut *const ::std::os::raw::c_char,
+        );
+    }
+    extern "C" {
+        #[doc = " Force flushing of buffered data."]
+        #[doc = ""]
+        #[doc = " For write streams, force the buffered data to be immediately written to the output,"]
+        #[doc = " without to wait to fill the internal buffer."]
+        #[doc = ""]
+        #[doc = " For read streams, discard all currently buffered data, and advance the"]
+        #[doc = " reported file position to that of the underlying stream. This does not"]
+        #[doc = " read new data, and does not perform any seeks."]
+        pub fn avio_flush(s: *mut root::AVIOContext);
+    }
+    extern "C" {
+        #[doc = " Read size bytes from AVIOContext into buf."]
+        #[doc = " @return number of bytes read or AVERROR"]
+        pub fn avio_read(
+            s: *mut root::AVIOContext,
+            buf: *mut ::std::os::raw::c_uchar,
+            size: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Read size bytes from AVIOContext into buf. Unlike avio_read(), this is allowed"]
+        #[doc = " to read fewer bytes than requested. The missing bytes can be read in the next"]
+        #[doc = " call. This always tries to read at least 1 byte."]
+        #[doc = " Useful to reduce latency in certain cases."]
+        #[doc = " @return number of bytes read or AVERROR"]
+        pub fn avio_read_partial(
+            s: *mut root::AVIOContext,
+            buf: *mut ::std::os::raw::c_uchar,
+            size: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " @name Functions for reading from AVIOContext"]
+        #[doc = " @{"]
+        #[doc = ""]
+        #[doc = " @note return 0 if EOF, so you cannot use it if EOF handling is"]
+        #[doc = "       necessary"]
+        pub fn avio_r8(s: *mut root::AVIOContext) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        pub fn avio_rl16(s: *mut root::AVIOContext) -> ::std::os::raw::c_uint;
+    }
+    extern "C" {
+        pub fn avio_rl24(s: *mut root::AVIOContext) -> ::std::os::raw::c_uint;
+    }
+    extern "C" {
+        pub fn avio_rl32(s: *mut root::AVIOContext) -> ::std::os::raw::c_uint;
+    }
+    extern "C" {
+        pub fn avio_rl64(s: *mut root::AVIOContext) -> u64;
+    }
+    extern "C" {
+        pub fn avio_rb16(s: *mut root::AVIOContext) -> ::std::os::raw::c_uint;
+    }
+    extern "C" {
+        pub fn avio_rb24(s: *mut root::AVIOContext) -> ::std::os::raw::c_uint;
+    }
+    extern "C" {
+        pub fn avio_rb32(s: *mut root::AVIOContext) -> ::std::os::raw::c_uint;
+    }
+    extern "C" {
+        pub fn avio_rb64(s: *mut root::AVIOContext) -> u64;
+    }
+    extern "C" {
+        #[doc = " Read a string from pb into buf. The reading will terminate when either"]
+        #[doc = " a NULL character was encountered, maxlen bytes have been read, or nothing"]
+        #[doc = " more can be read from pb. The result is guaranteed to be NULL-terminated, it"]
+        #[doc = " will be truncated if buf is too small."]
+        #[doc = " Note that the string is not interpreted or validated in any way, it"]
+        #[doc = " might get truncated in the middle of a sequence for multi-byte encodings."]
+        #[doc = ""]
+        #[doc = " @return number of bytes read (is always <= maxlen)."]
+        #[doc = " If reading ends on EOF or error, the return value will be one more than"]
+        #[doc = " bytes actually read."]
+        pub fn avio_get_str(
+            pb: *mut root::AVIOContext,
+            maxlen: ::std::os::raw::c_int,
+            buf: *mut ::std::os::raw::c_char,
+            buflen: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Read a UTF-16 string from pb and convert it to UTF-8."]
+        #[doc = " The reading will terminate when either a null or invalid character was"]
+        #[doc = " encountered or maxlen bytes have been read."]
+        #[doc = " @return number of bytes read (is always <= maxlen)"]
+        pub fn avio_get_str16le(
+            pb: *mut root::AVIOContext,
+            maxlen: ::std::os::raw::c_int,
+            buf: *mut ::std::os::raw::c_char,
+            buflen: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        pub fn avio_get_str16be(
+            pb: *mut root::AVIOContext,
+            maxlen: ::std::os::raw::c_int,
+            buf: *mut ::std::os::raw::c_char,
+            buflen: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Create and initialize a AVIOContext for accessing the"]
+        #[doc = " resource indicated by url."]
+        #[doc = " @note When the resource indicated by url has been opened in"]
+        #[doc = " read+write mode, the AVIOContext can be used only for writing."]
+        #[doc = ""]
+        #[doc = " @param s Used to return the pointer to the created AVIOContext."]
+        #[doc = " In case of failure the pointed to value is set to NULL."]
+        #[doc = " @param url resource to access"]
+        #[doc = " @param flags flags which control how the resource indicated by url"]
+        #[doc = " is to be opened"]
+        #[doc = " @return >= 0 in case of success, a negative value corresponding to an"]
+        #[doc = " AVERROR code in case of failure"]
+        pub fn avio_open(
+            s: *mut *mut root::AVIOContext,
+            url: *const ::std::os::raw::c_char,
+            flags: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Create and initialize a AVIOContext for accessing the"]
+        #[doc = " resource indicated by url."]
+        #[doc = " @note When the resource indicated by url has been opened in"]
+        #[doc = " read+write mode, the AVIOContext can be used only for writing."]
+        #[doc = ""]
+        #[doc = " @param s Used to return the pointer to the created AVIOContext."]
+        #[doc = " In case of failure the pointed to value is set to NULL."]
+        #[doc = " @param url resource to access"]
+        #[doc = " @param flags flags which control how the resource indicated by url"]
+        #[doc = " is to be opened"]
+        #[doc = " @param int_cb an interrupt callback to be used at the protocols level"]
+        #[doc = " @param options  A dictionary filled with protocol-private options. On return"]
+        #[doc = " this parameter will be destroyed and replaced with a dict containing options"]
+        #[doc = " that were not found. May be NULL."]
+        #[doc = " @return >= 0 in case of success, a negative value corresponding to an"]
+        #[doc = " AVERROR code in case of failure"]
+        pub fn avio_open2(
+            s: *mut *mut root::AVIOContext,
+            url: *const ::std::os::raw::c_char,
+            flags: ::std::os::raw::c_int,
+            int_cb: *const root::AVIOInterruptCB,
+            options: *mut *mut root::AVDictionary,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Close the resource accessed by the AVIOContext s and free it."]
+        #[doc = " This function can only be used if s was opened by avio_open()."]
+        #[doc = ""]
+        #[doc = " The internal buffer is automatically flushed before closing the"]
+        #[doc = " resource."]
+        #[doc = ""]
+        #[doc = " @return 0 on success, an AVERROR < 0 on error."]
+        #[doc = " @see avio_closep"]
+        pub fn avio_close(s: *mut root::AVIOContext) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Close the resource accessed by the AVIOContext *s, free it"]
+        #[doc = " and set the pointer pointing to it to NULL."]
+        #[doc = " This function can only be used if s was opened by avio_open()."]
+        #[doc = ""]
+        #[doc = " The internal buffer is automatically flushed before closing the"]
+        #[doc = " resource."]
+        #[doc = ""]
+        #[doc = " @return 0 on success, an AVERROR < 0 on error."]
+        #[doc = " @see avio_close"]
+        pub fn avio_closep(s: *mut *mut root::AVIOContext) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Open a write only memory stream."]
+        #[doc = ""]
+        #[doc = " @param s new IO context"]
+        #[doc = " @return zero if no error."]
+        pub fn avio_open_dyn_buf(s: *mut *mut root::AVIOContext) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Return the written size and a pointer to the buffer."]
+        #[doc = " The AVIOContext stream is left intact."]
+        #[doc = " The buffer must NOT be freed."]
+        #[doc = " No padding is added to the buffer."]
+        #[doc = ""]
+        #[doc = " @param s IO context"]
+        #[doc = " @param pbuffer pointer to a byte buffer"]
+        #[doc = " @return the length of the byte buffer"]
+        pub fn avio_get_dyn_buf(
+            s: *mut root::AVIOContext,
+            pbuffer: *mut *mut u8,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Return the written size and a pointer to the buffer. The buffer"]
+        #[doc = " must be freed with av_free()."]
+        #[doc = " Padding of AV_INPUT_BUFFER_PADDING_SIZE is added to the buffer."]
+        #[doc = ""]
+        #[doc = " @param s IO context"]
+        #[doc = " @param pbuffer pointer to a byte buffer"]
+        #[doc = " @return the length of the byte buffer"]
+        pub fn avio_close_dyn_buf(
+            s: *mut root::AVIOContext,
+            pbuffer: *mut *mut u8,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Iterate through names of available protocols."]
+        #[doc = ""]
+        #[doc = " @param opaque A private pointer representing current protocol."]
+        #[doc = "        It must be a pointer to NULL on first iteration and will"]
+        #[doc = "        be updated by successive calls to avio_enum_protocols."]
+        #[doc = " @param output If set to 1, iterate over output protocols,"]
+        #[doc = "               otherwise over input protocols."]
+        #[doc = ""]
+        #[doc = " @return A static string containing the name of current protocol or NULL"]
+        pub fn avio_enum_protocols(
+            opaque: *mut *mut ::std::os::raw::c_void,
+            output: ::std::os::raw::c_int,
+        ) -> *const ::std::os::raw::c_char;
+    }
+    extern "C" {
+        #[doc = " Get AVClass by names of available protocols."]
+        #[doc = ""]
+        #[doc = " @return A AVClass of input protocol name or NULL"]
+        pub fn avio_protocol_get_class(name: *const ::std::os::raw::c_char)
+            -> *const root::AVClass;
+    }
+    extern "C" {
+        #[doc = " Pause and resume playing - only meaningful if using a network streaming"]
+        #[doc = " protocol (e.g. MMS)."]
+        #[doc = ""]
+        #[doc = " @param h     IO context from which to call the read_pause function pointer"]
+        #[doc = " @param pause 1 for pause, 0 for resume"]
+        pub fn avio_pause(
+            h: *mut root::AVIOContext,
+            pause: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Seek to a given timestamp relative to some component stream."]
+        #[doc = " Only meaningful if using a network streaming protocol (e.g. MMS.)."]
+        #[doc = ""]
+        #[doc = " @param h IO context from which to call the seek function pointers"]
+        #[doc = " @param stream_index The stream index that the timestamp is relative to."]
+        #[doc = "        If stream_index is (-1) the timestamp should be in AV_TIME_BASE"]
+        #[doc = "        units from the beginning of the presentation."]
+        #[doc = "        If a stream_index >= 0 is used and the protocol does not support"]
+        #[doc = "        seeking based on component streams, the call will fail."]
+        #[doc = " @param timestamp timestamp in AVStream.time_base units"]
+        #[doc = "        or if there is no stream specified then in AV_TIME_BASE units."]
+        #[doc = " @param flags Optional combination of AVSEEK_FLAG_BACKWARD, AVSEEK_FLAG_BYTE"]
+        #[doc = "        and AVSEEK_FLAG_ANY. The protocol may silently ignore"]
+        #[doc = "        AVSEEK_FLAG_BACKWARD and AVSEEK_FLAG_ANY, but AVSEEK_FLAG_BYTE will"]
+        #[doc = "        fail if used and not supported."]
+        #[doc = " @return >= 0 on success"]
+        #[doc = " @see AVInputFormat::read_seek"]
+        pub fn avio_seek_time(
+            h: *mut root::AVIOContext,
+            stream_index: ::std::os::raw::c_int,
+            timestamp: i64,
+            flags: ::std::os::raw::c_int,
+        ) -> i64;
+    }
+    extern "C" {
+        #[doc = " Read contents of h into print buffer, up to max_size bytes, or up to EOF."]
+        #[doc = ""]
+        #[doc = " @return 0 for success (max_size bytes read or EOF reached), negative error"]
+        #[doc = " code otherwise"]
+        pub fn avio_read_to_bprint(
+            h: *mut root::AVIOContext,
+            pb: *mut root::AVBPrint,
+            max_size: root::size_t,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Accept and allocate a client context on a server context."]
+        #[doc = " @param  s the server context"]
+        #[doc = " @param  c the client context, must be unallocated"]
+        #[doc = " @return   >= 0 on success or a negative value corresponding"]
+        #[doc = "           to an AVERROR on failure"]
+        pub fn avio_accept(
+            s: *mut root::AVIOContext,
+            c: *mut *mut root::AVIOContext,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Perform one step of the protocol handshake to accept a new client."]
+        #[doc = " This function must be called on a client returned by avio_accept() before"]
+        #[doc = " using it as a read/write context."]
+        #[doc = " It is separate from avio_accept() because it may block."]
+        #[doc = " A step of the handshake is defined by places where the application may"]
+        #[doc = " decide to change the proceedings."]
+        #[doc = " For example, on a protocol with a request header and a reply header, each"]
+        #[doc = " one can constitute a step because the application may use the parameters"]
+        #[doc = " from the request to change parameters in the reply; or each individual"]
+        #[doc = " chunk of the request can constitute a step."]
+        #[doc = " If the handshake is already finished, avio_handshake() does nothing and"]
+        #[doc = " returns 0 immediately."]
+        #[doc = ""]
+        #[doc = " @param  c the client context to perform the handshake on"]
+        #[doc = " @return   0   on a complete and successful handshake"]
+        #[doc = "           > 0 if the handshake progressed, but is not complete"]
+        #[doc = "           < 0 for an AVERROR code"]
+        pub fn avio_handshake(c: *mut root::AVIOContext) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Allocate and read the payload of a packet and initialize its"]
+        #[doc = " fields with default values."]
+        #[doc = ""]
+        #[doc = " @param s    associated IO context"]
+        #[doc = " @param pkt packet"]
+        #[doc = " @param size desired payload size"]
+        #[doc = " @return >0 (read size) if OK, AVERROR_xxx otherwise"]
+        pub fn av_get_packet(
+            s: *mut root::AVIOContext,
+            pkt: *mut root::AVPacket,
+            size: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Read data and append it to the current content of the AVPacket."]
+        #[doc = " If pkt->size is 0 this is identical to av_get_packet."]
+        #[doc = " Note that this uses av_grow_packet and thus involves a realloc"]
+        #[doc = " which is inefficient. Thus this function should only be used"]
+        #[doc = " when there is no reasonable way to know (an upper bound of)"]
+        #[doc = " the final size."]
+        #[doc = ""]
+        #[doc = " @param s    associated IO context"]
+        #[doc = " @param pkt packet"]
+        #[doc = " @param size amount of data to read"]
+        #[doc = " @return >0 (read size) if OK, AVERROR_xxx otherwise, previous data"]
+        #[doc = "         will not be lost even if an error occurs."]
+        pub fn av_append_packet(
+            s: *mut root::AVIOContext,
+            pkt: *mut root::AVPacket,
+            size: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVCodecTag {
+        _unused: [u8; 0],
+    }
+    #[doc = " This structure contains the data a format has to probe a file."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVProbeData {
+        pub filename: *const ::std::os::raw::c_char,
+        #[doc = "< Buffer must have AVPROBE_PADDING_SIZE of extra allocated bytes filled with zero."]
+        pub buf: *mut ::std::os::raw::c_uchar,
+        #[doc = "< Size of buf except extra allocated bytes"]
+        pub buf_size: ::std::os::raw::c_int,
+        #[doc = "< mime_type, when known."]
+        pub mime_type: *const ::std::os::raw::c_char,
+    }
+    impl Default for AVProbeData {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    #[doc = " @addtogroup lavf_encoding"]
+    #[doc = " @{"]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVOutputFormat {
+        pub name: *const ::std::os::raw::c_char,
+        #[doc = " Descriptive name for the format, meant to be more human-readable"]
+        #[doc = " than name. You should use the NULL_IF_CONFIG_SMALL() macro"]
+        #[doc = " to define it."]
+        pub long_name: *const ::std::os::raw::c_char,
+        pub mime_type: *const ::std::os::raw::c_char,
+        #[doc = "< comma-separated filename extensions"]
+        pub extensions: *const ::std::os::raw::c_char,
+        #[doc = "< default audio codec"]
+        pub audio_codec: root::AVCodecID,
+        #[doc = "< default video codec"]
+        pub video_codec: root::AVCodecID,
+        #[doc = "< default subtitle codec"]
+        pub subtitle_codec: root::AVCodecID,
+        #[doc = " can use flags: AVFMT_NOFILE, AVFMT_NEEDNUMBER,"]
+        #[doc = " AVFMT_GLOBALHEADER, AVFMT_NOTIMESTAMPS, AVFMT_VARIABLE_FPS,"]
+        #[doc = " AVFMT_NODIMENSIONS, AVFMT_NOSTREAMS, AVFMT_ALLOW_FLUSH,"]
+        #[doc = " AVFMT_TS_NONSTRICT, AVFMT_TS_NEGATIVE"]
+        pub flags: ::std::os::raw::c_int,
+        #[doc = " List of supported codec_id-codec_tag pairs, ordered by \"better"]
+        #[doc = " choice first\". The arrays are all terminated by AV_CODEC_ID_NONE."]
+        pub codec_tag: *const *const root::AVCodecTag,
+        #[doc = "< AVClass for the private context"]
+        pub priv_class: *const root::AVClass,
+        #[doc = " No fields below this line are part of the public API. They"]
+        #[doc = " may not be used outside of libavformat and can be changed and"]
+        #[doc = " removed at will."]
+        #[doc = " New public fields should be added right above."]
+        #[doc = ""]
+        #[doc = " size of private data so that it can be allocated in the wrapper"]
+        pub priv_data_size: ::std::os::raw::c_int,
+        #[doc = " Internal flags. See FF_FMT_FLAG_* in internal.h."]
+        pub flags_internal: ::std::os::raw::c_int,
+        pub write_header: ::std::option::Option<
+            unsafe extern "C" fn(arg1: *mut root::AVFormatContext) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Write a packet. If AVFMT_ALLOW_FLUSH is set in flags,"]
+        #[doc = " pkt can be NULL in order to flush data buffered in the muxer."]
+        #[doc = " When flushing, return 0 if there still is more data to flush,"]
+        #[doc = " or 1 if everything was flushed and there is no more buffered"]
+        #[doc = " data."]
+        pub write_packet: ::std::option::Option<
+            unsafe extern "C" fn(
+                arg1: *mut root::AVFormatContext,
+                pkt: *mut root::AVPacket,
+            ) -> ::std::os::raw::c_int,
+        >,
+        pub write_trailer: ::std::option::Option<
+            unsafe extern "C" fn(arg1: *mut root::AVFormatContext) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " A format-specific function for interleavement."]
+        #[doc = " If unset, packets will be interleaved by dts."]
+        #[doc = ""]
+        #[doc = " @param s           An AVFormatContext for output. pkt will be added to"]
+        #[doc = "                    resp. taken from its packet buffer."]
+        #[doc = " @param[in,out] pkt A packet to be interleaved if has_packet is set;"]
+        #[doc = "                    also used to return packets. If no packet is returned"]
+        #[doc = "                    (e.g. on error), pkt is blank on return."]
+        #[doc = " @param flush       1 if no further packets are available as input and"]
+        #[doc = "                    all remaining packets should be output."]
+        #[doc = " @param has_packet  If set, pkt contains a packet to be interleaved"]
+        #[doc = "                    on input; otherwise pkt is blank on input."]
+        #[doc = " @return 1 if a packet was output, 0 if no packet could be output,"]
+        #[doc = "         < 0 if an error occurred"]
+        pub interleave_packet: ::std::option::Option<
+            unsafe extern "C" fn(
+                s: *mut root::AVFormatContext,
+                pkt: *mut root::AVPacket,
+                flush: ::std::os::raw::c_int,
+                has_packet: ::std::os::raw::c_int,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Test if the given codec can be stored in this container."]
+        #[doc = ""]
+        #[doc = " @return 1 if the codec is supported, 0 if it is not."]
+        #[doc = "         A negative number if unknown."]
+        #[doc = "         MKTAG('A', 'P', 'I', 'C') if the codec is only supported as AV_DISPOSITION_ATTACHED_PIC"]
+        pub query_codec: ::std::option::Option<
+            unsafe extern "C" fn(
+                id: root::AVCodecID,
+                std_compliance: ::std::os::raw::c_int,
+            ) -> ::std::os::raw::c_int,
+        >,
+        pub get_output_timestamp: ::std::option::Option<
+            unsafe extern "C" fn(
+                s: *mut root::AVFormatContext,
+                stream: ::std::os::raw::c_int,
+                dts: *mut i64,
+                wall: *mut i64,
+            ),
+        >,
+        #[doc = " Allows sending messages from application to device."]
+        pub control_message: ::std::option::Option<
+            unsafe extern "C" fn(
+                s: *mut root::AVFormatContext,
+                type_: ::std::os::raw::c_int,
+                data: *mut ::std::os::raw::c_void,
+                data_size: root::size_t,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Write an uncoded AVFrame."]
+        #[doc = ""]
+        #[doc = " See av_write_uncoded_frame() for details."]
+        #[doc = ""]
+        #[doc = " The library will free *frame afterwards, but the muxer can prevent it"]
+        #[doc = " by setting the pointer to NULL."]
+        pub write_uncoded_frame: ::std::option::Option<
+            unsafe extern "C" fn(
+                arg1: *mut root::AVFormatContext,
+                stream_index: ::std::os::raw::c_int,
+                frame: *mut *mut root::AVFrame,
+                flags: ::std::os::raw::c_uint,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Returns device list with it properties."]
+        #[doc = " @see avdevice_list_devices() for more details."]
+        pub get_device_list: ::std::option::Option<
+            unsafe extern "C" fn(
+                s: *mut root::AVFormatContext,
+                device_list: *mut root::AVDeviceInfoList,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = "< default data codec"]
+        pub data_codec: root::AVCodecID,
+        #[doc = " Initialize format. May allocate data here, and set any AVFormatContext or"]
+        #[doc = " AVStream parameters that need to be set before packets are sent."]
+        #[doc = " This method must not write output."]
+        #[doc = ""]
+        #[doc = " Return 0 if streams were fully configured, 1 if not, negative AVERROR on failure"]
+        #[doc = ""]
+        #[doc = " Any allocations made here must be freed in deinit()."]
+        pub init: ::std::option::Option<
+            unsafe extern "C" fn(arg1: *mut root::AVFormatContext) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Deinitialize format. If present, this is called whenever the muxer is being"]
+        #[doc = " destroyed, regardless of whether or not the header has been written."]
+        #[doc = ""]
+        #[doc = " If a trailer is being written, this is called after write_trailer()."]
+        #[doc = ""]
+        #[doc = " This is called if init() fails as well."]
+        pub deinit: ::std::option::Option<unsafe extern "C" fn(arg1: *mut root::AVFormatContext)>,
+        #[doc = " Set up any necessary bitstream filtering and extract any extra data needed"]
+        #[doc = " for the global header."]
+        #[doc = " Return 0 if more packets from this stream must be checked; 1 if not."]
+        pub check_bitstream: ::std::option::Option<
+            unsafe extern "C" fn(
+                arg1: *mut root::AVFormatContext,
+                pkt: *const root::AVPacket,
+            ) -> ::std::os::raw::c_int,
+        >,
+    }
+    impl Default for AVOutputFormat {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    #[doc = " @addtogroup lavf_decoding"]
+    #[doc = " @{"]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVInputFormat {
+        #[doc = " A comma separated list of short names for the format. New names"]
+        #[doc = " may be appended with a minor bump."]
+        pub name: *const ::std::os::raw::c_char,
+        #[doc = " Descriptive name for the format, meant to be more human-readable"]
+        #[doc = " than name. You should use the NULL_IF_CONFIG_SMALL() macro"]
+        #[doc = " to define it."]
+        pub long_name: *const ::std::os::raw::c_char,
+        #[doc = " Can use flags: AVFMT_NOFILE, AVFMT_NEEDNUMBER, AVFMT_SHOW_IDS,"]
+        #[doc = " AVFMT_NOTIMESTAMPS, AVFMT_GENERIC_INDEX, AVFMT_TS_DISCONT, AVFMT_NOBINSEARCH,"]
+        #[doc = " AVFMT_NOGENSEARCH, AVFMT_NO_BYTE_SEEK, AVFMT_SEEK_TO_PTS."]
+        pub flags: ::std::os::raw::c_int,
+        #[doc = " If extensions are defined, then no probe is done. You should"]
+        #[doc = " usually not use extension format guessing because it is not"]
+        #[doc = " reliable enough"]
+        pub extensions: *const ::std::os::raw::c_char,
+        pub codec_tag: *const *const root::AVCodecTag,
+        #[doc = "< AVClass for the private context"]
+        pub priv_class: *const root::AVClass,
+        #[doc = " Comma-separated list of mime types."]
+        #[doc = " It is used check for matching mime types while probing."]
+        #[doc = " @see av_probe_input_format2"]
+        pub mime_type: *const ::std::os::raw::c_char,
+        #[doc = " No fields below this line are part of the public API. They"]
+        #[doc = " may not be used outside of libavformat and can be changed and"]
+        #[doc = " removed at will."]
+        #[doc = " New public fields should be added right above."]
+        #[doc = ""]
+        #[doc = " Raw demuxers store their codec ID here."]
+        pub raw_codec_id: ::std::os::raw::c_int,
+        #[doc = " Size of private data so that it can be allocated in the wrapper."]
+        pub priv_data_size: ::std::os::raw::c_int,
+        #[doc = " Internal flags. See FF_FMT_FLAG_* in internal.h."]
+        pub flags_internal: ::std::os::raw::c_int,
+        #[doc = " Tell if a given file has a chance of being parsed as this format."]
+        #[doc = " The buffer provided is guaranteed to be AVPROBE_PADDING_SIZE bytes"]
+        #[doc = " big so you do not have to check for that unless you need more."]
+        pub read_probe: ::std::option::Option<
+            unsafe extern "C" fn(arg1: *const root::AVProbeData) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Read the format header and initialize the AVFormatContext"]
+        #[doc = " structure. Return 0 if OK. 'avformat_new_stream' should be"]
+        #[doc = " called to create new streams."]
+        pub read_header: ::std::option::Option<
+            unsafe extern "C" fn(arg1: *mut root::AVFormatContext) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Read one packet and put it in 'pkt'. pts and flags are also"]
+        #[doc = " set. 'avformat_new_stream' can be called only if the flag"]
+        #[doc = " AVFMTCTX_NOHEADER is used and only in the calling thread (not in a"]
+        #[doc = " background thread)."]
+        #[doc = " @return 0 on success, < 0 on error."]
+        #[doc = "         Upon returning an error, pkt must be unreferenced by the caller."]
+        pub read_packet: ::std::option::Option<
+            unsafe extern "C" fn(
+                arg1: *mut root::AVFormatContext,
+                pkt: *mut root::AVPacket,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Close the stream. The AVFormatContext and AVStreams are not"]
+        #[doc = " freed by this function"]
+        pub read_close: ::std::option::Option<
+            unsafe extern "C" fn(arg1: *mut root::AVFormatContext) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Seek to a given timestamp relative to the frames in"]
+        #[doc = " stream component stream_index."]
+        #[doc = " @param stream_index Must not be -1."]
+        #[doc = " @param flags Selects which direction should be preferred if no exact"]
+        #[doc = "              match is available."]
+        #[doc = " @return >= 0 on success (but not necessarily the new offset)"]
+        pub read_seek: ::std::option::Option<
+            unsafe extern "C" fn(
+                arg1: *mut root::AVFormatContext,
+                stream_index: ::std::os::raw::c_int,
+                timestamp: i64,
+                flags: ::std::os::raw::c_int,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Get the next timestamp in stream[stream_index].time_base units."]
+        #[doc = " @return the timestamp or AV_NOPTS_VALUE if an error occurred"]
+        pub read_timestamp: ::std::option::Option<
+            unsafe extern "C" fn(
+                s: *mut root::AVFormatContext,
+                stream_index: ::std::os::raw::c_int,
+                pos: *mut i64,
+                pos_limit: i64,
+            ) -> i64,
+        >,
+        #[doc = " Start/resume playing - only meaningful if using a network-based format"]
+        #[doc = " (RTSP)."]
+        pub read_play: ::std::option::Option<
+            unsafe extern "C" fn(arg1: *mut root::AVFormatContext) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Pause playing - only meaningful if using a network-based format"]
+        #[doc = " (RTSP)."]
+        pub read_pause: ::std::option::Option<
+            unsafe extern "C" fn(arg1: *mut root::AVFormatContext) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Seek to timestamp ts."]
+        #[doc = " Seeking will be done so that the point from which all active streams"]
+        #[doc = " can be presented successfully will be closest to ts and within min/max_ts."]
+        #[doc = " Active streams are all streams that have AVStream.discard < AVDISCARD_ALL."]
+        pub read_seek2: ::std::option::Option<
+            unsafe extern "C" fn(
+                s: *mut root::AVFormatContext,
+                stream_index: ::std::os::raw::c_int,
+                min_ts: i64,
+                ts: i64,
+                max_ts: i64,
+                flags: ::std::os::raw::c_int,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Returns device list with it properties."]
+        #[doc = " @see avdevice_list_devices() for more details."]
+        pub get_device_list: ::std::option::Option<
+            unsafe extern "C" fn(
+                s: *mut root::AVFormatContext,
+                device_list: *mut root::AVDeviceInfoList,
+            ) -> ::std::os::raw::c_int,
+        >,
+    }
+    impl Default for AVInputFormat {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    pub const AVStreamParseType_AVSTREAM_PARSE_NONE: root::AVStreamParseType = 0;
+    #[doc = "< full parsing and repack"]
+    pub const AVStreamParseType_AVSTREAM_PARSE_FULL: root::AVStreamParseType = 1;
+    #[doc = "< Only parse headers, do not repack."]
+    pub const AVStreamParseType_AVSTREAM_PARSE_HEADERS: root::AVStreamParseType = 2;
+    #[doc = "< full parsing and interpolation of timestamps for frames not starting on a packet boundary"]
+    pub const AVStreamParseType_AVSTREAM_PARSE_TIMESTAMPS: root::AVStreamParseType = 3;
+    #[doc = "< full parsing and repack of the first frame only, only implemented for H.264 currently"]
+    pub const AVStreamParseType_AVSTREAM_PARSE_FULL_ONCE: root::AVStreamParseType = 4;
+    #[doc = "< full parsing and repack with timestamp and position generation by parser for raw"]
+    #[doc = "this assumes that each packet in the file contains no demuxer level headers and"]
+    #[doc = "just codec level data, otherwise position generation would fail"]
+    pub const AVStreamParseType_AVSTREAM_PARSE_FULL_RAW: root::AVStreamParseType = 5;
+    #[doc = " @}"]
+    pub type AVStreamParseType = ::std::os::raw::c_uint;
+    #[repr(C)]
+    #[derive(Debug, Default, Copy, Clone)]
+    pub struct AVIndexEntry {
+        pub pos: i64,
+        #[doc = "<"]
+        #[doc = " Timestamp in AVStream.time_base units, preferably the time from which on correctly decoded frames are available"]
+        #[doc = " when seeking to this entry. That means preferable PTS on keyframe based formats."]
+        #[doc = " But demuxers can choose to store a different timestamp, if it is more convenient for the implementation or nothing better"]
+        #[doc = " is known"]
+        pub timestamp: i64,
+        pub _bitfield_align_1: [u32; 0],
+        pub _bitfield_1: root::__BindgenBitfieldUnit<[u8; 4usize]>,
+        #[doc = "< Minimum distance between this and the previous keyframe, used to avoid unneeded searching."]
+        pub min_distance: ::std::os::raw::c_int,
+    }
+    impl AVIndexEntry {
+        #[inline]
+        pub fn flags(&self) -> ::std::os::raw::c_int {
+            unsafe { ::std::mem::transmute(self._bitfield_1.get(0usize, 2u8) as u32) }
+        }
+        #[inline]
+        pub fn set_flags(&mut self, val: ::std::os::raw::c_int) {
+            unsafe {
+                let val: u32 = ::std::mem::transmute(val);
+                self._bitfield_1.set(0usize, 2u8, val as u64)
+            }
+        }
+        #[inline]
+        pub fn size(&self) -> ::std::os::raw::c_int {
+            unsafe { ::std::mem::transmute(self._bitfield_1.get(2usize, 30u8) as u32) }
+        }
+        #[inline]
+        pub fn set_size(&mut self, val: ::std::os::raw::c_int) {
+            unsafe {
+                let val: u32 = ::std::mem::transmute(val);
+                self._bitfield_1.set(2usize, 30u8, val as u64)
+            }
+        }
+        #[inline]
+        pub fn new_bitfield_1(
+            flags: ::std::os::raw::c_int,
+            size: ::std::os::raw::c_int,
+        ) -> root::__BindgenBitfieldUnit<[u8; 4usize]> {
+            let mut __bindgen_bitfield_unit: root::__BindgenBitfieldUnit<[u8; 4usize]> =
+                Default::default();
+            __bindgen_bitfield_unit.set(0usize, 2u8, {
+                let flags: u32 = unsafe { ::std::mem::transmute(flags) };
+                flags as u64
+            });
+            __bindgen_bitfield_unit.set(2usize, 30u8, {
+                let size: u32 = unsafe { ::std::mem::transmute(size) };
+                size as u64
+            });
+            __bindgen_bitfield_unit
+        }
+    }
+    #[doc = " Stream structure."]
+    #[doc = " New fields can be added to the end with minor version bumps."]
+    #[doc = " Removal, reordering and changes to existing fields require a major"]
+    #[doc = " version bump."]
+    #[doc = " sizeof(AVStream) must not be used outside libav*."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVStream {
+        #[doc = "< stream index in AVFormatContext"]
+        pub index: ::std::os::raw::c_int,
+        #[doc = " Format-specific stream ID."]
+        #[doc = " decoding: set by libavformat"]
+        #[doc = " encoding: set by the user, replaced by libavformat if left unset"]
+        pub id: ::std::os::raw::c_int,
+        pub priv_data: *mut ::std::os::raw::c_void,
+        #[doc = " This is the fundamental unit of time (in seconds) in terms"]
+        #[doc = " of which frame timestamps are represented."]
+        #[doc = ""]
+        #[doc = " decoding: set by libavformat"]
+        #[doc = " encoding: May be set by the caller before avformat_write_header() to"]
+        #[doc = "           provide a hint to the muxer about the desired timebase. In"]
+        #[doc = "           avformat_write_header(), the muxer will overwrite this field"]
+        #[doc = "           with the timebase that will actually be used for the timestamps"]
+        #[doc = "           written into the file (which may or may not be related to the"]
+        #[doc = "           user-provided one, depending on the format)."]
+        pub time_base: root::AVRational,
+        #[doc = " Decoding: pts of the first frame of the stream in presentation order, in stream time base."]
+        #[doc = " Only set this if you are absolutely 100% sure that the value you set"]
+        #[doc = " it to really is the pts of the first frame."]
+        #[doc = " This may be undefined (AV_NOPTS_VALUE)."]
+        #[doc = " @note The ASF header does NOT contain a correct start_time the ASF"]
+        #[doc = " demuxer must NOT set this."]
+        pub start_time: i64,
+        #[doc = " Decoding: duration of the stream, in stream time base."]
+        #[doc = " If a source file does not specify a duration, but does specify"]
+        #[doc = " a bitrate, this value will be estimated from bitrate and file size."]
+        #[doc = ""]
+        #[doc = " Encoding: May be set by the caller before avformat_write_header() to"]
+        #[doc = " provide a hint to the muxer about the estimated duration."]
+        pub duration: i64,
+        #[doc = "< number of frames in this stream if known or 0"]
+        pub nb_frames: i64,
+        #[doc = "< AV_DISPOSITION_* bit field"]
+        pub disposition: ::std::os::raw::c_int,
+        #[doc = "< Selects which packets can be discarded at will and do not need to be demuxed."]
+        pub discard: root::AVDiscard,
+        #[doc = " sample aspect ratio (0 if unknown)"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by libavformat."]
+        pub sample_aspect_ratio: root::AVRational,
+        pub metadata: *mut root::AVDictionary,
+        #[doc = " Average framerate"]
+        #[doc = ""]
+        #[doc = " - demuxing: May be set by libavformat when creating the stream or in"]
+        #[doc = "             avformat_find_stream_info()."]
+        #[doc = " - muxing: May be set by the caller before avformat_write_header()."]
+        pub avg_frame_rate: root::AVRational,
+        #[doc = " For streams with AV_DISPOSITION_ATTACHED_PIC disposition, this packet"]
+        #[doc = " will contain the attached picture."]
+        #[doc = ""]
+        #[doc = " decoding: set by libavformat, must not be modified by the caller."]
+        #[doc = " encoding: unused"]
+        pub attached_pic: root::AVPacket,
+        #[doc = " An array of side data that applies to the whole stream (i.e. the"]
+        #[doc = " container does not allow it to change between packets)."]
+        #[doc = ""]
+        #[doc = " There may be no overlap between the side data in this array and side data"]
+        #[doc = " in the packets. I.e. a given side data is either exported by the muxer"]
+        #[doc = " (demuxing) / set by the caller (muxing) in this array, then it never"]
+        #[doc = " appears in the packets, or the side data is exported / sent through"]
+        #[doc = " the packets (always in the first packet where the value becomes known or"]
+        #[doc = " changes), then it does not appear in this array."]
+        #[doc = ""]
+        #[doc = " - demuxing: Set by libavformat when the stream is created."]
+        #[doc = " - muxing: May be set by the caller before avformat_write_header()."]
+        #[doc = ""]
+        #[doc = " Freed by libavformat in avformat_free_context()."]
+        #[doc = ""]
+        #[doc = " @see av_format_inject_global_side_data()"]
+        pub side_data: *mut root::AVPacketSideData,
+        #[doc = " The number of elements in the AVStream.side_data array."]
+        pub nb_side_data: ::std::os::raw::c_int,
+        #[doc = " Flags indicating events happening on the stream, a combination of"]
+        #[doc = " AVSTREAM_EVENT_FLAG_*."]
+        #[doc = ""]
+        #[doc = " - demuxing: may be set by the demuxer in avformat_open_input(),"]
+        #[doc = "   avformat_find_stream_info() and av_read_frame(). Flags must be cleared"]
+        #[doc = "   by the user once the event has been handled."]
+        #[doc = " - muxing: may be set by the user after avformat_write_header(). to"]
+        #[doc = "   indicate a user-triggered event.  The muxer will clear the flags for"]
+        #[doc = "   events it has handled in av_[interleaved]_write_frame()."]
+        pub event_flags: ::std::os::raw::c_int,
+        #[doc = " Real base framerate of the stream."]
+        #[doc = " This is the lowest framerate with which all timestamps can be"]
+        #[doc = " represented accurately (it is the least common multiple of all"]
+        #[doc = " framerates in the stream). Note, this value is just a guess!"]
+        #[doc = " For example, if the time base is 1/90000 and all frames have either"]
+        #[doc = " approximately 3600 or 1800 timer ticks, then r_frame_rate will be 50/1."]
+        pub r_frame_rate: root::AVRational,
+        #[doc = " Codec parameters associated with this stream. Allocated and freed by"]
+        #[doc = " libavformat in avformat_new_stream() and avformat_free_context()"]
+        #[doc = " respectively."]
+        #[doc = ""]
+        #[doc = " - demuxing: filled by libavformat on stream creation or in"]
+        #[doc = "             avformat_find_stream_info()"]
+        #[doc = " - muxing: filled by the caller before avformat_write_header()"]
+        pub codecpar: *mut root::AVCodecParameters,
+        #[doc = " Number of bits in timestamps. Used for wrapping control."]
+        #[doc = ""]
+        #[doc = " - demuxing: set by libavformat"]
+        #[doc = " - muxing: set by libavformat"]
+        #[doc = ""]
+        pub pts_wrap_bits: ::std::os::raw::c_int,
+    }
+    impl Default for AVStream {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        pub fn av_stream_get_parser(s: *const root::AVStream) -> *mut root::AVCodecParserContext;
+    }
+    extern "C" {
+        #[doc = " Returns the pts of the last muxed packet + its duration"]
+        #[doc = ""]
+        #[doc = " the retuned value is undefined when used with a demuxer."]
+        pub fn av_stream_get_end_pts(st: *const root::AVStream) -> i64;
+    }
+    #[doc = " New fields can be added to the end with minor version bumps."]
+    #[doc = " Removal, reordering and changes to existing fields require a major"]
+    #[doc = " version bump."]
+    #[doc = " sizeof(AVProgram) must not be used outside libav*."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVProgram {
+        pub id: ::std::os::raw::c_int,
+        pub flags: ::std::os::raw::c_int,
+        #[doc = "< selects which program to discard and which to feed to the caller"]
+        pub discard: root::AVDiscard,
+        pub stream_index: *mut ::std::os::raw::c_uint,
+        pub nb_stream_indexes: ::std::os::raw::c_uint,
+        pub metadata: *mut root::AVDictionary,
+        pub program_num: ::std::os::raw::c_int,
+        pub pmt_pid: ::std::os::raw::c_int,
+        pub pcr_pid: ::std::os::raw::c_int,
+        pub pmt_version: ::std::os::raw::c_int,
+        #[doc = " All fields below this line are not part of the public API. They"]
+        #[doc = " may not be used outside of libavformat and can be changed and"]
+        #[doc = " removed at will."]
+        #[doc = " New public fields should be added right above."]
+        #[doc = ""]
+        pub start_time: i64,
+        pub end_time: i64,
+        #[doc = "< reference dts for wrap detection"]
+        pub pts_wrap_reference: i64,
+        #[doc = "< behavior on wrap detection"]
+        pub pts_wrap_behavior: ::std::os::raw::c_int,
+    }
+    impl Default for AVProgram {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVChapter {
+        #[doc = "< unique ID to identify the chapter"]
+        pub id: i64,
+        #[doc = "< time base in which the start/end timestamps are specified"]
+        pub time_base: root::AVRational,
+        #[doc = "< chapter start/end time in time_base units"]
+        pub start: i64,
+        #[doc = "< chapter start/end time in time_base units"]
+        pub end: i64,
+        pub metadata: *mut root::AVDictionary,
+    }
+    impl Default for AVChapter {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    #[doc = " Callback used by devices to communicate with application."]
+    pub type av_format_control_message = ::std::option::Option<
+        unsafe extern "C" fn(
+            s: *mut root::AVFormatContext,
+            type_: ::std::os::raw::c_int,
+            data: *mut ::std::os::raw::c_void,
+            data_size: root::size_t,
+        ) -> ::std::os::raw::c_int,
+    >;
+    pub type AVOpenCallback = ::std::option::Option<
+        unsafe extern "C" fn(
+            s: *mut root::AVFormatContext,
+            pb: *mut *mut root::AVIOContext,
+            url: *const ::std::os::raw::c_char,
+            flags: ::std::os::raw::c_int,
+            int_cb: *const root::AVIOInterruptCB,
+            options: *mut *mut root::AVDictionary,
+        ) -> ::std::os::raw::c_int,
+    >;
+    #[doc = "< Duration accurately estimated from PTSes"]
+    pub const AVDurationEstimationMethod_AVFMT_DURATION_FROM_PTS: root::AVDurationEstimationMethod =
+        0;
+    #[doc = "< Duration estimated from a stream with a known duration"]
+    pub const AVDurationEstimationMethod_AVFMT_DURATION_FROM_STREAM:
+        root::AVDurationEstimationMethod = 1;
+    #[doc = "< Duration estimated from bitrate (less accurate)"]
+    pub const AVDurationEstimationMethod_AVFMT_DURATION_FROM_BITRATE:
+        root::AVDurationEstimationMethod = 2;
+    #[doc = " The duration of a video can be estimated through various ways, and this enum can be used"]
+    #[doc = " to know how the duration was estimated."]
+    pub type AVDurationEstimationMethod = ::std::os::raw::c_uint;
+    #[doc = " Format I/O context."]
+    #[doc = " New fields can be added to the end with minor version bumps."]
+    #[doc = " Removal, reordering and changes to existing fields require a major"]
+    #[doc = " version bump."]
+    #[doc = " sizeof(AVFormatContext) must not be used outside libav*, use"]
+    #[doc = " avformat_alloc_context() to create an AVFormatContext."]
+    #[doc = ""]
+    #[doc = " Fields can be accessed through AVOptions (av_opt*),"]
+    #[doc = " the name string used matches the associated command line parameter name and"]
+    #[doc = " can be found in libavformat/options_table.h."]
+    #[doc = " The AVOption/command line parameter names differ in some cases from the C"]
+    #[doc = " structure field names for historic reasons or brevity."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVFormatContext {
+        #[doc = " A class for logging and @ref avoptions. Set by avformat_alloc_context()."]
+        #[doc = " Exports (de)muxer private options if they exist."]
+        pub av_class: *const root::AVClass,
+        #[doc = " The input container format."]
+        #[doc = ""]
+        #[doc = " Demuxing only, set by avformat_open_input()."]
+        pub iformat: *const root::AVInputFormat,
+        #[doc = " The output container format."]
+        #[doc = ""]
+        #[doc = " Muxing only, must be set by the caller before avformat_write_header()."]
+        pub oformat: *const root::AVOutputFormat,
+        #[doc = " Format private data. This is an AVOptions-enabled struct"]
+        #[doc = " if and only if iformat/oformat.priv_class is not NULL."]
+        #[doc = ""]
+        #[doc = " - muxing: set by avformat_write_header()"]
+        #[doc = " - demuxing: set by avformat_open_input()"]
+        pub priv_data: *mut ::std::os::raw::c_void,
+        #[doc = " I/O context."]
+        #[doc = ""]
+        #[doc = " - demuxing: either set by the user before avformat_open_input() (then"]
+        #[doc = "             the user must close it manually) or set by avformat_open_input()."]
+        #[doc = " - muxing: set by the user before avformat_write_header(). The caller must"]
+        #[doc = "           take care of closing / freeing the IO context."]
+        #[doc = ""]
+        #[doc = " Do NOT set this field if AVFMT_NOFILE flag is set in"]
+        #[doc = " iformat/oformat.flags. In such a case, the (de)muxer will handle"]
+        #[doc = " I/O in some other way and this field will be NULL."]
+        pub pb: *mut root::AVIOContext,
+        #[doc = " Flags signalling stream properties. A combination of AVFMTCTX_*."]
+        #[doc = " Set by libavformat."]
+        pub ctx_flags: ::std::os::raw::c_int,
+        #[doc = " Number of elements in AVFormatContext.streams."]
+        #[doc = ""]
+        #[doc = " Set by avformat_new_stream(), must not be modified by any other code."]
+        pub nb_streams: ::std::os::raw::c_uint,
+        #[doc = " A list of all streams in the file. New streams are created with"]
+        #[doc = " avformat_new_stream()."]
+        #[doc = ""]
+        #[doc = " - demuxing: streams are created by libavformat in avformat_open_input()."]
+        #[doc = "             If AVFMTCTX_NOHEADER is set in ctx_flags, then new streams may also"]
+        #[doc = "             appear in av_read_frame()."]
+        #[doc = " - muxing: streams are created by the user before avformat_write_header()."]
+        #[doc = ""]
+        #[doc = " Freed by libavformat in avformat_free_context()."]
+        pub streams: *mut *mut root::AVStream,
+        #[doc = " input or output URL. Unlike the old filename field, this field has no"]
+        #[doc = " length restriction."]
+        #[doc = ""]
+        #[doc = " - demuxing: set by avformat_open_input(), initialized to an empty"]
+        #[doc = "             string if url parameter was NULL in avformat_open_input()."]
+        #[doc = " - muxing: may be set by the caller before calling avformat_write_header()"]
+        #[doc = "           (or avformat_init_output() if that is called first) to a string"]
+        #[doc = "           which is freeable by av_free(). Set to an empty string if it"]
+        #[doc = "           was NULL in avformat_init_output()."]
+        #[doc = ""]
+        #[doc = " Freed by libavformat in avformat_free_context()."]
+        pub url: *mut ::std::os::raw::c_char,
+        #[doc = " Position of the first frame of the component, in"]
+        #[doc = " AV_TIME_BASE fractional seconds. NEVER set this value directly:"]
+        #[doc = " It is deduced from the AVStream values."]
+        #[doc = ""]
+        #[doc = " Demuxing only, set by libavformat."]
+        pub start_time: i64,
+        #[doc = " Duration of the stream, in AV_TIME_BASE fractional"]
+        #[doc = " seconds. Only set this value if you know none of the individual stream"]
+        #[doc = " durations and also do not set any of them. This is deduced from the"]
+        #[doc = " AVStream values if not set."]
+        #[doc = ""]
+        #[doc = " Demuxing only, set by libavformat."]
+        pub duration: i64,
+        #[doc = " Total stream bitrate in bit/s, 0 if not"]
+        #[doc = " available. Never set it directly if the file_size and the"]
+        #[doc = " duration are known as FFmpeg can compute it automatically."]
+        pub bit_rate: i64,
+        pub packet_size: ::std::os::raw::c_uint,
+        pub max_delay: ::std::os::raw::c_int,
+        #[doc = " Flags modifying the (de)muxer behaviour. A combination of AVFMT_FLAG_*."]
+        #[doc = " Set by the user before avformat_open_input() / avformat_write_header()."]
+        pub flags: ::std::os::raw::c_int,
+        #[doc = " Maximum number of bytes read from input in order to determine stream"]
+        #[doc = " properties. Used when reading the global header and in"]
+        #[doc = " avformat_find_stream_info()."]
+        #[doc = ""]
+        #[doc = " Demuxing only, set by the caller before avformat_open_input()."]
+        #[doc = ""]
+        #[doc = " @note this is \\e not  used for determining the \\ref AVInputFormat"]
+        #[doc = "       \"input format\""]
+        #[doc = " @sa format_probesize"]
+        pub probesize: i64,
+        #[doc = " Maximum duration (in AV_TIME_BASE units) of the data read"]
+        #[doc = " from input in avformat_find_stream_info()."]
+        #[doc = " Demuxing only, set by the caller before avformat_find_stream_info()."]
+        #[doc = " Can be set to 0 to let avformat choose using a heuristic."]
+        pub max_analyze_duration: i64,
+        pub key: *const u8,
+        pub keylen: ::std::os::raw::c_int,
+        pub nb_programs: ::std::os::raw::c_uint,
+        pub programs: *mut *mut root::AVProgram,
+        #[doc = " Forced video codec_id."]
+        #[doc = " Demuxing: Set by user."]
+        pub video_codec_id: root::AVCodecID,
+        #[doc = " Forced audio codec_id."]
+        #[doc = " Demuxing: Set by user."]
+        pub audio_codec_id: root::AVCodecID,
+        #[doc = " Forced subtitle codec_id."]
+        #[doc = " Demuxing: Set by user."]
+        pub subtitle_codec_id: root::AVCodecID,
+        #[doc = " Maximum amount of memory in bytes to use for the index of each stream."]
+        #[doc = " If the index exceeds this size, entries will be discarded as"]
+        #[doc = " needed to maintain a smaller size. This can lead to slower or less"]
+        #[doc = " accurate seeking (depends on demuxer)."]
+        #[doc = " Demuxers for which a full in-memory index is mandatory will ignore"]
+        #[doc = " this."]
+        #[doc = " - muxing: unused"]
+        #[doc = " - demuxing: set by user"]
+        pub max_index_size: ::std::os::raw::c_uint,
+        #[doc = " Maximum amount of memory in bytes to use for buffering frames"]
+        #[doc = " obtained from realtime capture devices."]
+        pub max_picture_buffer: ::std::os::raw::c_uint,
+        #[doc = " Number of chapters in AVChapter array."]
+        #[doc = " When muxing, chapters are normally written in the file header,"]
+        #[doc = " so nb_chapters should normally be initialized before write_header"]
+        #[doc = " is called. Some muxers (e.g. mov and mkv) can also write chapters"]
+        #[doc = " in the trailer.  To write chapters in the trailer, nb_chapters"]
+        #[doc = " must be zero when write_header is called and non-zero when"]
+        #[doc = " write_trailer is called."]
+        #[doc = " - muxing: set by user"]
+        #[doc = " - demuxing: set by libavformat"]
+        pub nb_chapters: ::std::os::raw::c_uint,
+        pub chapters: *mut *mut root::AVChapter,
+        #[doc = " Metadata that applies to the whole file."]
+        #[doc = ""]
+        #[doc = " - demuxing: set by libavformat in avformat_open_input()"]
+        #[doc = " - muxing: may be set by the caller before avformat_write_header()"]
+        #[doc = ""]
+        #[doc = " Freed by libavformat in avformat_free_context()."]
+        pub metadata: *mut root::AVDictionary,
+        #[doc = " Start time of the stream in real world time, in microseconds"]
+        #[doc = " since the Unix epoch (00:00 1st January 1970). That is, pts=0 in the"]
+        #[doc = " stream was captured at this real world time."]
+        #[doc = " - muxing: Set by the caller before avformat_write_header(). If set to"]
+        #[doc = "           either 0 or AV_NOPTS_VALUE, then the current wall-time will"]
+        #[doc = "           be used."]
+        #[doc = " - demuxing: Set by libavformat. AV_NOPTS_VALUE if unknown. Note that"]
+        #[doc = "             the value may become known after some number of frames"]
+        #[doc = "             have been received."]
+        pub start_time_realtime: i64,
+        #[doc = " The number of frames used for determining the framerate in"]
+        #[doc = " avformat_find_stream_info()."]
+        #[doc = " Demuxing only, set by the caller before avformat_find_stream_info()."]
+        pub fps_probe_size: ::std::os::raw::c_int,
+        #[doc = " Error recognition; higher values will detect more errors but may"]
+        #[doc = " misdetect some more or less valid parts as errors."]
+        #[doc = " Demuxing only, set by the caller before avformat_open_input()."]
+        pub error_recognition: ::std::os::raw::c_int,
+        #[doc = " Custom interrupt callbacks for the I/O layer."]
+        #[doc = ""]
+        #[doc = " demuxing: set by the user before avformat_open_input()."]
+        #[doc = " muxing: set by the user before avformat_write_header()"]
+        #[doc = " (mainly useful for AVFMT_NOFILE formats). The callback"]
+        #[doc = " should also be passed to avio_open2() if it's used to"]
+        #[doc = " open the file."]
+        pub interrupt_callback: root::AVIOInterruptCB,
+        #[doc = " Flags to enable debugging."]
+        pub debug: ::std::os::raw::c_int,
+        #[doc = " Maximum buffering duration for interleaving."]
+        #[doc = ""]
+        #[doc = " To ensure all the streams are interleaved correctly,"]
+        #[doc = " av_interleaved_write_frame() will wait until it has at least one packet"]
+        #[doc = " for each stream before actually writing any packets to the output file."]
+        #[doc = " When some streams are \"sparse\" (i.e. there are large gaps between"]
+        #[doc = " successive packets), this can result in excessive buffering."]
+        #[doc = ""]
+        #[doc = " This field specifies the maximum difference between the timestamps of the"]
+        #[doc = " first and the last packet in the muxing queue, above which libavformat"]
+        #[doc = " will output a packet regardless of whether it has queued a packet for all"]
+        #[doc = " the streams."]
+        #[doc = ""]
+        #[doc = " Muxing only, set by the caller before avformat_write_header()."]
+        pub max_interleave_delta: i64,
+        #[doc = " Allow non-standard and experimental extension"]
+        #[doc = " @see AVCodecContext.strict_std_compliance"]
+        pub strict_std_compliance: ::std::os::raw::c_int,
+        #[doc = " Flags indicating events happening on the file, a combination of"]
+        #[doc = " AVFMT_EVENT_FLAG_*."]
+        #[doc = ""]
+        #[doc = " - demuxing: may be set by the demuxer in avformat_open_input(),"]
+        #[doc = "   avformat_find_stream_info() and av_read_frame(). Flags must be cleared"]
+        #[doc = "   by the user once the event has been handled."]
+        #[doc = " - muxing: may be set by the user after avformat_write_header() to"]
+        #[doc = "   indicate a user-triggered event.  The muxer will clear the flags for"]
+        #[doc = "   events it has handled in av_[interleaved]_write_frame()."]
+        pub event_flags: ::std::os::raw::c_int,
+        #[doc = " Maximum number of packets to read while waiting for the first timestamp."]
+        #[doc = " Decoding only."]
+        pub max_ts_probe: ::std::os::raw::c_int,
+        #[doc = " Avoid negative timestamps during muxing."]
+        #[doc = " Any value of the AVFMT_AVOID_NEG_TS_* constants."]
+        #[doc = " Note, this only works when using av_interleaved_write_frame. (interleave_packet_per_dts is in use)"]
+        #[doc = " - muxing: Set by user"]
+        #[doc = " - demuxing: unused"]
+        pub avoid_negative_ts: ::std::os::raw::c_int,
+        #[doc = " Transport stream id."]
+        #[doc = " This will be moved into demuxer private options. Thus no API/ABI compatibility"]
+        pub ts_id: ::std::os::raw::c_int,
+        #[doc = " Audio preload in microseconds."]
+        #[doc = " Note, not all formats support this and unpredictable things may happen if it is used when not supported."]
+        #[doc = " - encoding: Set by user"]
+        #[doc = " - decoding: unused"]
+        pub audio_preload: ::std::os::raw::c_int,
+        #[doc = " Max chunk time in microseconds."]
+        #[doc = " Note, not all formats support this and unpredictable things may happen if it is used when not supported."]
+        #[doc = " - encoding: Set by user"]
+        #[doc = " - decoding: unused"]
+        pub max_chunk_duration: ::std::os::raw::c_int,
+        #[doc = " Max chunk size in bytes"]
+        #[doc = " Note, not all formats support this and unpredictable things may happen if it is used when not supported."]
+        #[doc = " - encoding: Set by user"]
+        #[doc = " - decoding: unused"]
+        pub max_chunk_size: ::std::os::raw::c_int,
+        #[doc = " forces the use of wallclock timestamps as pts/dts of packets"]
+        #[doc = " This has undefined results in the presence of B frames."]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: Set by user"]
+        pub use_wallclock_as_timestamps: ::std::os::raw::c_int,
+        #[doc = " avio flags, used to force AVIO_FLAG_DIRECT."]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: Set by user"]
+        pub avio_flags: ::std::os::raw::c_int,
+        #[doc = " The duration field can be estimated through various ways, and this field can be used"]
+        #[doc = " to know how the duration was estimated."]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: Read by user"]
+        pub duration_estimation_method: root::AVDurationEstimationMethod,
+        #[doc = " Skip initial bytes when opening stream"]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: Set by user"]
+        pub skip_initial_bytes: i64,
+        #[doc = " Correct single timestamp overflows"]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: Set by user"]
+        pub correct_ts_overflow: ::std::os::raw::c_uint,
+        #[doc = " Force seeking to any (also non key) frames."]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: Set by user"]
+        pub seek2any: ::std::os::raw::c_int,
+        #[doc = " Flush the I/O context after each packet."]
+        #[doc = " - encoding: Set by user"]
+        #[doc = " - decoding: unused"]
+        pub flush_packets: ::std::os::raw::c_int,
+        #[doc = " format probing score."]
+        #[doc = " The maximal score is AVPROBE_SCORE_MAX, its set when the demuxer probes"]
+        #[doc = " the format."]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: set by avformat, read by user"]
+        pub probe_score: ::std::os::raw::c_int,
+        #[doc = " Maximum number of bytes read from input in order to identify the"]
+        #[doc = " \\ref AVInputFormat \"input format\". Only used when the format is not set"]
+        #[doc = " explicitly by the caller."]
+        #[doc = ""]
+        #[doc = " Demuxing only, set by the caller before avformat_open_input()."]
+        #[doc = ""]
+        #[doc = " @sa probesize"]
+        pub format_probesize: ::std::os::raw::c_int,
+        #[doc = " ',' separated list of allowed decoders."]
+        #[doc = " If NULL then all are allowed"]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: set by user"]
+        pub codec_whitelist: *mut ::std::os::raw::c_char,
+        #[doc = " ',' separated list of allowed demuxers."]
+        #[doc = " If NULL then all are allowed"]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: set by user"]
+        pub format_whitelist: *mut ::std::os::raw::c_char,
+        #[doc = " IO repositioned flag."]
+        #[doc = " This is set by avformat when the underlaying IO context read pointer"]
+        #[doc = " is repositioned, for example when doing byte based seeking."]
+        #[doc = " Demuxers can use the flag to detect such changes."]
+        pub io_repositioned: ::std::os::raw::c_int,
+        #[doc = " Forced video codec."]
+        #[doc = " This allows forcing a specific decoder, even when there are multiple with"]
+        #[doc = " the same codec_id."]
+        #[doc = " Demuxing: Set by user"]
+        pub video_codec: *const root::AVCodec,
+        #[doc = " Forced audio codec."]
+        #[doc = " This allows forcing a specific decoder, even when there are multiple with"]
+        #[doc = " the same codec_id."]
+        #[doc = " Demuxing: Set by user"]
+        pub audio_codec: *const root::AVCodec,
+        #[doc = " Forced subtitle codec."]
+        #[doc = " This allows forcing a specific decoder, even when there are multiple with"]
+        #[doc = " the same codec_id."]
+        #[doc = " Demuxing: Set by user"]
+        pub subtitle_codec: *const root::AVCodec,
+        #[doc = " Forced data codec."]
+        #[doc = " This allows forcing a specific decoder, even when there are multiple with"]
+        #[doc = " the same codec_id."]
+        #[doc = " Demuxing: Set by user"]
+        pub data_codec: *const root::AVCodec,
+        #[doc = " Number of bytes to be written as padding in a metadata header."]
+        #[doc = " Demuxing: Unused."]
+        #[doc = " Muxing: Set by user via av_format_set_metadata_header_padding."]
+        pub metadata_header_padding: ::std::os::raw::c_int,
+        #[doc = " User data."]
+        #[doc = " This is a place for some private data of the user."]
+        pub opaque: *mut ::std::os::raw::c_void,
+        #[doc = " Callback used by devices to communicate with application."]
+        pub control_message_cb: root::av_format_control_message,
+        #[doc = " Output timestamp offset, in microseconds."]
+        #[doc = " Muxing: set by user"]
+        pub output_ts_offset: i64,
+        #[doc = " dump format separator."]
+        #[doc = " can be \", \" or \"\\n      \" or anything else"]
+        #[doc = " - muxing: Set by user."]
+        #[doc = " - demuxing: Set by user."]
+        pub dump_separator: *mut u8,
+        #[doc = " Forced Data codec_id."]
+        #[doc = " Demuxing: Set by user."]
+        pub data_codec_id: root::AVCodecID,
+        #[doc = " ',' separated list of allowed protocols."]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: set by user"]
+        pub protocol_whitelist: *mut ::std::os::raw::c_char,
+        #[doc = " A callback for opening new IO streams."]
+        #[doc = ""]
+        #[doc = " Whenever a muxer or a demuxer needs to open an IO stream (typically from"]
+        #[doc = " avformat_open_input() for demuxers, but for certain formats can happen at"]
+        #[doc = " other times as well), it will call this callback to obtain an IO context."]
+        #[doc = ""]
+        #[doc = " @param s the format context"]
+        #[doc = " @param pb on success, the newly opened IO context should be returned here"]
+        #[doc = " @param url the url to open"]
+        #[doc = " @param flags a combination of AVIO_FLAG_*"]
+        #[doc = " @param options a dictionary of additional options, with the same"]
+        #[doc = "                semantics as in avio_open2()"]
+        #[doc = " @return 0 on success, a negative AVERROR code on failure"]
+        #[doc = ""]
+        #[doc = " @note Certain muxers and demuxers do nesting, i.e. they open one or more"]
+        #[doc = " additional internal format contexts. Thus the AVFormatContext pointer"]
+        #[doc = " passed to this callback may be different from the one facing the caller."]
+        #[doc = " It will, however, have the same 'opaque' field."]
+        pub io_open: ::std::option::Option<
+            unsafe extern "C" fn(
+                s: *mut root::AVFormatContext,
+                pb: *mut *mut root::AVIOContext,
+                url: *const ::std::os::raw::c_char,
+                flags: ::std::os::raw::c_int,
+                options: *mut *mut root::AVDictionary,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " A callback for closing the streams opened with AVFormatContext.io_open()."]
+        pub io_close: ::std::option::Option<
+            unsafe extern "C" fn(s: *mut root::AVFormatContext, pb: *mut root::AVIOContext),
+        >,
+        #[doc = " ',' separated list of disallowed protocols."]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: set by user"]
+        pub protocol_blacklist: *mut ::std::os::raw::c_char,
+        #[doc = " The maximum number of streams."]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: set by user"]
+        pub max_streams: ::std::os::raw::c_int,
+        #[doc = " Skip duration calcuation in estimate_timings_from_pts."]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: set by user"]
+        pub skip_estimate_duration_from_pts: ::std::os::raw::c_int,
+        #[doc = " Maximum number of packets that can be probed"]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: set by user"]
+        pub max_probe_packets: ::std::os::raw::c_int,
+    }
+    impl Default for AVFormatContext {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " This function will cause global side data to be injected in the next packet"]
+        #[doc = " of each stream as well as after any subsequent seek."]
+        pub fn av_format_inject_global_side_data(s: *mut root::AVFormatContext);
+    }
+    extern "C" {
+        #[doc = " Returns the method used to set ctx->duration."]
+        #[doc = ""]
+        #[doc = " @return AVFMT_DURATION_FROM_PTS, AVFMT_DURATION_FROM_STREAM, or AVFMT_DURATION_FROM_BITRATE."]
+        pub fn av_fmt_ctx_get_duration_estimation_method(
+            ctx: *const root::AVFormatContext,
+        ) -> root::AVDurationEstimationMethod;
+    }
+    extern "C" {
+        #[doc = " Return the LIBAVFORMAT_VERSION_INT constant."]
+        pub fn avformat_version() -> ::std::os::raw::c_uint;
+    }
+    extern "C" {
+        #[doc = " Return the libavformat build-time configuration."]
+        pub fn avformat_configuration() -> *const ::std::os::raw::c_char;
+    }
+    extern "C" {
+        #[doc = " Return the libavformat license."]
+        pub fn avformat_license() -> *const ::std::os::raw::c_char;
+    }
+    extern "C" {
+        #[doc = " Do global initialization of network libraries. This is optional,"]
+        #[doc = " and not recommended anymore."]
+        #[doc = ""]
+        #[doc = " This functions only exists to work around thread-safety issues"]
+        #[doc = " with older GnuTLS or OpenSSL libraries. If libavformat is linked"]
+        #[doc = " to newer versions of those libraries, or if you do not use them,"]
+        #[doc = " calling this function is unnecessary. Otherwise, you need to call"]
+        #[doc = " this function before any other threads using them are started."]
+        #[doc = ""]
+        #[doc = " This function will be deprecated once support for older GnuTLS and"]
+        #[doc = " OpenSSL libraries is removed, and this function has no purpose"]
+        #[doc = " anymore."]
+        pub fn avformat_network_init() -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Undo the initialization done by avformat_network_init. Call it only"]
+        #[doc = " once for each time you called avformat_network_init."]
+        pub fn avformat_network_deinit() -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Iterate over all registered muxers."]
+        #[doc = ""]
+        #[doc = " @param opaque a pointer where libavformat will store the iteration state. Must"]
+        #[doc = "               point to NULL to start the iteration."]
+        #[doc = ""]
+        #[doc = " @return the next registered muxer or NULL when the iteration is"]
+        #[doc = "         finished"]
+        pub fn av_muxer_iterate(
+            opaque: *mut *mut ::std::os::raw::c_void,
+        ) -> *const root::AVOutputFormat;
+    }
+    extern "C" {
+        #[doc = " Iterate over all registered demuxers."]
+        #[doc = ""]
+        #[doc = " @param opaque a pointer where libavformat will store the iteration state. Must"]
+        #[doc = "               point to NULL to start the iteration."]
+        #[doc = ""]
+        #[doc = " @return the next registered demuxer or NULL when the iteration is"]
+        #[doc = "         finished"]
+        pub fn av_demuxer_iterate(
+            opaque: *mut *mut ::std::os::raw::c_void,
+        ) -> *const root::AVInputFormat;
+    }
+    extern "C" {
+        #[doc = " Allocate an AVFormatContext."]
+        #[doc = " avformat_free_context() can be used to free the context and everything"]
+        #[doc = " allocated by the framework within it."]
+        pub fn avformat_alloc_context() -> *mut root::AVFormatContext;
+    }
+    extern "C" {
+        #[doc = " Free an AVFormatContext and all its streams."]
+        #[doc = " @param s context to free"]
+        pub fn avformat_free_context(s: *mut root::AVFormatContext);
+    }
+    extern "C" {
+        #[doc = " Get the AVClass for AVFormatContext. It can be used in combination with"]
+        #[doc = " AV_OPT_SEARCH_FAKE_OBJ for examining options."]
+        #[doc = ""]
+        #[doc = " @see av_opt_find()."]
+        pub fn avformat_get_class() -> *const root::AVClass;
+    }
+    extern "C" {
+        #[doc = " Add a new stream to a media file."]
+        #[doc = ""]
+        #[doc = " When demuxing, it is called by the demuxer in read_header(). If the"]
+        #[doc = " flag AVFMTCTX_NOHEADER is set in s.ctx_flags, then it may also"]
+        #[doc = " be called in read_packet()."]
+        #[doc = ""]
+        #[doc = " When muxing, should be called by the user before avformat_write_header()."]
+        #[doc = ""]
+        #[doc = " User is required to call avformat_free_context() to clean up the allocation"]
+        #[doc = " by avformat_new_stream()."]
+        #[doc = ""]
+        #[doc = " @param s media file handle"]
+        #[doc = " @param c unused, does nothing"]
+        #[doc = ""]
+        #[doc = " @return newly created stream or NULL on error."]
+        pub fn avformat_new_stream(
+            s: *mut root::AVFormatContext,
+            c: *const root::AVCodec,
+        ) -> *mut root::AVStream;
+    }
+    extern "C" {
+        #[doc = " Wrap an existing array as stream side data."]
+        #[doc = ""]
+        #[doc = " @param st stream"]
+        #[doc = " @param type side information type"]
+        #[doc = " @param data the side data array. It must be allocated with the av_malloc()"]
+        #[doc = "             family of functions. The ownership of the data is transferred to"]
+        #[doc = "             st."]
+        #[doc = " @param size side information size"]
+        #[doc = " @return zero on success, a negative AVERROR code on failure. On failure,"]
+        #[doc = "         the stream is unchanged and the data remains owned by the caller."]
+        pub fn av_stream_add_side_data(
+            st: *mut root::AVStream,
+            type_: root::AVPacketSideDataType,
+            data: *mut u8,
+            size: root::size_t,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Allocate new information from stream."]
+        #[doc = ""]
+        #[doc = " @param stream stream"]
+        #[doc = " @param type desired side information type"]
+        #[doc = " @param size side information size"]
+        #[doc = " @return pointer to fresh allocated data or NULL otherwise"]
+        pub fn av_stream_new_side_data(
+            stream: *mut root::AVStream,
+            type_: root::AVPacketSideDataType,
+            size: root::size_t,
+        ) -> *mut u8;
+    }
+    extern "C" {
+        #[doc = " Get side information from stream."]
+        #[doc = ""]
+        #[doc = " @param stream stream"]
+        #[doc = " @param type desired side information type"]
+        #[doc = " @param size If supplied, *size will be set to the size of the side data"]
+        #[doc = "             or to zero if the desired side data is not present."]
+        #[doc = " @return pointer to data if present or NULL otherwise"]
+        pub fn av_stream_get_side_data(
+            stream: *const root::AVStream,
+            type_: root::AVPacketSideDataType,
+            size: *mut root::size_t,
+        ) -> *mut u8;
+    }
+    extern "C" {
+        pub fn av_new_program(
+            s: *mut root::AVFormatContext,
+            id: ::std::os::raw::c_int,
+        ) -> *mut root::AVProgram;
+    }
+    extern "C" {
+        #[doc = " Allocate an AVFormatContext for an output format."]
+        #[doc = " avformat_free_context() can be used to free the context and"]
+        #[doc = " everything allocated by the framework within it."]
+        #[doc = ""]
+        #[doc = " @param *ctx is set to the created format context, or to NULL in"]
+        #[doc = " case of failure"]
+        #[doc = " @param oformat format to use for allocating the context, if NULL"]
+        #[doc = " format_name and filename are used instead"]
+        #[doc = " @param format_name the name of output format to use for allocating the"]
+        #[doc = " context, if NULL filename is used instead"]
+        #[doc = " @param filename the name of the filename to use for allocating the"]
+        #[doc = " context, may be NULL"]
+        #[doc = " @return >= 0 in case of success, a negative AVERROR code in case of"]
+        #[doc = " failure"]
+        pub fn avformat_alloc_output_context2(
+            ctx: *mut *mut root::AVFormatContext,
+            oformat: *const root::AVOutputFormat,
+            format_name: *const ::std::os::raw::c_char,
+            filename: *const ::std::os::raw::c_char,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Find AVInputFormat based on the short name of the input format."]
+        pub fn av_find_input_format(
+            short_name: *const ::std::os::raw::c_char,
+        ) -> *const root::AVInputFormat;
+    }
+    extern "C" {
+        #[doc = " Guess the file format."]
+        #[doc = ""]
+        #[doc = " @param pd        data to be probed"]
+        #[doc = " @param is_opened Whether the file is already opened; determines whether"]
+        #[doc = "                  demuxers with or without AVFMT_NOFILE are probed."]
+        pub fn av_probe_input_format(
+            pd: *const root::AVProbeData,
+            is_opened: ::std::os::raw::c_int,
+        ) -> *const root::AVInputFormat;
+    }
+    extern "C" {
+        #[doc = " Guess the file format."]
+        #[doc = ""]
+        #[doc = " @param pd        data to be probed"]
+        #[doc = " @param is_opened Whether the file is already opened; determines whether"]
+        #[doc = "                  demuxers with or without AVFMT_NOFILE are probed."]
+        #[doc = " @param score_max A probe score larger that this is required to accept a"]
+        #[doc = "                  detection, the variable is set to the actual detection"]
+        #[doc = "                  score afterwards."]
+        #[doc = "                  If the score is <= AVPROBE_SCORE_MAX / 4 it is recommended"]
+        #[doc = "                  to retry with a larger probe buffer."]
+        pub fn av_probe_input_format2(
+            pd: *const root::AVProbeData,
+            is_opened: ::std::os::raw::c_int,
+            score_max: *mut ::std::os::raw::c_int,
+        ) -> *const root::AVInputFormat;
+    }
+    extern "C" {
+        #[doc = " Guess the file format."]
+        #[doc = ""]
+        #[doc = " @param is_opened Whether the file is already opened; determines whether"]
+        #[doc = "                  demuxers with or without AVFMT_NOFILE are probed."]
+        #[doc = " @param score_ret The score of the best detection."]
+        pub fn av_probe_input_format3(
+            pd: *const root::AVProbeData,
+            is_opened: ::std::os::raw::c_int,
+            score_ret: *mut ::std::os::raw::c_int,
+        ) -> *const root::AVInputFormat;
+    }
+    extern "C" {
+        #[doc = " Probe a bytestream to determine the input format. Each time a probe returns"]
+        #[doc = " with a score that is too low, the probe buffer size is increased and another"]
+        #[doc = " attempt is made. When the maximum probe size is reached, the input format"]
+        #[doc = " with the highest score is returned."]
+        #[doc = ""]
+        #[doc = " @param pb the bytestream to probe"]
+        #[doc = " @param fmt the input format is put here"]
+        #[doc = " @param url the url of the stream"]
+        #[doc = " @param logctx the log context"]
+        #[doc = " @param offset the offset within the bytestream to probe from"]
+        #[doc = " @param max_probe_size the maximum probe buffer size (zero for default)"]
+        #[doc = " @return the score in case of success, a negative value corresponding to an"]
+        #[doc = "         the maximal score is AVPROBE_SCORE_MAX"]
+        #[doc = " AVERROR code otherwise"]
+        pub fn av_probe_input_buffer2(
+            pb: *mut root::AVIOContext,
+            fmt: *mut *const root::AVInputFormat,
+            url: *const ::std::os::raw::c_char,
+            logctx: *mut ::std::os::raw::c_void,
+            offset: ::std::os::raw::c_uint,
+            max_probe_size: ::std::os::raw::c_uint,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Like av_probe_input_buffer2() but returns 0 on success"]
+        pub fn av_probe_input_buffer(
+            pb: *mut root::AVIOContext,
+            fmt: *mut *const root::AVInputFormat,
+            url: *const ::std::os::raw::c_char,
+            logctx: *mut ::std::os::raw::c_void,
+            offset: ::std::os::raw::c_uint,
+            max_probe_size: ::std::os::raw::c_uint,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Open an input stream and read the header. The codecs are not opened."]
+        #[doc = " The stream must be closed with avformat_close_input()."]
+        #[doc = ""]
+        #[doc = " @param ps Pointer to user-supplied AVFormatContext (allocated by avformat_alloc_context)."]
+        #[doc = "           May be a pointer to NULL, in which case an AVFormatContext is allocated by this"]
+        #[doc = "           function and written into ps."]
+        #[doc = "           Note that a user-supplied AVFormatContext will be freed on failure."]
+        #[doc = " @param url URL of the stream to open."]
+        #[doc = " @param fmt If non-NULL, this parameter forces a specific input format."]
+        #[doc = "            Otherwise the format is autodetected."]
+        #[doc = " @param options  A dictionary filled with AVFormatContext and demuxer-private options."]
+        #[doc = "                 On return this parameter will be destroyed and replaced with a dict containing"]
+        #[doc = "                 options that were not found. May be NULL."]
+        #[doc = ""]
+        #[doc = " @return 0 on success, a negative AVERROR on failure."]
+        #[doc = ""]
+        #[doc = " @note If you want to use custom IO, preallocate the format context and set its pb field."]
+        pub fn avformat_open_input(
+            ps: *mut *mut root::AVFormatContext,
+            url: *const ::std::os::raw::c_char,
+            fmt: *const root::AVInputFormat,
+            options: *mut *mut root::AVDictionary,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Read packets of a media file to get stream information. This"]
+        #[doc = " is useful for file formats with no headers such as MPEG. This"]
+        #[doc = " function also computes the real framerate in case of MPEG-2 repeat"]
+        #[doc = " frame mode."]
+        #[doc = " The logical file position is not changed by this function;"]
+        #[doc = " examined packets may be buffered for later processing."]
+        #[doc = ""]
+        #[doc = " @param ic media file handle"]
+        #[doc = " @param options  If non-NULL, an ic.nb_streams long array of pointers to"]
+        #[doc = "                 dictionaries, where i-th member contains options for"]
+        #[doc = "                 codec corresponding to i-th stream."]
+        #[doc = "                 On return each dictionary will be filled with options that were not found."]
+        #[doc = " @return >=0 if OK, AVERROR_xxx on error"]
+        #[doc = ""]
+        #[doc = " @note this function isn't guaranteed to open all the codecs, so"]
+        #[doc = "       options being non-empty at return is a perfectly normal behavior."]
+        #[doc = ""]
+        #[doc = " @todo Let the user decide somehow what information is needed so that"]
+        #[doc = "       we do not waste time getting stuff the user does not need."]
+        pub fn avformat_find_stream_info(
+            ic: *mut root::AVFormatContext,
+            options: *mut *mut root::AVDictionary,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Find the programs which belong to a given stream."]
+        #[doc = ""]
+        #[doc = " @param ic    media file handle"]
+        #[doc = " @param last  the last found program, the search will start after this"]
+        #[doc = "              program, or from the beginning if it is NULL"]
+        #[doc = " @param s     stream index"]
+        #[doc = " @return the next program which belongs to s, NULL if no program is found or"]
+        #[doc = "         the last program is not among the programs of ic."]
+        pub fn av_find_program_from_stream(
+            ic: *mut root::AVFormatContext,
+            last: *mut root::AVProgram,
+            s: ::std::os::raw::c_int,
+        ) -> *mut root::AVProgram;
+    }
+    extern "C" {
+        pub fn av_program_add_stream_index(
+            ac: *mut root::AVFormatContext,
+            progid: ::std::os::raw::c_int,
+            idx: ::std::os::raw::c_uint,
+        );
+    }
+    extern "C" {
+        #[doc = " Find the \"best\" stream in the file."]
+        #[doc = " The best stream is determined according to various heuristics as the most"]
+        #[doc = " likely to be what the user expects."]
+        #[doc = " If the decoder parameter is non-NULL, av_find_best_stream will find the"]
+        #[doc = " default decoder for the stream's codec; streams for which no decoder can"]
+        #[doc = " be found are ignored."]
+        #[doc = ""]
+        #[doc = " @param ic                media file handle"]
+        #[doc = " @param type              stream type: video, audio, subtitles, etc."]
+        #[doc = " @param wanted_stream_nb  user-requested stream number,"]
+        #[doc = "                          or -1 for automatic selection"]
+        #[doc = " @param related_stream    try to find a stream related (eg. in the same"]
+        #[doc = "                          program) to this one, or -1 if none"]
+        #[doc = " @param decoder_ret       if non-NULL, returns the decoder for the"]
+        #[doc = "                          selected stream"]
+        #[doc = " @param flags             flags; none are currently defined"]
+        #[doc = " @return  the non-negative stream number in case of success,"]
+        #[doc = "          AVERROR_STREAM_NOT_FOUND if no stream with the requested type"]
+        #[doc = "          could be found,"]
+        #[doc = "          AVERROR_DECODER_NOT_FOUND if streams were found but no decoder"]
+        #[doc = " @note  If av_find_best_stream returns successfully and decoder_ret is not"]
+        #[doc = "        NULL, then *decoder_ret is guaranteed to be set to a valid AVCodec."]
+        pub fn av_find_best_stream(
+            ic: *mut root::AVFormatContext,
+            type_: root::AVMediaType,
+            wanted_stream_nb: ::std::os::raw::c_int,
+            related_stream: ::std::os::raw::c_int,
+            decoder_ret: *mut *const root::AVCodec,
+            flags: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Return the next frame of a stream."]
+        #[doc = " This function returns what is stored in the file, and does not validate"]
+        #[doc = " that what is there are valid frames for the decoder. It will split what is"]
+        #[doc = " stored in the file into frames and return one for each call. It will not"]
+        #[doc = " omit invalid data between valid frames so as to give the decoder the maximum"]
+        #[doc = " information possible for decoding."]
+        #[doc = ""]
+        #[doc = " On success, the returned packet is reference-counted (pkt->buf is set) and"]
+        #[doc = " valid indefinitely. The packet must be freed with av_packet_unref() when"]
+        #[doc = " it is no longer needed. For video, the packet contains exactly one frame."]
+        #[doc = " For audio, it contains an integer number of frames if each frame has"]
+        #[doc = " a known fixed size (e.g. PCM or ADPCM data). If the audio frames have"]
+        #[doc = " a variable size (e.g. MPEG audio), then it contains one frame."]
+        #[doc = ""]
+        #[doc = " pkt->pts, pkt->dts and pkt->duration are always set to correct"]
+        #[doc = " values in AVStream.time_base units (and guessed if the format cannot"]
+        #[doc = " provide them). pkt->pts can be AV_NOPTS_VALUE if the video format"]
+        #[doc = " has B-frames, so it is better to rely on pkt->dts if you do not"]
+        #[doc = " decompress the payload."]
+        #[doc = ""]
+        #[doc = " @return 0 if OK, < 0 on error or end of file. On error, pkt will be blank"]
+        #[doc = "         (as if it came from av_packet_alloc())."]
+        #[doc = ""]
+        #[doc = " @note pkt will be initialized, so it may be uninitialized, but it must not"]
+        #[doc = "       contain data that needs to be freed."]
+        pub fn av_read_frame(
+            s: *mut root::AVFormatContext,
+            pkt: *mut root::AVPacket,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Seek to the keyframe at timestamp."]
+        #[doc = " 'timestamp' in 'stream_index'."]
+        #[doc = ""]
+        #[doc = " @param s media file handle"]
+        #[doc = " @param stream_index If stream_index is (-1), a default"]
+        #[doc = " stream is selected, and timestamp is automatically converted"]
+        #[doc = " from AV_TIME_BASE units to the stream specific time_base."]
+        #[doc = " @param timestamp Timestamp in AVStream.time_base units"]
+        #[doc = "        or, if no stream is specified, in AV_TIME_BASE units."]
+        #[doc = " @param flags flags which select direction and seeking mode"]
+        #[doc = " @return >= 0 on success"]
+        pub fn av_seek_frame(
+            s: *mut root::AVFormatContext,
+            stream_index: ::std::os::raw::c_int,
+            timestamp: i64,
+            flags: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Seek to timestamp ts."]
+        #[doc = " Seeking will be done so that the point from which all active streams"]
+        #[doc = " can be presented successfully will be closest to ts and within min/max_ts."]
+        #[doc = " Active streams are all streams that have AVStream.discard < AVDISCARD_ALL."]
+        #[doc = ""]
+        #[doc = " If flags contain AVSEEK_FLAG_BYTE, then all timestamps are in bytes and"]
+        #[doc = " are the file position (this may not be supported by all demuxers)."]
+        #[doc = " If flags contain AVSEEK_FLAG_FRAME, then all timestamps are in frames"]
+        #[doc = " in the stream with stream_index (this may not be supported by all demuxers)."]
+        #[doc = " Otherwise all timestamps are in units of the stream selected by stream_index"]
+        #[doc = " or if stream_index is -1, in AV_TIME_BASE units."]
+        #[doc = " If flags contain AVSEEK_FLAG_ANY, then non-keyframes are treated as"]
+        #[doc = " keyframes (this may not be supported by all demuxers)."]
+        #[doc = " If flags contain AVSEEK_FLAG_BACKWARD, it is ignored."]
+        #[doc = ""]
+        #[doc = " @param s media file handle"]
+        #[doc = " @param stream_index index of the stream which is used as time base reference"]
+        #[doc = " @param min_ts smallest acceptable timestamp"]
+        #[doc = " @param ts target timestamp"]
+        #[doc = " @param max_ts largest acceptable timestamp"]
+        #[doc = " @param flags flags"]
+        #[doc = " @return >=0 on success, error code otherwise"]
+        #[doc = ""]
+        #[doc = " @note This is part of the new seek API which is still under construction."]
+        pub fn avformat_seek_file(
+            s: *mut root::AVFormatContext,
+            stream_index: ::std::os::raw::c_int,
+            min_ts: i64,
+            ts: i64,
+            max_ts: i64,
+            flags: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Discard all internally buffered data. This can be useful when dealing with"]
+        #[doc = " discontinuities in the byte stream. Generally works only with formats that"]
+        #[doc = " can resync. This includes headerless formats like MPEG-TS/TS but should also"]
+        #[doc = " work with NUT, Ogg and in a limited way AVI for example."]
+        #[doc = ""]
+        #[doc = " The set of streams, the detected duration, stream parameters and codecs do"]
+        #[doc = " not change when calling this function. If you want a complete reset, it's"]
+        #[doc = " better to open a new AVFormatContext."]
+        #[doc = ""]
+        #[doc = " This does not flush the AVIOContext (s->pb). If necessary, call"]
+        #[doc = " avio_flush(s->pb) before calling this function."]
+        #[doc = ""]
+        #[doc = " @param s media file handle"]
+        #[doc = " @return >=0 on success, error code otherwise"]
+        pub fn avformat_flush(s: *mut root::AVFormatContext) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Start playing a network-based stream (e.g. RTSP stream) at the"]
+        #[doc = " current position."]
+        pub fn av_read_play(s: *mut root::AVFormatContext) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Pause a network-based stream (e.g. RTSP stream)."]
+        #[doc = ""]
+        #[doc = " Use av_read_play() to resume it."]
+        pub fn av_read_pause(s: *mut root::AVFormatContext) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Close an opened input AVFormatContext. Free it and all its contents"]
+        #[doc = " and set *s to NULL."]
+        pub fn avformat_close_input(s: *mut *mut root::AVFormatContext);
+    }
+    extern "C" {
+        #[doc = " Allocate the stream private data and write the stream header to"]
+        #[doc = " an output media file."]
+        #[doc = ""]
+        #[doc = " @param s Media file handle, must be allocated with avformat_alloc_context()."]
+        #[doc = "          Its oformat field must be set to the desired output format;"]
+        #[doc = "          Its pb field must be set to an already opened AVIOContext."]
+        #[doc = " @param options  An AVDictionary filled with AVFormatContext and muxer-private options."]
+        #[doc = "                 On return this parameter will be destroyed and replaced with a dict containing"]
+        #[doc = "                 options that were not found. May be NULL."]
+        #[doc = ""]
+        #[doc = " @return AVSTREAM_INIT_IN_WRITE_HEADER on success if the codec had not already been fully initialized in avformat_init,"]
+        #[doc = "         AVSTREAM_INIT_IN_INIT_OUTPUT  on success if the codec had already been fully initialized in avformat_init,"]
+        #[doc = "         negative AVERROR on failure."]
+        #[doc = ""]
+        #[doc = " @see av_opt_find, av_dict_set, avio_open, av_oformat_next, avformat_init_output."]
+        pub fn avformat_write_header(
+            s: *mut root::AVFormatContext,
+            options: *mut *mut root::AVDictionary,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Allocate the stream private data and initialize the codec, but do not write the header."]
+        #[doc = " May optionally be used before avformat_write_header to initialize stream parameters"]
+        #[doc = " before actually writing the header."]
+        #[doc = " If using this function, do not pass the same options to avformat_write_header."]
+        #[doc = ""]
+        #[doc = " @param s Media file handle, must be allocated with avformat_alloc_context()."]
+        #[doc = "          Its oformat field must be set to the desired output format;"]
+        #[doc = "          Its pb field must be set to an already opened AVIOContext."]
+        #[doc = " @param options  An AVDictionary filled with AVFormatContext and muxer-private options."]
+        #[doc = "                 On return this parameter will be destroyed and replaced with a dict containing"]
+        #[doc = "                 options that were not found. May be NULL."]
+        #[doc = ""]
+        #[doc = " @return AVSTREAM_INIT_IN_WRITE_HEADER on success if the codec requires avformat_write_header to fully initialize,"]
+        #[doc = "         AVSTREAM_INIT_IN_INIT_OUTPUT  on success if the codec has been fully initialized,"]
+        #[doc = "         negative AVERROR on failure."]
+        #[doc = ""]
+        #[doc = " @see av_opt_find, av_dict_set, avio_open, av_oformat_next, avformat_write_header."]
+        pub fn avformat_init_output(
+            s: *mut root::AVFormatContext,
+            options: *mut *mut root::AVDictionary,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Write a packet to an output media file."]
+        #[doc = ""]
+        #[doc = " This function passes the packet directly to the muxer, without any buffering"]
+        #[doc = " or reordering. The caller is responsible for correctly interleaving the"]
+        #[doc = " packets if the format requires it. Callers that want libavformat to handle"]
+        #[doc = " the interleaving should call av_interleaved_write_frame() instead of this"]
+        #[doc = " function."]
+        #[doc = ""]
+        #[doc = " @param s media file handle"]
+        #[doc = " @param pkt The packet containing the data to be written. Note that unlike"]
+        #[doc = "            av_interleaved_write_frame(), this function does not take"]
+        #[doc = "            ownership of the packet passed to it (though some muxers may make"]
+        #[doc = "            an internal reference to the input packet)."]
+        #[doc = "            <br>"]
+        #[doc = "            This parameter can be NULL (at any time, not just at the end), in"]
+        #[doc = "            order to immediately flush data buffered within the muxer, for"]
+        #[doc = "            muxers that buffer up data internally before writing it to the"]
+        #[doc = "            output."]
+        #[doc = "            <br>"]
+        #[doc = "            Packet's @ref AVPacket.stream_index \"stream_index\" field must be"]
+        #[doc = "            set to the index of the corresponding stream in @ref"]
+        #[doc = "            AVFormatContext.streams \"s->streams\"."]
+        #[doc = "            <br>"]
+        #[doc = "            The timestamps (@ref AVPacket.pts \"pts\", @ref AVPacket.dts \"dts\")"]
+        #[doc = "            must be set to correct values in the stream's timebase (unless the"]
+        #[doc = "            output format is flagged with the AVFMT_NOTIMESTAMPS flag, then"]
+        #[doc = "            they can be set to AV_NOPTS_VALUE)."]
+        #[doc = "            The dts for subsequent packets passed to this function must be strictly"]
+        #[doc = "            increasing when compared in their respective timebases (unless the"]
+        #[doc = "            output format is flagged with the AVFMT_TS_NONSTRICT, then they"]
+        #[doc = "            merely have to be nondecreasing).  @ref AVPacket.duration"]
+        #[doc = "            \"duration\") should also be set if known."]
+        #[doc = " @return < 0 on error, = 0 if OK, 1 if flushed and there is no more data to flush"]
+        #[doc = ""]
+        #[doc = " @see av_interleaved_write_frame()"]
+        pub fn av_write_frame(
+            s: *mut root::AVFormatContext,
+            pkt: *mut root::AVPacket,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Write a packet to an output media file ensuring correct interleaving."]
+        #[doc = ""]
+        #[doc = " This function will buffer the packets internally as needed to make sure the"]
+        #[doc = " packets in the output file are properly interleaved, usually ordered by"]
+        #[doc = " increasing dts. Callers doing their own interleaving should call"]
+        #[doc = " av_write_frame() instead of this function."]
+        #[doc = ""]
+        #[doc = " Using this function instead of av_write_frame() can give muxers advance"]
+        #[doc = " knowledge of future packets, improving e.g. the behaviour of the mp4"]
+        #[doc = " muxer for VFR content in fragmenting mode."]
+        #[doc = ""]
+        #[doc = " @param s media file handle"]
+        #[doc = " @param pkt The packet containing the data to be written."]
+        #[doc = "            <br>"]
+        #[doc = "            If the packet is reference-counted, this function will take"]
+        #[doc = "            ownership of this reference and unreference it later when it sees"]
+        #[doc = "            fit. If the packet is not reference-counted, libavformat will"]
+        #[doc = "            make a copy."]
+        #[doc = "            The returned packet will be blank (as if returned from"]
+        #[doc = "            av_packet_alloc()), even on error."]
+        #[doc = "            <br>"]
+        #[doc = "            This parameter can be NULL (at any time, not just at the end), to"]
+        #[doc = "            flush the interleaving queues."]
+        #[doc = "            <br>"]
+        #[doc = "            Packet's @ref AVPacket.stream_index \"stream_index\" field must be"]
+        #[doc = "            set to the index of the corresponding stream in @ref"]
+        #[doc = "            AVFormatContext.streams \"s->streams\"."]
+        #[doc = "            <br>"]
+        #[doc = "            The timestamps (@ref AVPacket.pts \"pts\", @ref AVPacket.dts \"dts\")"]
+        #[doc = "            must be set to correct values in the stream's timebase (unless the"]
+        #[doc = "            output format is flagged with the AVFMT_NOTIMESTAMPS flag, then"]
+        #[doc = "            they can be set to AV_NOPTS_VALUE)."]
+        #[doc = "            The dts for subsequent packets in one stream must be strictly"]
+        #[doc = "            increasing (unless the output format is flagged with the"]
+        #[doc = "            AVFMT_TS_NONSTRICT, then they merely have to be nondecreasing)."]
+        #[doc = "            @ref AVPacket.duration \"duration\" should also be set if known."]
+        #[doc = ""]
+        #[doc = " @return 0 on success, a negative AVERROR on error."]
+        #[doc = ""]
+        #[doc = " @see av_write_frame(), AVFormatContext.max_interleave_delta"]
+        pub fn av_interleaved_write_frame(
+            s: *mut root::AVFormatContext,
+            pkt: *mut root::AVPacket,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Write an uncoded frame to an output media file."]
+        #[doc = ""]
+        #[doc = " The frame must be correctly interleaved according to the container"]
+        #[doc = " specification; if not, av_interleaved_write_uncoded_frame() must be used."]
+        #[doc = ""]
+        #[doc = " See av_interleaved_write_uncoded_frame() for details."]
+        pub fn av_write_uncoded_frame(
+            s: *mut root::AVFormatContext,
+            stream_index: ::std::os::raw::c_int,
+            frame: *mut root::AVFrame,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Write an uncoded frame to an output media file."]
+        #[doc = ""]
+        #[doc = " If the muxer supports it, this function makes it possible to write an AVFrame"]
+        #[doc = " structure directly, without encoding it into a packet."]
+        #[doc = " It is mostly useful for devices and similar special muxers that use raw"]
+        #[doc = " video or PCM data and will not serialize it into a byte stream."]
+        #[doc = ""]
+        #[doc = " To test whether it is possible to use it with a given muxer and stream,"]
+        #[doc = " use av_write_uncoded_frame_query()."]
+        #[doc = ""]
+        #[doc = " The caller gives up ownership of the frame and must not access it"]
+        #[doc = " afterwards."]
+        #[doc = ""]
+        #[doc = " @return  >=0 for success, a negative code on error"]
+        pub fn av_interleaved_write_uncoded_frame(
+            s: *mut root::AVFormatContext,
+            stream_index: ::std::os::raw::c_int,
+            frame: *mut root::AVFrame,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Test whether a muxer supports uncoded frame."]
+        #[doc = ""]
+        #[doc = " @return  >=0 if an uncoded frame can be written to that muxer and stream,"]
+        #[doc = "          <0 if not"]
+        pub fn av_write_uncoded_frame_query(
+            s: *mut root::AVFormatContext,
+            stream_index: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Write the stream trailer to an output media file and free the"]
+        #[doc = " file private data."]
+        #[doc = ""]
+        #[doc = " May only be called after a successful call to avformat_write_header."]
+        #[doc = ""]
+        #[doc = " @param s media file handle"]
+        #[doc = " @return 0 if OK, AVERROR_xxx on error"]
+        pub fn av_write_trailer(s: *mut root::AVFormatContext) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Return the output format in the list of registered output formats"]
+        #[doc = " which best matches the provided parameters, or return NULL if"]
+        #[doc = " there is no match."]
+        #[doc = ""]
+        #[doc = " @param short_name if non-NULL checks if short_name matches with the"]
+        #[doc = " names of the registered formats"]
+        #[doc = " @param filename if non-NULL checks if filename terminates with the"]
+        #[doc = " extensions of the registered formats"]
+        #[doc = " @param mime_type if non-NULL checks if mime_type matches with the"]
+        #[doc = " MIME type of the registered formats"]
+        pub fn av_guess_format(
+            short_name: *const ::std::os::raw::c_char,
+            filename: *const ::std::os::raw::c_char,
+            mime_type: *const ::std::os::raw::c_char,
+        ) -> *const root::AVOutputFormat;
+    }
+    extern "C" {
+        #[doc = " Guess the codec ID based upon muxer and filename."]
+        pub fn av_guess_codec(
+            fmt: *const root::AVOutputFormat,
+            short_name: *const ::std::os::raw::c_char,
+            filename: *const ::std::os::raw::c_char,
+            mime_type: *const ::std::os::raw::c_char,
+            type_: root::AVMediaType,
+        ) -> root::AVCodecID;
+    }
+    extern "C" {
+        #[doc = " Get timing information for the data currently output."]
+        #[doc = " The exact meaning of \"currently output\" depends on the format."]
+        #[doc = " It is mostly relevant for devices that have an internal buffer and/or"]
+        #[doc = " work in real time."]
+        #[doc = " @param s          media file handle"]
+        #[doc = " @param stream     stream in the media file"]
+        #[doc = " @param[out] dts   DTS of the last packet output for the stream, in stream"]
+        #[doc = "                   time_base units"]
+        #[doc = " @param[out] wall  absolute time when that packet whas output,"]
+        #[doc = "                   in microsecond"]
+        #[doc = " @return  0 if OK, AVERROR(ENOSYS) if the format does not support it"]
+        #[doc = " Note: some formats or devices may not allow to measure dts and wall"]
+        #[doc = " atomically."]
+        pub fn av_get_output_timestamp(
+            s: *mut root::AVFormatContext,
+            stream: ::std::os::raw::c_int,
+            dts: *mut i64,
+            wall: *mut i64,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Send a nice hexadecimal dump of a buffer to the specified file stream."]
+        #[doc = ""]
+        #[doc = " @param f The file stream pointer where the dump should be sent to."]
+        #[doc = " @param buf buffer"]
+        #[doc = " @param size buffer size"]
+        #[doc = ""]
+        #[doc = " @see av_hex_dump_log, av_pkt_dump2, av_pkt_dump_log2"]
+        pub fn av_hex_dump(f: *mut root::FILE, buf: *const u8, size: ::std::os::raw::c_int);
+    }
+    extern "C" {
+        #[doc = " Send a nice hexadecimal dump of a buffer to the log."]
+        #[doc = ""]
+        #[doc = " @param avcl A pointer to an arbitrary struct of which the first field is a"]
+        #[doc = " pointer to an AVClass struct."]
+        #[doc = " @param level The importance level of the message, lower values signifying"]
+        #[doc = " higher importance."]
+        #[doc = " @param buf buffer"]
+        #[doc = " @param size buffer size"]
+        #[doc = ""]
+        #[doc = " @see av_hex_dump, av_pkt_dump2, av_pkt_dump_log2"]
+        pub fn av_hex_dump_log(
+            avcl: *mut ::std::os::raw::c_void,
+            level: ::std::os::raw::c_int,
+            buf: *const u8,
+            size: ::std::os::raw::c_int,
+        );
+    }
+    extern "C" {
+        #[doc = " Send a nice dump of a packet to the specified file stream."]
+        #[doc = ""]
+        #[doc = " @param f The file stream pointer where the dump should be sent to."]
+        #[doc = " @param pkt packet to dump"]
+        #[doc = " @param dump_payload True if the payload must be displayed, too."]
+        #[doc = " @param st AVStream that the packet belongs to"]
+        pub fn av_pkt_dump2(
+            f: *mut root::FILE,
+            pkt: *const root::AVPacket,
+            dump_payload: ::std::os::raw::c_int,
+            st: *const root::AVStream,
+        );
+    }
+    extern "C" {
+        #[doc = " Send a nice dump of a packet to the log."]
+        #[doc = ""]
+        #[doc = " @param avcl A pointer to an arbitrary struct of which the first field is a"]
+        #[doc = " pointer to an AVClass struct."]
+        #[doc = " @param level The importance level of the message, lower values signifying"]
+        #[doc = " higher importance."]
+        #[doc = " @param pkt packet to dump"]
+        #[doc = " @param dump_payload True if the payload must be displayed, too."]
+        #[doc = " @param st AVStream that the packet belongs to"]
+        pub fn av_pkt_dump_log2(
+            avcl: *mut ::std::os::raw::c_void,
+            level: ::std::os::raw::c_int,
+            pkt: *const root::AVPacket,
+            dump_payload: ::std::os::raw::c_int,
+            st: *const root::AVStream,
+        );
+    }
+    extern "C" {
+        #[doc = " Get the AVCodecID for the given codec tag tag."]
+        #[doc = " If no codec id is found returns AV_CODEC_ID_NONE."]
+        #[doc = ""]
+        #[doc = " @param tags list of supported codec_id-codec_tag pairs, as stored"]
+        #[doc = " in AVInputFormat.codec_tag and AVOutputFormat.codec_tag"]
+        #[doc = " @param tag  codec tag to match to a codec ID"]
+        pub fn av_codec_get_id(
+            tags: *const *const root::AVCodecTag,
+            tag: ::std::os::raw::c_uint,
+        ) -> root::AVCodecID;
+    }
+    extern "C" {
+        #[doc = " Get the codec tag for the given codec id id."]
+        #[doc = " If no codec tag is found returns 0."]
+        #[doc = ""]
+        #[doc = " @param tags list of supported codec_id-codec_tag pairs, as stored"]
+        #[doc = " in AVInputFormat.codec_tag and AVOutputFormat.codec_tag"]
+        #[doc = " @param id   codec ID to match to a codec tag"]
+        pub fn av_codec_get_tag(
+            tags: *const *const root::AVCodecTag,
+            id: root::AVCodecID,
+        ) -> ::std::os::raw::c_uint;
+    }
+    extern "C" {
+        #[doc = " Get the codec tag for the given codec id."]
+        #[doc = ""]
+        #[doc = " @param tags list of supported codec_id - codec_tag pairs, as stored"]
+        #[doc = " in AVInputFormat.codec_tag and AVOutputFormat.codec_tag"]
+        #[doc = " @param id codec id that should be searched for in the list"]
+        #[doc = " @param tag A pointer to the found tag"]
+        #[doc = " @return 0 if id was not found in tags, > 0 if it was found"]
+        pub fn av_codec_get_tag2(
+            tags: *const *const root::AVCodecTag,
+            id: root::AVCodecID,
+            tag: *mut ::std::os::raw::c_uint,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        pub fn av_find_default_stream_index(s: *mut root::AVFormatContext)
+            -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Get the index for a specific timestamp."]
+        #[doc = ""]
+        #[doc = " @param st        stream that the timestamp belongs to"]
+        #[doc = " @param timestamp timestamp to retrieve the index for"]
+        #[doc = " @param flags if AVSEEK_FLAG_BACKWARD then the returned index will correspond"]
+        #[doc = "                 to the timestamp which is <= the requested one, if backward"]
+        #[doc = "                 is 0, then it will be >="]
+        #[doc = "              if AVSEEK_FLAG_ANY seek to any frame, only keyframes otherwise"]
+        #[doc = " @return < 0 if no such timestamp could be found"]
+        pub fn av_index_search_timestamp(
+            st: *mut root::AVStream,
+            timestamp: i64,
+            flags: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Get the index entry count for the given AVStream."]
+        #[doc = ""]
+        #[doc = " @param st stream"]
+        #[doc = " @return the number of index entries in the stream"]
+        pub fn avformat_index_get_entries_count(st: *const root::AVStream)
+            -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Get the AVIndexEntry corresponding to the given index."]
+        #[doc = ""]
+        #[doc = " @param st          Stream containing the requested AVIndexEntry."]
+        #[doc = " @param idx         The desired index."]
+        #[doc = " @return A pointer to the requested AVIndexEntry if it exists, NULL otherwise."]
+        #[doc = ""]
+        #[doc = " @note The pointer returned by this function is only guaranteed to be valid"]
+        #[doc = "       until any function that takes the stream or the parent AVFormatContext"]
+        #[doc = "       as input argument is called."]
+        pub fn avformat_index_get_entry(
+            st: *mut root::AVStream,
+            idx: ::std::os::raw::c_int,
+        ) -> *const root::AVIndexEntry;
+    }
+    extern "C" {
+        #[doc = " Get the AVIndexEntry corresponding to the given timestamp."]
+        #[doc = ""]
+        #[doc = " @param st          Stream containing the requested AVIndexEntry."]
+        #[doc = " @param timestamp   Timestamp to retrieve the index entry for."]
+        #[doc = " @param flags       If AVSEEK_FLAG_BACKWARD then the returned entry will correspond"]
+        #[doc = "                    to the timestamp which is <= the requested one, if backward"]
+        #[doc = "                    is 0, then it will be >="]
+        #[doc = "                    if AVSEEK_FLAG_ANY seek to any frame, only keyframes otherwise."]
+        #[doc = " @return A pointer to the requested AVIndexEntry if it exists, NULL otherwise."]
+        #[doc = ""]
+        #[doc = " @note The pointer returned by this function is only guaranteed to be valid"]
+        #[doc = "       until any function that takes the stream or the parent AVFormatContext"]
+        #[doc = "       as input argument is called."]
+        pub fn avformat_index_get_entry_from_timestamp(
+            st: *mut root::AVStream,
+            wanted_timestamp: i64,
+            flags: ::std::os::raw::c_int,
+        ) -> *const root::AVIndexEntry;
+    }
+    extern "C" {
+        #[doc = " Add an index entry into a sorted list. Update the entry if the list"]
+        #[doc = " already contains it."]
+        #[doc = ""]
+        #[doc = " @param timestamp timestamp in the time base of the given stream"]
+        pub fn av_add_index_entry(
+            st: *mut root::AVStream,
+            pos: i64,
+            timestamp: i64,
+            size: ::std::os::raw::c_int,
+            distance: ::std::os::raw::c_int,
+            flags: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Split a URL string into components."]
+        #[doc = ""]
+        #[doc = " The pointers to buffers for storing individual components may be null,"]
+        #[doc = " in order to ignore that component. Buffers for components not found are"]
+        #[doc = " set to empty strings. If the port is not found, it is set to a negative"]
+        #[doc = " value."]
+        #[doc = ""]
+        #[doc = " @param proto the buffer for the protocol"]
+        #[doc = " @param proto_size the size of the proto buffer"]
+        #[doc = " @param authorization the buffer for the authorization"]
+        #[doc = " @param authorization_size the size of the authorization buffer"]
+        #[doc = " @param hostname the buffer for the host name"]
+        #[doc = " @param hostname_size the size of the hostname buffer"]
+        #[doc = " @param port_ptr a pointer to store the port number in"]
+        #[doc = " @param path the buffer for the path"]
+        #[doc = " @param path_size the size of the path buffer"]
+        #[doc = " @param url the URL to split"]
+        pub fn av_url_split(
+            proto: *mut ::std::os::raw::c_char,
+            proto_size: ::std::os::raw::c_int,
+            authorization: *mut ::std::os::raw::c_char,
+            authorization_size: ::std::os::raw::c_int,
+            hostname: *mut ::std::os::raw::c_char,
+            hostname_size: ::std::os::raw::c_int,
+            port_ptr: *mut ::std::os::raw::c_int,
+            path: *mut ::std::os::raw::c_char,
+            path_size: ::std::os::raw::c_int,
+            url: *const ::std::os::raw::c_char,
+        );
+    }
+    extern "C" {
+        #[doc = " Print detailed information about the input or output format, such as"]
+        #[doc = " duration, bitrate, streams, container, programs, metadata, side data,"]
+        #[doc = " codec and time base."]
+        #[doc = ""]
+        #[doc = " @param ic        the context to analyze"]
+        #[doc = " @param index     index of the stream to dump information about"]
+        #[doc = " @param url       the URL to print, such as source or destination file"]
+        #[doc = " @param is_output Select whether the specified context is an input(0) or output(1)"]
+        pub fn av_dump_format(
+            ic: *mut root::AVFormatContext,
+            index: ::std::os::raw::c_int,
+            url: *const ::std::os::raw::c_char,
+            is_output: ::std::os::raw::c_int,
+        );
+    }
+    extern "C" {
+        #[doc = " Return in 'buf' the path with '%d' replaced by a number."]
+        #[doc = ""]
+        #[doc = " Also handles the '%0nd' format where 'n' is the total number"]
+        #[doc = " of digits and '%%'."]
+        #[doc = ""]
+        #[doc = " @param buf destination buffer"]
+        #[doc = " @param buf_size destination buffer size"]
+        #[doc = " @param path numbered sequence string"]
+        #[doc = " @param number frame number"]
+        #[doc = " @param flags AV_FRAME_FILENAME_FLAGS_*"]
+        #[doc = " @return 0 if OK, -1 on format error"]
+        pub fn av_get_frame_filename2(
+            buf: *mut ::std::os::raw::c_char,
+            buf_size: ::std::os::raw::c_int,
+            path: *const ::std::os::raw::c_char,
+            number: ::std::os::raw::c_int,
+            flags: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        pub fn av_get_frame_filename(
+            buf: *mut ::std::os::raw::c_char,
+            buf_size: ::std::os::raw::c_int,
+            path: *const ::std::os::raw::c_char,
+            number: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Check whether filename actually is a numbered sequence generator."]
+        #[doc = ""]
+        #[doc = " @param filename possible numbered sequence string"]
+        #[doc = " @return 1 if a valid numbered sequence string, 0 otherwise"]
+        pub fn av_filename_number_test(
+            filename: *const ::std::os::raw::c_char,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Generate an SDP for an RTP session."]
+        #[doc = ""]
+        #[doc = " Note, this overwrites the id values of AVStreams in the muxer contexts"]
+        #[doc = " for getting unique dynamic payload types."]
+        #[doc = ""]
+        #[doc = " @param ac array of AVFormatContexts describing the RTP streams. If the"]
+        #[doc = "           array is composed by only one context, such context can contain"]
+        #[doc = "           multiple AVStreams (one AVStream per RTP stream). Otherwise,"]
+        #[doc = "           all the contexts in the array (an AVCodecContext per RTP stream)"]
+        #[doc = "           must contain only one AVStream."]
+        #[doc = " @param n_files number of AVCodecContexts contained in ac"]
+        #[doc = " @param buf buffer where the SDP will be stored (must be allocated by"]
+        #[doc = "            the caller)"]
+        #[doc = " @param size the size of the buffer"]
+        #[doc = " @return 0 if OK, AVERROR_xxx on error"]
+        pub fn av_sdp_create(
+            ac: *mut *mut root::AVFormatContext,
+            n_files: ::std::os::raw::c_int,
+            buf: *mut ::std::os::raw::c_char,
+            size: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Return a positive value if the given filename has one of the given"]
+        #[doc = " extensions, 0 otherwise."]
+        #[doc = ""]
+        #[doc = " @param filename   file name to check against the given extensions"]
+        #[doc = " @param extensions a comma-separated list of filename extensions"]
+        pub fn av_match_ext(
+            filename: *const ::std::os::raw::c_char,
+            extensions: *const ::std::os::raw::c_char,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Test if the given container can store a codec."]
+        #[doc = ""]
+        #[doc = " @param ofmt           container to check for compatibility"]
+        #[doc = " @param codec_id       codec to potentially store in container"]
+        #[doc = " @param std_compliance standards compliance level, one of FF_COMPLIANCE_*"]
+        #[doc = ""]
+        #[doc = " @return 1 if codec with ID codec_id can be stored in ofmt, 0 if it cannot."]
+        #[doc = "         A negative number if this information is not available."]
+        pub fn avformat_query_codec(
+            ofmt: *const root::AVOutputFormat,
+            codec_id: root::AVCodecID,
+            std_compliance: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " @defgroup riff_fourcc RIFF FourCCs"]
+        #[doc = " @{"]
+        #[doc = " Get the tables mapping RIFF FourCCs to libavcodec AVCodecIDs. The tables are"]
+        #[doc = " meant to be passed to av_codec_get_id()/av_codec_get_tag() as in the"]
+        #[doc = " following code:"]
+        #[doc = " @code"]
+        #[doc = " uint32_t tag = MKTAG('H', '2', '6', '4');"]
+        #[doc = " const struct AVCodecTag *table[] = { avformat_get_riff_video_tags(), 0 };"]
+        #[doc = " enum AVCodecID id = av_codec_get_id(table, tag);"]
+        #[doc = " @endcode"]
+        #[doc = " @return the table mapping RIFF FourCCs for video to libavcodec AVCodecID."]
+        pub fn avformat_get_riff_video_tags() -> *const root::AVCodecTag;
+    }
+    extern "C" {
+        #[doc = " @return the table mapping RIFF FourCCs for audio to AVCodecID."]
+        pub fn avformat_get_riff_audio_tags() -> *const root::AVCodecTag;
+    }
+    extern "C" {
+        #[doc = " @return the table mapping MOV FourCCs for video to libavcodec AVCodecID."]
+        pub fn avformat_get_mov_video_tags() -> *const root::AVCodecTag;
+    }
+    extern "C" {
+        #[doc = " @return the table mapping MOV FourCCs for audio to AVCodecID."]
+        pub fn avformat_get_mov_audio_tags() -> *const root::AVCodecTag;
+    }
+    extern "C" {
+        #[doc = " Guess the sample aspect ratio of a frame, based on both the stream and the"]
+        #[doc = " frame aspect ratio."]
+        #[doc = ""]
+        #[doc = " Since the frame aspect ratio is set by the codec but the stream aspect ratio"]
+        #[doc = " is set by the demuxer, these two may not be equal. This function tries to"]
+        #[doc = " return the value that you should use if you would like to display the frame."]
+        #[doc = ""]
+        #[doc = " Basic logic is to use the stream aspect ratio if it is set to something sane"]
+        #[doc = " otherwise use the frame aspect ratio. This way a container setting, which is"]
+        #[doc = " usually easy to modify can override the coded value in the frames."]
+        #[doc = ""]
+        #[doc = " @param format the format context which the stream is part of"]
+        #[doc = " @param stream the stream which the frame is part of"]
+        #[doc = " @param frame the frame with the aspect ratio to be determined"]
+        #[doc = " @return the guessed (valid) sample_aspect_ratio, 0/1 if no idea"]
+        pub fn av_guess_sample_aspect_ratio(
+            format: *mut root::AVFormatContext,
+            stream: *mut root::AVStream,
+            frame: *mut root::AVFrame,
+        ) -> root::AVRational;
+    }
+    extern "C" {
+        #[doc = " Guess the frame rate, based on both the container and codec information."]
+        #[doc = ""]
+        #[doc = " @param ctx the format context which the stream is part of"]
+        #[doc = " @param stream the stream which the frame is part of"]
+        #[doc = " @param frame the frame for which the frame rate should be determined, may be NULL"]
+        #[doc = " @return the guessed (valid) frame rate, 0/1 if no idea"]
+        pub fn av_guess_frame_rate(
+            ctx: *mut root::AVFormatContext,
+            stream: *mut root::AVStream,
+            frame: *mut root::AVFrame,
+        ) -> root::AVRational;
+    }
+    extern "C" {
+        #[doc = " Check if the stream st contained in s is matched by the stream specifier"]
+        #[doc = " spec."]
+        #[doc = ""]
+        #[doc = " See the \"stream specifiers\" chapter in the documentation for the syntax"]
+        #[doc = " of spec."]
+        #[doc = ""]
+        #[doc = " @return  >0 if st is matched by spec;"]
+        #[doc = "          0  if st is not matched by spec;"]
+        #[doc = "          AVERROR code if spec is invalid"]
+        #[doc = ""]
+        #[doc = " @note  A stream specifier can match several streams in the format."]
+        pub fn avformat_match_stream_specifier(
+            s: *mut root::AVFormatContext,
+            st: *mut root::AVStream,
+            spec: *const ::std::os::raw::c_char,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        pub fn avformat_queue_attached_pictures(
+            s: *mut root::AVFormatContext,
+        ) -> ::std::os::raw::c_int;
+    }
+    pub const AVTimebaseSource_AVFMT_TBCF_AUTO: root::AVTimebaseSource = -1;
+    pub const AVTimebaseSource_AVFMT_TBCF_DECODER: root::AVTimebaseSource = 0;
+    pub const AVTimebaseSource_AVFMT_TBCF_DEMUXER: root::AVTimebaseSource = 1;
+    pub const AVTimebaseSource_AVFMT_TBCF_R_FRAMERATE: root::AVTimebaseSource = 2;
+    pub type AVTimebaseSource = ::std::os::raw::c_int;
+    extern "C" {
+        #[doc = " Transfer internal timing information from one stream to another."]
+        #[doc = ""]
+        #[doc = " This function is useful when doing stream copy."]
+        #[doc = ""]
+        #[doc = " @param ofmt     target output format for ost"]
+        #[doc = " @param ost      output stream which needs timings copy and adjustments"]
+        #[doc = " @param ist      reference input stream to copy timings from"]
+        #[doc = " @param copy_tb  define from where the stream codec timebase needs to be imported"]
+        pub fn avformat_transfer_internal_stream_timing_info(
+            ofmt: *const root::AVOutputFormat,
+            ost: *mut root::AVStream,
+            ist: *const root::AVStream,
+            copy_tb: root::AVTimebaseSource,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Get the internal codec timebase from a stream."]
+        #[doc = ""]
+        #[doc = " @param st  input stream to extract the timebase from"]
+        pub fn av_stream_get_codec_timebase(st: *const root::AVStream) -> root::AVRational;
+    }
+    extern "C" {
+        #[doc = " Return the LIBAVDEVICE_VERSION_INT constant."]
+        pub fn avdevice_version() -> ::std::os::raw::c_uint;
+    }
+    extern "C" {
+        #[doc = " Return the libavdevice build-time configuration."]
+        pub fn avdevice_configuration() -> *const ::std::os::raw::c_char;
+    }
+    extern "C" {
+        #[doc = " Return the libavdevice license."]
+        pub fn avdevice_license() -> *const ::std::os::raw::c_char;
+    }
+    extern "C" {
+        #[doc = " Initialize libavdevice and register all the input and output devices."]
+        pub fn avdevice_register_all();
+    }
+    extern "C" {
+        #[doc = " Audio input devices iterator."]
+        #[doc = ""]
+        #[doc = " If d is NULL, returns the first registered input audio/video device,"]
+        #[doc = " if d is non-NULL, returns the next registered input audio/video device after d"]
+        #[doc = " or NULL if d is the last one."]
+        pub fn av_input_audio_device_next(
+            d: *const root::AVInputFormat,
+        ) -> *const root::AVInputFormat;
+    }
+    extern "C" {
+        #[doc = " Video input devices iterator."]
+        #[doc = ""]
+        #[doc = " If d is NULL, returns the first registered input audio/video device,"]
+        #[doc = " if d is non-NULL, returns the next registered input audio/video device after d"]
+        #[doc = " or NULL if d is the last one."]
+        pub fn av_input_video_device_next(
+            d: *const root::AVInputFormat,
+        ) -> *const root::AVInputFormat;
+    }
+    extern "C" {
+        #[doc = " Audio output devices iterator."]
+        #[doc = ""]
+        #[doc = " If d is NULL, returns the first registered output audio/video device,"]
+        #[doc = " if d is non-NULL, returns the next registered output audio/video device after d"]
+        #[doc = " or NULL if d is the last one."]
+        pub fn av_output_audio_device_next(
+            d: *const root::AVOutputFormat,
+        ) -> *const root::AVOutputFormat;
+    }
+    extern "C" {
+        #[doc = " Video output devices iterator."]
+        #[doc = ""]
+        #[doc = " If d is NULL, returns the first registered output audio/video device,"]
+        #[doc = " if d is non-NULL, returns the next registered output audio/video device after d"]
+        #[doc = " or NULL if d is the last one."]
+        pub fn av_output_video_device_next(
+            d: *const root::AVOutputFormat,
+        ) -> *const root::AVOutputFormat;
+    }
+    #[repr(C)]
+    #[derive(Debug, Default, Copy, Clone)]
+    pub struct AVDeviceRect {
+        #[doc = "< x coordinate of top left corner"]
+        pub x: ::std::os::raw::c_int,
+        #[doc = "< y coordinate of top left corner"]
+        pub y: ::std::os::raw::c_int,
+        #[doc = "< width"]
+        pub width: ::std::os::raw::c_int,
+        #[doc = "< height"]
+        pub height: ::std::os::raw::c_int,
+    }
+    #[doc = " Dummy message."]
+    pub const AVAppToDevMessageType_AV_APP_TO_DEV_NONE: root::AVAppToDevMessageType = 1313820229;
+    #[doc = " Window size change message."]
+    #[doc = ""]
+    #[doc = " Message is sent to the device every time the application changes the size"]
+    #[doc = " of the window device renders to."]
+    #[doc = " Message should also be sent right after window is created."]
+    #[doc = ""]
+    #[doc = " data: AVDeviceRect: new window size."]
+    pub const AVAppToDevMessageType_AV_APP_TO_DEV_WINDOW_SIZE: root::AVAppToDevMessageType =
+        1195724621;
+    #[doc = " Repaint request message."]
+    #[doc = ""]
+    #[doc = " Message is sent to the device when window has to be repainted."]
+    #[doc = ""]
+    #[doc = " data: AVDeviceRect: area required to be repainted."]
+    #[doc = "       NULL: whole area is required to be repainted."]
+    pub const AVAppToDevMessageType_AV_APP_TO_DEV_WINDOW_REPAINT: root::AVAppToDevMessageType =
+        1380274241;
+    #[doc = " Request pause/play."]
+    #[doc = ""]
+    #[doc = " Application requests pause/unpause playback."]
+    #[doc = " Mostly usable with devices that have internal buffer."]
+    #[doc = " By default devices are not paused."]
+    #[doc = ""]
+    #[doc = " data: NULL"]
+    pub const AVAppToDevMessageType_AV_APP_TO_DEV_PAUSE: root::AVAppToDevMessageType = 1346458912;
+    #[doc = " Request pause/play."]
+    #[doc = ""]
+    #[doc = " Application requests pause/unpause playback."]
+    #[doc = " Mostly usable with devices that have internal buffer."]
+    #[doc = " By default devices are not paused."]
+    #[doc = ""]
+    #[doc = " data: NULL"]
+    pub const AVAppToDevMessageType_AV_APP_TO_DEV_PLAY: root::AVAppToDevMessageType = 1347174745;
+    #[doc = " Request pause/play."]
+    #[doc = ""]
+    #[doc = " Application requests pause/unpause playback."]
+    #[doc = " Mostly usable with devices that have internal buffer."]
+    #[doc = " By default devices are not paused."]
+    #[doc = ""]
+    #[doc = " data: NULL"]
+    pub const AVAppToDevMessageType_AV_APP_TO_DEV_TOGGLE_PAUSE: root::AVAppToDevMessageType =
+        1346458964;
+    #[doc = " Volume control message."]
+    #[doc = ""]
+    #[doc = " Set volume level. It may be device-dependent if volume"]
+    #[doc = " is changed per stream or system wide. Per stream volume"]
+    #[doc = " change is expected when possible."]
+    #[doc = ""]
+    #[doc = " data: double: new volume with range of 0.0 - 1.0."]
+    pub const AVAppToDevMessageType_AV_APP_TO_DEV_SET_VOLUME: root::AVAppToDevMessageType =
+        1398165324;
+    #[doc = " Mute control messages."]
+    #[doc = ""]
+    #[doc = " Change mute state. It may be device-dependent if mute status"]
+    #[doc = " is changed per stream or system wide. Per stream mute status"]
+    #[doc = " change is expected when possible."]
+    #[doc = ""]
+    #[doc = " data: NULL."]
+    pub const AVAppToDevMessageType_AV_APP_TO_DEV_MUTE: root::AVAppToDevMessageType = 541939028;
+    #[doc = " Mute control messages."]
+    #[doc = ""]
+    #[doc = " Change mute state. It may be device-dependent if mute status"]
+    #[doc = " is changed per stream or system wide. Per stream mute status"]
+    #[doc = " change is expected when possible."]
+    #[doc = ""]
+    #[doc = " data: NULL."]
+    pub const AVAppToDevMessageType_AV_APP_TO_DEV_UNMUTE: root::AVAppToDevMessageType = 1431131476;
+    #[doc = " Mute control messages."]
+    #[doc = ""]
+    #[doc = " Change mute state. It may be device-dependent if mute status"]
+    #[doc = " is changed per stream or system wide. Per stream mute status"]
+    #[doc = " change is expected when possible."]
+    #[doc = ""]
+    #[doc = " data: NULL."]
+    pub const AVAppToDevMessageType_AV_APP_TO_DEV_TOGGLE_MUTE: root::AVAppToDevMessageType =
+        1414354260;
+    #[doc = " Get volume/mute messages."]
+    #[doc = ""]
+    #[doc = " Force the device to send AV_DEV_TO_APP_VOLUME_LEVEL_CHANGED or"]
+    #[doc = " AV_DEV_TO_APP_MUTE_STATE_CHANGED command respectively."]
+    #[doc = ""]
+    #[doc = " data: NULL."]
+    pub const AVAppToDevMessageType_AV_APP_TO_DEV_GET_VOLUME: root::AVAppToDevMessageType =
+        1196838732;
+    #[doc = " Get volume/mute messages."]
+    #[doc = ""]
+    #[doc = " Force the device to send AV_DEV_TO_APP_VOLUME_LEVEL_CHANGED or"]
+    #[doc = " AV_DEV_TO_APP_MUTE_STATE_CHANGED command respectively."]
+    #[doc = ""]
+    #[doc = " data: NULL."]
+    pub const AVAppToDevMessageType_AV_APP_TO_DEV_GET_MUTE: root::AVAppToDevMessageType =
+        1196250452;
+    #[doc = " Message types used by avdevice_app_to_dev_control_message()."]
+    pub type AVAppToDevMessageType = ::std::os::raw::c_uint;
+    #[doc = " Dummy message."]
+    pub const AVDevToAppMessageType_AV_DEV_TO_APP_NONE: root::AVDevToAppMessageType = 1313820229;
+    #[doc = " Create window buffer message."]
+    #[doc = ""]
+    #[doc = " Device requests to create a window buffer. Exact meaning is device-"]
+    #[doc = " and application-dependent. Message is sent before rendering first"]
+    #[doc = " frame and all one-shot initializations should be done here."]
+    #[doc = " Application is allowed to ignore preferred window buffer size."]
+    #[doc = ""]
+    #[doc = " @note: Application is obligated to inform about window buffer size"]
+    #[doc = "        with AV_APP_TO_DEV_WINDOW_SIZE message."]
+    #[doc = ""]
+    #[doc = " data: AVDeviceRect: preferred size of the window buffer."]
+    #[doc = "       NULL: no preferred size of the window buffer."]
+    pub const AVDevToAppMessageType_AV_DEV_TO_APP_CREATE_WINDOW_BUFFER:
+        root::AVDevToAppMessageType = 1111708229;
+    #[doc = " Prepare window buffer message."]
+    #[doc = ""]
+    #[doc = " Device requests to prepare a window buffer for rendering."]
+    #[doc = " Exact meaning is device- and application-dependent."]
+    #[doc = " Message is sent before rendering of each frame."]
+    #[doc = ""]
+    #[doc = " data: NULL."]
+    pub const AVDevToAppMessageType_AV_DEV_TO_APP_PREPARE_WINDOW_BUFFER:
+        root::AVDevToAppMessageType = 1112560197;
+    #[doc = " Display window buffer message."]
+    #[doc = ""]
+    #[doc = " Device requests to display a window buffer."]
+    #[doc = " Message is sent when new frame is ready to be displayed."]
+    #[doc = " Usually buffers need to be swapped in handler of this message."]
+    #[doc = ""]
+    #[doc = " data: NULL."]
+    pub const AVDevToAppMessageType_AV_DEV_TO_APP_DISPLAY_WINDOW_BUFFER:
+        root::AVDevToAppMessageType = 1111771475;
+    #[doc = " Destroy window buffer message."]
+    #[doc = ""]
+    #[doc = " Device requests to destroy a window buffer."]
+    #[doc = " Message is sent when device is about to be destroyed and window"]
+    #[doc = " buffer is not required anymore."]
+    #[doc = ""]
+    #[doc = " data: NULL."]
+    pub const AVDevToAppMessageType_AV_DEV_TO_APP_DESTROY_WINDOW_BUFFER:
+        root::AVDevToAppMessageType = 1111770451;
+    #[doc = " Buffer fullness status messages."]
+    #[doc = ""]
+    #[doc = " Device signals buffer overflow/underflow."]
+    #[doc = ""]
+    #[doc = " data: NULL."]
+    pub const AVDevToAppMessageType_AV_DEV_TO_APP_BUFFER_OVERFLOW: root::AVDevToAppMessageType =
+        1112491596;
+    #[doc = " Buffer fullness status messages."]
+    #[doc = ""]
+    #[doc = " Device signals buffer overflow/underflow."]
+    #[doc = ""]
+    #[doc = " data: NULL."]
+    pub const AVDevToAppMessageType_AV_DEV_TO_APP_BUFFER_UNDERFLOW: root::AVDevToAppMessageType =
+        1112884812;
+    #[doc = " Buffer readable/writable."]
+    #[doc = ""]
+    #[doc = " Device informs that buffer is readable/writable."]
+    #[doc = " When possible, device informs how many bytes can be read/write."]
+    #[doc = ""]
+    #[doc = " @warning Device may not inform when number of bytes than can be read/write changes."]
+    #[doc = ""]
+    #[doc = " data: int64_t: amount of bytes available to read/write."]
+    #[doc = "       NULL: amount of bytes available to read/write is not known."]
+    pub const AVDevToAppMessageType_AV_DEV_TO_APP_BUFFER_READABLE: root::AVDevToAppMessageType =
+        1112687648;
+    #[doc = " Buffer readable/writable."]
+    #[doc = ""]
+    #[doc = " Device informs that buffer is readable/writable."]
+    #[doc = " When possible, device informs how many bytes can be read/write."]
+    #[doc = ""]
+    #[doc = " @warning Device may not inform when number of bytes than can be read/write changes."]
+    #[doc = ""]
+    #[doc = " data: int64_t: amount of bytes available to read/write."]
+    #[doc = "       NULL: amount of bytes available to read/write is not known."]
+    pub const AVDevToAppMessageType_AV_DEV_TO_APP_BUFFER_WRITABLE: root::AVDevToAppMessageType =
+        1113018912;
+    #[doc = " Mute state change message."]
+    #[doc = ""]
+    #[doc = " Device informs that mute state has changed."]
+    #[doc = ""]
+    #[doc = " data: int: 0 for not muted state, non-zero for muted state."]
+    pub const AVDevToAppMessageType_AV_DEV_TO_APP_MUTE_STATE_CHANGED: root::AVDevToAppMessageType =
+        1129141588;
+    #[doc = " Volume level change message."]
+    #[doc = ""]
+    #[doc = " Device informs that volume level has changed."]
+    #[doc = ""]
+    #[doc = " data: double: new volume with range of 0.0 - 1.0."]
+    pub const AVDevToAppMessageType_AV_DEV_TO_APP_VOLUME_LEVEL_CHANGED:
+        root::AVDevToAppMessageType = 1129729868;
+    #[doc = " Message types used by avdevice_dev_to_app_control_message()."]
+    pub type AVDevToAppMessageType = ::std::os::raw::c_uint;
+    extern "C" {
+        #[doc = " Send control message from application to device."]
+        #[doc = ""]
+        #[doc = " @param s         device context."]
+        #[doc = " @param type      message type."]
+        #[doc = " @param data      message data. Exact type depends on message type."]
+        #[doc = " @param data_size size of message data."]
+        #[doc = " @return >= 0 on success, negative on error."]
+        #[doc = "         AVERROR(ENOSYS) when device doesn't implement handler of the message."]
+        pub fn avdevice_app_to_dev_control_message(
+            s: *mut root::AVFormatContext,
+            type_: root::AVAppToDevMessageType,
+            data: *mut ::std::os::raw::c_void,
+            data_size: root::size_t,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Send control message from device to application."]
+        #[doc = ""]
+        #[doc = " @param s         device context."]
+        #[doc = " @param type      message type."]
+        #[doc = " @param data      message data. Can be NULL."]
+        #[doc = " @param data_size size of message data."]
+        #[doc = " @return >= 0 on success, negative on error."]
+        #[doc = "         AVERROR(ENOSYS) when application doesn't implement handler of the message."]
+        pub fn avdevice_dev_to_app_control_message(
+            s: *mut root::AVFormatContext,
+            type_: root::AVDevToAppMessageType,
+            data: *mut ::std::os::raw::c_void,
+            data_size: root::size_t,
+        ) -> ::std::os::raw::c_int;
+    }
+    #[doc = " Structure describes device capabilities."]
+    #[doc = ""]
+    #[doc = " It is used by devices in conjunction with av_device_capabilities AVOption table"]
+    #[doc = " to implement capabilities probing API based on AVOption API. Should not be used directly."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVDeviceCapabilitiesQuery {
+        pub av_class: *const root::AVClass,
+        pub device_context: *mut root::AVFormatContext,
+        pub codec: root::AVCodecID,
+        pub sample_format: root::AVSampleFormat,
+        pub pixel_format: root::AVPixelFormat,
+        pub sample_rate: ::std::os::raw::c_int,
+        pub channels: ::std::os::raw::c_int,
+        pub channel_layout: i64,
+        pub window_width: ::std::os::raw::c_int,
+        pub window_height: ::std::os::raw::c_int,
+        pub frame_width: ::std::os::raw::c_int,
+        pub frame_height: ::std::os::raw::c_int,
+        pub fps: root::AVRational,
+    }
+    impl Default for AVDeviceCapabilitiesQuery {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " AVOption table used by devices to implement device capabilities API. Should not be used by a user."]
+        pub static mut av_device_capabilities: [root::AVOption; 0usize];
+    }
+    extern "C" {
+        #[doc = " Initialize capabilities probing API based on AVOption API."]
+        #[doc = ""]
+        #[doc = " avdevice_capabilities_free() must be called when query capabilities API is"]
+        #[doc = " not used anymore."]
+        #[doc = ""]
+        #[doc = " @param[out] caps      Device capabilities data. Pointer to a NULL pointer must be passed."]
+        #[doc = " @param s              Context of the device."]
+        #[doc = " @param device_options An AVDictionary filled with device-private options."]
+        #[doc = "                       On return this parameter will be destroyed and replaced with a dict"]
+        #[doc = "                       containing options that were not found. May be NULL."]
+        #[doc = "                       The same options must be passed later to avformat_write_header() for output"]
+        #[doc = "                       devices or avformat_open_input() for input devices, or at any other place"]
+        #[doc = "                       that affects device-private options."]
+        #[doc = ""]
+        #[doc = " @return >= 0 on success, negative otherwise."]
+        pub fn avdevice_capabilities_create(
+            caps: *mut *mut root::AVDeviceCapabilitiesQuery,
+            s: *mut root::AVFormatContext,
+            device_options: *mut *mut root::AVDictionary,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Free resources created by avdevice_capabilities_create()"]
+        #[doc = ""]
+        #[doc = " @param caps Device capabilities data to be freed."]
+        #[doc = " @param s    Context of the device."]
+        pub fn avdevice_capabilities_free(
+            caps: *mut *mut root::AVDeviceCapabilitiesQuery,
+            s: *mut root::AVFormatContext,
+        );
+    }
+    #[doc = " Structure describes basic parameters of the device."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVDeviceInfo {
+        #[doc = "< device name, format depends on device"]
+        pub device_name: *mut ::std::os::raw::c_char,
+        #[doc = "< human friendly name"]
+        pub device_description: *mut ::std::os::raw::c_char,
+    }
+    impl Default for AVDeviceInfo {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    #[doc = " List of devices."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVDeviceInfoList {
+        #[doc = "< list of autodetected devices"]
+        pub devices: *mut *mut root::AVDeviceInfo,
+        #[doc = "< number of autodetected devices"]
+        pub nb_devices: ::std::os::raw::c_int,
+        #[doc = "< index of default device or -1 if no default"]
+        pub default_device: ::std::os::raw::c_int,
+    }
+    impl Default for AVDeviceInfoList {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " List devices."]
+        #[doc = ""]
+        #[doc = " Returns available device names and their parameters."]
+        #[doc = ""]
+        #[doc = " @note: Some devices may accept system-dependent device names that cannot be"]
+        #[doc = "        autodetected. The list returned by this function cannot be assumed to"]
+        #[doc = "        be always completed."]
+        #[doc = ""]
+        #[doc = " @param s                device context."]
+        #[doc = " @param[out] device_list list of autodetected devices."]
+        #[doc = " @return count of autodetected devices, negative on error."]
+        pub fn avdevice_list_devices(
+            s: *mut root::AVFormatContext,
+            device_list: *mut *mut root::AVDeviceInfoList,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Convenient function to free result of avdevice_list_devices()."]
+        #[doc = ""]
+        #[doc = " @param devices device list to be freed."]
+        pub fn avdevice_free_list_devices(device_list: *mut *mut root::AVDeviceInfoList);
+    }
+    extern "C" {
+        #[doc = " List devices."]
+        #[doc = ""]
+        #[doc = " Returns available device names and their parameters."]
+        #[doc = " These are convinient wrappers for avdevice_list_devices()."]
+        #[doc = " Device context is allocated and deallocated internally."]
+        #[doc = ""]
+        #[doc = " @param device           device format. May be NULL if device name is set."]
+        #[doc = " @param device_name      device name. May be NULL if device format is set."]
+        #[doc = " @param device_options   An AVDictionary filled with device-private options. May be NULL."]
+        #[doc = "                         The same options must be passed later to avformat_write_header() for output"]
+        #[doc = "                         devices or avformat_open_input() for input devices, or at any other place"]
+        #[doc = "                         that affects device-private options."]
+        #[doc = " @param[out] device_list list of autodetected devices"]
+        #[doc = " @return count of autodetected devices, negative on error."]
+        #[doc = " @note device argument takes precedence over device_name when both are set."]
+        pub fn avdevice_list_input_sources(
+            device: *const root::AVInputFormat,
+            device_name: *const ::std::os::raw::c_char,
+            device_options: *mut root::AVDictionary,
+            device_list: *mut *mut root::AVDeviceInfoList,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        pub fn avdevice_list_output_sinks(
+            device: *const root::AVOutputFormat,
+            device_name: *const ::std::os::raw::c_char,
+            device_options: *mut root::AVDictionary,
+            device_list: *mut *mut root::AVDeviceInfoList,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " @defgroup libsws libswscale"]
+        #[doc = " Color conversion and scaling library."]
+        #[doc = ""]
+        #[doc = " @{"]
+        #[doc = ""]
+        #[doc = " Return the LIBSWSCALE_VERSION_INT constant."]
+        pub fn swscale_version() -> ::std::os::raw::c_uint;
+    }
+    extern "C" {
+        #[doc = " Return the libswscale build-time configuration."]
+        pub fn swscale_configuration() -> *const ::std::os::raw::c_char;
+    }
+    extern "C" {
+        #[doc = " Return the libswscale license."]
+        pub fn swscale_license() -> *const ::std::os::raw::c_char;
+    }
+    extern "C" {
+        #[doc = " Return a pointer to yuv<->rgb coefficients for the given colorspace"]
+        #[doc = " suitable for sws_setColorspaceDetails()."]
+        #[doc = ""]
+        #[doc = " @param colorspace One of the SWS_CS_* macros. If invalid,"]
+        #[doc = " SWS_CS_DEFAULT is used."]
+        pub fn sws_getCoefficients(
+            colorspace: ::std::os::raw::c_int,
+        ) -> *const ::std::os::raw::c_int;
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct SwsVector {
+        #[doc = "< pointer to the list of coefficients"]
+        pub coeff: *mut f64,
+        #[doc = "< number of coefficients in the vector"]
+        pub length: ::std::os::raw::c_int,
+    }
+    impl Default for SwsVector {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct SwsFilter {
+        pub lumH: *mut root::SwsVector,
+        pub lumV: *mut root::SwsVector,
+        pub chrH: *mut root::SwsVector,
+        pub chrV: *mut root::SwsVector,
+    }
+    impl Default for SwsFilter {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct SwsContext {
+        _unused: [u8; 0],
+    }
+    extern "C" {
+        #[doc = " Return a positive value if pix_fmt is a supported input format, 0"]
+        #[doc = " otherwise."]
+        pub fn sws_isSupportedInput(pix_fmt: root::AVPixelFormat) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Return a positive value if pix_fmt is a supported output format, 0"]
+        #[doc = " otherwise."]
+        pub fn sws_isSupportedOutput(pix_fmt: root::AVPixelFormat) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " @param[in]  pix_fmt the pixel format"]
+        #[doc = " @return a positive value if an endianness conversion for pix_fmt is"]
+        #[doc = " supported, 0 otherwise."]
+        pub fn sws_isSupportedEndiannessConversion(
+            pix_fmt: root::AVPixelFormat,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Allocate an empty SwsContext. This must be filled and passed to"]
+        #[doc = " sws_init_context(). For filling see AVOptions, options.c and"]
+        #[doc = " sws_setColorspaceDetails()."]
+        pub fn sws_alloc_context() -> *mut root::SwsContext;
+    }
+    extern "C" {
+        #[doc = " Initialize the swscaler context sws_context."]
+        #[doc = ""]
+        #[doc = " @return zero or positive value on success, a negative value on"]
+        #[doc = " error"]
+        pub fn sws_init_context(
+            sws_context: *mut root::SwsContext,
+            srcFilter: *mut root::SwsFilter,
+            dstFilter: *mut root::SwsFilter,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Free the swscaler context swsContext."]
+        #[doc = " If swsContext is NULL, then does nothing."]
+        pub fn sws_freeContext(swsContext: *mut root::SwsContext);
+    }
+    extern "C" {
+        #[doc = " Allocate and return an SwsContext. You need it to perform"]
+        #[doc = " scaling/conversion operations using sws_scale()."]
+        #[doc = ""]
+        #[doc = " @param srcW the width of the source image"]
+        #[doc = " @param srcH the height of the source image"]
+        #[doc = " @param srcFormat the source image format"]
+        #[doc = " @param dstW the width of the destination image"]
+        #[doc = " @param dstH the height of the destination image"]
+        #[doc = " @param dstFormat the destination image format"]
+        #[doc = " @param flags specify which algorithm and options to use for rescaling"]
+        #[doc = " @param param extra parameters to tune the used scaler"]
+        #[doc = "              For SWS_BICUBIC param[0] and [1] tune the shape of the basis"]
+        #[doc = "              function, param[0] tunes f(1) and param[1] f´(1)"]
+        #[doc = "              For SWS_GAUSS param[0] tunes the exponent and thus cutoff"]
+        #[doc = "              frequency"]
+        #[doc = "              For SWS_LANCZOS param[0] tunes the width of the window function"]
+        #[doc = " @return a pointer to an allocated context, or NULL in case of error"]
+        #[doc = " @note this function is to be removed after a saner alternative is"]
+        #[doc = "       written"]
+        pub fn sws_getContext(
+            srcW: ::std::os::raw::c_int,
+            srcH: ::std::os::raw::c_int,
+            srcFormat: root::AVPixelFormat,
+            dstW: ::std::os::raw::c_int,
+            dstH: ::std::os::raw::c_int,
+            dstFormat: root::AVPixelFormat,
+            flags: ::std::os::raw::c_int,
+            srcFilter: *mut root::SwsFilter,
+            dstFilter: *mut root::SwsFilter,
+            param: *const f64,
+        ) -> *mut root::SwsContext;
+    }
+    extern "C" {
+        #[doc = " Scale the image slice in srcSlice and put the resulting scaled"]
+        #[doc = " slice in the image in dst. A slice is a sequence of consecutive"]
+        #[doc = " rows in an image."]
+        #[doc = ""]
+        #[doc = " Slices have to be provided in sequential order, either in"]
+        #[doc = " top-bottom or bottom-top order. If slices are provided in"]
+        #[doc = " non-sequential order the behavior of the function is undefined."]
+        #[doc = ""]
+        #[doc = " @param c         the scaling context previously created with"]
+        #[doc = "                  sws_getContext()"]
+        #[doc = " @param srcSlice  the array containing the pointers to the planes of"]
+        #[doc = "                  the source slice"]
+        #[doc = " @param srcStride the array containing the strides for each plane of"]
+        #[doc = "                  the source image"]
+        #[doc = " @param srcSliceY the position in the source image of the slice to"]
+        #[doc = "                  process, that is the number (counted starting from"]
+        #[doc = "                  zero) in the image of the first row of the slice"]
+        #[doc = " @param srcSliceH the height of the source slice, that is the number"]
+        #[doc = "                  of rows in the slice"]
+        #[doc = " @param dst       the array containing the pointers to the planes of"]
+        #[doc = "                  the destination image"]
+        #[doc = " @param dstStride the array containing the strides for each plane of"]
+        #[doc = "                  the destination image"]
+        #[doc = " @return          the height of the output slice"]
+        pub fn sws_scale(
+            c: *mut root::SwsContext,
+            srcSlice: *const *const u8,
+            srcStride: *const ::std::os::raw::c_int,
+            srcSliceY: ::std::os::raw::c_int,
+            srcSliceH: ::std::os::raw::c_int,
+            dst: *const *mut u8,
+            dstStride: *const ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Scale source data from src and write the output to dst."]
+        #[doc = ""]
+        #[doc = " This is merely a convenience wrapper around"]
+        #[doc = " - sws_frame_start()"]
+        #[doc = " - sws_send_slice(0, src->height)"]
+        #[doc = " - sws_receive_slice(0, dst->height)"]
+        #[doc = " - sws_frame_end()"]
+        #[doc = ""]
+        #[doc = " @param dst The destination frame. See documentation for sws_frame_start() for"]
+        #[doc = "            more details."]
+        #[doc = " @param src The source frame."]
+        #[doc = ""]
+        #[doc = " @return 0 on success, a negative AVERROR code on failure"]
+        pub fn sws_scale_frame(
+            c: *mut root::SwsContext,
+            dst: *mut root::AVFrame,
+            src: *const root::AVFrame,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Initialize the scaling process for a given pair of source/destination frames."]
+        #[doc = " Must be called before any calls to sws_send_slice() and sws_receive_slice()."]
+        #[doc = ""]
+        #[doc = " This function will retain references to src and dst, so they must both use"]
+        #[doc = " refcounted buffers (if allocated by the caller, in case of dst)."]
+        #[doc = ""]
+        #[doc = " @param dst The destination frame."]
+        #[doc = ""]
+        #[doc = "            The data buffers may either be already allocated by the caller or"]
+        #[doc = "            left clear, in which case they will be allocated by the scaler."]
+        #[doc = "            The latter may have performance advantages - e.g. in certain cases"]
+        #[doc = "            some output planes may be references to input planes, rather than"]
+        #[doc = "            copies."]
+        #[doc = ""]
+        #[doc = "            Output data will be written into this frame in successful"]
+        #[doc = "            sws_receive_slice() calls."]
+        #[doc = " @param src The source frame. The data buffers must be allocated, but the"]
+        #[doc = "            frame data does not have to be ready at this point. Data"]
+        #[doc = "            availability is then signalled by sws_send_slice()."]
+        #[doc = " @return 0 on success, a negative AVERROR code on failure"]
+        #[doc = ""]
+        #[doc = " @see sws_frame_end()"]
+        pub fn sws_frame_start(
+            c: *mut root::SwsContext,
+            dst: *mut root::AVFrame,
+            src: *const root::AVFrame,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Finish the scaling process for a pair of source/destination frames previously"]
+        #[doc = " submitted with sws_frame_start(). Must be called after all sws_send_slice()"]
+        #[doc = " and sws_receive_slice() calls are done, before any new sws_frame_start()"]
+        #[doc = " calls."]
+        pub fn sws_frame_end(c: *mut root::SwsContext);
+    }
+    extern "C" {
+        #[doc = " Indicate that a horizontal slice of input data is available in the source"]
+        #[doc = " frame previously provided to sws_frame_start(). The slices may be provided in"]
+        #[doc = " any order, but may not overlap. For vertically subsampled pixel formats, the"]
+        #[doc = " slices must be aligned according to subsampling."]
+        #[doc = ""]
+        #[doc = " @param slice_start first row of the slice"]
+        #[doc = " @param slice_height number of rows in the slice"]
+        #[doc = ""]
+        #[doc = " @return a non-negative number on success, a negative AVERROR code on failure."]
+        pub fn sws_send_slice(
+            c: *mut root::SwsContext,
+            slice_start: ::std::os::raw::c_uint,
+            slice_height: ::std::os::raw::c_uint,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Request a horizontal slice of the output data to be written into the frame"]
+        #[doc = " previously provided to sws_frame_start()."]
+        #[doc = ""]
+        #[doc = " @param slice_start first row of the slice; must be a multiple of"]
+        #[doc = "                    sws_receive_slice_alignment()"]
+        #[doc = " @param slice_height number of rows in the slice; must be a multiple of"]
+        #[doc = "                     sws_receive_slice_alignment(), except for the last slice"]
+        #[doc = "                     (i.e. when slice_start+slice_height is equal to output"]
+        #[doc = "                     frame height)"]
+        #[doc = ""]
+        #[doc = " @return a non-negative number if the data was successfully written into the output"]
+        #[doc = "         AVERROR(EAGAIN) if more input data needs to be provided before the"]
+        #[doc = "                         output can be produced"]
+        #[doc = "         another negative AVERROR code on other kinds of scaling failure"]
+        pub fn sws_receive_slice(
+            c: *mut root::SwsContext,
+            slice_start: ::std::os::raw::c_uint,
+            slice_height: ::std::os::raw::c_uint,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " @return alignment required for output slices requested with sws_receive_slice()."]
+        #[doc = "         Slice offsets and sizes passed to sws_receive_slice() must be"]
+        #[doc = "         multiples of the value returned from this function."]
+        pub fn sws_receive_slice_alignment(c: *const root::SwsContext) -> ::std::os::raw::c_uint;
+    }
+    extern "C" {
+        #[doc = " @param dstRange flag indicating the while-black range of the output (1=jpeg / 0=mpeg)"]
+        #[doc = " @param srcRange flag indicating the while-black range of the input (1=jpeg / 0=mpeg)"]
+        #[doc = " @param table the yuv2rgb coefficients describing the output yuv space, normally ff_yuv2rgb_coeffs[x]"]
+        #[doc = " @param inv_table the yuv2rgb coefficients describing the input yuv space, normally ff_yuv2rgb_coeffs[x]"]
+        #[doc = " @param brightness 16.16 fixed point brightness correction"]
+        #[doc = " @param contrast 16.16 fixed point contrast correction"]
+        #[doc = " @param saturation 16.16 fixed point saturation correction"]
+        #[doc = "#if LIBSWSCALE_VERSION_MAJOR > 6"]
+        #[doc = " @return negative error code on error, non negative otherwise"]
+        #[doc = "#else"]
+        #[doc = " @return -1 if not supported"]
+        #[doc = "#endif"]
+        pub fn sws_setColorspaceDetails(
+            c: *mut root::SwsContext,
+            inv_table: *const ::std::os::raw::c_int,
+            srcRange: ::std::os::raw::c_int,
+            table: *const ::std::os::raw::c_int,
+            dstRange: ::std::os::raw::c_int,
+            brightness: ::std::os::raw::c_int,
+            contrast: ::std::os::raw::c_int,
+            saturation: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = "#if LIBSWSCALE_VERSION_MAJOR > 6"]
+        #[doc = " @return negative error code on error, non negative otherwise"]
+        #[doc = "#else"]
+        #[doc = " @return -1 if not supported"]
+        #[doc = "#endif"]
+        pub fn sws_getColorspaceDetails(
+            c: *mut root::SwsContext,
+            inv_table: *mut *mut ::std::os::raw::c_int,
+            srcRange: *mut ::std::os::raw::c_int,
+            table: *mut *mut ::std::os::raw::c_int,
+            dstRange: *mut ::std::os::raw::c_int,
+            brightness: *mut ::std::os::raw::c_int,
+            contrast: *mut ::std::os::raw::c_int,
+            saturation: *mut ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Allocate and return an uninitialized vector with length coefficients."]
+        pub fn sws_allocVec(length: ::std::os::raw::c_int) -> *mut root::SwsVector;
+    }
+    extern "C" {
+        #[doc = " Return a normalized Gaussian curve used to filter stuff"]
+        #[doc = " quality = 3 is high quality, lower is lower quality."]
+        pub fn sws_getGaussianVec(variance: f64, quality: f64) -> *mut root::SwsVector;
+    }
+    extern "C" {
+        #[doc = " Scale all the coefficients of a by the scalar value."]
+        pub fn sws_scaleVec(a: *mut root::SwsVector, scalar: f64);
+    }
+    extern "C" {
+        #[doc = " Scale all the coefficients of a so that their sum equals height."]
+        pub fn sws_normalizeVec(a: *mut root::SwsVector, height: f64);
+    }
+    extern "C" {
+        pub fn sws_freeVec(a: *mut root::SwsVector);
+    }
+    extern "C" {
+        pub fn sws_getDefaultFilter(
+            lumaGBlur: f32,
+            chromaGBlur: f32,
+            lumaSharpen: f32,
+            chromaSharpen: f32,
+            chromaHShift: f32,
+            chromaVShift: f32,
+            verbose: ::std::os::raw::c_int,
+        ) -> *mut root::SwsFilter;
+    }
+    extern "C" {
+        pub fn sws_freeFilter(filter: *mut root::SwsFilter);
+    }
+    extern "C" {
+        #[doc = " Check if context can be reused, otherwise reallocate a new one."]
+        #[doc = ""]
+        #[doc = " If context is NULL, just calls sws_getContext() to get a new"]
+        #[doc = " context. Otherwise, checks if the parameters are the ones already"]
+        #[doc = " saved in context. If that is the case, returns the current"]
+        #[doc = " context. Otherwise, frees context and gets a new context with"]
+        #[doc = " the new parameters."]
+        #[doc = ""]
+        #[doc = " Be warned that srcFilter and dstFilter are not checked, they"]
+        #[doc = " are assumed to remain the same."]
+        pub fn sws_getCachedContext(
+            context: *mut root::SwsContext,
+            srcW: ::std::os::raw::c_int,
+            srcH: ::std::os::raw::c_int,
+            srcFormat: root::AVPixelFormat,
+            dstW: ::std::os::raw::c_int,
+            dstH: ::std::os::raw::c_int,
+            dstFormat: root::AVPixelFormat,
+            flags: ::std::os::raw::c_int,
+            srcFilter: *mut root::SwsFilter,
+            dstFilter: *mut root::SwsFilter,
+            param: *const f64,
+        ) -> *mut root::SwsContext;
+    }
+    extern "C" {
+        #[doc = " Convert an 8-bit paletted frame into a frame with a color depth of 32 bits."]
+        #[doc = ""]
+        #[doc = " The output frame will have the same packed format as the palette."]
+        #[doc = ""]
+        #[doc = " @param src        source frame buffer"]
+        #[doc = " @param dst        destination frame buffer"]
+        #[doc = " @param num_pixels number of pixels to convert"]
+        #[doc = " @param palette    array with [256] entries, which must match color arrangement (RGB or BGR) of src"]
+        pub fn sws_convertPalette8ToPacked32(
+            src: *const u8,
+            dst: *mut u8,
+            num_pixels: ::std::os::raw::c_int,
+            palette: *const u8,
+        );
+    }
+    extern "C" {
+        #[doc = " Convert an 8-bit paletted frame into a frame with a color depth of 24 bits."]
+        #[doc = ""]
+        #[doc = " With the palette format \"ABCD\", the destination frame ends up with the format \"ABC\"."]
+        #[doc = ""]
+        #[doc = " @param src        source frame buffer"]
+        #[doc = " @param dst        destination frame buffer"]
+        #[doc = " @param num_pixels number of pixels to convert"]
+        #[doc = " @param palette    array with [256] entries, which must match color arrangement (RGB or BGR) of src"]
+        pub fn sws_convertPalette8ToPacked24(
+            src: *const u8,
+            dst: *mut u8,
+            num_pixels: ::std::os::raw::c_int,
+            palette: *const u8,
+        );
+    }
+    extern "C" {
+        #[doc = " Get the AVClass for swsContext. It can be used in combination with"]
+        #[doc = " AV_OPT_SEARCH_FAKE_OBJ for examining options."]
+        #[doc = ""]
+        #[doc = " @see av_opt_find()."]
+        pub fn sws_get_class() -> *const root::AVClass;
+    }
+    extern "C" {
+        #[doc = " Extract the number of samples and frames from AAC data."]
+        #[doc = " @param[in]  buf     pointer to AAC data buffer"]
+        #[doc = " @param[out] samples Pointer to where number of samples is written"]
+        #[doc = " @param[out] frames  Pointer to where number of frames is written"]
+        #[doc = " @return Returns 0 on success, error code on failure."]
+        pub fn av_adts_header_parse(
+            buf: *const u8,
+            samples: *mut u32,
+            frames: *mut u8,
+        ) -> ::std::os::raw::c_int;
+    }
+    #[doc = " This struct describes the properties of a single codec described by an"]
+    #[doc = " AVCodecID."]
+    #[doc = " @see avcodec_descriptor_get()"]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVCodecDescriptor {
+        pub id: root::AVCodecID,
+        pub type_: root::AVMediaType,
+        #[doc = " Name of the codec described by this descriptor. It is non-empty and"]
+        #[doc = " unique for each codec descriptor. It should contain alphanumeric"]
+        #[doc = " characters and '_' only."]
+        pub name: *const ::std::os::raw::c_char,
+        #[doc = " A more descriptive name for this codec. May be NULL."]
+        pub long_name: *const ::std::os::raw::c_char,
+        #[doc = " Codec properties, a combination of AV_CODEC_PROP_* flags."]
+        pub props: ::std::os::raw::c_int,
+        #[doc = " MIME type(s) associated with the codec."]
+        #[doc = " May be NULL; if not, a NULL-terminated array of MIME types."]
+        #[doc = " The first item is always non-NULL and is the preferred MIME type."]
+        pub mime_types: *const *const ::std::os::raw::c_char,
+        #[doc = " If non-NULL, an array of profiles recognized for this codec."]
+        #[doc = " Terminated with FF_PROFILE_UNKNOWN."]
+        pub profiles: *const root::AVProfile,
+    }
+    impl Default for AVCodecDescriptor {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " @return descriptor for given codec ID or NULL if no descriptor exists."]
+        pub fn avcodec_descriptor_get(id: root::AVCodecID) -> *const root::AVCodecDescriptor;
+    }
+    extern "C" {
+        #[doc = " Iterate over all codec descriptors known to libavcodec."]
+        #[doc = ""]
+        #[doc = " @param prev previous descriptor. NULL to get the first descriptor."]
+        #[doc = ""]
+        #[doc = " @return next descriptor or NULL after the last descriptor"]
+        pub fn avcodec_descriptor_next(
+            prev: *const root::AVCodecDescriptor,
+        ) -> *const root::AVCodecDescriptor;
+    }
+    extern "C" {
+        #[doc = " @return codec descriptor with the given name or NULL if no such descriptor"]
+        #[doc = "         exists."]
+        pub fn avcodec_descriptor_get_by_name(
+            name: *const ::std::os::raw::c_char,
+        ) -> *const root::AVCodecDescriptor;
+    }
+    #[doc = " @ingroup lavc_encoding"]
+    #[repr(C)]
+    #[derive(Debug, Default, Copy, Clone)]
+    pub struct RcOverride {
+        pub start_frame: ::std::os::raw::c_int,
+        pub end_frame: ::std::os::raw::c_int,
+        pub qscale: ::std::os::raw::c_int,
+        pub quality_factor: f32,
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVCodecInternal {
+        _unused: [u8; 0],
+    }
+    #[doc = " main external API structure."]
+    #[doc = " New fields can be added to the end with minor version bumps."]
+    #[doc = " Removal, reordering and changes to existing fields require a major"]
+    #[doc = " version bump."]
+    #[doc = " You can use AVOptions (av_opt* / av_set/get*()) to access these fields from user"]
+    #[doc = " applications."]
+    #[doc = " The name string for AVOptions options matches the associated command line"]
+    #[doc = " parameter name and can be found in libavcodec/options_table.h"]
+    #[doc = " The AVOption/command line parameter names differ in some cases from the C"]
+    #[doc = " structure field names for historic reasons or brevity."]
+    #[doc = " sizeof(AVCodecContext) must not be used outside libav*."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVCodecContext {
+        #[doc = " information on struct for av_log"]
+        #[doc = " - set by avcodec_alloc_context3"]
+        pub av_class: *const root::AVClass,
+        pub log_level_offset: ::std::os::raw::c_int,
+        pub codec_type: root::AVMediaType,
+        pub codec: *const root::AVCodec,
+        pub codec_id: root::AVCodecID,
+        #[doc = " fourcc (LSB first, so \"ABCD\" -> ('D'<<24) + ('C'<<16) + ('B'<<8) + 'A')."]
+        #[doc = " This is used to work around some encoder bugs."]
+        #[doc = " A demuxer should set this to what is stored in the field used to identify the codec."]
+        #[doc = " If there are multiple such fields in a container then the demuxer should choose the one"]
+        #[doc = " which maximizes the information about the used codec."]
+        #[doc = " If the codec tag field in a container is larger than 32 bits then the demuxer should"]
+        #[doc = " remap the longer ID to 32 bits with a table or other structure. Alternatively a new"]
+        #[doc = " extra_codec_tag + size could be added but for this a clear advantage must be demonstrated"]
+        #[doc = " first."]
+        #[doc = " - encoding: Set by user, if not then the default based on codec_id will be used."]
+        #[doc = " - decoding: Set by user, will be converted to uppercase by libavcodec during init."]
+        pub codec_tag: ::std::os::raw::c_uint,
+        pub priv_data: *mut ::std::os::raw::c_void,
+        #[doc = " Private context used for internal data."]
+        #[doc = ""]
+        #[doc = " Unlike priv_data, this is not codec-specific. It is used in general"]
+        #[doc = " libavcodec functions."]
+        pub internal: *mut root::AVCodecInternal,
+        #[doc = " Private data of the user, can be used to carry app specific stuff."]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by user."]
+        pub opaque: *mut ::std::os::raw::c_void,
+        #[doc = " the average bitrate"]
+        #[doc = " - encoding: Set by user; unused for constant quantizer encoding."]
+        #[doc = " - decoding: Set by user, may be overwritten by libavcodec"]
+        #[doc = "             if this info is available in the stream"]
+        pub bit_rate: i64,
+        #[doc = " number of bits the bitstream is allowed to diverge from the reference."]
+        #[doc = "           the reference can be CBR (for CBR pass1) or VBR (for pass2)"]
+        #[doc = " - encoding: Set by user; unused for constant quantizer encoding."]
+        #[doc = " - decoding: unused"]
+        pub bit_rate_tolerance: ::std::os::raw::c_int,
+        #[doc = " Global quality for codecs which cannot change it per frame."]
+        #[doc = " This should be proportional to MPEG-1/2/4 qscale."]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub global_quality: ::std::os::raw::c_int,
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub compression_level: ::std::os::raw::c_int,
+        #[doc = " AV_CODEC_FLAG_*."]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by user."]
+        pub flags: ::std::os::raw::c_int,
+        #[doc = " AV_CODEC_FLAG2_*"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by user."]
+        pub flags2: ::std::os::raw::c_int,
+        #[doc = " some codecs need / can use extradata like Huffman tables."]
+        #[doc = " MJPEG: Huffman tables"]
+        #[doc = " rv10: additional flags"]
+        #[doc = " MPEG-4: global headers (they can be in the bitstream or here)"]
+        #[doc = " The allocated memory should be AV_INPUT_BUFFER_PADDING_SIZE bytes larger"]
+        #[doc = " than extradata_size to avoid problems if it is read with the bitstream reader."]
+        #[doc = " The bytewise contents of extradata must not depend on the architecture or CPU endianness."]
+        #[doc = " Must be allocated with the av_malloc() family of functions."]
+        #[doc = " - encoding: Set/allocated/freed by libavcodec."]
+        #[doc = " - decoding: Set/allocated/freed by user."]
+        pub extradata: *mut u8,
+        pub extradata_size: ::std::os::raw::c_int,
+        #[doc = " This is the fundamental unit of time (in seconds) in terms"]
+        #[doc = " of which frame timestamps are represented. For fixed-fps content,"]
+        #[doc = " timebase should be 1/framerate and timestamp increments should be"]
+        #[doc = " identically 1."]
+        #[doc = " This often, but not always is the inverse of the frame rate or field rate"]
+        #[doc = " for video. 1/time_base is not the average frame rate if the frame rate is not"]
+        #[doc = " constant."]
+        #[doc = ""]
+        #[doc = " Like containers, elementary streams also can store timestamps, 1/time_base"]
+        #[doc = " is the unit in which these timestamps are specified."]
+        #[doc = " As example of such codec time base see ISO/IEC 14496-2:2001(E)"]
+        #[doc = " vop_time_increment_resolution and fixed_vop_rate"]
+        #[doc = " (fixed_vop_rate == 0 implies that it is different from the framerate)"]
+        #[doc = ""]
+        #[doc = " - encoding: MUST be set by user."]
+        #[doc = " - decoding: the use of this field for decoding is deprecated."]
+        #[doc = "             Use framerate instead."]
+        pub time_base: root::AVRational,
+        #[doc = " For some codecs, the time base is closer to the field rate than the frame rate."]
+        #[doc = " Most notably, H.264 and MPEG-2 specify time_base as half of frame duration"]
+        #[doc = " if no telecine is used ..."]
+        #[doc = ""]
+        #[doc = " Set to time_base ticks per frame. Default 1, e.g., H.264/MPEG-2 set it to 2."]
+        pub ticks_per_frame: ::std::os::raw::c_int,
+        #[doc = " Codec delay."]
+        #[doc = ""]
+        #[doc = " Encoding: Number of frames delay there will be from the encoder input to"]
+        #[doc = "           the decoder output. (we assume the decoder matches the spec)"]
+        #[doc = " Decoding: Number of frames delay in addition to what a standard decoder"]
+        #[doc = "           as specified in the spec would produce."]
+        #[doc = ""]
+        #[doc = " Video:"]
+        #[doc = "   Number of frames the decoded output will be delayed relative to the"]
+        #[doc = "   encoded input."]
+        #[doc = ""]
+        #[doc = " Audio:"]
+        #[doc = "   For encoding, this field is unused (see initial_padding)."]
+        #[doc = ""]
+        #[doc = "   For decoding, this is the number of samples the decoder needs to"]
+        #[doc = "   output before the decoder's output is valid. When seeking, you should"]
+        #[doc = "   start decoding this many samples prior to your desired seek point."]
+        #[doc = ""]
+        #[doc = " - encoding: Set by libavcodec."]
+        #[doc = " - decoding: Set by libavcodec."]
+        pub delay: ::std::os::raw::c_int,
+        #[doc = " picture width / height."]
+        #[doc = ""]
+        #[doc = " @note Those fields may not match the values of the last"]
+        #[doc = " AVFrame output by avcodec_receive_frame() due frame"]
+        #[doc = " reordering."]
+        #[doc = ""]
+        #[doc = " - encoding: MUST be set by user."]
+        #[doc = " - decoding: May be set by the user before opening the decoder if known e.g."]
+        #[doc = "             from the container. Some decoders will require the dimensions"]
+        #[doc = "             to be set by the caller. During decoding, the decoder may"]
+        #[doc = "             overwrite those values as required while parsing the data."]
+        pub width: ::std::os::raw::c_int,
+        #[doc = " picture width / height."]
+        #[doc = ""]
+        #[doc = " @note Those fields may not match the values of the last"]
+        #[doc = " AVFrame output by avcodec_receive_frame() due frame"]
+        #[doc = " reordering."]
+        #[doc = ""]
+        #[doc = " - encoding: MUST be set by user."]
+        #[doc = " - decoding: May be set by the user before opening the decoder if known e.g."]
+        #[doc = "             from the container. Some decoders will require the dimensions"]
+        #[doc = "             to be set by the caller. During decoding, the decoder may"]
+        #[doc = "             overwrite those values as required while parsing the data."]
+        pub height: ::std::os::raw::c_int,
+        #[doc = " Bitstream width / height, may be different from width/height e.g. when"]
+        #[doc = " the decoded frame is cropped before being output or lowres is enabled."]
+        #[doc = ""]
+        #[doc = " @note Those field may not match the value of the last"]
+        #[doc = " AVFrame output by avcodec_receive_frame() due frame"]
+        #[doc = " reordering."]
+        #[doc = ""]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: May be set by the user before opening the decoder if known"]
+        #[doc = "             e.g. from the container. During decoding, the decoder may"]
+        #[doc = "             overwrite those values as required while parsing the data."]
+        pub coded_width: ::std::os::raw::c_int,
+        #[doc = " Bitstream width / height, may be different from width/height e.g. when"]
+        #[doc = " the decoded frame is cropped before being output or lowres is enabled."]
+        #[doc = ""]
+        #[doc = " @note Those field may not match the value of the last"]
+        #[doc = " AVFrame output by avcodec_receive_frame() due frame"]
+        #[doc = " reordering."]
+        #[doc = ""]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: May be set by the user before opening the decoder if known"]
+        #[doc = "             e.g. from the container. During decoding, the decoder may"]
+        #[doc = "             overwrite those values as required while parsing the data."]
+        pub coded_height: ::std::os::raw::c_int,
+        #[doc = " the number of pictures in a group of pictures, or 0 for intra_only"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub gop_size: ::std::os::raw::c_int,
+        #[doc = " Pixel format, see AV_PIX_FMT_xxx."]
+        #[doc = " May be set by the demuxer if known from headers."]
+        #[doc = " May be overridden by the decoder if it knows better."]
+        #[doc = ""]
+        #[doc = " @note This field may not match the value of the last"]
+        #[doc = " AVFrame output by avcodec_receive_frame() due frame"]
+        #[doc = " reordering."]
+        #[doc = ""]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by user if known, overridden by libavcodec while"]
+        #[doc = "             parsing the data."]
+        pub pix_fmt: root::AVPixelFormat,
+        #[doc = " If non NULL, 'draw_horiz_band' is called by the libavcodec"]
+        #[doc = " decoder to draw a horizontal band. It improves cache usage. Not"]
+        #[doc = " all codecs can do that. You must check the codec capabilities"]
+        #[doc = " beforehand."]
+        #[doc = " When multithreading is used, it may be called from multiple threads"]
+        #[doc = " at the same time; threads might draw different parts of the same AVFrame,"]
+        #[doc = " or multiple AVFrames, and there is no guarantee that slices will be drawn"]
+        #[doc = " in order."]
+        #[doc = " The function is also used by hardware acceleration APIs."]
+        #[doc = " It is called at least once during frame decoding to pass"]
+        #[doc = " the data needed for hardware render."]
+        #[doc = " In that mode instead of pixel data, AVFrame points to"]
+        #[doc = " a structure specific to the acceleration API. The application"]
+        #[doc = " reads the structure and can change some fields to indicate progress"]
+        #[doc = " or mark state."]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: Set by user."]
+        #[doc = " @param height the height of the slice"]
+        #[doc = " @param y the y position of the slice"]
+        #[doc = " @param type 1->top field, 2->bottom field, 3->frame"]
+        #[doc = " @param offset offset into the AVFrame.data from which the slice should be read"]
+        pub draw_horiz_band: ::std::option::Option<
+            unsafe extern "C" fn(
+                s: *mut root::AVCodecContext,
+                src: *const root::AVFrame,
+                offset: *mut ::std::os::raw::c_int,
+                y: ::std::os::raw::c_int,
+                type_: ::std::os::raw::c_int,
+                height: ::std::os::raw::c_int,
+            ),
+        >,
+        #[doc = " Callback to negotiate the pixel format. Decoding only, may be set by the"]
+        #[doc = " caller before avcodec_open2()."]
+        #[doc = ""]
+        #[doc = " Called by some decoders to select the pixel format that will be used for"]
+        #[doc = " the output frames. This is mainly used to set up hardware acceleration,"]
+        #[doc = " then the provided format list contains the corresponding hwaccel pixel"]
+        #[doc = " formats alongside the \"software\" one. The software pixel format may also"]
+        #[doc = " be retrieved from \\ref sw_pix_fmt."]
+        #[doc = ""]
+        #[doc = " This callback will be called when the coded frame properties (such as"]
+        #[doc = " resolution, pixel format, etc.) change and more than one output format is"]
+        #[doc = " supported for those new properties. If a hardware pixel format is chosen"]
+        #[doc = " and initialization for it fails, the callback may be called again"]
+        #[doc = " immediately."]
+        #[doc = ""]
+        #[doc = " This callback may be called from different threads if the decoder is"]
+        #[doc = " multi-threaded, but not from more than one thread simultaneously."]
+        #[doc = ""]
+        #[doc = " @param fmt list of formats which may be used in the current"]
+        #[doc = "            configuration, terminated by AV_PIX_FMT_NONE."]
+        #[doc = " @warning Behavior is undefined if the callback returns a value other"]
+        #[doc = "          than one of the formats in fmt or AV_PIX_FMT_NONE."]
+        #[doc = " @return the chosen format or AV_PIX_FMT_NONE"]
+        pub get_format: ::std::option::Option<
+            unsafe extern "C" fn(
+                s: *mut root::AVCodecContext,
+                fmt: *const root::AVPixelFormat,
+            ) -> root::AVPixelFormat,
+        >,
+        #[doc = " maximum number of B-frames between non-B-frames"]
+        #[doc = " Note: The output will be delayed by max_b_frames+1 relative to the input."]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub max_b_frames: ::std::os::raw::c_int,
+        #[doc = " qscale factor between IP and B-frames"]
+        #[doc = " If > 0 then the last P-frame quantizer will be used (q= lastp_q*factor+offset)."]
+        #[doc = " If < 0 then normal ratecontrol will be done (q= -normal_q*factor+offset)."]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub b_quant_factor: f32,
+        #[doc = " qscale offset between IP and B-frames"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub b_quant_offset: f32,
+        #[doc = " Size of the frame reordering buffer in the decoder."]
+        #[doc = " For MPEG-2 it is 1 IPB or 0 low delay IP."]
+        #[doc = " - encoding: Set by libavcodec."]
+        #[doc = " - decoding: Set by libavcodec."]
+        pub has_b_frames: ::std::os::raw::c_int,
+        #[doc = " qscale factor between P- and I-frames"]
+        #[doc = " If > 0 then the last P-frame quantizer will be used (q = lastp_q * factor + offset)."]
+        #[doc = " If < 0 then normal ratecontrol will be done (q= -normal_q*factor+offset)."]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub i_quant_factor: f32,
+        #[doc = " qscale offset between P and I-frames"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub i_quant_offset: f32,
+        #[doc = " luminance masking (0-> disabled)"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub lumi_masking: f32,
+        #[doc = " temporary complexity masking (0-> disabled)"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub temporal_cplx_masking: f32,
+        #[doc = " spatial complexity masking (0-> disabled)"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub spatial_cplx_masking: f32,
+        #[doc = " p block masking (0-> disabled)"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub p_masking: f32,
+        #[doc = " darkness masking (0-> disabled)"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub dark_masking: f32,
+        #[doc = " slice count"]
+        #[doc = " - encoding: Set by libavcodec."]
+        #[doc = " - decoding: Set by user (or 0)."]
+        pub slice_count: ::std::os::raw::c_int,
+        #[doc = " slice offsets in the frame in bytes"]
+        #[doc = " - encoding: Set/allocated by libavcodec."]
+        #[doc = " - decoding: Set/allocated by user (or NULL)."]
+        pub slice_offset: *mut ::std::os::raw::c_int,
+        #[doc = " sample aspect ratio (0 if unknown)"]
+        #[doc = " That is the width of a pixel divided by the height of the pixel."]
+        #[doc = " Numerator and denominator must be relatively prime and smaller than 256 for some video standards."]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by libavcodec."]
+        pub sample_aspect_ratio: root::AVRational,
+        #[doc = " motion estimation comparison function"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub me_cmp: ::std::os::raw::c_int,
+        #[doc = " subpixel motion estimation comparison function"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub me_sub_cmp: ::std::os::raw::c_int,
+        #[doc = " macroblock comparison function (not supported yet)"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub mb_cmp: ::std::os::raw::c_int,
+        #[doc = " interlaced DCT comparison function"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub ildct_cmp: ::std::os::raw::c_int,
+        #[doc = " ME diamond size & shape"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub dia_size: ::std::os::raw::c_int,
+        #[doc = " amount of previous MV predictors (2a+1 x 2a+1 square)"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub last_predictor_count: ::std::os::raw::c_int,
+        #[doc = " motion estimation prepass comparison function"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub me_pre_cmp: ::std::os::raw::c_int,
+        #[doc = " ME prepass diamond size & shape"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub pre_dia_size: ::std::os::raw::c_int,
+        #[doc = " subpel ME quality"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub me_subpel_quality: ::std::os::raw::c_int,
+        #[doc = " maximum motion estimation search range in subpel units"]
+        #[doc = " If 0 then no limit."]
+        #[doc = ""]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub me_range: ::std::os::raw::c_int,
+        #[doc = " slice flags"]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: Set by user."]
+        pub slice_flags: ::std::os::raw::c_int,
+        #[doc = " macroblock decision mode"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub mb_decision: ::std::os::raw::c_int,
+        #[doc = " custom intra quantization matrix"]
+        #[doc = " Must be allocated with the av_malloc() family of functions, and will be freed in"]
+        #[doc = " avcodec_free_context()."]
+        #[doc = " - encoding: Set/allocated by user, freed by libavcodec. Can be NULL."]
+        #[doc = " - decoding: Set/allocated/freed by libavcodec."]
+        pub intra_matrix: *mut u16,
+        #[doc = " custom inter quantization matrix"]
+        #[doc = " Must be allocated with the av_malloc() family of functions, and will be freed in"]
+        #[doc = " avcodec_free_context()."]
+        #[doc = " - encoding: Set/allocated by user, freed by libavcodec. Can be NULL."]
+        #[doc = " - decoding: Set/allocated/freed by libavcodec."]
+        pub inter_matrix: *mut u16,
+        #[doc = " precision of the intra DC coefficient - 8"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by libavcodec"]
+        pub intra_dc_precision: ::std::os::raw::c_int,
+        #[doc = " Number of macroblock rows at the top which are skipped."]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: Set by user."]
+        pub skip_top: ::std::os::raw::c_int,
+        #[doc = " Number of macroblock rows at the bottom which are skipped."]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: Set by user."]
+        pub skip_bottom: ::std::os::raw::c_int,
+        #[doc = " minimum MB Lagrange multiplier"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub mb_lmin: ::std::os::raw::c_int,
+        #[doc = " maximum MB Lagrange multiplier"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub mb_lmax: ::std::os::raw::c_int,
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub bidir_refine: ::std::os::raw::c_int,
+        #[doc = " minimum GOP size"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub keyint_min: ::std::os::raw::c_int,
+        #[doc = " number of reference frames"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by lavc."]
+        pub refs: ::std::os::raw::c_int,
+        #[doc = " Note: Value depends upon the compare function used for fullpel ME."]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub mv0_threshold: ::std::os::raw::c_int,
+        #[doc = " Chromaticity coordinates of the source primaries."]
+        #[doc = " - encoding: Set by user"]
+        #[doc = " - decoding: Set by libavcodec"]
+        pub color_primaries: root::AVColorPrimaries,
+        #[doc = " Color Transfer Characteristic."]
+        #[doc = " - encoding: Set by user"]
+        #[doc = " - decoding: Set by libavcodec"]
+        pub color_trc: root::AVColorTransferCharacteristic,
+        #[doc = " YUV colorspace type."]
+        #[doc = " - encoding: Set by user"]
+        #[doc = " - decoding: Set by libavcodec"]
+        pub colorspace: root::AVColorSpace,
+        #[doc = " MPEG vs JPEG YUV range."]
+        #[doc = " - encoding: Set by user"]
+        #[doc = " - decoding: Set by libavcodec"]
+        pub color_range: root::AVColorRange,
+        #[doc = " This defines the location of chroma samples."]
+        #[doc = " - encoding: Set by user"]
+        #[doc = " - decoding: Set by libavcodec"]
+        pub chroma_sample_location: root::AVChromaLocation,
+        #[doc = " Number of slices."]
+        #[doc = " Indicates number of picture subdivisions. Used for parallelized"]
+        #[doc = " decoding."]
+        #[doc = " - encoding: Set by user"]
+        #[doc = " - decoding: unused"]
+        pub slices: ::std::os::raw::c_int,
+        #[doc = " Field order"]
+        #[doc = " - encoding: set by libavcodec"]
+        #[doc = " - decoding: Set by user."]
+        pub field_order: root::AVFieldOrder,
+        #[doc = "< samples per second"]
+        pub sample_rate: ::std::os::raw::c_int,
+        #[doc = "< number of audio channels"]
+        pub channels: ::std::os::raw::c_int,
+        #[doc = "< sample format"]
+        pub sample_fmt: root::AVSampleFormat,
+        #[doc = " Number of samples per channel in an audio frame."]
+        #[doc = ""]
+        #[doc = " - encoding: set by libavcodec in avcodec_open2(). Each submitted frame"]
+        #[doc = "   except the last must contain exactly frame_size samples per channel."]
+        #[doc = "   May be 0 when the codec has AV_CODEC_CAP_VARIABLE_FRAME_SIZE set, then the"]
+        #[doc = "   frame size is not restricted."]
+        #[doc = " - decoding: may be set by some decoders to indicate constant frame size"]
+        pub frame_size: ::std::os::raw::c_int,
+        #[doc = " Frame counter, set by libavcodec."]
+        #[doc = ""]
+        #[doc = " - decoding: total number of frames returned from the decoder so far."]
+        #[doc = " - encoding: total number of frames passed to the encoder so far."]
+        #[doc = ""]
+        #[doc = "   @note the counter is not incremented if encoding/decoding resulted in"]
+        #[doc = "   an error."]
+        pub frame_number: ::std::os::raw::c_int,
+        #[doc = " number of bytes per packet if constant and known or 0"]
+        #[doc = " Used by some WAV based audio codecs."]
+        pub block_align: ::std::os::raw::c_int,
+        #[doc = " Audio cutoff bandwidth (0 means \"automatic\")"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub cutoff: ::std::os::raw::c_int,
+        #[doc = " Audio channel layout."]
+        #[doc = " - encoding: set by user."]
+        #[doc = " - decoding: set by user, may be overwritten by libavcodec."]
+        pub channel_layout: u64,
+        #[doc = " Request decoder to use this channel layout if it can (0 for default)"]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: Set by user."]
+        pub request_channel_layout: u64,
+        #[doc = " Type of service that the audio stream conveys."]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by libavcodec."]
+        pub audio_service_type: root::AVAudioServiceType,
+        #[doc = " desired sample format"]
+        #[doc = " - encoding: Not used."]
+        #[doc = " - decoding: Set by user."]
+        #[doc = " Decoder will decode to this format if it can."]
+        pub request_sample_fmt: root::AVSampleFormat,
+        #[doc = " This callback is called at the beginning of each frame to get data"]
+        #[doc = " buffer(s) for it. There may be one contiguous buffer for all the data or"]
+        #[doc = " there may be a buffer per each data plane or anything in between. What"]
+        #[doc = " this means is, you may set however many entries in buf[] you feel necessary."]
+        #[doc = " Each buffer must be reference-counted using the AVBuffer API (see description"]
+        #[doc = " of buf[] below)."]
+        #[doc = ""]
+        #[doc = " The following fields will be set in the frame before this callback is"]
+        #[doc = " called:"]
+        #[doc = " - format"]
+        #[doc = " - width, height (video only)"]
+        #[doc = " - sample_rate, channel_layout, nb_samples (audio only)"]
+        #[doc = " Their values may differ from the corresponding values in"]
+        #[doc = " AVCodecContext. This callback must use the frame values, not the codec"]
+        #[doc = " context values, to calculate the required buffer size."]
+        #[doc = ""]
+        #[doc = " This callback must fill the following fields in the frame:"]
+        #[doc = " - data[]"]
+        #[doc = " - linesize[]"]
+        #[doc = " - extended_data:"]
+        #[doc = "   * if the data is planar audio with more than 8 channels, then this"]
+        #[doc = "     callback must allocate and fill extended_data to contain all pointers"]
+        #[doc = "     to all data planes. data[] must hold as many pointers as it can."]
+        #[doc = "     extended_data must be allocated with av_malloc() and will be freed in"]
+        #[doc = "     av_frame_unref()."]
+        #[doc = "   * otherwise extended_data must point to data"]
+        #[doc = " - buf[] must contain one or more pointers to AVBufferRef structures. Each of"]
+        #[doc = "   the frame's data and extended_data pointers must be contained in these. That"]
+        #[doc = "   is, one AVBufferRef for each allocated chunk of memory, not necessarily one"]
+        #[doc = "   AVBufferRef per data[] entry. See: av_buffer_create(), av_buffer_alloc(),"]
+        #[doc = "   and av_buffer_ref()."]
+        #[doc = " - extended_buf and nb_extended_buf must be allocated with av_malloc() by"]
+        #[doc = "   this callback and filled with the extra buffers if there are more"]
+        #[doc = "   buffers than buf[] can hold. extended_buf will be freed in"]
+        #[doc = "   av_frame_unref()."]
+        #[doc = ""]
+        #[doc = " If AV_CODEC_CAP_DR1 is not set then get_buffer2() must call"]
+        #[doc = " avcodec_default_get_buffer2() instead of providing buffers allocated by"]
+        #[doc = " some other means."]
+        #[doc = ""]
+        #[doc = " Each data plane must be aligned to the maximum required by the target"]
+        #[doc = " CPU."]
+        #[doc = ""]
+        #[doc = " @see avcodec_default_get_buffer2()"]
+        #[doc = ""]
+        #[doc = " Video:"]
+        #[doc = ""]
+        #[doc = " If AV_GET_BUFFER_FLAG_REF is set in flags then the frame may be reused"]
+        #[doc = " (read and/or written to if it is writable) later by libavcodec."]
+        #[doc = ""]
+        #[doc = " avcodec_align_dimensions2() should be used to find the required width and"]
+        #[doc = " height, as they normally need to be rounded up to the next multiple of 16."]
+        #[doc = ""]
+        #[doc = " Some decoders do not support linesizes changing between frames."]
+        #[doc = ""]
+        #[doc = " If frame multithreading is used, this callback may be called from a"]
+        #[doc = " different thread, but not from more than one at once. Does not need to be"]
+        #[doc = " reentrant."]
+        #[doc = ""]
+        #[doc = " @see avcodec_align_dimensions2()"]
+        #[doc = ""]
+        #[doc = " Audio:"]
+        #[doc = ""]
+        #[doc = " Decoders request a buffer of a particular size by setting"]
+        #[doc = " AVFrame.nb_samples prior to calling get_buffer2(). The decoder may,"]
+        #[doc = " however, utilize only part of the buffer by setting AVFrame.nb_samples"]
+        #[doc = " to a smaller value in the output frame."]
+        #[doc = ""]
+        #[doc = " As a convenience, av_samples_get_buffer_size() and"]
+        #[doc = " av_samples_fill_arrays() in libavutil may be used by custom get_buffer2()"]
+        #[doc = " functions to find the required data size and to fill data pointers and"]
+        #[doc = " linesize. In AVFrame.linesize, only linesize[0] may be set for audio"]
+        #[doc = " since all planes must be the same size."]
+        #[doc = ""]
+        #[doc = " @see av_samples_get_buffer_size(), av_samples_fill_arrays()"]
+        #[doc = ""]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: Set by libavcodec, user can override."]
+        pub get_buffer2: ::std::option::Option<
+            unsafe extern "C" fn(
+                s: *mut root::AVCodecContext,
+                frame: *mut root::AVFrame,
+                flags: ::std::os::raw::c_int,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = "< amount of qscale change between easy & hard scenes (0.0-1.0)"]
+        pub qcompress: f32,
+        #[doc = "< amount of qscale smoothing over time (0.0-1.0)"]
+        pub qblur: f32,
+        #[doc = " minimum quantizer"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub qmin: ::std::os::raw::c_int,
+        #[doc = " maximum quantizer"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub qmax: ::std::os::raw::c_int,
+        #[doc = " maximum quantizer difference between frames"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub max_qdiff: ::std::os::raw::c_int,
+        #[doc = " decoder bitstream buffer size"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub rc_buffer_size: ::std::os::raw::c_int,
+        #[doc = " ratecontrol override, see RcOverride"]
+        #[doc = " - encoding: Allocated/set/freed by user."]
+        #[doc = " - decoding: unused"]
+        pub rc_override_count: ::std::os::raw::c_int,
+        pub rc_override: *mut root::RcOverride,
+        #[doc = " maximum bitrate"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by user, may be overwritten by libavcodec."]
+        pub rc_max_rate: i64,
+        #[doc = " minimum bitrate"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub rc_min_rate: i64,
+        #[doc = " Ratecontrol attempt to use, at maximum, <value> of what can be used without an underflow."]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused."]
+        pub rc_max_available_vbv_use: f32,
+        #[doc = " Ratecontrol attempt to use, at least, <value> times the amount needed to prevent a vbv overflow."]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused."]
+        pub rc_min_vbv_overflow_use: f32,
+        #[doc = " Number of bits which should be loaded into the rc buffer before decoding starts."]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub rc_initial_buffer_occupancy: ::std::os::raw::c_int,
+        #[doc = " trellis RD quantization"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub trellis: ::std::os::raw::c_int,
+        #[doc = " pass1 encoding statistics output buffer"]
+        #[doc = " - encoding: Set by libavcodec."]
+        #[doc = " - decoding: unused"]
+        pub stats_out: *mut ::std::os::raw::c_char,
+        #[doc = " pass2 encoding statistics input buffer"]
+        #[doc = " Concatenated stuff from stats_out of pass1 should be placed here."]
+        #[doc = " - encoding: Allocated/set/freed by user."]
+        #[doc = " - decoding: unused"]
+        pub stats_in: *mut ::std::os::raw::c_char,
+        #[doc = " Work around bugs in encoders which sometimes cannot be detected automatically."]
+        #[doc = " - encoding: Set by user"]
+        #[doc = " - decoding: Set by user"]
+        pub workaround_bugs: ::std::os::raw::c_int,
+        #[doc = " strictly follow the standard (MPEG-4, ...)."]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by user."]
+        #[doc = " Setting this to STRICT or higher means the encoder and decoder will"]
+        #[doc = " generally do stupid things, whereas setting it to unofficial or lower"]
+        #[doc = " will mean the encoder might produce output that is not supported by all"]
+        #[doc = " spec-compliant decoders. Decoders don't differentiate between normal,"]
+        #[doc = " unofficial and experimental (that is, they always try to decode things"]
+        #[doc = " when they can) unless they are explicitly asked to behave stupidly"]
+        #[doc = " (=strictly conform to the specs)"]
+        pub strict_std_compliance: ::std::os::raw::c_int,
+        #[doc = " error concealment flags"]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: Set by user."]
+        pub error_concealment: ::std::os::raw::c_int,
+        #[doc = " debug"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by user."]
+        pub debug: ::std::os::raw::c_int,
+        #[doc = " Error recognition; may misdetect some more or less valid parts as errors."]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by user."]
+        pub err_recognition: ::std::os::raw::c_int,
+        #[doc = " opaque 64-bit number (generally a PTS) that will be reordered and"]
+        #[doc = " output in AVFrame.reordered_opaque"]
+        #[doc = " - encoding: Set by libavcodec to the reordered_opaque of the input"]
+        #[doc = "             frame corresponding to the last returned packet. Only"]
+        #[doc = "             supported by encoders with the"]
+        #[doc = "             AV_CODEC_CAP_ENCODER_REORDERED_OPAQUE capability."]
+        #[doc = " - decoding: Set by user."]
+        pub reordered_opaque: i64,
+        #[doc = " Hardware accelerator in use"]
+        #[doc = " - encoding: unused."]
+        #[doc = " - decoding: Set by libavcodec"]
+        pub hwaccel: *const root::AVHWAccel,
+        #[doc = " Hardware accelerator context."]
+        #[doc = " For some hardware accelerators, a global context needs to be"]
+        #[doc = " provided by the user. In that case, this holds display-dependent"]
+        #[doc = " data FFmpeg cannot instantiate itself. Please refer to the"]
+        #[doc = " FFmpeg HW accelerator documentation to know how to fill this."]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: Set by user"]
+        pub hwaccel_context: *mut ::std::os::raw::c_void,
+        #[doc = " error"]
+        #[doc = " - encoding: Set by libavcodec if flags & AV_CODEC_FLAG_PSNR."]
+        #[doc = " - decoding: unused"]
+        pub error: [u64; 8usize],
+        #[doc = " DCT algorithm, see FF_DCT_* below"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub dct_algo: ::std::os::raw::c_int,
+        #[doc = " IDCT algorithm, see FF_IDCT_* below."]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by user."]
+        pub idct_algo: ::std::os::raw::c_int,
+        #[doc = " bits per sample/pixel from the demuxer (needed for huffyuv)."]
+        #[doc = " - encoding: Set by libavcodec."]
+        #[doc = " - decoding: Set by user."]
+        pub bits_per_coded_sample: ::std::os::raw::c_int,
+        #[doc = " Bits per sample/pixel of internal libavcodec pixel/sample format."]
+        #[doc = " - encoding: set by user."]
+        #[doc = " - decoding: set by libavcodec."]
+        pub bits_per_raw_sample: ::std::os::raw::c_int,
+        #[doc = " low resolution decoding, 1-> 1/2 size, 2->1/4 size"]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: Set by user."]
+        pub lowres: ::std::os::raw::c_int,
+        #[doc = " thread count"]
+        #[doc = " is used to decide how many independent tasks should be passed to execute()"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by user."]
+        pub thread_count: ::std::os::raw::c_int,
+        #[doc = " Which multithreading methods to use."]
+        #[doc = " Use of FF_THREAD_FRAME will increase decoding delay by one frame per thread,"]
+        #[doc = " so clients which cannot provide future frames should not use it."]
+        #[doc = ""]
+        #[doc = " - encoding: Set by user, otherwise the default is used."]
+        #[doc = " - decoding: Set by user, otherwise the default is used."]
+        pub thread_type: ::std::os::raw::c_int,
+        #[doc = " Which multithreading methods are in use by the codec."]
+        #[doc = " - encoding: Set by libavcodec."]
+        #[doc = " - decoding: Set by libavcodec."]
+        pub active_thread_type: ::std::os::raw::c_int,
+        #[doc = " Set by the client if its custom get_buffer() callback can be called"]
+        #[doc = " synchronously from another thread, which allows faster multithreaded decoding."]
+        #[doc = " draw_horiz_band() will be called from other threads regardless of this setting."]
+        #[doc = " Ignored if the default get_buffer() is used."]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by user."]
+        #[doc = ""]
+        #[doc = " @deprecated the custom get_buffer2() callback should always be"]
+        #[doc = "   thread-safe. Thread-unsafe get_buffer2() implementations will be"]
+        #[doc = "   invalid starting with LIBAVCODEC_VERSION_MAJOR=60; in other words,"]
+        #[doc = "   libavcodec will behave as if this field was always set to 1."]
+        #[doc = "   Callers that want to be forward compatible with future libavcodec"]
+        #[doc = "   versions should wrap access to this field in"]
+        #[doc = "     #if LIBAVCODEC_VERSION_MAJOR < 60"]
+        pub thread_safe_callbacks: ::std::os::raw::c_int,
+        #[doc = " The codec may call this to execute several independent things."]
+        #[doc = " It will return only after finishing all tasks."]
+        #[doc = " The user may replace this with some multithreaded implementation,"]
+        #[doc = " the default implementation will execute the parts serially."]
+        #[doc = " @param count the number of things to execute"]
+        #[doc = " - encoding: Set by libavcodec, user can override."]
+        #[doc = " - decoding: Set by libavcodec, user can override."]
+        pub execute: ::std::option::Option<
+            unsafe extern "C" fn(
+                c: *mut root::AVCodecContext,
+                func: ::std::option::Option<
+                    unsafe extern "C" fn(
+                        c2: *mut root::AVCodecContext,
+                        arg: *mut ::std::os::raw::c_void,
+                    ) -> ::std::os::raw::c_int,
+                >,
+                arg2: *mut ::std::os::raw::c_void,
+                ret: *mut ::std::os::raw::c_int,
+                count: ::std::os::raw::c_int,
+                size: ::std::os::raw::c_int,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " The codec may call this to execute several independent things."]
+        #[doc = " It will return only after finishing all tasks."]
+        #[doc = " The user may replace this with some multithreaded implementation,"]
+        #[doc = " the default implementation will execute the parts serially."]
+        #[doc = " Also see avcodec_thread_init and e.g. the --enable-pthread configure option."]
+        #[doc = " @param c context passed also to func"]
+        #[doc = " @param count the number of things to execute"]
+        #[doc = " @param arg2 argument passed unchanged to func"]
+        #[doc = " @param ret return values of executed functions, must have space for \"count\" values. May be NULL."]
+        #[doc = " @param func function that will be called count times, with jobnr from 0 to count-1."]
+        #[doc = "             threadnr will be in the range 0 to c->thread_count-1 < MAX_THREADS and so that no"]
+        #[doc = "             two instances of func executing at the same time will have the same threadnr."]
+        #[doc = " @return always 0 currently, but code should handle a future improvement where when any call to func"]
+        #[doc = "         returns < 0 no further calls to func may be done and < 0 is returned."]
+        #[doc = " - encoding: Set by libavcodec, user can override."]
+        #[doc = " - decoding: Set by libavcodec, user can override."]
+        pub execute2: ::std::option::Option<
+            unsafe extern "C" fn(
+                c: *mut root::AVCodecContext,
+                func: ::std::option::Option<
+                    unsafe extern "C" fn(
+                        c2: *mut root::AVCodecContext,
+                        arg: *mut ::std::os::raw::c_void,
+                        jobnr: ::std::os::raw::c_int,
+                        threadnr: ::std::os::raw::c_int,
+                    ) -> ::std::os::raw::c_int,
+                >,
+                arg2: *mut ::std::os::raw::c_void,
+                ret: *mut ::std::os::raw::c_int,
+                count: ::std::os::raw::c_int,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " noise vs. sse weight for the nsse comparison function"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: unused"]
+        pub nsse_weight: ::std::os::raw::c_int,
+        #[doc = " profile"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by libavcodec."]
+        pub profile: ::std::os::raw::c_int,
+        #[doc = " level"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by libavcodec."]
+        pub level: ::std::os::raw::c_int,
+        #[doc = " Skip loop filtering for selected frames."]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: Set by user."]
+        pub skip_loop_filter: root::AVDiscard,
+        #[doc = " Skip IDCT/dequantization for selected frames."]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: Set by user."]
+        pub skip_idct: root::AVDiscard,
+        #[doc = " Skip decoding for selected frames."]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: Set by user."]
+        pub skip_frame: root::AVDiscard,
+        #[doc = " Header containing style information for text subtitles."]
+        #[doc = " For SUBTITLE_ASS subtitle type, it should contain the whole ASS"]
+        #[doc = " [Script Info] and [V4+ Styles] section, plus the [Events] line and"]
+        #[doc = " the Format line following. It shouldn't include any Dialogue line."]
+        #[doc = " - encoding: Set/allocated/freed by user (before avcodec_open2())"]
+        #[doc = " - decoding: Set/allocated/freed by libavcodec (by avcodec_open2())"]
+        pub subtitle_header: *mut u8,
+        pub subtitle_header_size: ::std::os::raw::c_int,
+        #[doc = " Audio only. The number of \"priming\" samples (padding) inserted by the"]
+        #[doc = " encoder at the beginning of the audio. I.e. this number of leading"]
+        #[doc = " decoded samples must be discarded by the caller to get the original audio"]
+        #[doc = " without leading padding."]
+        #[doc = ""]
+        #[doc = " - decoding: unused"]
+        #[doc = " - encoding: Set by libavcodec. The timestamps on the output packets are"]
+        #[doc = "             adjusted by the encoder so that they always refer to the"]
+        #[doc = "             first sample of the data actually contained in the packet,"]
+        #[doc = "             including any added padding.  E.g. if the timebase is"]
+        #[doc = "             1/samplerate and the timestamp of the first input sample is"]
+        #[doc = "             0, the timestamp of the first output packet will be"]
+        #[doc = "             -initial_padding."]
+        pub initial_padding: ::std::os::raw::c_int,
+        #[doc = " - decoding: For codecs that store a framerate value in the compressed"]
+        #[doc = "             bitstream, the decoder may export it here. { 0, 1} when"]
+        #[doc = "             unknown."]
+        #[doc = " - encoding: May be used to signal the framerate of CFR content to an"]
+        #[doc = "             encoder."]
+        pub framerate: root::AVRational,
+        #[doc = " Nominal unaccelerated pixel format, see AV_PIX_FMT_xxx."]
+        #[doc = " - encoding: unused."]
+        #[doc = " - decoding: Set by libavcodec before calling get_format()"]
+        pub sw_pix_fmt: root::AVPixelFormat,
+        #[doc = " Timebase in which pkt_dts/pts and AVPacket.dts/pts are."]
+        #[doc = " - encoding unused."]
+        #[doc = " - decoding set by user."]
+        pub pkt_timebase: root::AVRational,
+        #[doc = " AVCodecDescriptor"]
+        #[doc = " - encoding: unused."]
+        #[doc = " - decoding: set by libavcodec."]
+        pub codec_descriptor: *const root::AVCodecDescriptor,
+        #[doc = " Current statistics for PTS correction."]
+        #[doc = " - decoding: maintained and used by libavcodec, not intended to be used by user apps"]
+        #[doc = " - encoding: unused"]
+        pub pts_correction_num_faulty_pts: i64,
+        #[doc = " Number of incorrect PTS values so far"]
+        pub pts_correction_num_faulty_dts: i64,
+        #[doc = " Number of incorrect DTS values so far"]
+        pub pts_correction_last_pts: i64,
+        #[doc = " PTS of the last frame"]
+        pub pts_correction_last_dts: i64,
+        #[doc = " Character encoding of the input subtitles file."]
+        #[doc = " - decoding: set by user"]
+        #[doc = " - encoding: unused"]
+        pub sub_charenc: *mut ::std::os::raw::c_char,
+        #[doc = " Subtitles character encoding mode. Formats or codecs might be adjusting"]
+        #[doc = " this setting (if they are doing the conversion themselves for instance)."]
+        #[doc = " - decoding: set by libavcodec"]
+        #[doc = " - encoding: unused"]
+        pub sub_charenc_mode: ::std::os::raw::c_int,
+        #[doc = " Skip processing alpha if supported by codec."]
+        #[doc = " Note that if the format uses pre-multiplied alpha (common with VP6,"]
+        #[doc = " and recommended due to better video quality/compression)"]
+        #[doc = " the image will look as if alpha-blended onto a black background."]
+        #[doc = " However for formats that do not use pre-multiplied alpha"]
+        #[doc = " there might be serious artefacts (though e.g. libswscale currently"]
+        #[doc = " assumes pre-multiplied alpha anyway)."]
+        #[doc = ""]
+        #[doc = " - decoding: set by user"]
+        #[doc = " - encoding: unused"]
+        pub skip_alpha: ::std::os::raw::c_int,
+        #[doc = " Number of samples to skip after a discontinuity"]
+        #[doc = " - decoding: unused"]
+        #[doc = " - encoding: set by libavcodec"]
+        pub seek_preroll: ::std::os::raw::c_int,
+        #[doc = " @deprecated unused"]
+        pub debug_mv: ::std::os::raw::c_int,
+        #[doc = " custom intra quantization matrix"]
+        #[doc = " - encoding: Set by user, can be NULL."]
+        #[doc = " - decoding: unused."]
+        pub chroma_intra_matrix: *mut u16,
+        #[doc = " dump format separator."]
+        #[doc = " can be \", \" or \"\\n      \" or anything else"]
+        #[doc = " - encoding: Set by user."]
+        #[doc = " - decoding: Set by user."]
+        pub dump_separator: *mut u8,
+        #[doc = " ',' separated list of allowed decoders."]
+        #[doc = " If NULL then all are allowed"]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: set by user"]
+        pub codec_whitelist: *mut ::std::os::raw::c_char,
+        #[doc = " Properties of the stream that gets decoded"]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: set by libavcodec"]
+        pub properties: ::std::os::raw::c_uint,
+        #[doc = " Additional data associated with the entire coded stream."]
+        #[doc = ""]
+        #[doc = " - decoding: unused"]
+        #[doc = " - encoding: may be set by libavcodec after avcodec_open2()."]
+        pub coded_side_data: *mut root::AVPacketSideData,
+        pub nb_coded_side_data: ::std::os::raw::c_int,
+        #[doc = " A reference to the AVHWFramesContext describing the input (for encoding)"]
+        #[doc = " or output (decoding) frames. The reference is set by the caller and"]
+        #[doc = " afterwards owned (and freed) by libavcodec - it should never be read by"]
+        #[doc = " the caller after being set."]
+        #[doc = ""]
+        #[doc = " - decoding: This field should be set by the caller from the get_format()"]
+        #[doc = "             callback. The previous reference (if any) will always be"]
+        #[doc = "             unreffed by libavcodec before the get_format() call."]
+        #[doc = ""]
+        #[doc = "             If the default get_buffer2() is used with a hwaccel pixel"]
+        #[doc = "             format, then this AVHWFramesContext will be used for"]
+        #[doc = "             allocating the frame buffers."]
+        #[doc = ""]
+        #[doc = " - encoding: For hardware encoders configured to use a hwaccel pixel"]
+        #[doc = "             format, this field should be set by the caller to a reference"]
+        #[doc = "             to the AVHWFramesContext describing input frames."]
+        #[doc = "             AVHWFramesContext.format must be equal to"]
+        #[doc = "             AVCodecContext.pix_fmt."]
+        #[doc = ""]
+        #[doc = "             This field should be set before avcodec_open2() is called."]
+        pub hw_frames_ctx: *mut root::AVBufferRef,
+        #[doc = " @deprecated unused"]
+        pub sub_text_format: ::std::os::raw::c_int,
+        #[doc = " Audio only. The amount of padding (in samples) appended by the encoder to"]
+        #[doc = " the end of the audio. I.e. this number of decoded samples must be"]
+        #[doc = " discarded by the caller from the end of the stream to get the original"]
+        #[doc = " audio without any trailing padding."]
+        #[doc = ""]
+        #[doc = " - decoding: unused"]
+        #[doc = " - encoding: unused"]
+        pub trailing_padding: ::std::os::raw::c_int,
+        #[doc = " The number of pixels per image to maximally accept."]
+        #[doc = ""]
+        #[doc = " - decoding: set by user"]
+        #[doc = " - encoding: set by user"]
+        pub max_pixels: i64,
+        #[doc = " A reference to the AVHWDeviceContext describing the device which will"]
+        #[doc = " be used by a hardware encoder/decoder.  The reference is set by the"]
+        #[doc = " caller and afterwards owned (and freed) by libavcodec."]
+        #[doc = ""]
+        #[doc = " This should be used if either the codec device does not require"]
+        #[doc = " hardware frames or any that are used are to be allocated internally by"]
+        #[doc = " libavcodec.  If the user wishes to supply any of the frames used as"]
+        #[doc = " encoder input or decoder output then hw_frames_ctx should be used"]
+        #[doc = " instead.  When hw_frames_ctx is set in get_format() for a decoder, this"]
+        #[doc = " field will be ignored while decoding the associated stream segment, but"]
+        #[doc = " may again be used on a following one after another get_format() call."]
+        #[doc = ""]
+        #[doc = " For both encoders and decoders this field should be set before"]
+        #[doc = " avcodec_open2() is called and must not be written to thereafter."]
+        #[doc = ""]
+        #[doc = " Note that some decoders may require this field to be set initially in"]
+        #[doc = " order to support hw_frames_ctx at all - in that case, all frames"]
+        #[doc = " contexts used must be created on the same device."]
+        pub hw_device_ctx: *mut root::AVBufferRef,
+        #[doc = " Bit set of AV_HWACCEL_FLAG_* flags, which affect hardware accelerated"]
+        #[doc = " decoding (if active)."]
+        #[doc = " - encoding: unused"]
+        #[doc = " - decoding: Set by user (either before avcodec_open2(), or in the"]
+        #[doc = "             AVCodecContext.get_format callback)"]
+        pub hwaccel_flags: ::std::os::raw::c_int,
+        #[doc = " Video decoding only. Certain video codecs support cropping, meaning that"]
+        #[doc = " only a sub-rectangle of the decoded frame is intended for display.  This"]
+        #[doc = " option controls how cropping is handled by libavcodec."]
+        #[doc = ""]
+        #[doc = " When set to 1 (the default), libavcodec will apply cropping internally."]
+        #[doc = " I.e. it will modify the output frame width/height fields and offset the"]
+        #[doc = " data pointers (only by as much as possible while preserving alignment, or"]
+        #[doc = " by the full amount if the AV_CODEC_FLAG_UNALIGNED flag is set) so that"]
+        #[doc = " the frames output by the decoder refer only to the cropped area. The"]
+        #[doc = " crop_* fields of the output frames will be zero."]
+        #[doc = ""]
+        #[doc = " When set to 0, the width/height fields of the output frames will be set"]
+        #[doc = " to the coded dimensions and the crop_* fields will describe the cropping"]
+        #[doc = " rectangle. Applying the cropping is left to the caller."]
+        #[doc = ""]
+        #[doc = " @warning When hardware acceleration with opaque output frames is used,"]
+        #[doc = " libavcodec is unable to apply cropping from the top/left border."]
+        #[doc = ""]
+        #[doc = " @note when this option is set to zero, the width/height fields of the"]
+        #[doc = " AVCodecContext and output AVFrames have different meanings. The codec"]
+        #[doc = " context fields store display dimensions (with the coded dimensions in"]
+        #[doc = " coded_width/height), while the frame fields store the coded dimensions"]
+        #[doc = " (with the display dimensions being determined by the crop_* fields)."]
+        pub apply_cropping: ::std::os::raw::c_int,
+        pub extra_hw_frames: ::std::os::raw::c_int,
+        #[doc = " The percentage of damaged samples to discard a frame."]
+        #[doc = ""]
+        #[doc = " - decoding: set by user"]
+        #[doc = " - encoding: unused"]
+        pub discard_damaged_percentage: ::std::os::raw::c_int,
+        #[doc = " The number of samples per frame to maximally accept."]
+        #[doc = ""]
+        #[doc = " - decoding: set by user"]
+        #[doc = " - encoding: set by user"]
+        pub max_samples: i64,
+        #[doc = " Bit set of AV_CODEC_EXPORT_DATA_* flags, which affects the kind of"]
+        #[doc = " metadata exported in frame, packet, or coded stream side data by"]
+        #[doc = " decoders and encoders."]
+        #[doc = ""]
+        #[doc = " - decoding: set by user"]
+        #[doc = " - encoding: set by user"]
+        pub export_side_data: ::std::os::raw::c_int,
+        #[doc = " This callback is called at the beginning of each packet to get a data"]
+        #[doc = " buffer for it."]
+        #[doc = ""]
+        #[doc = " The following field will be set in the packet before this callback is"]
+        #[doc = " called:"]
+        #[doc = " - size"]
+        #[doc = " This callback must use the above value to calculate the required buffer size,"]
+        #[doc = " which must padded by at least AV_INPUT_BUFFER_PADDING_SIZE bytes."]
+        #[doc = ""]
+        #[doc = " In some specific cases, the encoder may not use the entire buffer allocated by this"]
+        #[doc = " callback. This will be reflected in the size value in the packet once returned by"]
+        #[doc = " avcodec_receive_packet()."]
+        #[doc = ""]
+        #[doc = " This callback must fill the following fields in the packet:"]
+        #[doc = " - data: alignment requirements for AVPacket apply, if any. Some architectures and"]
+        #[doc = "   encoders may benefit from having aligned data."]
+        #[doc = " - buf: must contain a pointer to an AVBufferRef structure. The packet's"]
+        #[doc = "   data pointer must be contained in it. See: av_buffer_create(), av_buffer_alloc(),"]
+        #[doc = "   and av_buffer_ref()."]
+        #[doc = ""]
+        #[doc = " If AV_CODEC_CAP_DR1 is not set then get_encode_buffer() must call"]
+        #[doc = " avcodec_default_get_encode_buffer() instead of providing a buffer allocated by"]
+        #[doc = " some other means."]
+        #[doc = ""]
+        #[doc = " The flags field may contain a combination of AV_GET_ENCODE_BUFFER_FLAG_ flags."]
+        #[doc = " They may be used for example to hint what use the buffer may get after being"]
+        #[doc = " created."]
+        #[doc = " Implementations of this callback may ignore flags they don't understand."]
+        #[doc = " If AV_GET_ENCODE_BUFFER_FLAG_REF is set in flags then the packet may be reused"]
+        #[doc = " (read and/or written to if it is writable) later by libavcodec."]
+        #[doc = ""]
+        #[doc = " This callback must be thread-safe, as when frame threading is used, it may"]
+        #[doc = " be called from multiple threads simultaneously."]
+        #[doc = ""]
+        #[doc = " @see avcodec_default_get_encode_buffer()"]
+        #[doc = ""]
+        #[doc = " - encoding: Set by libavcodec, user can override."]
+        #[doc = " - decoding: unused"]
+        pub get_encode_buffer: ::std::option::Option<
+            unsafe extern "C" fn(
+                s: *mut root::AVCodecContext,
+                pkt: *mut root::AVPacket,
+                flags: ::std::os::raw::c_int,
+            ) -> ::std::os::raw::c_int,
+        >,
+    }
+    impl Default for AVCodecContext {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct MpegEncContext {
+        _unused: [u8; 0],
+    }
+    #[doc = " @defgroup lavc_hwaccel AVHWAccel"]
+    #[doc = ""]
+    #[doc = " @note  Nothing in this structure should be accessed by the user.  At some"]
+    #[doc = "        point in future it will not be externally visible at all."]
+    #[doc = ""]
+    #[doc = " @{"]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVHWAccel {
+        #[doc = " Name of the hardware accelerated codec."]
+        #[doc = " The name is globally unique among encoders and among decoders (but an"]
+        #[doc = " encoder and a decoder can share the same name)."]
+        pub name: *const ::std::os::raw::c_char,
+        #[doc = " Type of codec implemented by the hardware accelerator."]
+        #[doc = ""]
+        #[doc = " See AVMEDIA_TYPE_xxx"]
+        pub type_: root::AVMediaType,
+        #[doc = " Codec implemented by the hardware accelerator."]
+        #[doc = ""]
+        #[doc = " See AV_CODEC_ID_xxx"]
+        pub id: root::AVCodecID,
+        #[doc = " Supported pixel format."]
+        #[doc = ""]
+        #[doc = " Only hardware accelerated formats are supported here."]
+        pub pix_fmt: root::AVPixelFormat,
+        #[doc = " Hardware accelerated codec capabilities."]
+        #[doc = " see AV_HWACCEL_CODEC_CAP_*"]
+        pub capabilities: ::std::os::raw::c_int,
+        #[doc = " Allocate a custom buffer"]
+        pub alloc_frame: ::std::option::Option<
+            unsafe extern "C" fn(
+                avctx: *mut root::AVCodecContext,
+                frame: *mut root::AVFrame,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Called at the beginning of each frame or field picture."]
+        #[doc = ""]
+        #[doc = " Meaningful frame information (codec specific) is guaranteed to"]
+        #[doc = " be parsed at this point. This function is mandatory."]
+        #[doc = ""]
+        #[doc = " Note that buf can be NULL along with buf_size set to 0."]
+        #[doc = " Otherwise, this means the whole frame is available at this point."]
+        #[doc = ""]
+        #[doc = " @param avctx the codec context"]
+        #[doc = " @param buf the frame data buffer base"]
+        #[doc = " @param buf_size the size of the frame in bytes"]
+        #[doc = " @return zero if successful, a negative value otherwise"]
+        pub start_frame: ::std::option::Option<
+            unsafe extern "C" fn(
+                avctx: *mut root::AVCodecContext,
+                buf: *const u8,
+                buf_size: u32,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Callback for parameter data (SPS/PPS/VPS etc)."]
+        #[doc = ""]
+        #[doc = " Useful for hardware decoders which keep persistent state about the"]
+        #[doc = " video parameters, and need to receive any changes to update that state."]
+        #[doc = ""]
+        #[doc = " @param avctx the codec context"]
+        #[doc = " @param type the nal unit type"]
+        #[doc = " @param buf the nal unit data buffer"]
+        #[doc = " @param buf_size the size of the nal unit in bytes"]
+        #[doc = " @return zero if successful, a negative value otherwise"]
+        pub decode_params: ::std::option::Option<
+            unsafe extern "C" fn(
+                avctx: *mut root::AVCodecContext,
+                type_: ::std::os::raw::c_int,
+                buf: *const u8,
+                buf_size: u32,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Callback for each slice."]
+        #[doc = ""]
+        #[doc = " Meaningful slice information (codec specific) is guaranteed to"]
+        #[doc = " be parsed at this point. This function is mandatory."]
+        #[doc = " The only exception is XvMC, that works on MB level."]
+        #[doc = ""]
+        #[doc = " @param avctx the codec context"]
+        #[doc = " @param buf the slice data buffer base"]
+        #[doc = " @param buf_size the size of the slice in bytes"]
+        #[doc = " @return zero if successful, a negative value otherwise"]
+        pub decode_slice: ::std::option::Option<
+            unsafe extern "C" fn(
+                avctx: *mut root::AVCodecContext,
+                buf: *const u8,
+                buf_size: u32,
+            ) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Called at the end of each frame or field picture."]
+        #[doc = ""]
+        #[doc = " The whole picture is parsed at this point and can now be sent"]
+        #[doc = " to the hardware accelerator. This function is mandatory."]
+        #[doc = ""]
+        #[doc = " @param avctx the codec context"]
+        #[doc = " @return zero if successful, a negative value otherwise"]
+        pub end_frame: ::std::option::Option<
+            unsafe extern "C" fn(avctx: *mut root::AVCodecContext) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Size of per-frame hardware accelerator private data."]
+        #[doc = ""]
+        #[doc = " Private data is allocated with av_mallocz() before"]
+        #[doc = " AVCodecContext.get_buffer() and deallocated after"]
+        #[doc = " AVCodecContext.release_buffer()."]
+        pub frame_priv_data_size: ::std::os::raw::c_int,
+        #[doc = " Called for every Macroblock in a slice."]
+        #[doc = ""]
+        #[doc = " XvMC uses it to replace the ff_mpv_reconstruct_mb()."]
+        #[doc = " Instead of decoding to raw picture, MB parameters are"]
+        #[doc = " stored in an array provided by the video driver."]
+        #[doc = ""]
+        #[doc = " @param s the mpeg context"]
+        pub decode_mb: ::std::option::Option<unsafe extern "C" fn(s: *mut root::MpegEncContext)>,
+        #[doc = " Initialize the hwaccel private data."]
+        #[doc = ""]
+        #[doc = " This will be called from ff_get_format(), after hwaccel and"]
+        #[doc = " hwaccel_context are set and the hwaccel private data in AVCodecInternal"]
+        #[doc = " is allocated."]
+        pub init: ::std::option::Option<
+            unsafe extern "C" fn(avctx: *mut root::AVCodecContext) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Uninitialize the hwaccel private data."]
+        #[doc = ""]
+        #[doc = " This will be called from get_format() or avcodec_close(), after hwaccel"]
+        #[doc = " and hwaccel_context are already uninitialized."]
+        pub uninit: ::std::option::Option<
+            unsafe extern "C" fn(avctx: *mut root::AVCodecContext) -> ::std::os::raw::c_int,
+        >,
+        #[doc = " Size of the private data to allocate in"]
+        #[doc = " AVCodecInternal.hwaccel_priv_data."]
+        pub priv_data_size: ::std::os::raw::c_int,
+        #[doc = " Internal hwaccel capabilities."]
+        pub caps_internal: ::std::os::raw::c_int,
+        #[doc = " Fill the given hw_frames context with current codec parameters. Called"]
+        #[doc = " from get_format. Refer to avcodec_get_hw_frames_parameters() for"]
+        #[doc = " details."]
+        #[doc = ""]
+        #[doc = " This CAN be called before AVHWAccel.init is called, and you must assume"]
+        #[doc = " that avctx->hwaccel_priv_data is invalid."]
+        pub frame_params: ::std::option::Option<
+            unsafe extern "C" fn(
+                avctx: *mut root::AVCodecContext,
+                hw_frames_ctx: *mut root::AVBufferRef,
+            ) -> ::std::os::raw::c_int,
+        >,
+    }
+    impl Default for AVHWAccel {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    pub const AVSubtitleType_SUBTITLE_NONE: root::AVSubtitleType = 0;
+    #[doc = "< A bitmap, pict will be set"]
+    pub const AVSubtitleType_SUBTITLE_BITMAP: root::AVSubtitleType = 1;
+    #[doc = " Plain text, the text field must be set by the decoder and is"]
+    #[doc = " authoritative. ass and pict fields may contain approximations."]
+    pub const AVSubtitleType_SUBTITLE_TEXT: root::AVSubtitleType = 2;
+    #[doc = " Formatted text, the ass field must be set by the decoder and is"]
+    #[doc = " authoritative. pict and text fields may contain approximations."]
+    pub const AVSubtitleType_SUBTITLE_ASS: root::AVSubtitleType = 3;
+    #[doc = " @}"]
+    pub type AVSubtitleType = ::std::os::raw::c_uint;
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVSubtitleRect {
+        #[doc = "< top left corner  of pict, undefined when pict is not set"]
+        pub x: ::std::os::raw::c_int,
+        #[doc = "< top left corner  of pict, undefined when pict is not set"]
+        pub y: ::std::os::raw::c_int,
+        #[doc = "< width            of pict, undefined when pict is not set"]
+        pub w: ::std::os::raw::c_int,
+        #[doc = "< height           of pict, undefined when pict is not set"]
+        pub h: ::std::os::raw::c_int,
+        #[doc = "< number of colors in pict, undefined when pict is not set"]
+        pub nb_colors: ::std::os::raw::c_int,
+        #[doc = " data+linesize for the bitmap of this subtitle."]
+        #[doc = " Can be set for text/ass as well once they are rendered."]
+        pub data: [*mut u8; 4usize],
+        pub linesize: [::std::os::raw::c_int; 4usize],
+        pub type_: root::AVSubtitleType,
+        #[doc = "< 0 terminated plain UTF-8 text"]
+        pub text: *mut ::std::os::raw::c_char,
+        #[doc = " 0 terminated ASS/SSA compatible event line."]
+        #[doc = " The presentation of this is unaffected by the other values in this"]
+        #[doc = " struct."]
+        pub ass: *mut ::std::os::raw::c_char,
+        pub flags: ::std::os::raw::c_int,
+    }
+    impl Default for AVSubtitleRect {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVSubtitle {
+        pub format: u16,
+        pub start_display_time: u32,
+        pub end_display_time: u32,
+        pub num_rects: ::std::os::raw::c_uint,
+        pub rects: *mut *mut root::AVSubtitleRect,
+        #[doc = "< Same as packet pts, in AV_TIME_BASE"]
+        pub pts: i64,
+    }
+    impl Default for AVSubtitle {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " Return the LIBAVCODEC_VERSION_INT constant."]
+        pub fn avcodec_version() -> ::std::os::raw::c_uint;
+    }
+    extern "C" {
+        #[doc = " Return the libavcodec build-time configuration."]
+        pub fn avcodec_configuration() -> *const ::std::os::raw::c_char;
+    }
+    extern "C" {
+        #[doc = " Return the libavcodec license."]
+        pub fn avcodec_license() -> *const ::std::os::raw::c_char;
+    }
+    extern "C" {
+        #[doc = " Allocate an AVCodecContext and set its fields to default values. The"]
+        #[doc = " resulting struct should be freed with avcodec_free_context()."]
+        #[doc = ""]
+        #[doc = " @param codec if non-NULL, allocate private data and initialize defaults"]
+        #[doc = "              for the given codec. It is illegal to then call avcodec_open2()"]
+        #[doc = "              with a different codec."]
+        #[doc = "              If NULL, then the codec-specific defaults won't be initialized,"]
+        #[doc = "              which may result in suboptimal default settings (this is"]
+        #[doc = "              important mainly for encoders, e.g. libx264)."]
+        #[doc = ""]
+        #[doc = " @return An AVCodecContext filled with default values or NULL on failure."]
+        pub fn avcodec_alloc_context3(codec: *const root::AVCodec) -> *mut root::AVCodecContext;
+    }
+    extern "C" {
+        #[doc = " Free the codec context and everything associated with it and write NULL to"]
+        #[doc = " the provided pointer."]
+        pub fn avcodec_free_context(avctx: *mut *mut root::AVCodecContext);
+    }
+    extern "C" {
+        #[doc = " Get the AVClass for AVCodecContext. It can be used in combination with"]
+        #[doc = " AV_OPT_SEARCH_FAKE_OBJ for examining options."]
+        #[doc = ""]
+        #[doc = " @see av_opt_find()."]
+        pub fn avcodec_get_class() -> *const root::AVClass;
+    }
+    extern "C" {
+        #[doc = " @deprecated This function should not be used."]
+        pub fn avcodec_get_frame_class() -> *const root::AVClass;
+    }
+    extern "C" {
+        #[doc = " Get the AVClass for AVSubtitleRect. It can be used in combination with"]
+        #[doc = " AV_OPT_SEARCH_FAKE_OBJ for examining options."]
+        #[doc = ""]
+        #[doc = " @see av_opt_find()."]
+        pub fn avcodec_get_subtitle_rect_class() -> *const root::AVClass;
+    }
+    extern "C" {
+        #[doc = " Fill the parameters struct based on the values from the supplied codec"]
+        #[doc = " context. Any allocated fields in par are freed and replaced with duplicates"]
+        #[doc = " of the corresponding fields in codec."]
+        #[doc = ""]
+        #[doc = " @return >= 0 on success, a negative AVERROR code on failure"]
+        pub fn avcodec_parameters_from_context(
+            par: *mut root::AVCodecParameters,
+            codec: *const root::AVCodecContext,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Fill the codec context based on the values from the supplied codec"]
+        #[doc = " parameters. Any allocated fields in codec that have a corresponding field in"]
+        #[doc = " par are freed and replaced with duplicates of the corresponding field in par."]
+        #[doc = " Fields in codec that do not have a counterpart in par are not touched."]
+        #[doc = ""]
+        #[doc = " @return >= 0 on success, a negative AVERROR code on failure."]
+        pub fn avcodec_parameters_to_context(
+            codec: *mut root::AVCodecContext,
+            par: *const root::AVCodecParameters,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Initialize the AVCodecContext to use the given AVCodec. Prior to using this"]
+        #[doc = " function the context has to be allocated with avcodec_alloc_context3()."]
+        #[doc = ""]
+        #[doc = " The functions avcodec_find_decoder_by_name(), avcodec_find_encoder_by_name(),"]
+        #[doc = " avcodec_find_decoder() and avcodec_find_encoder() provide an easy way for"]
+        #[doc = " retrieving a codec."]
+        #[doc = ""]
+        #[doc = " @warning This function is not thread safe!"]
+        #[doc = ""]
+        #[doc = " @note Always call this function before using decoding routines (such as"]
+        #[doc = " @ref avcodec_receive_frame())."]
+        #[doc = ""]
+        #[doc = " @code"]
+        #[doc = " av_dict_set(&opts, \"b\", \"2.5M\", 0);"]
+        #[doc = " codec = avcodec_find_decoder(AV_CODEC_ID_H264);"]
+        #[doc = " if (!codec)"]
+        #[doc = "     exit(1);"]
+        #[doc = ""]
+        #[doc = " context = avcodec_alloc_context3(codec);"]
+        #[doc = ""]
+        #[doc = " if (avcodec_open2(context, codec, opts) < 0)"]
+        #[doc = "     exit(1);"]
+        #[doc = " @endcode"]
+        #[doc = ""]
+        #[doc = " @param avctx The context to initialize."]
+        #[doc = " @param codec The codec to open this context for. If a non-NULL codec has been"]
+        #[doc = "              previously passed to avcodec_alloc_context3() or"]
+        #[doc = "              for this context, then this parameter MUST be either NULL or"]
+        #[doc = "              equal to the previously passed codec."]
+        #[doc = " @param options A dictionary filled with AVCodecContext and codec-private options."]
+        #[doc = "                On return this object will be filled with options that were not found."]
+        #[doc = ""]
+        #[doc = " @return zero on success, a negative value on error"]
+        #[doc = " @see avcodec_alloc_context3(), avcodec_find_decoder(), avcodec_find_encoder(),"]
+        #[doc = "      av_dict_set(), av_opt_find()."]
+        pub fn avcodec_open2(
+            avctx: *mut root::AVCodecContext,
+            codec: *const root::AVCodec,
+            options: *mut *mut root::AVDictionary,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Close a given AVCodecContext and free all the data associated with it"]
+        #[doc = " (but not the AVCodecContext itself)."]
+        #[doc = ""]
+        #[doc = " Calling this function on an AVCodecContext that hasn't been opened will free"]
+        #[doc = " the codec-specific data allocated in avcodec_alloc_context3() with a non-NULL"]
+        #[doc = " codec. Subsequent calls will do nothing."]
+        #[doc = ""]
+        #[doc = " @note Do not use this function. Use avcodec_free_context() to destroy a"]
+        #[doc = " codec context (either open or closed). Opening and closing a codec context"]
+        #[doc = " multiple times is not supported anymore -- use multiple codec contexts"]
+        #[doc = " instead."]
+        pub fn avcodec_close(avctx: *mut root::AVCodecContext) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Free all allocated data in the given subtitle struct."]
+        #[doc = ""]
+        #[doc = " @param sub AVSubtitle to free."]
+        pub fn avsubtitle_free(sub: *mut root::AVSubtitle);
+    }
+    extern "C" {
+        #[doc = " The default callback for AVCodecContext.get_buffer2(). It is made public so"]
+        #[doc = " it can be called by custom get_buffer2() implementations for decoders without"]
+        #[doc = " AV_CODEC_CAP_DR1 set."]
+        pub fn avcodec_default_get_buffer2(
+            s: *mut root::AVCodecContext,
+            frame: *mut root::AVFrame,
+            flags: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " The default callback for AVCodecContext.get_encode_buffer(). It is made public so"]
+        #[doc = " it can be called by custom get_encode_buffer() implementations for encoders without"]
+        #[doc = " AV_CODEC_CAP_DR1 set."]
+        pub fn avcodec_default_get_encode_buffer(
+            s: *mut root::AVCodecContext,
+            pkt: *mut root::AVPacket,
+            flags: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Modify width and height values so that they will result in a memory"]
+        #[doc = " buffer that is acceptable for the codec if you do not use any horizontal"]
+        #[doc = " padding."]
+        #[doc = ""]
+        #[doc = " May only be used if a codec with AV_CODEC_CAP_DR1 has been opened."]
+        pub fn avcodec_align_dimensions(
+            s: *mut root::AVCodecContext,
+            width: *mut ::std::os::raw::c_int,
+            height: *mut ::std::os::raw::c_int,
+        );
+    }
+    extern "C" {
+        #[doc = " Modify width and height values so that they will result in a memory"]
+        #[doc = " buffer that is acceptable for the codec if you also ensure that all"]
+        #[doc = " line sizes are a multiple of the respective linesize_align[i]."]
+        #[doc = ""]
+        #[doc = " May only be used if a codec with AV_CODEC_CAP_DR1 has been opened."]
+        pub fn avcodec_align_dimensions2(
+            s: *mut root::AVCodecContext,
+            width: *mut ::std::os::raw::c_int,
+            height: *mut ::std::os::raw::c_int,
+            linesize_align: *mut ::std::os::raw::c_int,
+        );
+    }
+    extern "C" {
+        #[doc = " Converts AVChromaLocation to swscale x/y chroma position."]
+        #[doc = ""]
+        #[doc = " The positions represent the chroma (0,0) position in a coordinates system"]
+        #[doc = " with luma (0,0) representing the origin and luma(1,1) representing 256,256"]
+        #[doc = ""]
+        #[doc = " @param xpos  horizontal chroma sample position"]
+        #[doc = " @param ypos  vertical   chroma sample position"]
+        pub fn avcodec_enum_to_chroma_pos(
+            xpos: *mut ::std::os::raw::c_int,
+            ypos: *mut ::std::os::raw::c_int,
+            pos: root::AVChromaLocation,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Converts swscale x/y chroma position to AVChromaLocation."]
+        #[doc = ""]
+        #[doc = " The positions represent the chroma (0,0) position in a coordinates system"]
+        #[doc = " with luma (0,0) representing the origin and luma(1,1) representing 256,256"]
+        #[doc = ""]
+        #[doc = " @param xpos  horizontal chroma sample position"]
+        #[doc = " @param ypos  vertical   chroma sample position"]
+        pub fn avcodec_chroma_pos_to_enum(
+            xpos: ::std::os::raw::c_int,
+            ypos: ::std::os::raw::c_int,
+        ) -> root::AVChromaLocation;
+    }
+    extern "C" {
+        #[doc = " Decode a subtitle message."]
+        #[doc = " Return a negative value on error, otherwise return the number of bytes used."]
+        #[doc = " If no subtitle could be decompressed, got_sub_ptr is zero."]
+        #[doc = " Otherwise, the subtitle is stored in *sub."]
+        #[doc = " Note that AV_CODEC_CAP_DR1 is not available for subtitle codecs. This is for"]
+        #[doc = " simplicity, because the performance difference is expected to be negligible"]
+        #[doc = " and reusing a get_buffer written for video codecs would probably perform badly"]
+        #[doc = " due to a potentially very different allocation pattern."]
+        #[doc = ""]
+        #[doc = " Some decoders (those marked with AV_CODEC_CAP_DELAY) have a delay between input"]
+        #[doc = " and output. This means that for some packets they will not immediately"]
+        #[doc = " produce decoded output and need to be flushed at the end of decoding to get"]
+        #[doc = " all the decoded data. Flushing is done by calling this function with packets"]
+        #[doc = " with avpkt->data set to NULL and avpkt->size set to 0 until it stops"]
+        #[doc = " returning subtitles. It is safe to flush even those decoders that are not"]
+        #[doc = " marked with AV_CODEC_CAP_DELAY, then no subtitles will be returned."]
+        #[doc = ""]
+        #[doc = " @note The AVCodecContext MUST have been opened with @ref avcodec_open2()"]
+        #[doc = " before packets may be fed to the decoder."]
+        #[doc = ""]
+        #[doc = " @param avctx the codec context"]
+        #[doc = " @param[out] sub The preallocated AVSubtitle in which the decoded subtitle will be stored,"]
+        #[doc = "                 must be freed with avsubtitle_free if *got_sub_ptr is set."]
+        #[doc = " @param[in,out] got_sub_ptr Zero if no subtitle could be decompressed, otherwise, it is nonzero."]
+        #[doc = " @param[in] avpkt The input AVPacket containing the input buffer."]
+        pub fn avcodec_decode_subtitle2(
+            avctx: *mut root::AVCodecContext,
+            sub: *mut root::AVSubtitle,
+            got_sub_ptr: *mut ::std::os::raw::c_int,
+            avpkt: *mut root::AVPacket,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Supply raw packet data as input to a decoder."]
+        #[doc = ""]
+        #[doc = " Internally, this call will copy relevant AVCodecContext fields, which can"]
+        #[doc = " influence decoding per-packet, and apply them when the packet is actually"]
+        #[doc = " decoded. (For example AVCodecContext.skip_frame, which might direct the"]
+        #[doc = " decoder to drop the frame contained by the packet sent with this function.)"]
+        #[doc = ""]
+        #[doc = " @warning The input buffer, avpkt->data must be AV_INPUT_BUFFER_PADDING_SIZE"]
+        #[doc = "          larger than the actual read bytes because some optimized bitstream"]
+        #[doc = "          readers read 32 or 64 bits at once and could read over the end."]
+        #[doc = ""]
+        #[doc = " @note The AVCodecContext MUST have been opened with @ref avcodec_open2()"]
+        #[doc = "       before packets may be fed to the decoder."]
+        #[doc = ""]
+        #[doc = " @param avctx codec context"]
+        #[doc = " @param[in] avpkt The input AVPacket. Usually, this will be a single video"]
+        #[doc = "                  frame, or several complete audio frames."]
+        #[doc = "                  Ownership of the packet remains with the caller, and the"]
+        #[doc = "                  decoder will not write to the packet. The decoder may create"]
+        #[doc = "                  a reference to the packet data (or copy it if the packet is"]
+        #[doc = "                  not reference-counted)."]
+        #[doc = "                  Unlike with older APIs, the packet is always fully consumed,"]
+        #[doc = "                  and if it contains multiple frames (e.g. some audio codecs),"]
+        #[doc = "                  will require you to call avcodec_receive_frame() multiple"]
+        #[doc = "                  times afterwards before you can send a new packet."]
+        #[doc = "                  It can be NULL (or an AVPacket with data set to NULL and"]
+        #[doc = "                  size set to 0); in this case, it is considered a flush"]
+        #[doc = "                  packet, which signals the end of the stream. Sending the"]
+        #[doc = "                  first flush packet will return success. Subsequent ones are"]
+        #[doc = "                  unnecessary and will return AVERROR_EOF. If the decoder"]
+        #[doc = "                  still has frames buffered, it will return them after sending"]
+        #[doc = "                  a flush packet."]
+        #[doc = ""]
+        #[doc = " @return 0 on success, otherwise negative error code:"]
+        #[doc = "      AVERROR(EAGAIN):   input is not accepted in the current state - user"]
+        #[doc = "                         must read output with avcodec_receive_frame() (once"]
+        #[doc = "                         all output is read, the packet should be resent, and"]
+        #[doc = "                         the call will not fail with EAGAIN)."]
+        #[doc = "      AVERROR_EOF:       the decoder has been flushed, and no new packets can"]
+        #[doc = "                         be sent to it (also returned if more than 1 flush"]
+        #[doc = "                         packet is sent)"]
+        #[doc = "      AVERROR(EINVAL):   codec not opened, it is an encoder, or requires flush"]
+        #[doc = "      AVERROR(ENOMEM):   failed to add packet to internal queue, or similar"]
+        #[doc = "      other errors: legitimate decoding errors"]
+        pub fn avcodec_send_packet(
+            avctx: *mut root::AVCodecContext,
+            avpkt: *const root::AVPacket,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Return decoded output data from a decoder."]
+        #[doc = ""]
+        #[doc = " @param avctx codec context"]
+        #[doc = " @param frame This will be set to a reference-counted video or audio"]
+        #[doc = "              frame (depending on the decoder type) allocated by the"]
+        #[doc = "              decoder. Note that the function will always call"]
+        #[doc = "              av_frame_unref(frame) before doing anything else."]
+        #[doc = ""]
+        #[doc = " @return"]
+        #[doc = "      0:                 success, a frame was returned"]
+        #[doc = "      AVERROR(EAGAIN):   output is not available in this state - user must try"]
+        #[doc = "                         to send new input"]
+        #[doc = "      AVERROR_EOF:       the decoder has been fully flushed, and there will be"]
+        #[doc = "                         no more output frames"]
+        #[doc = "      AVERROR(EINVAL):   codec not opened, or it is an encoder"]
+        #[doc = "      AVERROR_INPUT_CHANGED:   current decoded frame has changed parameters"]
+        #[doc = "                               with respect to first decoded frame. Applicable"]
+        #[doc = "                               when flag AV_CODEC_FLAG_DROPCHANGED is set."]
+        #[doc = "      other negative values: legitimate decoding errors"]
+        pub fn avcodec_receive_frame(
+            avctx: *mut root::AVCodecContext,
+            frame: *mut root::AVFrame,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Supply a raw video or audio frame to the encoder. Use avcodec_receive_packet()"]
+        #[doc = " to retrieve buffered output packets."]
+        #[doc = ""]
+        #[doc = " @param avctx     codec context"]
+        #[doc = " @param[in] frame AVFrame containing the raw audio or video frame to be encoded."]
+        #[doc = "                  Ownership of the frame remains with the caller, and the"]
+        #[doc = "                  encoder will not write to the frame. The encoder may create"]
+        #[doc = "                  a reference to the frame data (or copy it if the frame is"]
+        #[doc = "                  not reference-counted)."]
+        #[doc = "                  It can be NULL, in which case it is considered a flush"]
+        #[doc = "                  packet.  This signals the end of the stream. If the encoder"]
+        #[doc = "                  still has packets buffered, it will return them after this"]
+        #[doc = "                  call. Once flushing mode has been entered, additional flush"]
+        #[doc = "                  packets are ignored, and sending frames will return"]
+        #[doc = "                  AVERROR_EOF."]
+        #[doc = ""]
+        #[doc = "                  For audio:"]
+        #[doc = "                  If AV_CODEC_CAP_VARIABLE_FRAME_SIZE is set, then each frame"]
+        #[doc = "                  can have any number of samples."]
+        #[doc = "                  If it is not set, frame->nb_samples must be equal to"]
+        #[doc = "                  avctx->frame_size for all frames except the last."]
+        #[doc = "                  The final frame may be smaller than avctx->frame_size."]
+        #[doc = " @return 0 on success, otherwise negative error code:"]
+        #[doc = "      AVERROR(EAGAIN):   input is not accepted in the current state - user"]
+        #[doc = "                         must read output with avcodec_receive_packet() (once"]
+        #[doc = "                         all output is read, the packet should be resent, and"]
+        #[doc = "                         the call will not fail with EAGAIN)."]
+        #[doc = "      AVERROR_EOF:       the encoder has been flushed, and no new frames can"]
+        #[doc = "                         be sent to it"]
+        #[doc = "      AVERROR(EINVAL):   codec not opened, it is a decoder, or requires flush"]
+        #[doc = "      AVERROR(ENOMEM):   failed to add packet to internal queue, or similar"]
+        #[doc = "      other errors: legitimate encoding errors"]
+        pub fn avcodec_send_frame(
+            avctx: *mut root::AVCodecContext,
+            frame: *const root::AVFrame,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Read encoded data from the encoder."]
+        #[doc = ""]
+        #[doc = " @param avctx codec context"]
+        #[doc = " @param avpkt This will be set to a reference-counted packet allocated by the"]
+        #[doc = "              encoder. Note that the function will always call"]
+        #[doc = "              av_packet_unref(avpkt) before doing anything else."]
+        #[doc = " @return 0 on success, otherwise negative error code:"]
+        #[doc = "      AVERROR(EAGAIN):   output is not available in the current state - user"]
+        #[doc = "                         must try to send input"]
+        #[doc = "      AVERROR_EOF:       the encoder has been fully flushed, and there will be"]
+        #[doc = "                         no more output packets"]
+        #[doc = "      AVERROR(EINVAL):   codec not opened, or it is a decoder"]
+        #[doc = "      other errors: legitimate encoding errors"]
+        pub fn avcodec_receive_packet(
+            avctx: *mut root::AVCodecContext,
+            avpkt: *mut root::AVPacket,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Create and return a AVHWFramesContext with values adequate for hardware"]
+        #[doc = " decoding. This is meant to get called from the get_format callback, and is"]
+        #[doc = " a helper for preparing a AVHWFramesContext for AVCodecContext.hw_frames_ctx."]
+        #[doc = " This API is for decoding with certain hardware acceleration modes/APIs only."]
+        #[doc = ""]
+        #[doc = " The returned AVHWFramesContext is not initialized. The caller must do this"]
+        #[doc = " with av_hwframe_ctx_init()."]
+        #[doc = ""]
+        #[doc = " Calling this function is not a requirement, but makes it simpler to avoid"]
+        #[doc = " codec or hardware API specific details when manually allocating frames."]
+        #[doc = ""]
+        #[doc = " Alternatively to this, an API user can set AVCodecContext.hw_device_ctx,"]
+        #[doc = " which sets up AVCodecContext.hw_frames_ctx fully automatically, and makes"]
+        #[doc = " it unnecessary to call this function or having to care about"]
+        #[doc = " AVHWFramesContext initialization at all."]
+        #[doc = ""]
+        #[doc = " There are a number of requirements for calling this function:"]
+        #[doc = ""]
+        #[doc = " - It must be called from get_format with the same avctx parameter that was"]
+        #[doc = "   passed to get_format. Calling it outside of get_format is not allowed, and"]
+        #[doc = "   can trigger undefined behavior."]
+        #[doc = " - The function is not always supported (see description of return values)."]
+        #[doc = "   Even if this function returns successfully, hwaccel initialization could"]
+        #[doc = "   fail later. (The degree to which implementations check whether the stream"]
+        #[doc = "   is actually supported varies. Some do this check only after the user's"]
+        #[doc = "   get_format callback returns.)"]
+        #[doc = " - The hw_pix_fmt must be one of the choices suggested by get_format. If the"]
+        #[doc = "   user decides to use a AVHWFramesContext prepared with this API function,"]
+        #[doc = "   the user must return the same hw_pix_fmt from get_format."]
+        #[doc = " - The device_ref passed to this function must support the given hw_pix_fmt."]
+        #[doc = " - After calling this API function, it is the user's responsibility to"]
+        #[doc = "   initialize the AVHWFramesContext (returned by the out_frames_ref parameter),"]
+        #[doc = "   and to set AVCodecContext.hw_frames_ctx to it. If done, this must be done"]
+        #[doc = "   before returning from get_format (this is implied by the normal"]
+        #[doc = "   AVCodecContext.hw_frames_ctx API rules)."]
+        #[doc = " - The AVHWFramesContext parameters may change every time time get_format is"]
+        #[doc = "   called. Also, AVCodecContext.hw_frames_ctx is reset before get_format. So"]
+        #[doc = "   you are inherently required to go through this process again on every"]
+        #[doc = "   get_format call."]
+        #[doc = " - It is perfectly possible to call this function without actually using"]
+        #[doc = "   the resulting AVHWFramesContext. One use-case might be trying to reuse a"]
+        #[doc = "   previously initialized AVHWFramesContext, and calling this API function"]
+        #[doc = "   only to test whether the required frame parameters have changed."]
+        #[doc = " - Fields that use dynamically allocated values of any kind must not be set"]
+        #[doc = "   by the user unless setting them is explicitly allowed by the documentation."]
+        #[doc = "   If the user sets AVHWFramesContext.free and AVHWFramesContext.user_opaque,"]
+        #[doc = "   the new free callback must call the potentially set previous free callback."]
+        #[doc = "   This API call may set any dynamically allocated fields, including the free"]
+        #[doc = "   callback."]
+        #[doc = ""]
+        #[doc = " The function will set at least the following fields on AVHWFramesContext"]
+        #[doc = " (potentially more, depending on hwaccel API):"]
+        #[doc = ""]
+        #[doc = " - All fields set by av_hwframe_ctx_alloc()."]
+        #[doc = " - Set the format field to hw_pix_fmt."]
+        #[doc = " - Set the sw_format field to the most suited and most versatile format. (An"]
+        #[doc = "   implication is that this will prefer generic formats over opaque formats"]
+        #[doc = "   with arbitrary restrictions, if possible.)"]
+        #[doc = " - Set the width/height fields to the coded frame size, rounded up to the"]
+        #[doc = "   API-specific minimum alignment."]
+        #[doc = " - Only _if_ the hwaccel requires a pre-allocated pool: set the initial_pool_size"]
+        #[doc = "   field to the number of maximum reference surfaces possible with the codec,"]
+        #[doc = "   plus 1 surface for the user to work (meaning the user can safely reference"]
+        #[doc = "   at most 1 decoded surface at a time), plus additional buffering introduced"]
+        #[doc = "   by frame threading. If the hwaccel does not require pre-allocation, the"]
+        #[doc = "   field is left to 0, and the decoder will allocate new surfaces on demand"]
+        #[doc = "   during decoding."]
+        #[doc = " - Possibly AVHWFramesContext.hwctx fields, depending on the underlying"]
+        #[doc = "   hardware API."]
+        #[doc = ""]
+        #[doc = " Essentially, out_frames_ref returns the same as av_hwframe_ctx_alloc(), but"]
+        #[doc = " with basic frame parameters set."]
+        #[doc = ""]
+        #[doc = " The function is stateless, and does not change the AVCodecContext or the"]
+        #[doc = " device_ref AVHWDeviceContext."]
+        #[doc = ""]
+        #[doc = " @param avctx The context which is currently calling get_format, and which"]
+        #[doc = "              implicitly contains all state needed for filling the returned"]
+        #[doc = "              AVHWFramesContext properly."]
+        #[doc = " @param device_ref A reference to the AVHWDeviceContext describing the device"]
+        #[doc = "                   which will be used by the hardware decoder."]
+        #[doc = " @param hw_pix_fmt The hwaccel format you are going to return from get_format."]
+        #[doc = " @param out_frames_ref On success, set to a reference to an _uninitialized_"]
+        #[doc = "                       AVHWFramesContext, created from the given device_ref."]
+        #[doc = "                       Fields will be set to values required for decoding."]
+        #[doc = "                       Not changed if an error is returned."]
+        #[doc = " @return zero on success, a negative value on error. The following error codes"]
+        #[doc = "         have special semantics:"]
+        #[doc = "      AVERROR(ENOENT): the decoder does not support this functionality. Setup"]
+        #[doc = "                       is always manual, or it is a decoder which does not"]
+        #[doc = "                       support setting AVCodecContext.hw_frames_ctx at all,"]
+        #[doc = "                       or it is a software format."]
+        #[doc = "      AVERROR(EINVAL): it is known that hardware decoding is not supported for"]
+        #[doc = "                       this configuration, or the device_ref is not supported"]
+        #[doc = "                       for the hwaccel referenced by hw_pix_fmt."]
+        pub fn avcodec_get_hw_frames_parameters(
+            avctx: *mut root::AVCodecContext,
+            device_ref: *mut root::AVBufferRef,
+            hw_pix_fmt: root::AVPixelFormat,
+            out_frames_ref: *mut *mut root::AVBufferRef,
+        ) -> ::std::os::raw::c_int;
+    }
+    pub const AVPictureStructure_AV_PICTURE_STRUCTURE_UNKNOWN: root::AVPictureStructure = 0;
+    pub const AVPictureStructure_AV_PICTURE_STRUCTURE_TOP_FIELD: root::AVPictureStructure = 1;
+    pub const AVPictureStructure_AV_PICTURE_STRUCTURE_BOTTOM_FIELD: root::AVPictureStructure = 2;
+    pub const AVPictureStructure_AV_PICTURE_STRUCTURE_FRAME: root::AVPictureStructure = 3;
+    #[doc = " @defgroup lavc_parsing Frame parsing"]
+    #[doc = " @{"]
+    pub type AVPictureStructure = ::std::os::raw::c_uint;
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVCodecParserContext {
+        pub priv_data: *mut ::std::os::raw::c_void,
+        pub parser: *const root::AVCodecParser,
+        pub frame_offset: i64,
+        pub cur_offset: i64,
+        pub next_frame_offset: i64,
+        pub pict_type: ::std::os::raw::c_int,
+        #[doc = " This field is used for proper frame duration computation in lavf."]
+        #[doc = " It signals, how much longer the frame duration of the current frame"]
+        #[doc = " is compared to normal frame duration."]
+        #[doc = ""]
+        #[doc = " frame_duration = (1 + repeat_pict) * time_base"]
+        #[doc = ""]
+        #[doc = " It is used by codecs like H.264 to display telecined material."]
+        pub repeat_pict: ::std::os::raw::c_int,
+        pub pts: i64,
+        pub dts: i64,
+        pub last_pts: i64,
+        pub last_dts: i64,
+        pub fetch_timestamp: ::std::os::raw::c_int,
+        pub cur_frame_start_index: ::std::os::raw::c_int,
+        pub cur_frame_offset: [i64; 4usize],
+        pub cur_frame_pts: [i64; 4usize],
+        pub cur_frame_dts: [i64; 4usize],
+        pub flags: ::std::os::raw::c_int,
+        #[doc = "< byte offset from starting packet start"]
+        pub offset: i64,
+        pub cur_frame_end: [i64; 4usize],
+        #[doc = " Set by parser to 1 for key frames and 0 for non-key frames."]
+        #[doc = " It is initialized to -1, so if the parser doesn't set this flag,"]
+        #[doc = " old-style fallback using AV_PICTURE_TYPE_I picture type as key frames"]
+        #[doc = " will be used."]
+        pub key_frame: ::std::os::raw::c_int,
+        #[doc = " Synchronization point for start of timestamp generation."]
+        #[doc = ""]
+        #[doc = " Set to >0 for sync point, 0 for no sync point and <0 for undefined"]
+        #[doc = " (default)."]
+        #[doc = ""]
+        #[doc = " For example, this corresponds to presence of H.264 buffering period"]
+        #[doc = " SEI message."]
+        pub dts_sync_point: ::std::os::raw::c_int,
+        #[doc = " Offset of the current timestamp against last timestamp sync point in"]
+        #[doc = " units of AVCodecContext.time_base."]
+        #[doc = ""]
+        #[doc = " Set to INT_MIN when dts_sync_point unused. Otherwise, it must"]
+        #[doc = " contain a valid timestamp offset."]
+        #[doc = ""]
+        #[doc = " Note that the timestamp of sync point has usually a nonzero"]
+        #[doc = " dts_ref_dts_delta, which refers to the previous sync point. Offset of"]
+        #[doc = " the next frame after timestamp sync point will be usually 1."]
+        #[doc = ""]
+        #[doc = " For example, this corresponds to H.264 cpb_removal_delay."]
+        pub dts_ref_dts_delta: ::std::os::raw::c_int,
+        #[doc = " Presentation delay of current frame in units of AVCodecContext.time_base."]
+        #[doc = ""]
+        #[doc = " Set to INT_MIN when dts_sync_point unused. Otherwise, it must"]
+        #[doc = " contain valid non-negative timestamp delta (presentation time of a frame"]
+        #[doc = " must not lie in the past)."]
+        #[doc = ""]
+        #[doc = " This delay represents the difference between decoding and presentation"]
+        #[doc = " time of the frame."]
+        #[doc = ""]
+        #[doc = " For example, this corresponds to H.264 dpb_output_delay."]
+        pub pts_dts_delta: ::std::os::raw::c_int,
+        #[doc = " Position of the packet in file."]
+        #[doc = ""]
+        #[doc = " Analogous to cur_frame_pts/dts"]
+        pub cur_frame_pos: [i64; 4usize],
+        #[doc = " Byte position of currently parsed frame in stream."]
+        pub pos: i64,
+        #[doc = " Previous frame byte position."]
+        pub last_pos: i64,
+        #[doc = " Duration of the current frame."]
+        #[doc = " For audio, this is in units of 1 / AVCodecContext.sample_rate."]
+        #[doc = " For all other types, this is in units of AVCodecContext.time_base."]
+        pub duration: ::std::os::raw::c_int,
+        pub field_order: root::AVFieldOrder,
+        #[doc = " Indicate whether a picture is coded as a frame, top field or bottom field."]
+        #[doc = ""]
+        #[doc = " For example, H.264 field_pic_flag equal to 0 corresponds to"]
+        #[doc = " AV_PICTURE_STRUCTURE_FRAME. An H.264 picture with field_pic_flag"]
+        #[doc = " equal to 1 and bottom_field_flag equal to 0 corresponds to"]
+        #[doc = " AV_PICTURE_STRUCTURE_TOP_FIELD."]
+        pub picture_structure: root::AVPictureStructure,
+        #[doc = " Picture number incremented in presentation or output order."]
+        #[doc = " This field may be reinitialized at the first picture of a new sequence."]
+        #[doc = ""]
+        #[doc = " For example, this corresponds to H.264 PicOrderCnt."]
+        pub output_picture_number: ::std::os::raw::c_int,
+        #[doc = " Dimensions of the decoded video intended for presentation."]
+        pub width: ::std::os::raw::c_int,
+        pub height: ::std::os::raw::c_int,
+        #[doc = " Dimensions of the coded video."]
+        pub coded_width: ::std::os::raw::c_int,
+        pub coded_height: ::std::os::raw::c_int,
+        #[doc = " The format of the coded data, corresponds to enum AVPixelFormat for video"]
+        #[doc = " and for enum AVSampleFormat for audio."]
+        #[doc = ""]
+        #[doc = " Note that a decoder can have considerable freedom in how exactly it"]
+        #[doc = " decodes the data, so the format reported here might be different from the"]
+        #[doc = " one returned by a decoder."]
+        pub format: ::std::os::raw::c_int,
+    }
+    impl Default for AVCodecParserContext {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    #[repr(C)]
+    #[derive(Debug, Default, Copy, Clone)]
+    pub struct AVCodecParser {
+        pub codec_ids: [::std::os::raw::c_int; 7usize],
+        pub priv_data_size: ::std::os::raw::c_int,
+        pub parser_init: ::std::option::Option<
+            unsafe extern "C" fn(s: *mut root::AVCodecParserContext) -> ::std::os::raw::c_int,
+        >,
+        pub parser_parse: ::std::option::Option<
+            unsafe extern "C" fn(
+                s: *mut root::AVCodecParserContext,
+                avctx: *mut root::AVCodecContext,
+                poutbuf: *mut *const u8,
+                poutbuf_size: *mut ::std::os::raw::c_int,
+                buf: *const u8,
+                buf_size: ::std::os::raw::c_int,
+            ) -> ::std::os::raw::c_int,
+        >,
+        pub parser_close:
+            ::std::option::Option<unsafe extern "C" fn(s: *mut root::AVCodecParserContext)>,
+        pub split: ::std::option::Option<
+            unsafe extern "C" fn(
+                avctx: *mut root::AVCodecContext,
+                buf: *const u8,
+                buf_size: ::std::os::raw::c_int,
+            ) -> ::std::os::raw::c_int,
+        >,
+    }
+    extern "C" {
+        #[doc = " Iterate over all registered codec parsers."]
+        #[doc = ""]
+        #[doc = " @param opaque a pointer where libavcodec will store the iteration state. Must"]
+        #[doc = "               point to NULL to start the iteration."]
+        #[doc = ""]
+        #[doc = " @return the next registered codec parser or NULL when the iteration is"]
+        #[doc = "         finished"]
+        pub fn av_parser_iterate(
+            opaque: *mut *mut ::std::os::raw::c_void,
+        ) -> *const root::AVCodecParser;
+    }
+    extern "C" {
+        pub fn av_parser_init(codec_id: ::std::os::raw::c_int) -> *mut root::AVCodecParserContext;
+    }
+    extern "C" {
+        #[doc = " Parse a packet."]
+        #[doc = ""]
+        #[doc = " @param s             parser context."]
+        #[doc = " @param avctx         codec context."]
+        #[doc = " @param poutbuf       set to pointer to parsed buffer or NULL if not yet finished."]
+        #[doc = " @param poutbuf_size  set to size of parsed buffer or zero if not yet finished."]
+        #[doc = " @param buf           input buffer."]
+        #[doc = " @param buf_size      buffer size in bytes without the padding. I.e. the full buffer"]
+        #[doc = "size is assumed to be buf_size + AV_INPUT_BUFFER_PADDING_SIZE."]
+        #[doc = "To signal EOF, this should be 0 (so that the last frame"]
+        #[doc = "can be output)."]
+        #[doc = " @param pts           input presentation timestamp."]
+        #[doc = " @param dts           input decoding timestamp."]
+        #[doc = " @param pos           input byte position in stream."]
+        #[doc = " @return the number of bytes of the input bitstream used."]
+        #[doc = ""]
+        #[doc = " Example:"]
+        #[doc = " @code"]
+        #[doc = "   while(in_len){"]
+        #[doc = "       len = av_parser_parse2(myparser, AVCodecContext, &data, &size,"]
+        #[doc = "                                        in_data, in_len,"]
+        #[doc = "                                        pts, dts, pos);"]
+        #[doc = "       in_data += len;"]
+        #[doc = "       in_len  -= len;"]
+        #[doc = ""]
+        #[doc = "       if(size)"]
+        #[doc = "          decode_frame(data, size);"]
+        #[doc = "   }"]
+        #[doc = " @endcode"]
+        pub fn av_parser_parse2(
+            s: *mut root::AVCodecParserContext,
+            avctx: *mut root::AVCodecContext,
+            poutbuf: *mut *mut u8,
+            poutbuf_size: *mut ::std::os::raw::c_int,
+            buf: *const u8,
+            buf_size: ::std::os::raw::c_int,
+            pts: i64,
+            dts: i64,
+            pos: i64,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        pub fn av_parser_close(s: *mut root::AVCodecParserContext);
+    }
+    extern "C" {
+        #[doc = " @addtogroup lavc_encoding"]
+        #[doc = " @{"]
+        pub fn avcodec_encode_subtitle(
+            avctx: *mut root::AVCodecContext,
+            buf: *mut u8,
+            buf_size: ::std::os::raw::c_int,
+            sub: *const root::AVSubtitle,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Return a value representing the fourCC code associated to the"]
+        #[doc = " pixel format pix_fmt, or 0 if no associated fourCC code can be"]
+        #[doc = " found."]
+        pub fn avcodec_pix_fmt_to_codec_tag(pix_fmt: root::AVPixelFormat)
+            -> ::std::os::raw::c_uint;
+    }
+    extern "C" {
+        #[doc = " Find the best pixel format to convert to given a certain source pixel"]
+        #[doc = " format.  When converting from one pixel format to another, information loss"]
+        #[doc = " may occur.  For example, when converting from RGB24 to GRAY, the color"]
+        #[doc = " information will be lost. Similarly, other losses occur when converting from"]
+        #[doc = " some formats to other formats. avcodec_find_best_pix_fmt_of_2() searches which of"]
+        #[doc = " the given pixel formats should be used to suffer the least amount of loss."]
+        #[doc = " The pixel formats from which it chooses one, are determined by the"]
+        #[doc = " pix_fmt_list parameter."]
+        #[doc = ""]
+        #[doc = ""]
+        #[doc = " @param[in] pix_fmt_list AV_PIX_FMT_NONE terminated array of pixel formats to choose from"]
+        #[doc = " @param[in] src_pix_fmt source pixel format"]
+        #[doc = " @param[in] has_alpha Whether the source pixel format alpha channel is used."]
+        #[doc = " @param[out] loss_ptr Combination of flags informing you what kind of losses will occur."]
+        #[doc = " @return The best pixel format to convert to or -1 if none was found."]
+        pub fn avcodec_find_best_pix_fmt_of_list(
+            pix_fmt_list: *const root::AVPixelFormat,
+            src_pix_fmt: root::AVPixelFormat,
+            has_alpha: ::std::os::raw::c_int,
+            loss_ptr: *mut ::std::os::raw::c_int,
+        ) -> root::AVPixelFormat;
+    }
+    extern "C" {
+        pub fn avcodec_default_get_format(
+            s: *mut root::AVCodecContext,
+            fmt: *const root::AVPixelFormat,
+        ) -> root::AVPixelFormat;
+    }
+    extern "C" {
+        #[doc = " @}"]
+        pub fn avcodec_string(
+            buf: *mut ::std::os::raw::c_char,
+            buf_size: ::std::os::raw::c_int,
+            enc: *mut root::AVCodecContext,
+            encode: ::std::os::raw::c_int,
+        );
+    }
+    extern "C" {
+        pub fn avcodec_default_execute(
+            c: *mut root::AVCodecContext,
+            func: ::std::option::Option<
+                unsafe extern "C" fn(
+                    c2: *mut root::AVCodecContext,
+                    arg2: *mut ::std::os::raw::c_void,
+                ) -> ::std::os::raw::c_int,
+            >,
+            arg: *mut ::std::os::raw::c_void,
+            ret: *mut ::std::os::raw::c_int,
+            count: ::std::os::raw::c_int,
+            size: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        pub fn avcodec_default_execute2(
+            c: *mut root::AVCodecContext,
+            func: ::std::option::Option<
+                unsafe extern "C" fn(
+                    c2: *mut root::AVCodecContext,
+                    arg2: *mut ::std::os::raw::c_void,
+                    arg1: ::std::os::raw::c_int,
+                    arg2: ::std::os::raw::c_int,
+                ) -> ::std::os::raw::c_int,
+            >,
+            arg: *mut ::std::os::raw::c_void,
+            ret: *mut ::std::os::raw::c_int,
+            count: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Fill AVFrame audio data and linesize pointers."]
+        #[doc = ""]
+        #[doc = " The buffer buf must be a preallocated buffer with a size big enough"]
+        #[doc = " to contain the specified samples amount. The filled AVFrame data"]
+        #[doc = " pointers will point to this buffer."]
+        #[doc = ""]
+        #[doc = " AVFrame extended_data channel pointers are allocated if necessary for"]
+        #[doc = " planar audio."]
+        #[doc = ""]
+        #[doc = " @param frame       the AVFrame"]
+        #[doc = "                    frame->nb_samples must be set prior to calling the"]
+        #[doc = "                    function. This function fills in frame->data,"]
+        #[doc = "                    frame->extended_data, frame->linesize[0]."]
+        #[doc = " @param nb_channels channel count"]
+        #[doc = " @param sample_fmt  sample format"]
+        #[doc = " @param buf         buffer to use for frame data"]
+        #[doc = " @param buf_size    size of buffer"]
+        #[doc = " @param align       plane size sample alignment (0 = default)"]
+        #[doc = " @return            >=0 on success, negative error code on failure"]
+        #[doc = " @todo return the size in bytes required to store the samples in"]
+        #[doc = " case of success, at the next libavutil bump"]
+        pub fn avcodec_fill_audio_frame(
+            frame: *mut root::AVFrame,
+            nb_channels: ::std::os::raw::c_int,
+            sample_fmt: root::AVSampleFormat,
+            buf: *const u8,
+            buf_size: ::std::os::raw::c_int,
+            align: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Reset the internal codec state / flush internal buffers. Should be called"]
+        #[doc = " e.g. when seeking or when switching to a different stream."]
+        #[doc = ""]
+        #[doc = " @note for decoders, this function just releases any references the decoder"]
+        #[doc = " might keep internally, but the caller's references remain valid."]
+        #[doc = ""]
+        #[doc = " @note for encoders, this function will only do something if the encoder"]
+        #[doc = " declares support for AV_CODEC_CAP_ENCODER_FLUSH. When called, the encoder"]
+        #[doc = " will drain any remaining packets, and can then be re-used for a different"]
+        #[doc = " stream (as opposed to sending a null frame which will leave the encoder"]
+        #[doc = " in a permanent EOF state after draining). This can be desirable if the"]
+        #[doc = " cost of tearing down and replacing the encoder instance is high."]
+        pub fn avcodec_flush_buffers(avctx: *mut root::AVCodecContext);
+    }
+    extern "C" {
+        #[doc = " Return audio frame duration."]
+        #[doc = ""]
+        #[doc = " @param avctx        codec context"]
+        #[doc = " @param frame_bytes  size of the frame, or 0 if unknown"]
+        #[doc = " @return             frame duration, in samples, if known. 0 if not able to"]
+        #[doc = "                     determine."]
+        pub fn av_get_audio_frame_duration(
+            avctx: *mut root::AVCodecContext,
+            frame_bytes: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Same behaviour av_fast_malloc but the buffer has additional"]
+        #[doc = " AV_INPUT_BUFFER_PADDING_SIZE at the end which will always be 0."]
+        #[doc = ""]
+        #[doc = " In addition the whole buffer will initially and after resizes"]
+        #[doc = " be 0-initialized so that no uninitialized data will ever appear."]
+        pub fn av_fast_padded_malloc(
+            ptr: *mut ::std::os::raw::c_void,
+            size: *mut ::std::os::raw::c_uint,
+            min_size: root::size_t,
+        );
+    }
+    extern "C" {
+        #[doc = " Same behaviour av_fast_padded_malloc except that buffer will always"]
+        #[doc = " be 0-initialized after call."]
+        pub fn av_fast_padded_mallocz(
+            ptr: *mut ::std::os::raw::c_void,
+            size: *mut ::std::os::raw::c_uint,
+            min_size: root::size_t,
+        );
+    }
+    extern "C" {
+        #[doc = " @return a positive value if s is open (i.e. avcodec_open2() was called on it"]
+        #[doc = " with no corresponding avcodec_close()), 0 otherwise."]
+        pub fn avcodec_is_open(s: *mut root::AVCodecContext) -> ::std::os::raw::c_int;
+    }
+    #[doc = " This structure holds a reference to a android/view/Surface object that will"]
+    #[doc = " be used as output by the decoder."]
+    #[doc = ""]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVMediaCodecContext {
+        #[doc = " android/view/Surface object reference."]
+        pub surface: *mut ::std::os::raw::c_void,
+    }
+    impl Default for AVMediaCodecContext {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " Allocate and initialize a MediaCodec context."]
+        #[doc = ""]
+        #[doc = " When decoding with MediaCodec is finished, the caller must free the"]
+        #[doc = " MediaCodec context with av_mediacodec_default_free."]
+        #[doc = ""]
+        #[doc = " @return a pointer to a newly allocated AVMediaCodecContext on success, NULL otherwise"]
+        pub fn av_mediacodec_alloc_context() -> *mut root::AVMediaCodecContext;
+    }
+    extern "C" {
+        #[doc = " Convenience function that sets up the MediaCodec context."]
+        #[doc = ""]
+        #[doc = " @param avctx codec context"]
+        #[doc = " @param ctx MediaCodec context to initialize"]
+        #[doc = " @param surface reference to an android/view/Surface"]
+        #[doc = " @return 0 on success, < 0 otherwise"]
+        pub fn av_mediacodec_default_init(
+            avctx: *mut root::AVCodecContext,
+            ctx: *mut root::AVMediaCodecContext,
+            surface: *mut ::std::os::raw::c_void,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " This function must be called to free the MediaCodec context initialized with"]
+        #[doc = " av_mediacodec_default_init()."]
+        #[doc = ""]
+        #[doc = " @param avctx codec context"]
+        pub fn av_mediacodec_default_free(avctx: *mut root::AVCodecContext);
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct MediaCodecBuffer {
+        _unused: [u8; 0],
+    }
+    #[doc = " Opaque structure representing a MediaCodec buffer to render."]
+    pub type AVMediaCodecBuffer = root::MediaCodecBuffer;
+    extern "C" {
+        #[doc = " Release a MediaCodec buffer and render it to the surface that is associated"]
+        #[doc = " with the decoder. This function should only be called once on a given"]
+        #[doc = " buffer, once released the underlying buffer returns to the codec, thus"]
+        #[doc = " subsequent calls to this function will have no effect."]
+        #[doc = ""]
+        #[doc = " @param buffer the buffer to render"]
+        #[doc = " @param render 1 to release and render the buffer to the surface or 0 to"]
+        #[doc = " discard the buffer"]
+        #[doc = " @return 0 on success, < 0 otherwise"]
+        pub fn av_mediacodec_release_buffer(
+            buffer: *mut root::AVMediaCodecBuffer,
+            render: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Release a MediaCodec buffer and render it at the given time to the surface"]
+        #[doc = " that is associated with the decoder. The timestamp must be within one second"]
+        #[doc = " of the current java/lang/System#nanoTime() (which is implemented using"]
+        #[doc = " CLOCK_MONOTONIC on Android). See the Android MediaCodec documentation"]
+        #[doc = " of android/media/MediaCodec#releaseOutputBuffer(int,long) for more details."]
+        #[doc = ""]
+        #[doc = " @param buffer the buffer to render"]
+        #[doc = " @param time timestamp in nanoseconds of when to render the buffer"]
+        #[doc = " @return 0 on success, < 0 otherwise"]
+        pub fn av_mediacodec_render_buffer_at_time(
+            buffer: *mut root::AVMediaCodecBuffer,
+            time: i64,
+        ) -> ::std::os::raw::c_int;
+    }
+    #[doc = " @defgroup lavc_fft FFT functions"]
+    #[doc = " @ingroup lavc_misc"]
+    #[doc = ""]
+    #[doc = " @{"]
+    pub type FFTSample = f32;
+    #[repr(C)]
+    #[derive(Debug, Default, Copy, Clone)]
+    pub struct FFTComplex {
+        pub re: root::FFTSample,
+        pub im: root::FFTSample,
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct FFTContext {
+        _unused: [u8; 0],
+    }
+    extern "C" {
+        #[doc = " Set up a complex FFT."]
+        #[doc = " @param nbits           log2 of the length of the input array"]
+        #[doc = " @param inverse         if 0 perform the forward transform, if 1 perform the inverse"]
+        pub fn av_fft_init(
+            nbits: ::std::os::raw::c_int,
+            inverse: ::std::os::raw::c_int,
+        ) -> *mut root::FFTContext;
+    }
+    extern "C" {
+        #[doc = " Do the permutation needed BEFORE calling ff_fft_calc()."]
+        pub fn av_fft_permute(s: *mut root::FFTContext, z: *mut root::FFTComplex);
+    }
+    extern "C" {
+        #[doc = " Do a complex FFT with the parameters defined in av_fft_init(). The"]
+        #[doc = " input data must be permuted before. No 1.0/sqrt(n) normalization is done."]
+        pub fn av_fft_calc(s: *mut root::FFTContext, z: *mut root::FFTComplex);
+    }
+    extern "C" {
+        pub fn av_fft_end(s: *mut root::FFTContext);
+    }
+    extern "C" {
+        pub fn av_mdct_init(
+            nbits: ::std::os::raw::c_int,
+            inverse: ::std::os::raw::c_int,
+            scale: f64,
+        ) -> *mut root::FFTContext;
+    }
+    extern "C" {
+        pub fn av_imdct_calc(
+            s: *mut root::FFTContext,
+            output: *mut root::FFTSample,
+            input: *const root::FFTSample,
+        );
+    }
+    extern "C" {
+        pub fn av_imdct_half(
+            s: *mut root::FFTContext,
+            output: *mut root::FFTSample,
+            input: *const root::FFTSample,
+        );
+    }
+    extern "C" {
+        pub fn av_mdct_calc(
+            s: *mut root::FFTContext,
+            output: *mut root::FFTSample,
+            input: *const root::FFTSample,
+        );
+    }
+    extern "C" {
+        pub fn av_mdct_end(s: *mut root::FFTContext);
+    }
+    pub const RDFTransformType_DFT_R2C: root::RDFTransformType = 0;
+    pub const RDFTransformType_IDFT_C2R: root::RDFTransformType = 1;
+    pub const RDFTransformType_IDFT_R2C: root::RDFTransformType = 2;
+    pub const RDFTransformType_DFT_C2R: root::RDFTransformType = 3;
+    pub type RDFTransformType = ::std::os::raw::c_uint;
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct RDFTContext {
+        _unused: [u8; 0],
+    }
+    extern "C" {
+        #[doc = " Set up a real FFT."]
+        #[doc = " @param nbits           log2 of the length of the input array"]
+        #[doc = " @param trans           the type of transform"]
+        pub fn av_rdft_init(
+            nbits: ::std::os::raw::c_int,
+            trans: root::RDFTransformType,
+        ) -> *mut root::RDFTContext;
+    }
+    extern "C" {
+        pub fn av_rdft_calc(s: *mut root::RDFTContext, data: *mut root::FFTSample);
+    }
+    extern "C" {
+        pub fn av_rdft_end(s: *mut root::RDFTContext);
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct DCTContext {
+        _unused: [u8; 0],
+    }
+    pub const DCTTransformType_DCT_II: root::DCTTransformType = 0;
+    pub const DCTTransformType_DCT_III: root::DCTTransformType = 1;
+    pub const DCTTransformType_DCT_I: root::DCTTransformType = 2;
+    pub const DCTTransformType_DST_I: root::DCTTransformType = 3;
+    pub type DCTTransformType = ::std::os::raw::c_uint;
+    extern "C" {
+        #[doc = " Set up DCT."]
+        #[doc = ""]
+        #[doc = " @param nbits           size of the input array:"]
+        #[doc = "                        (1 << nbits)     for DCT-II, DCT-III and DST-I"]
+        #[doc = "                        (1 << nbits) + 1 for DCT-I"]
+        #[doc = " @param type            the type of transform"]
+        #[doc = ""]
+        #[doc = " @note the first element of the input of DST-I is ignored"]
+        pub fn av_dct_init(
+            nbits: ::std::os::raw::c_int,
+            type_: root::DCTTransformType,
+        ) -> *mut root::DCTContext;
+    }
+    extern "C" {
+        pub fn av_dct_calc(s: *mut root::DCTContext, data: *mut root::FFTSample);
+    }
+    extern "C" {
+        pub fn av_dct_end(s: *mut root::DCTContext);
+    }
+    extern "C" {
+        pub fn av_jni_set_java_vm(
+            vm: *mut ::std::os::raw::c_void,
+            log_ctx: *mut ::std::os::raw::c_void,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        pub fn av_jni_get_java_vm(
+            log_ctx: *mut ::std::os::raw::c_void,
+        ) -> *mut ::std::os::raw::c_void;
+    }
+    #[doc = " The bitstream filter state."]
+    #[doc = ""]
+    #[doc = " This struct must be allocated with av_bsf_alloc() and freed with"]
+    #[doc = " av_bsf_free()."]
+    #[doc = ""]
+    #[doc = " The fields in the struct will only be changed (by the caller or by the"]
+    #[doc = " filter) as described in their documentation, and are to be considered"]
+    #[doc = " immutable otherwise."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVBSFContext {
+        #[doc = " A class for logging and AVOptions"]
+        pub av_class: *const root::AVClass,
+        #[doc = " The bitstream filter this context is an instance of."]
+        pub filter: *const root::AVBitStreamFilter,
+        #[doc = " Opaque filter-specific private data. If filter->priv_class is non-NULL,"]
+        #[doc = " this is an AVOptions-enabled struct."]
+        pub priv_data: *mut ::std::os::raw::c_void,
+        #[doc = " Parameters of the input stream. This field is allocated in"]
+        #[doc = " av_bsf_alloc(), it needs to be filled by the caller before"]
+        #[doc = " av_bsf_init()."]
+        pub par_in: *mut root::AVCodecParameters,
+        #[doc = " Parameters of the output stream. This field is allocated in"]
+        #[doc = " av_bsf_alloc(), it is set by the filter in av_bsf_init()."]
+        pub par_out: *mut root::AVCodecParameters,
+        #[doc = " The timebase used for the timestamps of the input packets. Set by the"]
+        #[doc = " caller before av_bsf_init()."]
+        pub time_base_in: root::AVRational,
+        #[doc = " The timebase used for the timestamps of the output packets. Set by the"]
+        #[doc = " filter in av_bsf_init()."]
+        pub time_base_out: root::AVRational,
+    }
+    impl Default for AVBSFContext {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVBitStreamFilter {
+        pub name: *const ::std::os::raw::c_char,
+        #[doc = " A list of codec ids supported by the filter, terminated by"]
+        #[doc = " AV_CODEC_ID_NONE."]
+        #[doc = " May be NULL, in that case the bitstream filter works with any codec id."]
+        pub codec_ids: *const root::AVCodecID,
+        #[doc = " A class for the private data, used to declare bitstream filter private"]
+        #[doc = " AVOptions. This field is NULL for bitstream filters that do not declare"]
+        #[doc = " any options."]
+        #[doc = ""]
+        #[doc = " If this field is non-NULL, the first member of the filter private data"]
+        #[doc = " must be a pointer to AVClass, which will be set by libavcodec generic"]
+        #[doc = " code to this class."]
+        pub priv_class: *const root::AVClass,
+        #[doc = " No fields below this line are part of the public API. They"]
+        #[doc = " may not be used outside of libavcodec and can be changed and"]
+        #[doc = " removed at will."]
+        #[doc = " New public fields should be added right above."]
+        #[doc = ""]
+        pub priv_data_size: ::std::os::raw::c_int,
+        pub init: ::std::option::Option<
+            unsafe extern "C" fn(ctx: *mut root::AVBSFContext) -> ::std::os::raw::c_int,
+        >,
+        pub filter: ::std::option::Option<
+            unsafe extern "C" fn(
+                ctx: *mut root::AVBSFContext,
+                pkt: *mut root::AVPacket,
+            ) -> ::std::os::raw::c_int,
+        >,
+        pub close: ::std::option::Option<unsafe extern "C" fn(ctx: *mut root::AVBSFContext)>,
+        pub flush: ::std::option::Option<unsafe extern "C" fn(ctx: *mut root::AVBSFContext)>,
+    }
+    impl Default for AVBitStreamFilter {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " @return a bitstream filter with the specified name or NULL if no such"]
+        #[doc = "         bitstream filter exists."]
+        pub fn av_bsf_get_by_name(
+            name: *const ::std::os::raw::c_char,
+        ) -> *const root::AVBitStreamFilter;
+    }
+    extern "C" {
+        #[doc = " Iterate over all registered bitstream filters."]
+        #[doc = ""]
+        #[doc = " @param opaque a pointer where libavcodec will store the iteration state. Must"]
+        #[doc = "               point to NULL to start the iteration."]
+        #[doc = ""]
+        #[doc = " @return the next registered bitstream filter or NULL when the iteration is"]
+        #[doc = "         finished"]
+        pub fn av_bsf_iterate(
+            opaque: *mut *mut ::std::os::raw::c_void,
+        ) -> *const root::AVBitStreamFilter;
+    }
+    extern "C" {
+        #[doc = " Allocate a context for a given bitstream filter. The caller must fill in the"]
+        #[doc = " context parameters as described in the documentation and then call"]
+        #[doc = " av_bsf_init() before sending any data to the filter."]
+        #[doc = ""]
+        #[doc = " @param filter the filter for which to allocate an instance."]
+        #[doc = " @param ctx a pointer into which the pointer to the newly-allocated context"]
+        #[doc = "            will be written. It must be freed with av_bsf_free() after the"]
+        #[doc = "            filtering is done."]
+        #[doc = ""]
+        #[doc = " @return 0 on success, a negative AVERROR code on failure"]
+        pub fn av_bsf_alloc(
+            filter: *const root::AVBitStreamFilter,
+            ctx: *mut *mut root::AVBSFContext,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Prepare the filter for use, after all the parameters and options have been"]
+        #[doc = " set."]
+        pub fn av_bsf_init(ctx: *mut root::AVBSFContext) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Submit a packet for filtering."]
+        #[doc = ""]
+        #[doc = " After sending each packet, the filter must be completely drained by calling"]
+        #[doc = " av_bsf_receive_packet() repeatedly until it returns AVERROR(EAGAIN) or"]
+        #[doc = " AVERROR_EOF."]
+        #[doc = ""]
+        #[doc = " @param pkt the packet to filter. The bitstream filter will take ownership of"]
+        #[doc = " the packet and reset the contents of pkt. pkt is not touched if an error occurs."]
+        #[doc = " If pkt is empty (i.e. NULL, or pkt->data is NULL and pkt->side_data_elems zero),"]
+        #[doc = " it signals the end of the stream (i.e. no more non-empty packets will be sent;"]
+        #[doc = " sending more empty packets does nothing) and will cause the filter to output"]
+        #[doc = " any packets it may have buffered internally."]
+        #[doc = ""]
+        #[doc = " @return 0 on success. AVERROR(EAGAIN) if packets need to be retrieved from the"]
+        #[doc = " filter (using av_bsf_receive_packet()) before new input can be consumed. Another"]
+        #[doc = " negative AVERROR value if an error occurs."]
+        pub fn av_bsf_send_packet(
+            ctx: *mut root::AVBSFContext,
+            pkt: *mut root::AVPacket,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Retrieve a filtered packet."]
+        #[doc = ""]
+        #[doc = " @param[out] pkt this struct will be filled with the contents of the filtered"]
+        #[doc = "                 packet. It is owned by the caller and must be freed using"]
+        #[doc = "                 av_packet_unref() when it is no longer needed."]
+        #[doc = "                 This parameter should be \"clean\" (i.e. freshly allocated"]
+        #[doc = "                 with av_packet_alloc() or unreffed with av_packet_unref())"]
+        #[doc = "                 when this function is called. If this function returns"]
+        #[doc = "                 successfully, the contents of pkt will be completely"]
+        #[doc = "                 overwritten by the returned data. On failure, pkt is not"]
+        #[doc = "                 touched."]
+        #[doc = ""]
+        #[doc = " @return 0 on success. AVERROR(EAGAIN) if more packets need to be sent to the"]
+        #[doc = " filter (using av_bsf_send_packet()) to get more output. AVERROR_EOF if there"]
+        #[doc = " will be no further output from the filter. Another negative AVERROR value if"]
+        #[doc = " an error occurs."]
+        #[doc = ""]
+        #[doc = " @note one input packet may result in several output packets, so after sending"]
+        #[doc = " a packet with av_bsf_send_packet(), this function needs to be called"]
+        #[doc = " repeatedly until it stops returning 0. It is also possible for a filter to"]
+        #[doc = " output fewer packets than were sent to it, so this function may return"]
+        #[doc = " AVERROR(EAGAIN) immediately after a successful av_bsf_send_packet() call."]
+        pub fn av_bsf_receive_packet(
+            ctx: *mut root::AVBSFContext,
+            pkt: *mut root::AVPacket,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Reset the internal bitstream filter state. Should be called e.g. when seeking."]
+        pub fn av_bsf_flush(ctx: *mut root::AVBSFContext);
+    }
+    extern "C" {
+        #[doc = " Free a bitstream filter context and everything associated with it; write NULL"]
+        #[doc = " into the supplied pointer."]
+        pub fn av_bsf_free(ctx: *mut *mut root::AVBSFContext);
+    }
+    extern "C" {
+        #[doc = " Get the AVClass for AVBSFContext. It can be used in combination with"]
+        #[doc = " AV_OPT_SEARCH_FAKE_OBJ for examining options."]
+        #[doc = ""]
+        #[doc = " @see av_opt_find()."]
+        pub fn av_bsf_get_class() -> *const root::AVClass;
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVBSFList {
+        _unused: [u8; 0],
+    }
+    extern "C" {
+        #[doc = " Allocate empty list of bitstream filters."]
+        #[doc = " The list must be later freed by av_bsf_list_free()"]
+        #[doc = " or finalized by av_bsf_list_finalize()."]
+        #[doc = ""]
+        #[doc = " @return Pointer to @ref AVBSFList on success, NULL in case of failure"]
+        pub fn av_bsf_list_alloc() -> *mut root::AVBSFList;
+    }
+    extern "C" {
+        #[doc = " Free list of bitstream filters."]
+        #[doc = ""]
+        #[doc = " @param lst Pointer to pointer returned by av_bsf_list_alloc()"]
+        pub fn av_bsf_list_free(lst: *mut *mut root::AVBSFList);
+    }
+    extern "C" {
+        #[doc = " Append bitstream filter to the list of bitstream filters."]
+        #[doc = ""]
+        #[doc = " @param lst List to append to"]
+        #[doc = " @param bsf Filter context to be appended"]
+        #[doc = ""]
+        #[doc = " @return >=0 on success, negative AVERROR in case of failure"]
+        pub fn av_bsf_list_append(
+            lst: *mut root::AVBSFList,
+            bsf: *mut root::AVBSFContext,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Construct new bitstream filter context given it's name and options"]
+        #[doc = " and append it to the list of bitstream filters."]
+        #[doc = ""]
+        #[doc = " @param lst      List to append to"]
+        #[doc = " @param bsf_name Name of the bitstream filter"]
+        #[doc = " @param options  Options for the bitstream filter, can be set to NULL"]
+        #[doc = ""]
+        #[doc = " @return >=0 on success, negative AVERROR in case of failure"]
+        pub fn av_bsf_list_append2(
+            lst: *mut root::AVBSFList,
+            bsf_name: *const ::std::os::raw::c_char,
+            options: *mut *mut root::AVDictionary,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Finalize list of bitstream filters."]
+        #[doc = ""]
+        #[doc = " This function will transform @ref AVBSFList to single @ref AVBSFContext,"]
+        #[doc = " so the whole chain of bitstream filters can be treated as single filter"]
+        #[doc = " freshly allocated by av_bsf_alloc()."]
+        #[doc = " If the call is successful, @ref AVBSFList structure is freed and lst"]
+        #[doc = " will be set to NULL. In case of failure, caller is responsible for"]
+        #[doc = " freeing the structure by av_bsf_list_free()"]
+        #[doc = ""]
+        #[doc = " @param      lst Filter list structure to be transformed"]
+        #[doc = " @param[out] bsf Pointer to be set to newly created @ref AVBSFContext structure"]
+        #[doc = "                 representing the chain of bitstream filters"]
+        #[doc = ""]
+        #[doc = " @return >=0 on success, negative AVERROR in case of failure"]
+        pub fn av_bsf_list_finalize(
+            lst: *mut *mut root::AVBSFList,
+            bsf: *mut *mut root::AVBSFContext,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Parse string describing list of bitstream filters and create single"]
+        #[doc = " @ref AVBSFContext describing the whole chain of bitstream filters."]
+        #[doc = " Resulting @ref AVBSFContext can be treated as any other @ref AVBSFContext freshly"]
+        #[doc = " allocated by av_bsf_alloc()."]
+        #[doc = ""]
+        #[doc = " @param      str String describing chain of bitstream filters in format"]
+        #[doc = "                 `bsf1[=opt1=val1:opt2=val2][,bsf2]`"]
+        #[doc = " @param[out] bsf Pointer to be set to newly created @ref AVBSFContext structure"]
+        #[doc = "                 representing the chain of bitstream filters"]
+        #[doc = ""]
+        #[doc = " @return >=0 on success, negative AVERROR in case of failure"]
+        pub fn av_bsf_list_parse_str(
+            str_: *const ::std::os::raw::c_char,
+            bsf: *mut *mut root::AVBSFContext,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Get null/pass-through bitstream filter."]
+        #[doc = ""]
+        #[doc = " @param[out] bsf Pointer to be set to new instance of pass-through bitstream filter"]
+        #[doc = ""]
+        #[doc = " @return"]
+        pub fn av_bsf_get_null_filter(bsf: *mut *mut root::AVBSFContext) -> ::std::os::raw::c_int;
+    }
+    pub const DiracParseCodes_DIRAC_PCODE_SEQ_HEADER: root::DiracParseCodes = 0;
+    pub const DiracParseCodes_DIRAC_PCODE_END_SEQ: root::DiracParseCodes = 16;
+    pub const DiracParseCodes_DIRAC_PCODE_AUX: root::DiracParseCodes = 32;
+    pub const DiracParseCodes_DIRAC_PCODE_PAD: root::DiracParseCodes = 48;
+    pub const DiracParseCodes_DIRAC_PCODE_PICTURE_CODED: root::DiracParseCodes = 8;
+    pub const DiracParseCodes_DIRAC_PCODE_PICTURE_RAW: root::DiracParseCodes = 72;
+    pub const DiracParseCodes_DIRAC_PCODE_PICTURE_LOW_DEL: root::DiracParseCodes = 200;
+    pub const DiracParseCodes_DIRAC_PCODE_PICTURE_HQ: root::DiracParseCodes = 232;
+    pub const DiracParseCodes_DIRAC_PCODE_INTER_NOREF_CO1: root::DiracParseCodes = 10;
+    pub const DiracParseCodes_DIRAC_PCODE_INTER_NOREF_CO2: root::DiracParseCodes = 9;
+    pub const DiracParseCodes_DIRAC_PCODE_INTER_REF_CO1: root::DiracParseCodes = 13;
+    pub const DiracParseCodes_DIRAC_PCODE_INTER_REF_CO2: root::DiracParseCodes = 14;
+    pub const DiracParseCodes_DIRAC_PCODE_INTRA_REF_CO: root::DiracParseCodes = 12;
+    pub const DiracParseCodes_DIRAC_PCODE_INTRA_REF_RAW: root::DiracParseCodes = 76;
+    pub const DiracParseCodes_DIRAC_PCODE_INTRA_REF_PICT: root::DiracParseCodes = 204;
+    pub const DiracParseCodes_DIRAC_PCODE_MAGIC: root::DiracParseCodes = 1111638852;
+    #[doc = " Parse code values:"]
+    #[doc = ""]
+    #[doc = " Dirac Specification ->"]
+    #[doc = " 9.6.1  Table 9.1"]
+    #[doc = ""]
+    #[doc = " VC-2 Specification  ->"]
+    #[doc = " 10.4.1 Table 10.1"]
+    pub type DiracParseCodes = ::std::os::raw::c_uint;
+    #[repr(C)]
+    #[derive(Debug, Default, Copy, Clone)]
+    pub struct DiracVersionInfo {
+        pub major: ::std::os::raw::c_int,
+        pub minor: ::std::os::raw::c_int,
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVDiracSeqHeader {
+        pub width: ::std::os::raw::c_uint,
+        pub height: ::std::os::raw::c_uint,
+        #[doc = "< 0: 444  1: 422  2: 420"]
+        pub chroma_format: u8,
+        pub interlaced: u8,
+        pub top_field_first: u8,
+        #[doc = "< index into dirac_frame_rate[]"]
+        pub frame_rate_index: u8,
+        #[doc = "< index into dirac_aspect_ratio[]"]
+        pub aspect_ratio_index: u8,
+        pub clean_width: u16,
+        pub clean_height: u16,
+        pub clean_left_offset: u16,
+        pub clean_right_offset: u16,
+        #[doc = "< index into dirac_pixel_range_presets[]"]
+        pub pixel_range_index: u8,
+        #[doc = "< index into dirac_color_spec_presets[]"]
+        pub color_spec_index: u8,
+        pub profile: ::std::os::raw::c_int,
+        pub level: ::std::os::raw::c_int,
+        pub framerate: root::AVRational,
+        pub sample_aspect_ratio: root::AVRational,
+        pub pix_fmt: root::AVPixelFormat,
+        pub color_range: root::AVColorRange,
+        pub color_primaries: root::AVColorPrimaries,
+        pub color_trc: root::AVColorTransferCharacteristic,
+        pub colorspace: root::AVColorSpace,
+        pub version: root::DiracVersionInfo,
+        pub bit_depth: ::std::os::raw::c_int,
+    }
+    impl Default for AVDiracSeqHeader {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " Parse a Dirac sequence header."]
+        #[doc = ""]
+        #[doc = " @param dsh this function will allocate and fill an AVDiracSeqHeader struct"]
+        #[doc = "            and write it into this pointer. The caller must free it with"]
+        #[doc = "            av_free()."]
+        #[doc = " @param buf the data buffer"]
+        #[doc = " @param buf_size the size of the data buffer in bytes"]
+        #[doc = " @param log_ctx if non-NULL, this function will log errors here"]
+        #[doc = " @return 0 on success, a negative AVERROR code on failure"]
+        pub fn av_dirac_parse_sequence_header(
+            dsh: *mut *mut root::AVDiracSeqHeader,
+            buf: *const u8,
+            buf_size: root::size_t,
+            log_ctx: *mut ::std::os::raw::c_void,
+        ) -> ::std::os::raw::c_int;
+    }
+    #[doc = " AVDCT context."]
+    #[doc = " @note function pointers can be NULL if the specific features have been"]
+    #[doc = "       disabled at build time."]
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVDCT {
+        pub av_class: *const root::AVClass,
+        pub idct: ::std::option::Option<unsafe extern "C" fn(block: *mut i16)>,
+        #[doc = " IDCT input permutation."]
+        #[doc = " Several optimized IDCTs need a permutated input (relative to the"]
+        #[doc = " normal order of the reference IDCT)."]
+        #[doc = " This permutation must be performed before the idct_put/add."]
+        #[doc = " Note, normally this can be merged with the zigzag/alternate scan<br>"]
+        #[doc = " An example to avoid confusion:"]
+        #[doc = " - (->decode coeffs -> zigzag reorder -> dequant -> reference IDCT -> ...)"]
+        #[doc = " - (x -> reference DCT -> reference IDCT -> x)"]
+        #[doc = " - (x -> reference DCT -> simple_mmx_perm = idct_permutation"]
+        #[doc = "    -> simple_idct_mmx -> x)"]
+        #[doc = " - (-> decode coeffs -> zigzag reorder -> simple_mmx_perm -> dequant"]
+        #[doc = "    -> simple_idct_mmx -> ...)"]
+        pub idct_permutation: [u8; 64usize],
+        pub fdct: ::std::option::Option<unsafe extern "C" fn(block: *mut i16)>,
+        #[doc = " DCT algorithm."]
+        #[doc = " must use AVOptions to set this field."]
+        pub dct_algo: ::std::os::raw::c_int,
+        #[doc = " IDCT algorithm."]
+        #[doc = " must use AVOptions to set this field."]
+        pub idct_algo: ::std::os::raw::c_int,
+        pub get_pixels: ::std::option::Option<
+            unsafe extern "C" fn(block: *mut i16, pixels: *const u8, line_size: isize),
+        >,
+        pub bits_per_sample: ::std::os::raw::c_int,
+        pub get_pixels_unaligned: ::std::option::Option<
+            unsafe extern "C" fn(block: *mut i16, pixels: *const u8, line_size: isize),
+        >,
+    }
+    impl Default for AVDCT {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " Allocates a AVDCT context."]
+        #[doc = " This needs to be initialized with avcodec_dct_init() after optionally"]
+        #[doc = " configuring it with AVOptions."]
+        #[doc = ""]
+        #[doc = " To free it use av_free()"]
+        pub fn avcodec_dct_alloc() -> *mut root::AVDCT;
+    }
+    extern "C" {
+        pub fn avcodec_dct_init(arg1: *mut root::AVDCT) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        pub fn avcodec_dct_get_class() -> *const root::AVClass;
+    }
+    extern "C" {
+        #[doc = " Extract the bitstream ID and the frame size from AC-3 data."]
+        pub fn av_ac3_parse_header(
+            buf: *const u8,
+            size: root::size_t,
+            bitstream_id: *mut u8,
+            frame_size: *mut u16,
+        ) -> ::std::os::raw::c_int;
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVVorbisParseContext {
+        _unused: [u8; 0],
+    }
+    extern "C" {
+        #[doc = " Allocate and initialize the Vorbis parser using headers in the extradata."]
+        pub fn av_vorbis_parse_init(
+            extradata: *const u8,
+            extradata_size: ::std::os::raw::c_int,
+        ) -> *mut root::AVVorbisParseContext;
+    }
+    extern "C" {
+        #[doc = " Free the parser and everything associated with it."]
+        pub fn av_vorbis_parse_free(s: *mut *mut root::AVVorbisParseContext);
+    }
+    extern "C" {
+        #[doc = " Get the duration for a Vorbis packet."]
+        #[doc = ""]
+        #[doc = " If @p flags is @c NULL,"]
+        #[doc = " special frames are considered invalid."]
+        #[doc = ""]
+        #[doc = " @param s        Vorbis parser context"]
+        #[doc = " @param buf      buffer containing a Vorbis frame"]
+        #[doc = " @param buf_size size of the buffer"]
+        #[doc = " @param flags    flags for special frames"]
+        pub fn av_vorbis_parse_frame_flags(
+            s: *mut root::AVVorbisParseContext,
+            buf: *const u8,
+            buf_size: ::std::os::raw::c_int,
+            flags: *mut ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Get the duration for a Vorbis packet."]
+        #[doc = ""]
+        #[doc = " @param s        Vorbis parser context"]
+        #[doc = " @param buf      buffer containing a Vorbis frame"]
+        #[doc = " @param buf_size size of the buffer"]
+        pub fn av_vorbis_parse_frame(
+            s: *mut root::AVVorbisParseContext,
+            buf: *const u8,
+            buf_size: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        pub fn av_vorbis_parse_reset(s: *mut root::AVVorbisParseContext);
+    }
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct AVDVProfile {
+        pub dsf: ::std::os::raw::c_int,
+        pub video_stype: ::std::os::raw::c_int,
+        pub frame_size: ::std::os::raw::c_int,
+        pub difseg_size: ::std::os::raw::c_int,
+        pub n_difchan: ::std::os::raw::c_int,
+        pub time_base: root::AVRational,
+        pub ltc_divisor: ::std::os::raw::c_int,
+        pub height: ::std::os::raw::c_int,
+        pub width: ::std::os::raw::c_int,
+        pub sar: [root::AVRational; 2usize],
+        pub pix_fmt: root::AVPixelFormat,
+        pub bpm: ::std::os::raw::c_int,
+        pub block_sizes: *const u8,
+        pub audio_stride: ::std::os::raw::c_int,
+        pub audio_min_samples: [::std::os::raw::c_int; 3usize],
+        pub audio_samples_dist: [::std::os::raw::c_int; 5usize],
+        pub audio_shuffle: *const [u8; 9usize],
+    }
+    impl Default for AVDVProfile {
+        fn default() -> Self {
+            let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+            unsafe {
+                ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+                s.assume_init()
+            }
+        }
+    }
+    extern "C" {
+        #[doc = " Get a DV profile for the provided compressed frame."]
+        #[doc = ""]
+        #[doc = " @param sys the profile used for the previous frame, may be NULL"]
+        #[doc = " @param frame the compressed data buffer"]
+        #[doc = " @param buf_size size of the buffer in bytes"]
+        #[doc = " @return the DV profile for the supplied data or NULL on failure"]
+        pub fn av_dv_frame_profile(
+            sys: *const root::AVDVProfile,
+            frame: *const u8,
+            buf_size: ::std::os::raw::c_uint,
+        ) -> *const root::AVDVProfile;
+    }
+    extern "C" {
+        #[doc = " Get a DV profile for the provided stream parameters."]
+        pub fn av_dv_codec_profile(
+            width: ::std::os::raw::c_int,
+            height: ::std::os::raw::c_int,
+            pix_fmt: root::AVPixelFormat,
+        ) -> *const root::AVDVProfile;
+    }
+    extern "C" {
+        #[doc = " Get a DV profile for the provided stream parameters."]
+        #[doc = " The frame rate is used as a best-effort parameter."]
+        pub fn av_dv_codec_profile2(
+            width: ::std::os::raw::c_int,
+            height: ::std::os::raw::c_int,
+            pix_fmt: root::AVPixelFormat,
+            frame_rate: root::AVRational,
+        ) -> *const root::AVDVProfile;
+    }
+    pub const SwrDitherType_SWR_DITHER_NONE: root::SwrDitherType = 0;
+    pub const SwrDitherType_SWR_DITHER_RECTANGULAR: root::SwrDitherType = 1;
+    pub const SwrDitherType_SWR_DITHER_TRIANGULAR: root::SwrDitherType = 2;
+    pub const SwrDitherType_SWR_DITHER_TRIANGULAR_HIGHPASS: root::SwrDitherType = 3;
+    #[doc = "< not part of API/ABI"]
+    pub const SwrDitherType_SWR_DITHER_NS: root::SwrDitherType = 64;
+    pub const SwrDitherType_SWR_DITHER_NS_LIPSHITZ: root::SwrDitherType = 65;
+    pub const SwrDitherType_SWR_DITHER_NS_F_WEIGHTED: root::SwrDitherType = 66;
+    pub const SwrDitherType_SWR_DITHER_NS_MODIFIED_E_WEIGHTED: root::SwrDitherType = 67;
+    pub const SwrDitherType_SWR_DITHER_NS_IMPROVED_E_WEIGHTED: root::SwrDitherType = 68;
+    pub const SwrDitherType_SWR_DITHER_NS_SHIBATA: root::SwrDitherType = 69;
+    pub const SwrDitherType_SWR_DITHER_NS_LOW_SHIBATA: root::SwrDitherType = 70;
+    pub const SwrDitherType_SWR_DITHER_NS_HIGH_SHIBATA: root::SwrDitherType = 71;
+    #[doc = "< not part of API/ABI"]
+    pub const SwrDitherType_SWR_DITHER_NB: root::SwrDitherType = 72;
+    #[doc = " Dithering algorithms"]
+    pub type SwrDitherType = ::std::os::raw::c_uint;
+    #[doc = "< SW Resampler"]
+    pub const SwrEngine_SWR_ENGINE_SWR: root::SwrEngine = 0;
+    #[doc = "< SoX Resampler"]
+    pub const SwrEngine_SWR_ENGINE_SOXR: root::SwrEngine = 1;
+    #[doc = "< not part of API/ABI"]
+    pub const SwrEngine_SWR_ENGINE_NB: root::SwrEngine = 2;
+    #[doc = " Resampling Engines"]
+    pub type SwrEngine = ::std::os::raw::c_uint;
+    #[doc = "< Cubic"]
+    pub const SwrFilterType_SWR_FILTER_TYPE_CUBIC: root::SwrFilterType = 0;
+    #[doc = "< Blackman Nuttall windowed sinc"]
+    pub const SwrFilterType_SWR_FILTER_TYPE_BLACKMAN_NUTTALL: root::SwrFilterType = 1;
+    #[doc = "< Kaiser windowed sinc"]
+    pub const SwrFilterType_SWR_FILTER_TYPE_KAISER: root::SwrFilterType = 2;
+    #[doc = " Resampling Filter Types"]
+    pub type SwrFilterType = ::std::os::raw::c_uint;
+    #[repr(C)]
+    #[derive(Debug, Copy, Clone)]
+    pub struct SwrContext {
+        _unused: [u8; 0],
+    }
+    extern "C" {
+        #[doc = " Get the AVClass for SwrContext. It can be used in combination with"]
+        #[doc = " AV_OPT_SEARCH_FAKE_OBJ for examining options."]
+        #[doc = ""]
+        #[doc = " @see av_opt_find()."]
+        #[doc = " @return the AVClass of SwrContext"]
+        pub fn swr_get_class() -> *const root::AVClass;
+    }
+    extern "C" {
+        #[doc = " Allocate SwrContext."]
+        #[doc = ""]
+        #[doc = " If you use this function you will need to set the parameters (manually or"]
+        #[doc = " with swr_alloc_set_opts()) before calling swr_init()."]
+        #[doc = ""]
+        #[doc = " @see swr_alloc_set_opts(), swr_init(), swr_free()"]
+        #[doc = " @return NULL on error, allocated context otherwise"]
+        pub fn swr_alloc() -> *mut root::SwrContext;
+    }
+    extern "C" {
+        #[doc = " Initialize context after user parameters have been set."]
+        #[doc = " @note The context must be configured using the AVOption API."]
+        #[doc = ""]
+        #[doc = " @see av_opt_set_int()"]
+        #[doc = " @see av_opt_set_dict()"]
+        #[doc = ""]
+        #[doc = " @param[in,out]   s Swr context to initialize"]
+        #[doc = " @return AVERROR error code in case of failure."]
+        pub fn swr_init(s: *mut root::SwrContext) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Check whether an swr context has been initialized or not."]
+        #[doc = ""]
+        #[doc = " @param[in]       s Swr context to check"]
+        #[doc = " @see swr_init()"]
+        #[doc = " @return positive if it has been initialized, 0 if not initialized"]
+        pub fn swr_is_initialized(s: *mut root::SwrContext) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Allocate SwrContext if needed and set/reset common parameters."]
+        #[doc = ""]
+        #[doc = " This function does not require s to be allocated with swr_alloc(). On the"]
+        #[doc = " other hand, swr_alloc() can use swr_alloc_set_opts() to set the parameters"]
+        #[doc = " on the allocated context."]
+        #[doc = ""]
+        #[doc = " @param s               existing Swr context if available, or NULL if not"]
+        #[doc = " @param out_ch_layout   output channel layout (AV_CH_LAYOUT_*)"]
+        #[doc = " @param out_sample_fmt  output sample format (AV_SAMPLE_FMT_*)."]
+        #[doc = " @param out_sample_rate output sample rate (frequency in Hz)"]
+        #[doc = " @param in_ch_layout    input channel layout (AV_CH_LAYOUT_*)"]
+        #[doc = " @param in_sample_fmt   input sample format (AV_SAMPLE_FMT_*)."]
+        #[doc = " @param in_sample_rate  input sample rate (frequency in Hz)"]
+        #[doc = " @param log_offset      logging level offset"]
+        #[doc = " @param log_ctx         parent logging context, can be NULL"]
+        #[doc = ""]
+        #[doc = " @see swr_init(), swr_free()"]
+        #[doc = " @return NULL on error, allocated context otherwise"]
+        pub fn swr_alloc_set_opts(
+            s: *mut root::SwrContext,
+            out_ch_layout: i64,
+            out_sample_fmt: root::AVSampleFormat,
+            out_sample_rate: ::std::os::raw::c_int,
+            in_ch_layout: i64,
+            in_sample_fmt: root::AVSampleFormat,
+            in_sample_rate: ::std::os::raw::c_int,
+            log_offset: ::std::os::raw::c_int,
+            log_ctx: *mut ::std::os::raw::c_void,
+        ) -> *mut root::SwrContext;
+    }
+    extern "C" {
+        #[doc = " Free the given SwrContext and set the pointer to NULL."]
+        #[doc = ""]
+        #[doc = " @param[in] s a pointer to a pointer to Swr context"]
+        pub fn swr_free(s: *mut *mut root::SwrContext);
+    }
+    extern "C" {
+        #[doc = " Closes the context so that swr_is_initialized() returns 0."]
+        #[doc = ""]
+        #[doc = " The context can be brought back to life by running swr_init(),"]
+        #[doc = " swr_init() can also be used without swr_close()."]
+        #[doc = " This function is mainly provided for simplifying the usecase"]
+        #[doc = " where one tries to support libavresample and libswresample."]
+        #[doc = ""]
+        #[doc = " @param[in,out] s Swr context to be closed"]
+        pub fn swr_close(s: *mut root::SwrContext);
+    }
+    extern "C" {
+        #[doc = " Convert audio."]
+        #[doc = ""]
+        #[doc = " in and in_count can be set to 0 to flush the last few samples out at the"]
+        #[doc = " end."]
+        #[doc = ""]
+        #[doc = " If more input is provided than output space, then the input will be buffered."]
+        #[doc = " You can avoid this buffering by using swr_get_out_samples() to retrieve an"]
+        #[doc = " upper bound on the required number of output samples for the given number of"]
+        #[doc = " input samples. Conversion will run directly without copying whenever possible."]
+        #[doc = ""]
+        #[doc = " @param s         allocated Swr context, with parameters set"]
+        #[doc = " @param out       output buffers, only the first one need be set in case of packed audio"]
+        #[doc = " @param out_count amount of space available for output in samples per channel"]
+        #[doc = " @param in        input buffers, only the first one need to be set in case of packed audio"]
+        #[doc = " @param in_count  number of input samples available in one channel"]
+        #[doc = ""]
+        #[doc = " @return number of samples output per channel, negative value on error"]
+        pub fn swr_convert(
+            s: *mut root::SwrContext,
+            out: *mut *mut u8,
+            out_count: ::std::os::raw::c_int,
+            in_: *mut *const u8,
+            in_count: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Convert the next timestamp from input to output"]
+        #[doc = " timestamps are in 1/(in_sample_rate * out_sample_rate) units."]
+        #[doc = ""]
+        #[doc = " @note There are 2 slightly differently behaving modes."]
+        #[doc = "       @li When automatic timestamp compensation is not used, (min_compensation >= FLT_MAX)"]
+        #[doc = "              in this case timestamps will be passed through with delays compensated"]
+        #[doc = "       @li When automatic timestamp compensation is used, (min_compensation < FLT_MAX)"]
+        #[doc = "              in this case the output timestamps will match output sample numbers."]
+        #[doc = "              See ffmpeg-resampler(1) for the two modes of compensation."]
+        #[doc = ""]
+        #[doc = " @param s[in]     initialized Swr context"]
+        #[doc = " @param pts[in]   timestamp for the next input sample, INT64_MIN if unknown"]
+        #[doc = " @see swr_set_compensation(), swr_drop_output(), and swr_inject_silence() are"]
+        #[doc = "      function used internally for timestamp compensation."]
+        #[doc = " @return the output timestamp for the next output sample"]
+        pub fn swr_next_pts(s: *mut root::SwrContext, pts: i64) -> i64;
+    }
+    extern "C" {
+        #[doc = " Activate resampling compensation (\"soft\" compensation). This function is"]
+        #[doc = " internally called when needed in swr_next_pts()."]
+        #[doc = ""]
+        #[doc = " @param[in,out] s             allocated Swr context. If it is not initialized,"]
+        #[doc = "                              or SWR_FLAG_RESAMPLE is not set, swr_init() is"]
+        #[doc = "                              called with the flag set."]
+        #[doc = " @param[in]     sample_delta  delta in PTS per sample"]
+        #[doc = " @param[in]     compensation_distance number of samples to compensate for"]
+        #[doc = " @return    >= 0 on success, AVERROR error codes if:"]
+        #[doc = "            @li @c s is NULL,"]
+        #[doc = "            @li @c compensation_distance is less than 0,"]
+        #[doc = "            @li @c compensation_distance is 0 but sample_delta is not,"]
+        #[doc = "            @li compensation unsupported by resampler, or"]
+        #[doc = "            @li swr_init() fails when called."]
+        pub fn swr_set_compensation(
+            s: *mut root::SwrContext,
+            sample_delta: ::std::os::raw::c_int,
+            compensation_distance: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Set a customized input channel mapping."]
+        #[doc = ""]
+        #[doc = " @param[in,out] s           allocated Swr context, not yet initialized"]
+        #[doc = " @param[in]     channel_map customized input channel mapping (array of channel"]
+        #[doc = "                            indexes, -1 for a muted channel)"]
+        #[doc = " @return >= 0 on success, or AVERROR error code in case of failure."]
+        pub fn swr_set_channel_mapping(
+            s: *mut root::SwrContext,
+            channel_map: *const ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Generate a channel mixing matrix."]
+        #[doc = ""]
+        #[doc = " This function is the one used internally by libswresample for building the"]
+        #[doc = " default mixing matrix. It is made public just as a utility function for"]
+        #[doc = " building custom matrices."]
+        #[doc = ""]
+        #[doc = " @param in_layout           input channel layout"]
+        #[doc = " @param out_layout          output channel layout"]
+        #[doc = " @param center_mix_level    mix level for the center channel"]
+        #[doc = " @param surround_mix_level  mix level for the surround channel(s)"]
+        #[doc = " @param lfe_mix_level       mix level for the low-frequency effects channel"]
+        #[doc = " @param rematrix_maxval     if 1.0, coefficients will be normalized to prevent"]
+        #[doc = "                            overflow. if INT_MAX, coefficients will not be"]
+        #[doc = "                            normalized."]
+        #[doc = " @param[out] matrix         mixing coefficients; matrix[i + stride * o] is"]
+        #[doc = "                            the weight of input channel i in output channel o."]
+        #[doc = " @param stride              distance between adjacent input channels in the"]
+        #[doc = "                            matrix array"]
+        #[doc = " @param matrix_encoding     matrixed stereo downmix mode (e.g. dplii)"]
+        #[doc = " @param log_ctx             parent logging context, can be NULL"]
+        #[doc = " @return                    0 on success, negative AVERROR code on failure"]
+        pub fn swr_build_matrix(
+            in_layout: u64,
+            out_layout: u64,
+            center_mix_level: f64,
+            surround_mix_level: f64,
+            lfe_mix_level: f64,
+            rematrix_maxval: f64,
+            rematrix_volume: f64,
+            matrix: *mut f64,
+            stride: ::std::os::raw::c_int,
+            matrix_encoding: root::AVMatrixEncoding,
+            log_ctx: *mut ::std::os::raw::c_void,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Set a customized remix matrix."]
+        #[doc = ""]
+        #[doc = " @param s       allocated Swr context, not yet initialized"]
+        #[doc = " @param matrix  remix coefficients; matrix[i + stride * o] is"]
+        #[doc = "                the weight of input channel i in output channel o"]
+        #[doc = " @param stride  offset between lines of the matrix"]
+        #[doc = " @return  >= 0 on success, or AVERROR error code in case of failure."]
+        pub fn swr_set_matrix(
+            s: *mut root::SwrContext,
+            matrix: *const f64,
+            stride: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Drops the specified number of output samples."]
+        #[doc = ""]
+        #[doc = " This function, along with swr_inject_silence(), is called by swr_next_pts()"]
+        #[doc = " if needed for \"hard\" compensation."]
+        #[doc = ""]
+        #[doc = " @param s     allocated Swr context"]
+        #[doc = " @param count number of samples to be dropped"]
+        #[doc = ""]
+        #[doc = " @return >= 0 on success, or a negative AVERROR code on failure"]
+        pub fn swr_drop_output(
+            s: *mut root::SwrContext,
+            count: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Injects the specified number of silence samples."]
+        #[doc = ""]
+        #[doc = " This function, along with swr_drop_output(), is called by swr_next_pts()"]
+        #[doc = " if needed for \"hard\" compensation."]
+        #[doc = ""]
+        #[doc = " @param s     allocated Swr context"]
+        #[doc = " @param count number of samples to be dropped"]
+        #[doc = ""]
+        #[doc = " @return >= 0 on success, or a negative AVERROR code on failure"]
+        pub fn swr_inject_silence(
+            s: *mut root::SwrContext,
+            count: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Gets the delay the next input sample will experience relative to the next output sample."]
+        #[doc = ""]
+        #[doc = " Swresample can buffer data if more input has been provided than available"]
+        #[doc = " output space, also converting between sample rates needs a delay."]
+        #[doc = " This function returns the sum of all such delays."]
+        #[doc = " The exact delay is not necessarily an integer value in either input or"]
+        #[doc = " output sample rate. Especially when downsampling by a large value, the"]
+        #[doc = " output sample rate may be a poor choice to represent the delay, similarly"]
+        #[doc = " for upsampling and the input sample rate."]
+        #[doc = ""]
+        #[doc = " @param s     swr context"]
+        #[doc = " @param base  timebase in which the returned delay will be:"]
+        #[doc = "              @li if it's set to 1 the returned delay is in seconds"]
+        #[doc = "              @li if it's set to 1000 the returned delay is in milliseconds"]
+        #[doc = "              @li if it's set to the input sample rate then the returned"]
+        #[doc = "                  delay is in input samples"]
+        #[doc = "              @li if it's set to the output sample rate then the returned"]
+        #[doc = "                  delay is in output samples"]
+        #[doc = "              @li if it's the least common multiple of in_sample_rate and"]
+        #[doc = "                  out_sample_rate then an exact rounding-free delay will be"]
+        #[doc = "                  returned"]
+        #[doc = " @returns     the delay in 1 / @c base units."]
+        pub fn swr_get_delay(s: *mut root::SwrContext, base: i64) -> i64;
+    }
+    extern "C" {
+        #[doc = " Find an upper bound on the number of samples that the next swr_convert"]
+        #[doc = " call will output, if called with in_samples of input samples. This"]
+        #[doc = " depends on the internal state, and anything changing the internal state"]
+        #[doc = " (like further swr_convert() calls) will may change the number of samples"]
+        #[doc = " swr_get_out_samples() returns for the same number of input samples."]
+        #[doc = ""]
+        #[doc = " @param in_samples    number of input samples."]
+        #[doc = " @note any call to swr_inject_silence(), swr_convert(), swr_next_pts()"]
+        #[doc = "       or swr_set_compensation() invalidates this limit"]
+        #[doc = " @note it is recommended to pass the correct available buffer size"]
+        #[doc = "       to all functions like swr_convert() even if swr_get_out_samples()"]
+        #[doc = "       indicates that less would be used."]
+        #[doc = " @returns an upper bound on the number of samples that the next swr_convert"]
+        #[doc = "          will output or a negative value to indicate an error"]
+        pub fn swr_get_out_samples(
+            s: *mut root::SwrContext,
+            in_samples: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Return the @ref LIBSWRESAMPLE_VERSION_INT constant."]
+        #[doc = ""]
+        #[doc = " This is useful to check if the build-time libswresample has the same version"]
+        #[doc = " as the run-time one."]
+        #[doc = ""]
+        #[doc = " @returns     the unsigned int-typed version"]
+        pub fn swresample_version() -> ::std::os::raw::c_uint;
+    }
+    extern "C" {
+        #[doc = " Return the swr build-time configuration."]
+        #[doc = ""]
+        #[doc = " @returns     the build-time @c ./configure flags"]
+        pub fn swresample_configuration() -> *const ::std::os::raw::c_char;
+    }
+    extern "C" {
+        #[doc = " Return the swr license."]
+        #[doc = ""]
+        #[doc = " @returns     the license of libswresample, determined at build-time"]
+        pub fn swresample_license() -> *const ::std::os::raw::c_char;
+    }
+    extern "C" {
+        #[doc = " Convert the samples in the input AVFrame and write them to the output AVFrame."]
+        #[doc = ""]
+        #[doc = " Input and output AVFrames must have channel_layout, sample_rate and format set."]
+        #[doc = ""]
+        #[doc = " If the output AVFrame does not have the data pointers allocated the nb_samples"]
+        #[doc = " field will be set using av_frame_get_buffer()"]
+        #[doc = " is called to allocate the frame."]
+        #[doc = ""]
+        #[doc = " The output AVFrame can be NULL or have fewer allocated samples than required."]
+        #[doc = " In this case, any remaining samples not written to the output will be added"]
+        #[doc = " to an internal FIFO buffer, to be returned at the next call to this function"]
+        #[doc = " or to swr_convert()."]
+        #[doc = ""]
+        #[doc = " If converting sample rate, there may be data remaining in the internal"]
+        #[doc = " resampling delay buffer. swr_get_delay() tells the number of"]
+        #[doc = " remaining samples. To get this data as output, call this function or"]
+        #[doc = " swr_convert() with NULL input."]
+        #[doc = ""]
+        #[doc = " If the SwrContext configuration does not match the output and"]
+        #[doc = " input AVFrame settings the conversion does not take place and depending on"]
+        #[doc = " which AVFrame is not matching AVERROR_OUTPUT_CHANGED, AVERROR_INPUT_CHANGED"]
+        #[doc = " or the result of a bitwise-OR of them is returned."]
+        #[doc = ""]
+        #[doc = " @see swr_delay()"]
+        #[doc = " @see swr_convert()"]
+        #[doc = " @see swr_get_delay()"]
+        #[doc = ""]
+        #[doc = " @param swr             audio resample context"]
+        #[doc = " @param output          output AVFrame"]
+        #[doc = " @param input           input AVFrame"]
+        #[doc = " @return                0 on success, AVERROR on failure or nonmatching"]
+        #[doc = "                        configuration."]
+        pub fn swr_convert_frame(
+            swr: *mut root::SwrContext,
+            output: *mut root::AVFrame,
+            input: *const root::AVFrame,
+        ) -> ::std::os::raw::c_int;
+    }
+    extern "C" {
+        #[doc = " Configure or reconfigure the SwrContext using the information"]
+        #[doc = " provided by the AVFrames."]
+        #[doc = ""]
+        #[doc = " The original resampling context is reset even on failure."]
+        #[doc = " The function calls swr_close() internally if the context is open."]
+        #[doc = ""]
+        #[doc = " @see swr_close();"]
+        #[doc = ""]
+        #[doc = " @param swr             audio resample context"]
+        #[doc = " @param output          output AVFrame"]
+        #[doc = " @param input           input AVFrame"]
+        #[doc = " @return                0 on success, AVERROR on failure."]
+        pub fn swr_config_frame(
+            swr: *mut root::SwrContext,
+            out: *const root::AVFrame,
+            in_: *const root::AVFrame,
+        ) -> ::std::os::raw::c_int;
+    }
     pub type __builtin_va_list = *mut ::std::os::raw::c_char;
     pub type __uint128_t = u128;
+    #[repr(C)]
+    #[derive(Debug, Default, Copy, Clone)]
+    pub struct AVFilterCommand {
+        pub _address: u8,
+    }
+    #[doc = " Array of pointers to hardware configurations supported by the codec,"]
+    #[doc = " or NULL if no hardware supported.  The array is terminated by a NULL"]
+    #[doc = " pointer."]
+    #[doc = ""]
+    #[doc = " The user can only access this field via avcodec_get_hw_config()."]
+    #[repr(C)]
+    #[derive(Debug, Default, Copy, Clone)]
+    pub struct AVCodecHWConfigInternal {
+        pub _address: u8,
+    }
+    #[repr(C)]
+    #[derive(Debug, Default, Copy, Clone)]
+    pub struct URLContext {
+        pub _address: u8,
+    }
 }

@@ -7,7 +7,8 @@ cd ../source/FFmpeg
 ./configure \
 --prefix=../../ff-output \
 --disable-everything \
---disable-all \
+--prefix=../../ff-output \
+--disable-everything \
 --disable-ffplay \
 --disable-ffprobe \
 --disable-x86asm \
@@ -15,23 +16,11 @@ cd ../source/FFmpeg
 --disable-asm \
 --disable-doc \
 --disable-autodetect \
---disable-optimizations \
---disable-devices \
 --disable-pthreads \
 --disable-w32threads \
 --disable-network \
 --disable-hwaccels \
 --disable-parsers \
---disable-bsfs \
---disable-debug \
---disable-stripping \
---disable-protocols \
---disable-indevs \
---disable-outdevs \
---disable-swresample \
---disable-x86asm \
--–disable-shared \
---disable-ffplay \
 --disable-hwaccels \
 --enable-protocol=file \
 --enable-protocol=rtmp \
@@ -72,5 +61,7 @@ cd ../source/FFmpeg
 make -j 12
 
 make install
+
+make clean
 
 cd -
