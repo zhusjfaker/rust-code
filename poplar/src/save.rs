@@ -85,7 +85,7 @@ pub fn saveframe(frame: *mut ffmpeglib::AVFrame, index: i32) {
         println!("Encode Successful");
 
         if p_avstream != null_mut() {
-            ffmpeglib::avcodec_close((*p_avstream).codec);
+            ffmpeglib::avcodec_close(p_codectx);
         }
         ffmpeglib::avio_close((*p_format_ctx).pb);
         ffmpeglib::avformat_free_context(p_format_ctx);
