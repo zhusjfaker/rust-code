@@ -16,7 +16,7 @@ mod tests {
         println!("{}", ffmpeglib::AV_CPU_FLAG_SSE);
         unsafe {
             ffmpeglib::avdevice_register_all();
-            let path = "/Users/zhushijie/Desktop/m3u8-demo/test.mp4";
+            let path = "/Users/zhushijie/Desktop/test/a.mp4";
             let c_path = ffi::CString::new(path)
                 .expect("CString::new failed")
                 .into_raw();
