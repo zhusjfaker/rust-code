@@ -21,6 +21,7 @@ mod tests {
         println!("{}", ffmpeglib::AV_CPU_FLAG_SSE);
         unsafe {
             ffmpeglib::avdevice_register_all();
+            let mut video_stream_idx: Vec<usize> = Vec::new();
             let path = "/Users/zhushijie/Desktop/test/a.mp4";
             let c_path = ffi::CString::new(path)
                 .expect("CString::new failed")
