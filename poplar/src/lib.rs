@@ -69,20 +69,23 @@ mod tests {
                     let pframe: *mut ffmpeglib::AVFrame = ffmpeglib::av_frame_alloc();
                     let tr_frame: *mut ffmpeglib::AVFrame = ffmpeglib::av_frame_alloc();
 
-                    let picturesize = ffmpeglib::avpicture_get_size(
+                    let picturesize = ffmpeglib::av_image_get_buffer_size(
                         ffmpeglib::AVPixelFormat_AV_PIX_FMT_YUVJ420P,
                         (*codec_ctx).width,
                         (*codec_ctx).height,
+                        1
                     ) as usize;
 
                     let buffer = ffmpeglib::av_malloc(picturesize as u64) as *mut u8;
 
-                    ffmpeglib::avpicture_fill(
-                        tr_frame as *mut ffmpeglib::AVPicture,
+                    ffmpeglib::av_image_fill_arrays(
+                        (*tr_frame).data.as_mut_ptr(),
+                        (*tr_frame).linesize.as_mut_ptr(),
                         buffer,
                         ffmpeglib::AVPixelFormat_AV_PIX_FMT_YUVJ420P,
                         (*codec_ctx).width,
                         (*codec_ctx).height,
+                        1
                     );
 
                     println!(
