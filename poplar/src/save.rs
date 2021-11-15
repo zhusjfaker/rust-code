@@ -71,16 +71,25 @@ pub fn saveframe(frame: *mut ffmpeglib::AVFrame, index: i32) {
         let mut pkt: *mut ffmpeglib::AVPacket = ffmpeglib::av_packet_alloc();
         ffmpeglib::av_new_packet(pkt, y_size * 3);
 
-        let mut got_picture = 0;
-        let pic_decode_res = ffmpeglib::avcodec_encode_video2(p_codectx, pkt, frame, &mut got_picture);
-        if pic_decode_res < 0 {
-            println!("Encode Error");
+        let mut ret = ffmpeglib::avcodec_send_frame(p_codectx, frame);
+        if ret < 0 {
+            println!("Send IFrame to decodec error....\n");
             return;
         }
-        if got_picture > 0 {
-            ffmpeglib::av_write_frame(p_format_ctx, pkt);
+        while ret >= 0 {
+            ret = ffmpeglib::avcodec_receive_packet(p_codectx, pkt);
+            if ret < 0 {
+                println!("Error during encoding... \n");
+                return;
+            }
+            ret = ffmpeglib::av_write_frame(p_format_ctx, pkt);
+            if ret < 0 {
+                println!("Write frame to output failed....\n");
+                return;
+            }
+            ffmpeglib::av_packet_free(&mut pkt);
         }
-        ffmpeglib::av_packet_free(&mut pkt);
+
         ffmpeglib::av_write_trailer(p_format_ctx);
         println!("Encode Successful");
 
