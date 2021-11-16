@@ -69,6 +69,11 @@ mod tests {
                     let pframe: *mut ffmpeglib::AVFrame = ffmpeglib::av_frame_alloc();
                     let tr_frame: *mut ffmpeglib::AVFrame = ffmpeglib::av_frame_alloc();
 
+                    (*tr_frame).format = (*codec_ctx).pix_fmt;
+                    (*tr_frame).color_range = (*codec_ctx).color_range;
+                    (*tr_frame).width = (*codec_ctx).width;
+                    (*tr_frame).height = (*codec_ctx).height;
+
                     let picturesize = ffmpeglib::av_image_get_buffer_size(
                         ffmpeglib::AVPixelFormat_AV_PIX_FMT_YUVJ420P,
                         (*codec_ctx).width,
@@ -114,7 +119,7 @@ mod tests {
                             if (*packet).flags == 1 {
                                 pic_index += 1;
 
-                                if pic_index < 20 {
+                                if pic_index < 4 {
                                     let img_convert_ctx: *mut ffmpeglib::SwsContext = ffmpeglib::sws_getContext(
                                         (*pframe).width,
                                         (*pframe).height,

@@ -10,12 +10,12 @@ pub fn saveframe(frame: *mut ffmpeglib::AVFrame, index: i32) {
         println!("pic name is {}", filepath);
         let c_filepath = CString::new(filepath).unwrap().into_raw();
         let p_format_ctx: *mut ffmpeglib::AVFormatContext = ffmpeglib::avformat_alloc_context();
-        (*p_format_ctx).oformat = ffmpeglib::av_guess_format(
+        let format = ffmpeglib::av_guess_format(
             CString::new("mjpeg").unwrap().into_raw(),
             null_mut(),
             null_mut(),
         );
-        println!("codeid is {}", (*(*p_format_ctx).oformat).video_codec);
+        (*p_format_ctx).oformat = format;
         let write_res = ffmpeglib::avio_open(
             &mut (*p_format_ctx).pb,
             c_filepath,
