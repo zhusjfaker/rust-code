@@ -7,8 +7,6 @@ cd ../source/FFmpeg
 ./configure \
 --prefix=../../ff-output \
 --disable-everything \
---prefix=../../ff-output \
---disable-everything \
 --disable-ffplay \
 --disable-ffprobe \
 --disable-x86asm \
@@ -54,6 +52,8 @@ cd ../source/FFmpeg
 --enable-muxer=avi \
 --enable-parser=aac \
 --enable-encoder=mjpeg \
+--enable-demuxer=mjpeg \
+--enable-muxer=mjpeg \
 --enable-decoder=mjpeg \
 --arch=x86_64 \
 --target-os=darwin 
