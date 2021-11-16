@@ -75,7 +75,7 @@ mod tests {
                     (*tr_frame).height = (*codec_ctx).height;
 
                     let picturesize = ffmpeglib::av_image_get_buffer_size(
-                        ffmpeglib::AVPixelFormat_AV_PIX_FMT_YUVJ420P,
+                        (*codec_ctx).pix_fmt,
                         (*codec_ctx).width,
                         (*codec_ctx).height,
                         1,
@@ -118,7 +118,7 @@ mod tests {
                                     (*pframe).width,
                                     (*pframe).height,
                                     ffmpeglib::AVPixelFormat_AV_PIX_FMT_YUVJ420P,
-                                    ffmpeglib::SWS_BICUBIC as i32,
+                                    ffmpeglib::SWS_FAST_BILINEAR as i32,
                                     null_mut(),
                                     null_mut(),
                                     null_mut(),
