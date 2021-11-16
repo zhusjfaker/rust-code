@@ -51,8 +51,8 @@ cd ../source/FFmpeg
 --enable-muxer=mpegts \
 --enable-muxer=avi \
 --enable-parser=aac \
---enable-encoder=jmpeg \
---enable-decoder=jmpeg \
+--enable-encoder=mjpeg \
+--enable-decoder=mjpeg \
 --arch=aarch64 \
 --target-os=darwin 
 
