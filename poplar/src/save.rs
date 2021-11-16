@@ -26,8 +26,10 @@ pub fn saveframe(frame: *mut ffmpeglib::AVFrame, index: i32) {
             return;
         }
 
-        let codec: *const ffmpeglib::AVCodec = ffmpeglib::avcodec_find_decoder((*(*p_format_ctx).oformat).video_codec);
-        let p_avstream = ffmpeglib::avformat_new_stream(p_format_ctx, codec);
+        // let codec: *const ffmpeglib::AVCodec = ffmpeglib::avcodec_find_decoder((*(*p_format_ctx).oformat).video_codec);
+        // let p_avstream = ffmpeglib::avformat_new_stream(p_format_ctx, codec);
+        let avcodec = ffmpeglib::avcodec_find_encoder_by_name(CString::new("mjpeg").unwrap().into_raw());
+        let p_avstream = ffmpeglib::avformat_new_stream(p_format_ctx, avcodec);
         if p_avstream == null_mut() {
             return;
         }
