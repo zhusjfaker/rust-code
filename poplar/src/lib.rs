@@ -9,7 +9,7 @@ mod tests {
     use std::slice::from_raw_parts;
     use rust_ffmpeg::gen::ffmpeg::root as ffmpeglib;
     use rust_ffmpeg::gen::ffmpeg::root::{AV_TIME_BASE, AVCodecParameters, AVMediaType_AVMEDIA_TYPE_VIDEO};
-    use crate::save::saveframe;
+    use crate::save::*;
 
     #[test]
     fn it_works() {
@@ -134,8 +134,7 @@ mod tests {
                                     (*tr_frame).linesize.as_ptr(),
                                 );
                                 println!("重新计算的高端:{}", h);
-                                saveframe(tr_frame, pic_index);
-                                // saveframe(pframe, pic_index);
+                                saveframe2(tr_frame, pic_index);
                             }
                             pic_index += 1;
                         }
