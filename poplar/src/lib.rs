@@ -78,7 +78,7 @@ mod tests {
                         ffmpeglib::AVPixelFormat_AV_PIX_FMT_YUVJ420P,
                         (*codec_ctx).width,
                         (*codec_ctx).height,
-                        1
+                        1,
                     ) as usize;
 
                     let buffer = ffmpeglib::av_malloc(picturesize as u64) as *mut u8;
@@ -90,7 +90,7 @@ mod tests {
                         ffmpeglib::AVPixelFormat_AV_PIX_FMT_YUVJ420P,
                         (*codec_ctx).width,
                         (*codec_ctx).height,
-                        1
+                        1,
                     );
 
                     println!(
@@ -102,7 +102,7 @@ mod tests {
 
                     let mut pic_index = 1;
 
-                    while ffmpeglib::av_read_frame(ifmt_ctx, packet) >= 0 {
+                    while ffmpeglib::av_read_frame(ifmt_ctx, packet) >= 0 && pic_index < 4 {
                         let stream_index = (*packet).stream_index as usize;
                         if video_stream_idx.contains(&stream_index) {
                             let ret_send = ffmpeglib::avcodec_send_packet(codec_ctx, packet);
@@ -110,46 +110,34 @@ mod tests {
                                 println!("发送视频帧失败,跳过");
                                 continue;
                             }
-                            let receive_ret = ffmpeglib::avcodec_receive_frame(codec_ctx, pframe);
-                            if receive_ret < 0 {
-                                println!("解码获取 视频帧失败,跳过");
-                                continue;
+                            while ffmpeglib::avcodec_receive_frame(codec_ctx, pframe) == 0 {
+                                let img_convert_ctx: *mut ffmpeglib::SwsContext = ffmpeglib::sws_getContext(
+                                    (*pframe).width,
+                                    (*pframe).height,
+                                    (*pframe).format,
+                                    (*pframe).width,
+                                    (*pframe).height,
+                                    ffmpeglib::AVPixelFormat_AV_PIX_FMT_YUVJ420P,
+                                    ffmpeglib::SWS_BICUBIC as i32,
+                                    null_mut(),
+                                    null_mut(),
+                                    null_mut(),
+                                );
+
+                                let h = ffmpeglib::sws_scale(
+                                    img_convert_ctx,
+                                    (*pframe).data.as_ptr() as *mut *const u8,
+                                    (*pframe).linesize.as_ptr(),
+                                    0,
+                                    (*codec_ctx).height,
+                                    (*tr_frame).data.as_ptr(),
+                                    (*tr_frame).linesize.as_ptr(),
+                                );
+                                println!("重新计算的高端:{}", h);
+                                saveframe(tr_frame, pic_index);
+                                // saveframe(pframe, pic_index);
                             }
-
-                            if (*packet).flags == 1 {
-                                pic_index += 1;
-
-                                if pic_index < 4 {
-                                    let img_convert_ctx: *mut ffmpeglib::SwsContext = ffmpeglib::sws_getContext(
-                                        (*pframe).width,
-                                        (*pframe).height,
-                                        (*pframe).format,
-                                        (*pframe).width,
-                                        (*pframe).height,
-                                        ffmpeglib::AVPixelFormat_AV_PIX_FMT_YUVJ420P,
-                                        ffmpeglib::SWS_BICUBIC as i32,
-                                        null_mut(),
-                                        null_mut(),
-                                        null_mut(),
-                                    );
-
-                                    let h = ffmpeglib::sws_scale(
-                                        img_convert_ctx,
-                                        (*pframe).data.as_ptr() as *mut *const u8,
-                                        (*pframe).linesize.as_ptr(),
-                                        0,
-                                        (*codec_ctx).height,
-                                        (*tr_frame).data.as_ptr(),
-                                        (*tr_frame).linesize.as_ptr(),
-                                    );
-
-                                    println!("重新计算的高端:{}", h);
-
-                                    saveframe(tr_frame, pic_index);
-                                } else {
-                                    break;
-                                }
-                            }
+                            pic_index += 1;
                         }
                     }
 
