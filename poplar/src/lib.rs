@@ -22,7 +22,7 @@ mod tests {
         unsafe {
             ffmpeglib::avdevice_register_all();
             let mut video_stream_id = 0 as usize;
-            let path = "/Users/zhushijie/Desktop/test/c.mp4";
+            let path = "/Users/zhushijie/Desktop/test/a.mp4";
             let c_path = ffi::CString::new(path)
                 .expect("CString::new failed")
                 .into_raw();
@@ -76,7 +76,7 @@ mod tests {
                     (*tr_frame).height = (*codec_ctx).height;
 
                     let picturesize = ffmpeglib::av_image_get_buffer_size(
-                        ffmpeglib::AVPixelFormat_AV_PIX_FMT_YUVJ420P,
+                        ffmpeglib::AVPixelFormat_AV_PIX_FMT_YUV420P,
                         (*codec_ctx).width,
                         (*codec_ctx).height,
                         1,
@@ -88,7 +88,7 @@ mod tests {
                         (*tr_frame).data.as_mut_ptr(),
                         (*tr_frame).linesize.as_mut_ptr(),
                         buffer,
-                        ffmpeglib::AVPixelFormat_AV_PIX_FMT_YUVJ420P,
+                        ffmpeglib::AVPixelFormat_AV_PIX_FMT_YUV420P,
                         (*codec_ctx).width,
                         (*codec_ctx).height,
                         1,
@@ -123,7 +123,7 @@ mod tests {
                                 (*pframe).format,
                                 (*codec_ctx).width,
                                 (*codec_ctx).height,
-                                ffmpeglib::AVPixelFormat_AV_PIX_FMT_YUVJ420P,
+                                ffmpeglib::AVPixelFormat_AV_PIX_FMT_YUV420P,
                                 ffmpeglib::SWS_BICUBIC as i32,
                                 null_mut(),
                                 null_mut(),
@@ -145,7 +145,7 @@ mod tests {
                                 /*
                                  *  ffmpeg -i c.mp4 -pix_fmt yuv420p -an -y a.mp4 (手动执行转化命令)
                                  */
-                                saveframe2(tr_frame, pic_index);
+                                saveframe2(pframe, pic_index);
                             }
                             if pic_index >= 4 {
                                 break;
