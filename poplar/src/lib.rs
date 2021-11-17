@@ -68,6 +68,7 @@ mod tests {
                     let packet: *mut ffmpeglib::AVPacket = ffmpeglib::av_packet_alloc();
                     let pframe: *mut ffmpeglib::AVFrame = ffmpeglib::av_frame_alloc();
                     let tr_frame: *mut ffmpeglib::AVFrame = ffmpeglib::av_frame_alloc();
+                    ffmpeglib::av_init_packet(packet);
 
                     (*tr_frame).format = (*codec_ctx).pix_fmt;
                     (*tr_frame).color_range = (*codec_ctx).color_range;
@@ -75,7 +76,7 @@ mod tests {
                     (*tr_frame).height = (*codec_ctx).height;
 
                     let picturesize = ffmpeglib::av_image_get_buffer_size(
-                        (*codec_ctx).pix_fmt,
+                        ffmpeglib::AVPixelFormat_AV_PIX_FMT_YUVJ420P,
                         (*codec_ctx).width,
                         (*codec_ctx).height,
                         1,
@@ -145,6 +146,9 @@ mod tests {
                                  *  ffmpeg -i c.mp4 -pix_fmt yuv420p -an -y a.mp4 (手动执行转化命令)
                                  */
                                 saveframe2(tr_frame, pic_index);
+                            }
+                            if pic_index >= 4 {
+                                break;
                             }
                             pic_index += 1;
                         }
