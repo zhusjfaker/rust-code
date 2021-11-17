@@ -22,7 +22,7 @@ mod tests {
         unsafe {
             ffmpeglib::avdevice_register_all();
             let mut video_stream_id = 0 as usize;
-            let path = "/Users/zhushijie/Desktop/test/a.mp4";
+            let path = "/Users/zhushijie/Desktop/test/c.mp4";
             let c_path = ffi::CString::new(path)
                 .expect("CString::new failed")
                 .into_raw();
@@ -139,11 +139,12 @@ mod tests {
                                 (*tr_frame).linesize.as_ptr(),
                             );
                             println!("重新计算的高端:{}", h);
-                            if pic_index < 4 {
+
+                            if pic_index < 4 && h > 0 {
                                 /*
                                  *  ffmpeg -i c.mp4 -pix_fmt yuv420p -an -y a.mp4 (手动执行转化命令)
                                  */
-                                saveframe2(pframe, pic_index);
+                                saveframe2(tr_frame, pic_index);
                             }
                             pic_index += 1;
                         }
