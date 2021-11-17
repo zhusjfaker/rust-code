@@ -22,7 +22,7 @@ mod tests {
         unsafe {
             ffmpeglib::avdevice_register_all();
             let mut video_stream_id = 0 as usize;
-            let path = "/Users/zhushijie/Desktop/test/c.mp4";
+            let path = "/Users/zhushijie/Desktop/test/b.mp4";
             let c_path = ffi::CString::new(path)
                 .expect("CString::new failed")
                 .into_raw();
@@ -52,8 +52,7 @@ mod tests {
 
             for (index, stream_ptr) in streams.iter().enumerate() {
                 let acc: *mut AVCodecParameters = stream_ptr.codecpar;
-                println!("codec_type is {},index is {}", (*acc).codec_type, index);
-                if (*acc).codec_type == AVMediaType_AVMEDIA_TYPE_VIDEO {
+                if acc != null_mut() && (*acc).codec_type == AVMediaType_AVMEDIA_TYPE_VIDEO {
                     video_stream_id = index;
                     let codec: *const ffmpeglib::AVCodec = ffmpeglib::avcodec_find_decoder((*acc).codec_id);
                     if codec == null_mut() {
@@ -70,7 +69,6 @@ mod tests {
                     let tr_frame: *mut ffmpeglib::AVFrame = ffmpeglib::av_frame_alloc();
                     ffmpeglib::av_init_packet(packet);
 
-                    (*tr_frame).format = (*codec_ctx).pix_fmt;
                     (*tr_frame).color_range = (*codec_ctx).color_range;
                     (*tr_frame).width = (*codec_ctx).width;
                     (*tr_frame).height = (*codec_ctx).height;
@@ -130,6 +128,8 @@ mod tests {
                                 null_mut(),
                             );
 
+                            (*tr_frame).format = (*pframe).format;
+
                             let h = ffmpeglib::sws_scale(
                                 img_convert_ctx,
                                 (*pframe).data.as_ptr() as *mut *const u8,
@@ -146,7 +146,7 @@ mod tests {
                                 /*
                                  *  ffmpeg -i c.mp4 -pix_fmt yuv420p -an -y a.mp4 (手动执行转化命令)
                                  */
-                                (*tr_frame).buf = (*pframe).buf;
+                                // (*tr_frame).buf = (*pframe).buf.clone();
                                 saveframe2(tr_frame, pic_index);
                             }
                             if pic_index >= 4 {
