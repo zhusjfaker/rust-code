@@ -21,7 +21,7 @@ mod tests {
         println!("{}", ffmpeglib::AV_CPU_FLAG_SSE);
         unsafe {
             ffmpeglib::avdevice_register_all();
-            let mut video_stream_idx: Vec<usize> = Vec::new();
+            let mut video_stream_id = 0 as usize;
             let path = "/Users/zhushijie/Desktop/test/a.mp4";
             let c_path = ffi::CString::new(path)
                 .expect("CString::new failed")
@@ -54,7 +54,7 @@ mod tests {
                 let acc: *mut AVCodecParameters = stream_ptr.codecpar;
                 println!("codec_type is {},index is {}", (*acc).codec_type, index);
                 if (*acc).codec_type == AVMediaType_AVMEDIA_TYPE_VIDEO {
-                    video_stream_idx.push(index);
+                    video_stream_id = index;
                     let codec: *const ffmpeglib::AVCodec = ffmpeglib::avcodec_find_decoder((*acc).codec_id);
                     if codec == null_mut() {
                         println!("没有该类型的解码器!");
@@ -102,39 +102,48 @@ mod tests {
 
                     let mut pic_index = 1;
 
-                    while ffmpeglib::av_read_frame(ifmt_ctx, packet) >= 0 && pic_index < 4 {
+
+                    while ffmpeglib::av_read_frame(ifmt_ctx, packet) >= 0 {
                         let stream_index = (*packet).stream_index as usize;
-                        if video_stream_idx.contains(&stream_index) {
+                        if video_stream_id == stream_index {
                             let ret_send = ffmpeglib::avcodec_send_packet(codec_ctx, packet);
-                            if ret_send < 0 {
-                                println!("发送视频帧失败,跳过");
+                            if ret_send != 0 {
+                                println!("avodec send packet error");
                                 continue;
                             }
-                            while ffmpeglib::avcodec_receive_frame(codec_ctx, pframe) == 0 {
-                                let img_convert_ctx: *mut ffmpeglib::SwsContext = ffmpeglib::sws_getContext(
-                                    (*pframe).width,
-                                    (*pframe).height,
-                                    (*pframe).format,
-                                    (*pframe).width,
-                                    (*pframe).height,
-                                    ffmpeglib::AVPixelFormat_AV_PIX_FMT_YUVJ420P,
-                                    ffmpeglib::SWS_FAST_BILINEAR as i32,
-                                    null_mut(),
-                                    null_mut(),
-                                    null_mut(),
-                                );
+                            let receiveFrame = ffmpeglib::avcodec_receive_frame(codec_ctx, pframe);
+                            if receiveFrame != 0 {
+                                println!("avcodec_receive_frame error");
+                                continue;
+                            }
+                            let img_convert_ctx: *mut ffmpeglib::SwsContext = ffmpeglib::sws_getContext(
+                                (*codec_ctx).width,
+                                (*codec_ctx).height,
+                                (*pframe).format,
+                                (*codec_ctx).width,
+                                (*codec_ctx).height,
+                                ffmpeglib::AVPixelFormat_AV_PIX_FMT_YUVJ420P,
+                                ffmpeglib::SWS_BICUBIC as i32,
+                                null_mut(),
+                                null_mut(),
+                                null_mut(),
+                            );
 
-                                let h = ffmpeglib::sws_scale(
-                                    img_convert_ctx,
-                                    (*pframe).data.as_ptr() as *mut *const u8,
-                                    (*pframe).linesize.as_ptr(),
-                                    0,
-                                    (*codec_ctx).height,
-                                    (*tr_frame).data.as_ptr(),
-                                    (*tr_frame).linesize.as_ptr(),
-                                );
-                                println!("重新计算的高端:{}", h);
-                                saveframe2(tr_frame, pic_index);
+                            let h = ffmpeglib::sws_scale(
+                                img_convert_ctx,
+                                (*pframe).data.as_ptr() as *mut *const u8,
+                                (*pframe).linesize.as_ptr(),
+                                0,
+                                (*pframe).height,
+                                (*tr_frame).data.as_ptr(),
+                                (*tr_frame).linesize.as_ptr(),
+                            );
+                            println!("重新计算的高端:{}", h);
+                            if pic_index < 4 {
+                                /*
+                                 *  ffmpeg -i c.mp4 -pix_fmt yuv420p -an -y a.mp4 (手动执行转化命令)
+                                 */
+                                saveframe2(pframe, pic_index);
                             }
                             pic_index += 1;
                         }
