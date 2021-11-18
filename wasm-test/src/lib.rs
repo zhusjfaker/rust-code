@@ -1,7 +1,10 @@
 use wasm_bindgen::prelude::*;
-use crate::clib::root::test_add;
-
 mod clib;
+
+#[wasm_bindgen]
+pub extern "C" fn test_add(x: i32) -> i32 {
+    x + 2
+}
 
 #[wasm_bindgen]
 pub fn greet(num: i32) -> i32 {
@@ -12,7 +15,7 @@ pub fn greet(num: i32) -> i32 {
 
 #[cfg(test)]
 mod tests {
-    use crate::test_add;
+    use crate::clib::root::test_add;
 
     #[test]
     fn it_works() {
