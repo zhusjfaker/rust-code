@@ -4,4 +4,7 @@
 pub mod root {
     #[allow(unused_imports)]
     use self::super::root;
+    extern "C" {
+        pub fn test_add(a: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+    }
 }
