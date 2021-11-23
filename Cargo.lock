@@ -522,6 +522,8 @@ version = "0.1.0"
 dependencies = [
  "ratel",
  "swc",
+ "swc_common",
+ "swc_ecma_parser",
 ]
 
 [[package]]

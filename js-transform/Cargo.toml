@@ -8,3 +8,5 @@ edition = "2021"
 [dependencies]
 ratel = "0.7.0"
 swc = "0.86.0"
+swc_ecma_parser = "0.78.7"
+swc_common = "0.14.6"
