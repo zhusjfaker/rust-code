@@ -3,5 +3,6 @@
 members = [
     "rust-ffmpeg",
     "poplar",
-    "wasm-test"
+    "wasm-test",
+    "js-transform"
 ]
