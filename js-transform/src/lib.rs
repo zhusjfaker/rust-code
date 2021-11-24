@@ -2,20 +2,31 @@
 mod tests {
     extern crate swc_common;
     extern crate swc_ecma_parser;
+    extern crate swc_ecma_visit;
 
-    use swc::ecmascript::ast::EsVersion;
+    use std::any::Any;
+    use std::borrow::BorrowMut;
+    use std::ops::Deref;
+    use swc::ecmascript::ast::{EsVersion, ImportDecl, ImportNamedSpecifier, ImportStarAsSpecifier, ModuleDecl};
     use swc_common::sync::Lrc;
     use swc_common::{
         errors::{ColorConfig, Handler},
         FileName, FilePathMapping, SourceMap,
     };
+    use swc_common::comments::SingleThreadedComments;
+    use swc_common::util::take::Take;
     use swc_ecma_parser::{EsConfig, lexer::Lexer, Parser, StringInput, Syntax};
+    use swc_ecma_transforms::typescript;
+    use swc_ecma_transforms_typescript::strip;
+    use swc_ecma_visit::FoldWith;
+    use swc_ecma_visit::{
+        as_folder, noop_visit_mut_type, noop_visit_type, Fold, Node, Visit, VisitMut, VisitMutWith,
+        VisitWith,
+    };
+    use swc::ecmascript::ast::{Decl, Module, ModuleItem, Pat, Stmt};
+    use swc_atoms::{js_word, JsWord};
+    use swc_ecma_ast::ImportSpecifier;
 
-    #[test]
-    fn it_works() {
-        let result = 2 + 2;
-        assert_eq!(result, 4);
-    }
 
     #[test]
     fn transform() {
@@ -72,7 +83,7 @@ ReactDOM.render(<Page/>, document.getElementById(\"root\"));
                 top_level_await: false,
                 import_assertions: false,
                 static_blocks: true,
-                private_in_object: true
+                private_in_object: true,
             }),
             // EsVersion defaults to es5
             EsVersion::Es2016,
@@ -86,9 +97,37 @@ ReactDOM.render(<Page/>, document.getElementById(\"root\"));
             println!("parser fail");
         }
 
-        let _module = parser
-            .parse_module().expect("parser fail");
+        let mut module = parser
+            .parse_module().unwrap();
 
         println!("parser success");
+
+        let s = serde_json::to_string_pretty(&module).expect("failed to serialize");
+        println!("ast json is \n {}", s);
+
+        let mut specifiers = vec![];
+
+
+        for item in module.body {
+            if let ModuleItem::ModuleDecl(ModuleDecl::Import(var)) = item {
+                let source = &*var.src.value;
+                if source == "antd" {
+                    for specifier in &var.specifiers {
+                        match specifier {
+                            ImportSpecifier::Named(ref s) => {
+                                let d = format!("{}", s.local.sym);
+                                specifiers.push(d);
+                            }
+                            ImportSpecifier::Default(ref s) => {}
+                            ImportSpecifier::Namespace(ref ns) => {}
+                        }
+                    }
+                }
+            }
+        }
+
+
+        println!("gen success");
     }
 }
+
