@@ -6,7 +6,10 @@ mod tests {
 
     use std::any::Any;
     use std::borrow::BorrowMut;
+    use std::io::stderr;
     use std::ops::Deref;
+    use swc::Compiler;
+    use swc::config::SourceMapsConfig;
     use swc::ecmascript::ast::{EsVersion, ImportDecl, ImportNamedSpecifier, ImportStarAsSpecifier, ModuleDecl};
     use swc_common::sync::Lrc;
     use swc_common::{
@@ -63,6 +66,9 @@ ReactDOM.render(<Page/>, document.getElementById(\"root\"));
             source.into(),
         );
 
+        let compiler = Compiler::new(cm.clone());
+        let handler = Handler::with_emitter_writer(Box::new(stderr()), Some(compiler.cm.clone()));
+
         let lexer = Lexer::new(
             // We want to parse ecmascript
             Syntax::Es(EsConfig {
@@ -97,7 +103,7 @@ ReactDOM.render(<Page/>, document.getElementById(\"root\"));
             println!("parser fail");
         }
 
-        let mut module = parser
+        let module = parser
             .parse_module().unwrap();
 
         println!("parser success");
@@ -107,7 +113,7 @@ ReactDOM.render(<Page/>, document.getElementById(\"root\"));
 
         let mut specifiers = vec![];
 
-
+        let oldmodule = module.clone();
         for item in module.body {
             if let ModuleItem::ModuleDecl(ModuleDecl::Import(var)) = item {
                 let source = &*var.src.value;
@@ -126,6 +132,16 @@ ReactDOM.render(<Page/>, document.getElementById(\"root\"));
             }
         }
 
+        let res = compiler.print(&oldmodule,
+                                 None,
+                                 None,
+                                 false,
+                                 EsVersion::Es2020,
+                                 SourceMapsConfig::Bool(false),
+                                 &Default::default(),
+                                 None,
+                                 false,
+                                 None, ).unwrap();
 
         println!("gen success");
     }
