@@ -12,10 +12,7 @@ mod tests {
     use swc::config::SourceMapsConfig;
     use swc::ecmascript::ast::{EsVersion, ImportDecl, ImportNamedSpecifier, ImportStarAsSpecifier, ModuleDecl};
     use swc_common::sync::Lrc;
-    use swc_common::{
-        errors::{ColorConfig, Handler},
-        FileName, FilePathMapping, SourceMap,
-    };
+    use swc_common::{DUMMY_SP, errors::{ColorConfig, Handler}, FileName, FilePathMapping, SourceMap};
     use swc_common::comments::SingleThreadedComments;
     use swc_common::util::take::Take;
     use swc_ecma_parser::{EsConfig, lexer::Lexer, Parser, StringInput, Syntax};
@@ -28,7 +25,8 @@ mod tests {
     };
     use swc::ecmascript::ast::{Decl, Module, ModuleItem, Pat, Stmt};
     use swc_atoms::{js_word, JsWord};
-    use swc_ecma_ast::ImportSpecifier;
+    use swc_babel_ast::{BaseNode, ImportDeclaration, StringLiteral};
+    use swc_ecma_ast::{ImportSpecifier, Str};
 
 
     #[test]
@@ -103,7 +101,7 @@ ReactDOM.render(<Page/>, document.getElementById(\"root\"));
             println!("parser fail");
         }
 
-        let module = parser
+        let mut module = parser
             .parse_module().unwrap();
 
         println!("parser success");
@@ -113,7 +111,8 @@ ReactDOM.render(<Page/>, document.getElementById(\"root\"));
 
         let mut specifiers = vec![];
 
-        let oldmodule = module.clone();
+        let oldmodule = module.clone() as Module;
+        let mut newmodule = module.clone() as Module;
         for item in module.body {
             if let ModuleItem::ModuleDecl(ModuleDecl::Import(var)) = item {
                 let source = &*var.src.value;
@@ -121,18 +120,46 @@ ReactDOM.render(<Page/>, document.getElementById(\"root\"));
                     for specifier in &var.specifiers {
                         match specifier {
                             ImportSpecifier::Named(ref s) => {
-                                let d = format!("{}", s.local.sym);
-                                specifiers.push(d);
+                                let ident = format!("{}", s.local.sym);
+                                specifiers.push(format!("antd/es/{}/style/index.css", ident.to_lowercase()));
                             }
                             ImportSpecifier::Default(ref s) => {}
                             ImportSpecifier::Namespace(ref ns) => {}
                         }
+                    }
+                    for css_source in specifiers.clone() {
+                        let css_source_ref = css_source.as_str();
+                        let dec = ModuleItem::ModuleDecl(ModuleDecl::Import(ImportDecl {
+                            span: DUMMY_SP,
+                            specifiers:  vec![],
+                            src: Str {
+                                span: DUMMY_SP,
+                                value: JsWord::from(css_source_ref),
+                                has_escape: false,
+                                kind: Default::default(),
+                            },
+                            type_only: false,
+                            asserts: None,
+                        }));
+                        let body = &mut newmodule.body;
+                        body.push(dec)
                     }
                 }
             }
         }
 
         let res = compiler.print(&oldmodule,
+                                 None,
+                                 None,
+                                 false,
+                                 EsVersion::Es2020,
+                                 SourceMapsConfig::Bool(false),
+                                 &Default::default(),
+                                 None,
+                                 false,
+                                 None, ).unwrap();
+
+        let new_res = compiler.print(&newmodule,
                                  None,
                                  None,
                                  false,
