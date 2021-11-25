@@ -1,31 +1,14 @@
 #[cfg(test)]
 mod tests {
-    extern crate swc_common;
-    extern crate swc_ecma_parser;
-    extern crate swc_ecma_visit;
-
-    use std::any::Any;
-    use std::borrow::BorrowMut;
     use std::io::stderr;
-    use std::ops::Deref;
     use swc::Compiler;
     use swc::config::SourceMapsConfig;
     use swc::ecmascript::ast::{EsVersion, ImportDecl, ImportNamedSpecifier, ImportStarAsSpecifier, ModuleDecl};
     use swc_common::sync::Lrc;
     use swc_common::{DUMMY_SP, errors::{ColorConfig, Handler}, FileName, FilePathMapping, SourceMap};
-    use swc_common::comments::SingleThreadedComments;
-    use swc_common::util::take::Take;
     use swc_ecma_parser::{EsConfig, lexer::Lexer, Parser, StringInput, Syntax};
-    use swc_ecma_transforms::typescript;
-    use swc_ecma_transforms_typescript::strip;
-    use swc_ecma_visit::FoldWith;
-    use swc_ecma_visit::{
-        as_folder, noop_visit_mut_type, noop_visit_type, Fold, Node, Visit, VisitMut, VisitMutWith,
-        VisitWith,
-    };
     use swc::ecmascript::ast::{Decl, Module, ModuleItem, Pat, Stmt};
     use swc_atoms::{js_word, JsWord};
-    use swc_babel_ast::{BaseNode, ImportDeclaration, StringLiteral};
     use swc_ecma_ast::{ImportSpecifier, Str};
 
 
@@ -131,7 +114,7 @@ ReactDOM.render(<Page/>, document.getElementById(\"root\"));
                         let css_source_ref = css_source.as_str();
                         let dec = ModuleItem::ModuleDecl(ModuleDecl::Import(ImportDecl {
                             span: DUMMY_SP,
-                            specifiers:  vec![],
+                            specifiers: vec![],
                             src: Str {
                                 span: DUMMY_SP,
                                 value: JsWord::from(css_source_ref),
@@ -142,7 +125,7 @@ ReactDOM.render(<Page/>, document.getElementById(\"root\"));
                             asserts: None,
                         }));
                         let body = &mut newmodule.body;
-                        body.push(dec)
+                        body.insert(0, dec);
                     }
                 }
             }
@@ -160,15 +143,15 @@ ReactDOM.render(<Page/>, document.getElementById(\"root\"));
                                  None, ).unwrap();
 
         let new_res = compiler.print(&newmodule,
-                                 None,
-                                 None,
-                                 false,
-                                 EsVersion::Es2020,
-                                 SourceMapsConfig::Bool(false),
-                                 &Default::default(),
-                                 None,
-                                 false,
-                                 None, ).unwrap();
+                                     None,
+                                     None,
+                                     false,
+                                     EsVersion::Es2020,
+                                     SourceMapsConfig::Bool(false),
+                                     &Default::default(),
+                                     None,
+                                     false,
+                                     None, ).unwrap();
 
         println!("gen success");
     }
