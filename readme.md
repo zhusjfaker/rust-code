@@ -18,20 +18,25 @@
 
 * 包依赖恢复
 ```
-cargo update
+$: cargo update
 ```
 
 * Monorepo 编译
 ```
-cargo build
+$: cargo build
 ```
 
 * 单包 编译
 ```
-cargo build --name {包名称}
+$:  cargo build --name {包名称}
 ```
 
 * 测试用例运行
 ```
-cargo test {lib.rs 中 函数名} -- --nocapture
+$:  cargo test {lib.rs 中 函数名} -- --nocapture
+```
+
+* 切换成 暗夜模式编译(必须)
+```
+$:  rustup default nightly
 ```
