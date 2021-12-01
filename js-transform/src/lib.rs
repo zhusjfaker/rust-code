@@ -1,16 +1,20 @@
 #[cfg(test)]
 mod tests {
+    use std::collections::HashMap;
     use std::io::stderr;
     use swc::Compiler;
     use swc::config::SourceMapsConfig;
     use swc::ecmascript::ast::{EsVersion, ImportDecl, ImportNamedSpecifier, ImportStarAsSpecifier, ModuleDecl};
     use swc_common::sync::Lrc;
     use swc_common::{DUMMY_SP, errors::{ColorConfig, Handler}, FileName, FilePathMapping, SourceMap};
-    use swc_ecma_parser::{EsConfig, lexer::Lexer, Parser, StringInput, Syntax};
+    use swc_ecma_parser::{EsConfig, lexer::Lexer, Parser, StringInput, Syntax, TsConfig};
     use swc::ecmascript::ast::{Decl, Module, ModuleItem, Pat, Stmt};
     use swc_atoms::{js_word, JsWord};
+    use swc_ecma_visit::FoldWith;
     use swc_ecma_ast::{ImportSpecifier, Str};
-
+    use swc_ecma_transforms::const_modules;
+    use swc_ecma_visit::{as_folder, noop_visit_mut_type, Fold, VisitMut, VisitMutWith};
+    use swc_bundler::Bundler;
 
     #[test]
     fn transform() {
@@ -52,25 +56,13 @@ ReactDOM.render(<Page/>, document.getElementById(\"root\"));
 
         let lexer = Lexer::new(
             // We want to parse ecmascript
-            Syntax::Es(EsConfig {
-                jsx: true,
-                num_sep: true,
-                class_private_props: true,
-                class_private_methods: false,
-                class_props: true,
-                fn_bind: true,
+            Syntax::Typescript(TsConfig {
+                tsx: true,
                 decorators: true,
-                decorators_before_export: true,
-                export_default_from: true,
-                export_namespace_from: false,
                 dynamic_import: true,
-                nullish_coalescing: true,
-                optional_chaining: true,
-                import_meta: false,
-                top_level_await: false,
+                dts: false,
+                no_early_errors: false,
                 import_assertions: false,
-                static_blocks: true,
-                private_in_object: true,
             }),
             // EsVersion defaults to es5
             EsVersion::Es2016,
@@ -80,8 +72,13 @@ ReactDOM.render(<Page/>, document.getElementById(\"root\"));
 
         let mut parser = Parser::new_from(lexer);
 
-        for e in parser.take_errors() {
-            println!("parser fail");
+        let list_error = parser.take_errors();
+        if list_error.iter().len() > 0 {
+            let mut err_msg = "".to_owned();
+            for err in list_error {
+                let msg = err.into_kind().msg().to_string();
+                err_msg.push_str(msg.as_str());
+            }
         }
 
         let mut module = parser
@@ -94,9 +91,7 @@ ReactDOM.render(<Page/>, document.getElementById(\"root\"));
 
         let mut specifiers = vec![];
 
-        let oldmodule = module.clone() as Module;
-        let mut newmodule = module.clone() as Module;
-        for item in module.body {
+        for item in &mut module.body {
             if let ModuleItem::ModuleDecl(ModuleDecl::Import(var)) = item {
                 let source = &*var.src.value;
                 if source == "antd" {
@@ -110,39 +105,28 @@ ReactDOM.render(<Page/>, document.getElementById(\"root\"));
                             ImportSpecifier::Namespace(ref ns) => {}
                         }
                     }
-                    for css_source in specifiers.clone() {
-                        let css_source_ref = css_source.as_str();
-                        let dec = ModuleItem::ModuleDecl(ModuleDecl::Import(ImportDecl {
-                            span: DUMMY_SP,
-                            specifiers: vec![],
-                            src: Str {
-                                span: DUMMY_SP,
-                                value: JsWord::from(css_source_ref),
-                                has_escape: false,
-                                kind: Default::default(),
-                            },
-                            type_only: false,
-                            asserts: None,
-                        }));
-                        let body = &mut newmodule.body;
-                        body.insert(0, dec);
-                    }
                 }
             }
         }
 
-        let res = compiler.print(&oldmodule,
-                                 None,
-                                 None,
-                                 false,
-                                 EsVersion::Es2020,
-                                 SourceMapsConfig::Bool(false),
-                                 &Default::default(),
-                                 None,
-                                 false,
-                                 None, ).unwrap();
+        for css_source in specifiers.clone() {
+            let css_source_ref = css_source.as_str();
+            let dec = ModuleItem::ModuleDecl(ModuleDecl::Import(ImportDecl {
+                span: DUMMY_SP,
+                specifiers: vec![],
+                src: Str {
+                    span: DUMMY_SP,
+                    value: JsWord::from(css_source_ref),
+                    has_escape: false,
+                    kind: Default::default(),
+                },
+                type_only: false,
+                asserts: None,
+            }));
+            module.body.insert(0,dec);
+        }
 
-        let new_res = compiler.print(&newmodule,
+        let new_res = compiler.print(&module,
                                      None,
                                      None,
                                      false,
@@ -152,6 +136,8 @@ ReactDOM.render(<Page/>, document.getElementById(\"root\"));
                                      None,
                                      false,
                                      None, ).unwrap();
+
+
 
         println!("gen success");
     }
