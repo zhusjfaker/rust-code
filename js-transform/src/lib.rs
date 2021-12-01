@@ -17,6 +17,22 @@ mod tests {
     use swc_bundler::Bundler;
 
     #[test]
+    fn mut_change() {
+        let mut list = vec![1, 2, 3, 4];
+        let mut temp_list: Vec<i32> = vec![];
+        for num in list.iter_mut() {
+            let c = (*num) % 2;
+            if c == 0 {
+                *num = *num * 4;
+                temp_list.push(*num * 4);
+            }
+        }
+        list.extend(temp_list);
+        let str = list.iter().map(|x| { return x.to_string(); }).collect::<Vec<std::string::String>>().join("\n");
+        println!("{}", str);
+    }
+
+    #[test]
     fn transform() {
         let source = "
 import React from \"react\";
@@ -123,7 +139,7 @@ ReactDOM.render(<Page/>, document.getElementById(\"root\"));
                 type_only: false,
                 asserts: None,
             }));
-            module.body.insert(0,dec);
+            module.body.insert(0, dec);
         }
 
         let new_res = compiler.print(&module,
@@ -136,7 +152,6 @@ ReactDOM.render(<Page/>, document.getElementById(\"root\"));
                                      None,
                                      false,
                                      None, ).unwrap();
-
 
 
         println!("gen success");
