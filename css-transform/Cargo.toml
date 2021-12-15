@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 postcss = "0.0.2"
+sass-rs = "0.2.2"
