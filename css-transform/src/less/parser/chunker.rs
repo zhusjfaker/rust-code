@@ -21,17 +21,17 @@ pub fn chunker(input: &str) {
   let mut lastOpeningParen: usize;
   let mut emitFrom = 0;
   let mut chunkerCurrentIndex = 0;
-  // let mut chunks = vec![];
+  let mut chunks = vec![];
   let mut cc: u32 = 0;
 
-  // let mut emitChunk = |force: Option<bool>| {
-  //   let len = chunkerCurrentIndex - emitFrom;
-  //   if ((len < 512) && !force.unwrap_or(true)) || len == 0 {
-  //     return;
-  //   }
-  //   chunks.push(&input[emitFrom..chunkerCurrentIndex + 1]);
-  //   emitFrom = chunkerCurrentIndex + 1;
-  // };
+  let mut emitChunk = move |force: Option<bool>| {
+    let len = chunkerCurrentIndex - emitFrom;
+    if ((len < 512) && !force.unwrap_or(true)) || len == 0 {
+      return;
+    }
+    chunks.push(&input[emitFrom..chunkerCurrentIndex + 1]);
+    emitFrom = chunkerCurrentIndex + 1;
+  };
 
   loop {
     if chunkerCurrentIndex < len {
@@ -46,7 +46,7 @@ pub fn chunker(input: &str) {
         41 => {}
         59 => {
           if parenLevel != 0 {
-            // emitChunk(None);
+            emitChunk(None);
           }
           continue;
         }
