@@ -63,8 +63,10 @@ mod tests {
   fn test_fnc() {
     let mut current = 1;
     let mut emitform = 1;
-    let mut a = || {
-      let c = current.clone() - emitform;
+
+    current = current + 1;
+    let mut a = move || {
+      let c = &current - &emitform;
       emitform += c;
     };
     current = current + 1;
