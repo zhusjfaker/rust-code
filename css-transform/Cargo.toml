@@ -6,5 +6,3 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-postcss = "0.0.2"
-sass-rs = "0.2.2"

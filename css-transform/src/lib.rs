@@ -4,8 +4,6 @@
 
 use std::string::String;
 
-mod less;
-
 
 #[cfg(test)]
 mod tests {
@@ -43,14 +41,6 @@ mod tests {
             .unwrap();
     }
 
-    #[test]
-    fn css_parser() {
-        let lessfile_path = path_resolve("assets/index.less".to_string());
-        let content = std::fs::read_to_string(lessfile_path.as_str()).unwrap();
-        println!("content is {}", content);
-        let css_content = sass_rs::compile_string(content.as_str(), Default::default()).unwrap();
-        println!("content is {}", css_content);
-    }
 
     /// [测试] 返回 str 某一个字符的 unicode 编码
     #[test]
