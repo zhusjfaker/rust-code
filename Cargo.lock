@@ -291,10 +291,6 @@ dependencies = [
 [[package]]
 name = "css-transform"
 version = "0.1.0"
-dependencies = [
- "postcss",
- "sass-rs",
-]
 
 [[package]]
 name = "cty"
@@ -942,12 +938,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8d31d11c69a6b52a174b42bdc0c30e5e11670f90788b2c471c31c1d17d449443"
 
 [[package]]
-name = "pkg-config"
-version = "0.3.24"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "58893f751c9b0412871a09abd62ecd2a00298c6c83befa223ef98c52aef40cbe"
-
-[[package]]
 name = "pmutil"
 version = "0.5.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -963,20 +953,6 @@ name = "poplar"
 version = "0.1.0"
 dependencies = [
  "rust_ffmpeg",
-]
-
-[[package]]
-name = "postcss"
-version = "0.0.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a9ce0596d441b6cd0d8c3c1b6f090bf75d68e1165ce31ea6aba14f07e7b4d468"
-dependencies = [
- "memchr",
- "once_cell",
- "regex",
- "ropey",
- "serde",
- "serde_json",
 ]
 
 [[package]]
@@ -1275,15 +1251,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "11000e6ba5020e53e7cc26f73b91ae7d5496b4977851479edb66b694c0675c21"
 
 [[package]]
-name = "ropey"
-version = "1.3.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9150aff6deb25b20ed110889f070a678bcd1033e46e5e9d6fb1abeab17947f28"
-dependencies = [
- "smallvec 1.7.0",
-]
-
-[[package]]
 name = "rust_ffmpeg"
 version = "0.1.0"
 dependencies = [
@@ -1318,28 +1285,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "93fc1dc3aaa9bfed95e02e6eadabb4baf7e3078b0bd1b4d7b6b0b68378900502"
 dependencies = [
  "winapi-util",
-]
-
-[[package]]
-name = "sass-rs"
-version = "0.2.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cabcf7c6e55053f359911187ac401409aad2dc14338cae972dec266fee486abd"
-dependencies = [
- "libc",
- "sass-sys",
-]
-
-[[package]]
-name = "sass-sys"
-version = "0.4.22"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "933bca23b402377f0ab71e79732a826deffc748013746ac3314f6abc7f9fc51c"
-dependencies = [
- "cc",
- "libc",
- "num_cpus",
- "pkg-config",
 ]
 
 [[package]]
