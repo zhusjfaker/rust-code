@@ -59,18 +59,20 @@ mod tests {
     println!("....");
   }
 
+  fn innerpush<T>(mut callback: T)
+    where T: FnMut(),
+  {
+    callback();
+  }
+
   #[test]
   fn test_fnc() {
-    let mut current = 1;
-    let mut emitform = 1;
-
-    current = current + 1;
-    let mut a = move || {
-      let c = &current - &emitform;
-      emitform += c;
-    };
-    current = current + 1;
-    a();
-    let m = current.clone();
+    let mut c = 1;
+    let mut a = |num: &mut i32| { *num += 1; };
+    c += 1;
+    a(&mut c);
+    c += 1;
+    a(&mut c);
+    println!(".....");
   }
 }
