@@ -76,8 +76,21 @@ mod tests {
     println!(".....");
   }
 
+  struct A {
+    num: i32,
+    add: Fn(),
+  }
+
+
   #[test]
   fn test_ref() {
-
+    fn abc() -> Box<A> {
+      let c = 1;
+      let a = A {
+        num: 1,
+        add: move || { a.num += c },
+      };
+      Box::new(a)
+    }
   }
 }
