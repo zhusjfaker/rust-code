@@ -75,4 +75,9 @@ mod tests {
     a(&mut c);
     println!(".....");
   }
+
+  #[test]
+  fn test_ref() {
+
+  }
 }
