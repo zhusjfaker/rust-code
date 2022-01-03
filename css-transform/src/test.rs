@@ -78,19 +78,31 @@ mod tests {
 
   struct A {
     num: i32,
-    add: Fn(),
+    closure_num: Box<i32>,
+  }
+
+  impl A {
+    fn add(&mut self) {
+      *self.closure_num = self.num;
+      self.num += *self.closure_num;
+    }
   }
 
 
   #[test]
   fn test_ref() {
-    fn abc() -> Box<A> {
-      let c = 1;
+    fn abc() -> A {
+      let mut c = Box::new(1);
       let a = A {
         num: 1,
-        add: move || { a.num += c },
+        closure_num: c,
       };
-      Box::new(a)
+      a
     }
+    let mut obj = abc();
+    obj.add();
+    obj.add();
+    obj.add();
+    println!(".....")
   }
 }
